@@ -12,7 +12,7 @@ import {
   PathStep,
 } from './lib/breeding'
 import { passives, inheritChance, exactChance } from './lib/passives'
-import { rarityTier, genderText, ELEMENT_COLORS, WEAK_TO, WORK_ICONS } from './lib/ui'
+import { rarityTier, genderText, ELEMENT_COLORS, WEAK_TO, WORK_ICONS, WORK_COLORS } from './lib/ui'
 import workIconsJson from './data/workicons.json'
 
 const workIconSrc = workIconsJson as Record<string, string>
@@ -544,9 +544,9 @@ function PalDetailModal({ id, hasBack, onBack, onClose }: { id: string; hasBack:
                 const lv = pal.work[w] ?? 0
                 return (
                   <div key={w} className={`workrow ${lv === 0 ? 'none' : ''}`}>
-                    <span className="workicon">
+                    <span className="workicon" style={{ background: WORK_COLORS[w] ?? '#666' }}>
                       {workIconSrc[w]
-                        ? <img src={workIconSrc[w]} width={20} height={20} alt="" />
+                        ? <img src={workIconSrc[w]} width={16} height={16} alt="" />
                         : WORK_ICONS[w]}
                     </span>
                     <span className="statlabel">{w}</span>

@@ -54,6 +54,23 @@ export const WEAK_TO: Record<string, string> = {
   Dark: 'Dragon',
 }
 
+// badge colors behind the white in-game glyphs, themed per work type
+export const WORK_COLORS: Record<string, string> = {
+  Kindling: '#d95b3c',
+  Watering: '#3f8fd4',
+  Planting: '#5aa348',
+  'Generating Electricity': '#d9b13c',
+  Handiwork: '#c98a4e',
+  Gathering: '#7fb542',
+  Lumbering: '#8a6d4e',
+  Mining: '#8c8c94',
+  'Oil Extracting': '#6b5b73',
+  'Medicine Production': '#5bb8a5',
+  Cooling: '#5bc0d4',
+  Transporting: '#a3865e',
+  Farming: '#b06fb0',
+}
+
 export const WORK_ICONS: Record<string, string> = {
   Kindling: '🔥',
   Watering: '💧',
