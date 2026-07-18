@@ -173,7 +173,12 @@ def passive_desc(key, r):
 
 passives = []
 for key, r in passive.items():
-    if not (r.get("AddPal") or r.get("AddRarePal")):
+    lottery = r.get("AddPal") or r.get("AddRarePal")
+    # innate / special-source passives (Legend, the element Emperor set, World
+    # Tree passives, mutation pals...) never enter the wild lottery but are
+    # real pal passives: displayable category + a localized name
+    displayable = str(r.get("Category", "")).endswith("SortDisplayable") and f"PASSIVE_{key}" in skill_names
+    if not (lottery or displayable):
         continue
     nm = skill_names.get(f"PASSIVE_{key}")
     effects = []
@@ -188,8 +193,9 @@ for key, r in passive.items():
         "desc": passive_desc(key, r),
         "rank": r.get("Rank", 0),
         "effects": effects,
-        "weight": r.get("LotteryWeight", 0),
+        "weight": r.get("LotteryWeight", 0) if lottery else 0,
         "rareOnly": bool(r.get("AddRarePal")) and not r.get("AddPal"),
+        "special": not lottery,
     })
 passives.sort(key=lambda p: (-p["rank"], p["name"]))
 

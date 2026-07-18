@@ -8,6 +8,8 @@ export interface Passive {
   effects: { t: string; v: number }[]
   weight: number
   rareOnly: boolean
+  /** innate / special-source passive that never enters the wild lottery */
+  special: boolean
 }
 
 export const passives = passivesJson as Passive[]

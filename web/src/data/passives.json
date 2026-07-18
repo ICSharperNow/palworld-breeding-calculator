@@ -1,5 +1,189 @@
 [
  {
+  "id": "WorldTree_CraftSpeed",
+  "name": "Demon\u2019s Hand",
+  "desc": "Work Speed +90%\r\nSAN dreceases +15.0% faster\r\nWorld Tree harvestables won't vanish when approached.",
+  "rank": 5,
+  "effects": [
+   {
+    "t": "Work Speed",
+    "v": 90.0
+   },
+   {
+    "t": "Sanity_Decrease",
+    "v": 15.0
+   },
+   {
+    "t": "WorldTreeDecayImmunity",
+    "v": 0.0
+   }
+  ],
+  "weight": 0,
+  "rareOnly": false,
+  "special": true
+ },
+ {
+  "id": "WorldTree_MoveSpeed",
+  "name": "Dimensional Leap",
+  "desc": "Movement Speed +50%\r\nIncreases Hunger depletion rate by +15.0%\r\nWorld Tree resources will not vanish when approached.",
+  "rank": 5,
+  "effects": [
+   {
+    "t": "Movement Speed",
+    "v": 50.0
+   },
+   {
+    "t": "FullStomatch_Decrease",
+    "v": 15.0
+   },
+   {
+    "t": "WorldTreeDecayImmunity",
+    "v": 0.0
+   }
+  ],
+  "weight": 0,
+  "rareOnly": false,
+  "special": true
+ },
+ {
+  "id": "WorldTree_ATK_DEF",
+  "name": "God of Destruction",
+  "desc": "Attack +40%\r\nDefense +20%\r\nMax Health -50%\r\nWorld Tree resources will not vanish when approached.",
+  "rank": 5,
+  "effects": [
+   {
+    "t": "Attack",
+    "v": 40.0
+   },
+   {
+    "t": "Defense",
+    "v": 20.0
+   },
+   {
+    "t": "Max HP",
+    "v": -50.0
+   },
+   {
+    "t": "WorldTreeDecayImmunity",
+    "v": 0.0
+   }
+  ],
+  "weight": 0,
+  "rareOnly": false,
+  "special": true
+ },
+ {
+  "id": "WorldTree_Sanity",
+  "name": "Hermit Sage",
+  "desc": "SAN depletion rate -50.0%\r\nWork Speed -20%\r\nWorld Tree resources will not vanish when approached.",
+  "rank": 5,
+  "effects": [
+   {
+    "t": "Sanity_Decrease",
+    "v": -50.0
+   },
+   {
+    "t": "Work Speed",
+    "v": -20.0
+   },
+   {
+    "t": "WorldTreeDecayImmunity",
+    "v": 0.0
+   }
+  ],
+  "weight": 0,
+  "rareOnly": false,
+  "special": true
+ },
+ {
+  "id": "WorldTree_DEF",
+  "name": "Sanctified Meat Shield",
+  "desc": "Defense +50%\r\nAttack -30%\r\nWorld Tree resources will not vanish when approached.",
+  "rank": 5,
+  "effects": [
+   {
+    "t": "Defense",
+    "v": 50.0
+   },
+   {
+    "t": "Attack",
+    "v": -30.0
+   },
+   {
+    "t": "WorldTreeDecayImmunity",
+    "v": 0.0
+   }
+  ],
+  "weight": 0,
+  "rareOnly": false,
+  "special": true
+ },
+ {
+  "id": "WorldTree_ATK",
+  "name": "Twin-Edged Holy Blade",
+  "desc": "Attack +50%\r\nDefense -30%\r\nWorld Tree resources will not vanish when approached.",
+  "rank": 5,
+  "effects": [
+   {
+    "t": "Attack",
+    "v": 50.0
+   },
+   {
+    "t": "Defense",
+    "v": -30.0
+   },
+   {
+    "t": "WorldTreeDecayImmunity",
+    "v": 0.0
+   }
+  ],
+  "weight": 0,
+  "rareOnly": false,
+  "special": true
+ },
+ {
+  "id": "WorldTree_FullStomach",
+  "name": "World Tree Seedbed",
+  "desc": "Decrease Hunger depletion rate by +50.0%\r\nHP -20%\r\nWorld Tree resources will not vanish when approached.",
+  "rank": 5,
+  "effects": [
+   {
+    "t": "FullStomatch_Decrease",
+    "v": -50.0
+   },
+   {
+    "t": "Max HP",
+    "v": -20.0
+   },
+   {
+    "t": "WorldTreeDecayImmunity",
+    "v": 0.0
+   }
+  ],
+  "weight": 0,
+  "rareOnly": false,
+  "special": true
+ },
+ {
+  "id": "MutationPal_Babysitter",
+  "name": "Babysitter",
+  "desc": "While at a base, increases egg production speed by +30% and incubation speed by +30% for Pals assigned to a Breeding Farm.",
+  "rank": 4,
+  "effects": [
+   {
+    "t": "PalEggHatchingSpeed",
+    "v": 30.0
+   },
+   {
+    "t": "BreedSpeed_InBaseCamp",
+    "v": 30.0
+   }
+  ],
+  "weight": 0,
+  "rareOnly": false,
+  "special": true
+ },
+ {
   "id": "PAL_ALLAttack_up3",
   "name": "Demon God",
   "desc": "Attack +30% \u00b7 Defense +5%",
@@ -15,7 +199,8 @@
    }
   ],
   "weight": 5,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "Deffence_up3",
@@ -37,7 +222,8 @@
    }
   ],
   "weight": 5,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "Stamina_Up_3",
@@ -51,7 +237,27 @@
    }
   ],
   "weight": 5,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
+ },
+ {
+  "id": "EternalFlame",
+  "name": "Eternal Flame",
+  "desc": "ElementBoost_Fire +30% \u00b7 ElementBoost_Electricity +30%",
+  "rank": 4,
+  "effects": [
+   {
+    "t": "ElementBoost_Fire",
+    "v": 30.0
+   },
+   {
+    "t": "ElementBoost_Electricity",
+    "v": 30.0
+   }
+  ],
+  "weight": 0,
+  "rareOnly": false,
+  "special": true
  },
  {
   "id": "PAL_Sanity_Down_3",
@@ -65,7 +271,92 @@
    }
   ],
   "weight": 5,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
+ },
+ {
+  "id": "MutationPal_ExplosionResist",
+  "name": "Heavily Armored",
+  "desc": "Immune to Explosion Damage",
+  "rank": 4,
+  "effects": [
+   {
+    "t": "ExplosionResist",
+    "v": 100.0
+   }
+  ],
+  "weight": 0,
+  "rareOnly": false,
+  "special": true
+ },
+ {
+  "id": "MutationPal_Mutant",
+  "name": "Idiosyncratic",
+  "desc": "Pal and Player Auto Health Regeneration Rate +50%\r\nDefense +25%\r\nImmune to Poison Damage\r\nImmune to Burn Damage",
+  "rank": 4,
+  "effects": [
+   {
+    "t": "HP regeneration",
+    "v": 50.0
+   },
+   {
+    "t": "ResistAdditionalEffect_Burn",
+    "v": 100.0
+   },
+   {
+    "t": "ResistAdditionalEffect_Poison",
+    "v": 100.0
+   },
+   {
+    "t": "Defense",
+    "v": 25.0
+   }
+  ],
+  "weight": 0,
+  "rareOnly": false,
+  "special": true
+ },
+ {
+  "id": "MutationPal_Immortal",
+  "name": "Immortality",
+  "desc": "Life Steal +5%\r\nPal Auto Health Regeneration Rate +100%\r\nAttack +15%",
+  "rank": 4,
+  "effects": [
+   {
+    "t": "LifeSteal",
+    "v": 5.0
+   },
+   {
+    "t": "HP regeneration",
+    "v": 100.0
+   },
+   {
+    "t": "Attack",
+    "v": 15.0
+   }
+  ],
+  "weight": 0,
+  "rareOnly": false,
+  "special": true
+ },
+ {
+  "id": "Invader",
+  "name": "Invader",
+  "desc": "ElementBoost_Dark +30% \u00b7 ElementBoost_Dragon +30%",
+  "rank": 4,
+  "effects": [
+   {
+    "t": "ElementBoost_Dark",
+    "v": 30.0
+   },
+   {
+    "t": "ElementBoost_Dragon",
+    "v": 30.0
+   }
+  ],
+  "weight": 0,
+  "rareOnly": false,
+  "special": true
  },
  {
   "id": "SwimSpeed_up_3",
@@ -79,7 +370,8 @@
    }
   ],
   "weight": 5,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "SelfDeathAddItemDrop_up_3",
@@ -93,7 +385,31 @@
    }
   ],
   "weight": 5,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
+ },
+ {
+  "id": "Legend",
+  "name": "Legend",
+  "desc": "Attack +20%\r\nDefense +20%\r\nMovement Speed increases 20%",
+  "rank": 4,
+  "effects": [
+   {
+    "t": "Attack",
+    "v": 20.0
+   },
+   {
+    "t": "Defense",
+    "v": 20.0
+   },
+   {
+    "t": "Movement Speed",
+    "v": 20.0
+   }
+  ],
+  "weight": 0,
+  "rareOnly": false,
+  "special": true
  },
  {
   "id": "RideJumpCount_Increase1",
@@ -107,7 +423,8 @@
    }
   ],
   "weight": 5,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "Rare",
@@ -129,7 +446,31 @@
    }
   ],
   "weight": 100,
-  "rareOnly": true
+  "rareOnly": true,
+  "special": false
+ },
+ {
+  "id": "Nushi",
+  "name": "Lunker",
+  "desc": "20% increase to Water attack damage \r\n20% increase to Ice attack damage \r\n20% increase to defense.",
+  "rank": 4,
+  "effects": [
+   {
+    "t": "ElementBoost_Water",
+    "v": 20.0
+   },
+   {
+    "t": "ElementBoost_Ice",
+    "v": 20.0
+   },
+   {
+    "t": "Defense",
+    "v": 20.0
+   }
+  ],
+  "weight": 0,
+  "rareOnly": false,
+  "special": true
  },
  {
   "id": "PAL_FullStomach_Down_3",
@@ -143,7 +484,8 @@
    }
   ],
   "weight": 5,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "WorkSuitabilityAddRank_MonsterFarm_2",
@@ -157,7 +499,8 @@
    }
   ],
   "weight": 5,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "CraftSpeed_up3",
@@ -171,7 +514,61 @@
    }
   ],
   "weight": 5,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
+ },
+ {
+  "id": "Salvation",
+  "name": "Savior",
+  "desc": "ElementBoost_Normal +30% \u00b7 ElementBoost_Leaf +30%",
+  "rank": 4,
+  "effects": [
+   {
+    "t": "ElementBoost_Normal",
+    "v": 30.0
+   },
+   {
+    "t": "ElementBoost_Leaf",
+    "v": 30.0
+   }
+  ],
+  "weight": 0,
+  "rareOnly": false,
+  "special": true
+ },
+ {
+  "id": "Witch",
+  "name": "Siren of the Void",
+  "desc": "ElementBoost_Dark +30% \u00b7 ElementBoost_Ice +30%",
+  "rank": 4,
+  "effects": [
+   {
+    "t": "ElementBoost_Dark",
+    "v": 30.0
+   },
+   {
+    "t": "ElementBoost_Ice",
+    "v": 30.0
+   }
+  ],
+  "weight": 0,
+  "rareOnly": false,
+  "special": true
+ },
+ {
+  "id": "RideJumpCount_Increase2",
+  "name": "Skymarcher",
+  "desc": "Mounted Jump Count +2",
+  "rank": 4,
+  "effects": [
+   {
+    "t": "RideJumpCount_Increase",
+    "v": 2.0
+   }
+  ],
+  "weight": 0,
+  "rareOnly": false,
+  "special": true
  },
  {
   "id": "MoveSpeed_up_3",
@@ -185,7 +582,8 @@
    }
   ],
   "weight": 5,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "Vampire",
@@ -203,7 +601,8 @@
    }
   ],
   "weight": 5,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "SwimSpeed_up_2",
@@ -217,7 +616,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "CraftSpeed_up2",
@@ -231,7 +631,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "Deffence_up2",
@@ -249,7 +650,23 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
+ },
+ {
+  "id": "ElementBoost_Normal_2_PAL",
+  "name": "Celestial Emperor",
+  "desc": "ElementBoost_Normal +30%",
+  "rank": 3,
+  "effects": [
+   {
+    "t": "ElementBoost_Normal",
+    "v": 30.0
+   }
+  ],
+  "weight": 0,
+  "rareOnly": false,
+  "special": true
  },
  {
   "id": "PAL_FullStomach_Down_2",
@@ -263,7 +680,38 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
+ },
+ {
+  "id": "ElementBoost_Dragon_2_PAL",
+  "name": "Divine Dragon",
+  "desc": "ElementBoost_Dragon +30%",
+  "rank": 3,
+  "effects": [
+   {
+    "t": "ElementBoost_Dragon",
+    "v": 30.0
+   }
+  ],
+  "weight": 0,
+  "rareOnly": false,
+  "special": true
+ },
+ {
+  "id": "ElementBoost_Earth_2_PAL",
+  "name": "Earth Emperor",
+  "desc": "ElementBoost_Earth +30%",
+  "rank": 3,
+  "effects": [
+   {
+    "t": "ElementBoost_Earth",
+    "v": 30.0
+   }
+  ],
+  "weight": 0,
+  "rareOnly": false,
+  "special": true
  },
  {
   "id": "WorkSuitabilityAddRank_MonsterFarm_1",
@@ -277,7 +725,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "PAL_ALLAttack_up2",
@@ -291,7 +740,23 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
+ },
+ {
+  "id": "ElementBoost_Fire_2_PAL",
+  "name": "Flame Emperor",
+  "desc": "ElementBoost_Fire +30%",
+  "rank": 3,
+  "effects": [
+   {
+    "t": "ElementBoost_Fire",
+    "v": 30.0
+   }
+  ],
+  "weight": 0,
+  "rareOnly": false,
+  "special": true
  },
  {
   "id": "AutoHPRegeneRate_Passive",
@@ -305,7 +770,23 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
+ },
+ {
+  "id": "ElementBoost_Ice_2_PAL",
+  "name": "Ice Emperor",
+  "desc": "ElementBoost_Ice +30%",
+  "rank": 3,
+  "effects": [
+   {
+    "t": "ElementBoost_Ice",
+    "v": 30.0
+   }
+  ],
+  "weight": 0,
+  "rareOnly": false,
+  "special": true
  },
  {
   "id": "Stamina_Up_1",
@@ -319,7 +800,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "TrainerLogging_up1",
@@ -333,7 +815,53 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
+ },
+ {
+  "id": "ElementBoost_Thunder_2_PAL",
+  "name": "Lord of Lightning",
+  "desc": "ElementBoost_Electricity +30%",
+  "rank": 3,
+  "effects": [
+   {
+    "t": "ElementBoost_Electricity",
+    "v": 30.0
+   }
+  ],
+  "weight": 0,
+  "rareOnly": false,
+  "special": true
+ },
+ {
+  "id": "ElementBoost_Aqua_2_PAL",
+  "name": "Lord of the Sea",
+  "desc": "ElementBoost_Water +30%",
+  "rank": 3,
+  "effects": [
+   {
+    "t": "ElementBoost_Water",
+    "v": 30.0
+   }
+  ],
+  "weight": 0,
+  "rareOnly": false,
+  "special": true
+ },
+ {
+  "id": "ElementBoost_Dark_2_PAL",
+  "name": "Lord of the Underworld",
+  "desc": "ElementBoost_Dark +30%",
+  "rank": 3,
+  "effects": [
+   {
+    "t": "ElementBoost_Dark",
+    "v": 30.0
+   }
+  ],
+  "weight": 0,
+  "rareOnly": false,
+  "special": true
  },
  {
   "id": "TrainerMining_up1",
@@ -347,7 +875,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "TrainerWorkSpeed_UP_1",
@@ -361,7 +890,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "SalePrice_Up_1",
@@ -379,7 +909,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "Test_PalEgg_HatchingSpeed_Up",
@@ -393,7 +924,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "ReloadSpeedUp_Passive",
@@ -407,7 +939,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "MoveSpeed_up_2",
@@ -421,7 +954,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "CoolTimeReduction_Up_1",
@@ -439,7 +973,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "SelfDeathAddItemDrop_up_2",
@@ -453,7 +988,23 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
+ },
+ {
+  "id": "ElementBoost_Leaf_2_PAL",
+  "name": "Spirit Emperor",
+  "desc": "ElementBoost_Leaf +30%",
+  "rank": 3,
+  "effects": [
+   {
+    "t": "ElementBoost_Leaf",
+    "v": 30.0
+   }
+  ],
+  "weight": 0,
+  "rareOnly": false,
+  "special": true
  },
  {
   "id": "TrainerDEF_UP_1",
@@ -467,7 +1018,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "TrainerATK_UP_1",
@@ -481,7 +1033,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "PlayerSP_DecreaseRate_Passive",
@@ -495,7 +1048,31 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
+ },
+ {
+  "id": "MiniNushi",
+  "name": "Whopper",
+  "desc": "ElementBoost_Water +5% \u00b7 ElementBoost_Ice +5% \u00b7 Defense +5%",
+  "rank": 3,
+  "effects": [
+   {
+    "t": "ElementBoost_Water",
+    "v": 5.0
+   },
+   {
+    "t": "ElementBoost_Ice",
+    "v": 5.0
+   },
+   {
+    "t": "Defense",
+    "v": 5.0
+   }
+  ],
+  "weight": 0,
+  "rareOnly": false,
+  "special": true
  },
  {
   "id": "PAL_Sanity_Down_2",
@@ -509,7 +1086,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "Deffence_up2_2",
@@ -527,7 +1105,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "Noukin",
@@ -545,7 +1124,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "ElementResist_Normal_1_PAL",
@@ -559,7 +1139,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "PAL_oraora",
@@ -577,7 +1158,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "ElementBoost_Dragon_1_PAL",
@@ -591,7 +1173,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "ElementResist_Leaf_1_PAL",
@@ -605,7 +1188,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "PAL_ALLAttack_up1",
@@ -619,7 +1203,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "ElementBoost_Thunder_1_PAL",
@@ -633,7 +1218,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "ElementResist_Dark_1_PAL",
@@ -647,7 +1233,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "ElementBoost_Ice_1_PAL",
@@ -661,7 +1248,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "PAL_conceited",
@@ -679,7 +1267,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "PAL_FullStomach_Down_1",
@@ -693,7 +1282,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "ElementResist_Dragon_1_PAL",
@@ -707,7 +1297,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "ElementResist_Earth_1_PAL",
@@ -721,7 +1312,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "SalePrice_Up_2",
@@ -739,7 +1331,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "Stamina_Up_2",
@@ -753,7 +1346,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "ElementBoost_Leaf_1_PAL",
@@ -767,7 +1361,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "Deffence_up1",
@@ -781,7 +1376,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "ElementResist_Ice_1_PAL",
@@ -795,7 +1391,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "PAL_rude",
@@ -813,7 +1410,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "ElementBoost_Aqua_1_PAL",
@@ -827,7 +1425,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "CoolTimeReduction_Up_2",
@@ -841,7 +1440,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "Nocturnal",
@@ -855,7 +1455,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "ElementResist_Thunder_1_PAL",
@@ -869,7 +1470,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "PAL_masochist",
@@ -887,7 +1489,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "MoveSpeed_up_1",
@@ -901,7 +1504,31 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
+ },
+ {
+  "id": "Alien",
+  "name": "Otherworldly Cells",
+  "desc": "Attack +10%\r\nFire damage reduction 15%\r\nLightning damage reduction 15%",
+  "rank": 1,
+  "effects": [
+   {
+    "t": "Attack",
+    "v": 10.0
+   },
+   {
+    "t": "ElementResist_Fire",
+    "v": 15.0
+   },
+   {
+    "t": "ElementBoost_Electricity",
+    "v": 15.0
+   }
+  ],
+  "weight": 0,
+  "rareOnly": false,
+  "special": true
  },
  {
   "id": "PAL_Sanity_Down_1",
@@ -915,7 +1542,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "ElementBoost_Earth_1_PAL",
@@ -929,7 +1557,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "ElementBoost_Fire_1_PAL",
@@ -943,7 +1572,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "PAL_sadist",
@@ -961,7 +1591,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "CraftSpeed_up1",
@@ -975,7 +1606,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "SwimSpeed_up_1",
@@ -989,7 +1621,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "ElementBoost_Normal_1_PAL",
@@ -1003,7 +1636,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "ElementResist_Fire_1_PAL",
@@ -1017,7 +1651,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "ElementBoost_Dark_1_PAL",
@@ -1031,7 +1666,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "ElementResist_Aqua_1_PAL",
@@ -1045,7 +1681,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "PAL_CorporateSlave",
@@ -1063,7 +1700,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "CraftSpeed_down1",
@@ -1077,7 +1715,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "PAL_ALLAttack_down1",
@@ -1091,7 +1730,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "Deffence_down1",
@@ -1105,7 +1745,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "CoolTimeReduction_Down_1",
@@ -1119,7 +1760,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "PAL_FullStomach_Up_1",
@@ -1133,7 +1775,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "NonKilling",
@@ -1147,7 +1790,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "NightOwl",
@@ -1161,7 +1805,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "SalePrice_Down_1",
@@ -1179,7 +1824,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "Stamina_Down_1",
@@ -1193,7 +1839,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "PAL_Sanity_Up_1",
@@ -1207,7 +1854,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "PAL_FullStomach_Up_2",
@@ -1221,7 +1869,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "PAL_Sanity_Up_2",
@@ -1235,7 +1884,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "Deffence_down2",
@@ -1249,7 +1899,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "PAL_ALLAttack_down2",
@@ -1263,7 +1914,8 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  },
  {
   "id": "CraftSpeed_down2",
@@ -1277,6 +1929,7 @@
    }
   ],
   "weight": 100,
-  "rareOnly": false
+  "rareOnly": false,
+  "special": false
  }
 ]

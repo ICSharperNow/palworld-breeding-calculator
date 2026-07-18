@@ -1381,6 +1381,7 @@ function PassiveDetailModal({ id, onClose }: { id: string; onClose: () => void }
             <span className="muted small"> (per passive slot on a wild pal)</span>
           </div>
           {p.rareOnly && <div><span className="statlabel">Source</span><b>lucky / rare pals only</b></div>}
+          {p.special && <div><span className="statlabel">Source</span><b>innate to specific pals / special events</b></div>}
           <div><span className="statlabel">Internal id</span><b>{p.id}</b></div>
         </div>
       </div>
@@ -1403,7 +1404,7 @@ function PassiveDexTab() {
     <section>
       <p className="lede">
         All {passives.length} passive skills a pal can have, with their in-game descriptions.
-        Tier runs from −1 (negative) to +4 (best). Click one for details.
+        Tier runs from −1 (negative) to +5 (best). Click one for details.
       </p>
       <input className="filter" value={q} onChange={e => setQ(e.target.value)} placeholder="Search name or description…" />
       <SortBar options={PDEX_SORTS} value={sort} onChange={setSort} />
