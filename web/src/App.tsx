@@ -12,7 +12,7 @@ import {
   PathStep,
 } from './lib/breeding'
 import { passives, inheritChance, exactChance } from './lib/passives'
-import { rarityTier, genderText, ELEMENT_COLORS } from './lib/ui'
+import { rarityTier, genderText, ELEMENT_COLORS, WEAK_TO, WORK_ICONS } from './lib/ui'
 import { spawnsFor, worldMap, treeMap, SPAWN_GRID, gameCoords } from './lib/spawns'
 import { PalPicker, ElementChips, PalIcon } from './PalPicker'
 
@@ -491,6 +491,41 @@ function PalDetailModal({ id, hasBack, onBack, onClose }: { id: string; hasBack:
           <button className="modal-btn close" onClick={onClose}>× Close</button>
         </div>
         <PalCard pal={pal} big clickable={false} />
+        <div className="modal-cols">
+          <div>
+            <h3>Stats</h3>
+            <div className="deckstats">
+              <div><span className="statlabel">HP</span><b>{pal.stats.hp}</b></div>
+              <div><span className="statlabel">Attack</span><b>{pal.stats.atk}</b></div>
+              <div><span className="statlabel">Defense</span><b>{pal.stats.def}</b></div>
+              <div><span className="statlabel">Work speed</span><b>{pal.stats.workSpeed}</b></div>
+              <div><span className="statlabel">Stamina</span><b>{pal.stats.stamina}</b></div>
+              <div><span className="statlabel">Food</span><b>{pal.stats.food}</b></div>
+              <div><span className="statlabel">Run / ride speed</span><b>{pal.stats.run} / {pal.stats.ride}</b></div>
+              {pal.nocturnal && <div><span className="statlabel">Active</span><b>🌙 nocturnal</b></div>}
+            </div>
+          </div>
+          <div>
+            <h3>Weak to</h3>
+            <div className="chips">
+              {[...new Set(pal.elements.map(e => WEAK_TO[e]).filter(Boolean))].map(e => (
+                <span key={e} className="chip" style={{ background: ELEMENT_COLORS[e] ?? '#888' }}>{e}</span>
+              ))}
+            </div>
+            <h3>Work suitability</h3>
+            <div className="worklist">
+              {Object.entries(pal.work).map(([w, lv]) => (
+                <div key={w} className="workrow">
+                  <span className="workicon">{WORK_ICONS[w] ?? '🔧'}</span>
+                  <span className="statlabel">{w}</span>
+                  <b>Lv {lv}</b>
+                </div>
+              ))}
+              {Object.keys(pal.work).length === 0 && <span className="muted small">none</span>}
+            </div>
+          </div>
+        </div>
+        <h3>Breeding</h3>
         <div className="deckstats">
           <div><span className="statlabel">Breeding power</span><b>{pal.rank}</b></div>
           <div><span className="statlabel">Parent pairs</span><b>{pairCount}</b></div>

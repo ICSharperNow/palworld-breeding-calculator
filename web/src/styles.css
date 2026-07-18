@@ -212,7 +212,13 @@ nav button.active {
 }
 .modal-btn.primary:hover { filter: brightness(1.1); }
 .modal-actions { display: flex; gap: 10px; margin-top: 18px; flex-wrap: wrap; }
-.modal .deckstats { margin-top: 14px; }
+.modal .deckstats { margin-top: 6px; }
+.modal-cols { display: flex; gap: 28px; margin-top: 8px; flex-wrap: wrap; }
+.modal-cols > div { flex: 1; min-width: 220px; }
+.worklist { display: flex; flex-direction: column; gap: 3px; }
+.workrow { display: flex; align-items: center; gap: 8px; }
+.workrow .statlabel { min-width: 160px; }
+.workicon { width: 22px; text-align: center; }
 .modal-combos { display: flex; flex-direction: column; gap: 2px; max-height: 180px; overflow-y: auto; }
 .modal h3 { margin: 16px 0 6px; }
 
@@ -329,6 +335,10 @@ h3 { margin: 20px 0 6px; font-size: 15px; }
 }
 .maptitle { display: inline-flex; align-items: center; gap: 9px; font-weight: 650; font-size: 16px; }
 .mapnavbtns { display: inline-flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+/* size the popup so the square map plus toolbar and legend always fit the
+   viewport - width is capped by available height */
+.mapdrop:not(.full) .mapmodal { max-width: min(92vw, 780px, calc(100vh - 220px)); }
+.mapdrop:not(.full) { padding-top: 4vh; }
 .mapmodal.full { max-width: none; width: calc(100vw - 24px); height: calc(100vh - 24px); display: flex; flex-direction: column; }
 .mapdrop.full { padding: 12px; align-items: stretch; }
 .mapmodal.full .mapwrap {

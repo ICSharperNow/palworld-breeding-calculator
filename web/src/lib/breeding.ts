@@ -12,6 +12,18 @@ export interface Pal {
   maleProb: number
   elements: string[]
   rarity: number
+  stats: {
+    hp: number
+    atk: number
+    def: number
+    workSpeed: number
+    stamina: number
+    food: number
+    run: number
+    ride: number
+  }
+  nocturnal: boolean
+  work: Record<string, number>
 }
 
 export type Gender = 'Male' | 'Female'

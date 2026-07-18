@@ -11,7 +11,23 @@
   "elements": [
    "Normal"
   ],
-  "rarity": 1
+  "rarity": 1,
+  "stats": {
+   "hp": 70,
+   "atk": 70,
+   "def": 70,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 1,
+   "run": 400,
+   "ride": 550
+  },
+  "nocturnal": false,
+  "work": {
+   "Handiwork": 1,
+   "Transporting": 1,
+   "Farming": 1
+  }
  },
  {
   "id": "PinkCat",
@@ -25,7 +41,24 @@
   "elements": [
    "Normal"
   ],
-  "rarity": 1
+  "rarity": 1,
+  "stats": {
+   "hp": 70,
+   "atk": 70,
+   "def": 70,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 1,
+   "run": 400,
+   "ride": 550
+  },
+  "nocturnal": false,
+  "work": {
+   "Handiwork": 1,
+   "Gathering": 1,
+   "Mining": 1,
+   "Transporting": 1
+  }
  },
  {
   "id": "ChickenPal",
@@ -39,7 +72,22 @@
   "elements": [
    "Normal"
   ],
-  "rarity": 1
+  "rarity": 1,
+  "stats": {
+   "hp": 60,
+   "atk": 60,
+   "def": 60,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 1,
+   "run": 375,
+   "ride": 550
+  },
+  "nocturnal": false,
+  "work": {
+   "Gathering": 1,
+   "Farming": 1
+  }
  },
  {
   "id": "Carbunclo",
@@ -53,7 +101,25 @@
   "elements": [
    "Leaf"
   ],
-  "rarity": 1
+  "rarity": 1,
+  "stats": {
+   "hp": 75,
+   "atk": 70,
+   "def": 70,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 1,
+   "run": 400,
+   "ride": 550
+  },
+  "nocturnal": false,
+  "work": {
+   "Planting": 1,
+   "Handiwork": 1,
+   "Gathering": 1,
+   "Lumbering": 1,
+   "Medicine Production": 1
+  }
  },
  {
   "id": "BluePlatypus",
@@ -67,7 +133,23 @@
   "elements": [
    "Water"
   ],
-  "rarity": 1
+  "rarity": 1,
+  "stats": {
+   "hp": 60,
+   "atk": 80,
+   "def": 60,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 1,
+   "run": 300,
+   "ride": 400
+  },
+  "nocturnal": false,
+  "work": {
+   "Watering": 1,
+   "Handiwork": 1,
+   "Transporting": 1
+  }
  },
  {
   "id": "BluePlatypus_Fire",
@@ -82,7 +164,24 @@
    "Water",
    "Fire"
   ],
-  "rarity": 2
+  "rarity": 2,
+  "stats": {
+   "hp": 60,
+   "atk": 85,
+   "def": 60,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 1,
+   "run": 300,
+   "ride": 400
+  },
+  "nocturnal": false,
+  "work": {
+   "Kindling": 2,
+   "Watering": 2,
+   "Handiwork": 1,
+   "Transporting": 1
+  }
  },
  {
   "id": "CuteFox",
@@ -96,7 +195,22 @@
   "elements": [
    "Normal"
   ],
-  "rarity": 2
+  "rarity": 2,
+  "stats": {
+   "hp": 70,
+   "atk": 70,
+   "def": 70,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 1,
+   "run": 350,
+   "ride": 450
+  },
+  "nocturnal": false,
+  "work": {
+   "Gathering": 1,
+   "Farming": 1
+  }
  },
  {
   "id": "FlyingManta",
@@ -110,7 +224,22 @@
   "elements": [
    "Water"
   ],
-  "rarity": 3
+  "rarity": 3,
+  "stats": {
+   "hp": 80,
+   "atk": 70,
+   "def": 80,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 2,
+   "run": 550,
+   "ride": 700
+  },
+  "nocturnal": false,
+  "work": {
+   "Watering": 1,
+   "Transporting": 1
+  }
  },
  {
   "id": "FlyingManta_Thunder",
@@ -125,7 +254,23 @@
    "Water",
    "Electricity"
   ],
-  "rarity": 4
+  "rarity": 4,
+  "stats": {
+   "hp": 80,
+   "atk": 75,
+   "def": 80,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 2,
+   "run": 550,
+   "ride": 700
+  },
+  "nocturnal": false,
+  "work": {
+   "Watering": 1,
+   "Generating Electricity": 2,
+   "Transporting": 1
+  }
  },
  {
   "id": "WoolFox",
@@ -139,7 +284,22 @@
   "elements": [
    "Normal"
   ],
-  "rarity": 1
+  "rarity": 1,
+  "stats": {
+   "hp": 70,
+   "atk": 70,
+   "def": 75,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 1,
+   "run": 300,
+   "ride": 450
+  },
+  "nocturnal": false,
+  "work": {
+   "Gathering": 1,
+   "Farming": 2
+  }
  },
  {
   "id": "KendoFrog",
@@ -153,7 +313,24 @@
   "elements": [
    "Water"
   ],
-  "rarity": 4
+  "rarity": 4,
+  "stats": {
+   "hp": 80,
+   "atk": 100,
+   "def": 85,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 2,
+   "run": 300,
+   "ride": 450
+  },
+  "nocturnal": false,
+  "work": {
+   "Watering": 1,
+   "Handiwork": 1,
+   "Gathering": 1,
+   "Transporting": 1
+  }
  },
  {
   "id": "KendoFrog_Dark",
@@ -168,7 +345,24 @@
    "Water",
    "Dark"
   ],
-  "rarity": 5
+  "rarity": 5,
+  "stats": {
+   "hp": 85,
+   "atk": 110,
+   "def": 90,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 2,
+   "run": 300,
+   "ride": 450
+  },
+  "nocturnal": true,
+  "work": {
+   "Watering": 1,
+   "Handiwork": 2,
+   "Gathering": 1,
+   "Transporting": 1
+  }
  },
  {
   "id": "LeafMomonga",
@@ -183,7 +377,23 @@
    "Leaf",
    "Normal"
   ],
-  "rarity": 3
+  "rarity": 3,
+  "stats": {
+   "hp": 80,
+   "atk": 75,
+   "def": 75,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 1,
+   "run": 350,
+   "ride": 600
+  },
+  "nocturnal": false,
+  "work": {
+   "Planting": 1,
+   "Gathering": 1,
+   "Transporting": 1
+  }
  },
  {
   "id": "Ganesha",
@@ -197,7 +407,21 @@
   "elements": [
    "Water"
   ],
-  "rarity": 1
+  "rarity": 1,
+  "stats": {
+   "hp": 70,
+   "atk": 60,
+   "def": 70,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 1,
+   "run": 300,
+   "ride": 400
+  },
+  "nocturnal": false,
+  "work": {
+   "Watering": 1
+  }
  },
  {
   "id": "PlantSlime",
@@ -212,7 +436,21 @@
    "Leaf",
    "Earth"
   ],
-  "rarity": 1
+  "rarity": 1,
+  "stats": {
+   "hp": 70,
+   "atk": 70,
+   "def": 70,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 1,
+   "run": 300,
+   "ride": 400
+  },
+  "nocturnal": false,
+  "work": {
+   "Planting": 1
+  }
  },
  {
   "id": "PlantSlime_Flower",
@@ -227,7 +465,21 @@
    "Leaf",
    "Earth"
   ],
-  "rarity": 10
+  "rarity": 10,
+  "stats": {
+   "hp": 70,
+   "atk": 70,
+   "def": 70,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 1,
+   "run": 300,
+   "ride": 400
+  },
+  "nocturnal": false,
+  "work": {
+   "Planting": 1
+  }
  },
  {
   "id": "SamuraiDog",
@@ -241,7 +493,23 @@
   "elements": [
    "Earth"
   ],
-  "rarity": 2
+  "rarity": 2,
+  "stats": {
+   "hp": 70,
+   "atk": 80,
+   "def": 70,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 1,
+   "run": 400,
+   "ride": 600
+  },
+  "nocturnal": false,
+  "work": {
+   "Gathering": 1,
+   "Lumbering": 1,
+   "Transporting": 1
+  }
  },
  {
   "id": "CloverFairy",
@@ -256,7 +524,22 @@
    "Leaf",
    "Normal"
   ],
-  "rarity": 2
+  "rarity": 2,
+  "stats": {
+   "hp": 80,
+   "atk": 65,
+   "def": 65,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 1,
+   "run": 400,
+   "ride": 550
+  },
+  "nocturnal": false,
+  "work": {
+   "Planting": 1,
+   "Gathering": 1
+  }
  },
  {
   "id": "Hedgehog",
@@ -270,7 +553,21 @@
   "elements": [
    "Electricity"
   ],
-  "rarity": 1
+  "rarity": 1,
+  "stats": {
+   "hp": 70,
+   "atk": 75,
+   "def": 70,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 1,
+   "run": 400,
+   "ride": 550
+  },
+  "nocturnal": false,
+  "work": {
+   "Generating Electricity": 1
+  }
  },
  {
   "id": "Hedgehog_Ice",
@@ -284,7 +581,21 @@
   "elements": [
    "Ice"
   ],
-  "rarity": 2
+  "rarity": 2,
+  "stats": {
+   "hp": 70,
+   "atk": 75,
+   "def": 80,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 1,
+   "run": 400,
+   "ride": 550
+  },
+  "nocturnal": false,
+  "work": {
+   "Cooling": 1
+  }
  },
  {
   "id": "NegativeKoala",
@@ -298,7 +609,24 @@
   "elements": [
    "Dark"
   ],
-  "rarity": 1
+  "rarity": 1,
+  "stats": {
+   "hp": 70,
+   "atk": 70,
+   "def": 70,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 1,
+   "run": 300,
+   "ride": 400
+  },
+  "nocturnal": true,
+  "work": {
+   "Handiwork": 1,
+   "Mining": 1,
+   "Transporting": 1,
+   "Farming": 1
+  }
  },
  {
   "id": "Penguin",
@@ -313,7 +641,24 @@
    "Water",
    "Ice"
   ],
-  "rarity": 1
+  "rarity": 1,
+  "stats": {
+   "hp": 70,
+   "atk": 75,
+   "def": 70,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 1,
+   "run": 500,
+   "ride": 650
+  },
+  "nocturnal": false,
+  "work": {
+   "Watering": 1,
+   "Handiwork": 1,
+   "Cooling": 1,
+   "Transporting": 1
+  }
  },
  {
   "id": "Penguin_Electric",
@@ -328,7 +673,24 @@
    "Water",
    "Electricity"
   ],
-  "rarity": 2
+  "rarity": 2,
+  "stats": {
+   "hp": 70,
+   "atk": 80,
+   "def": 70,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 1,
+   "run": 500,
+   "ride": 650
+  },
+  "nocturnal": false,
+  "work": {
+   "Watering": 1,
+   "Generating Electricity": 2,
+   "Handiwork": 1,
+   "Transporting": 1
+  }
  },
  {
   "id": "CaptainPenguin",
@@ -343,7 +705,25 @@
    "Water",
    "Ice"
   ],
-  "rarity": 6
+  "rarity": 6,
+  "stats": {
+   "hp": 95,
+   "atk": 95,
+   "def": 95,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 4,
+   "run": 450,
+   "ride": 600
+  },
+  "nocturnal": false,
+  "work": {
+   "Watering": 2,
+   "Handiwork": 2,
+   "Mining": 3,
+   "Cooling": 2,
+   "Transporting": 3
+  }
  },
  {
   "id": "CaptainPenguin_Black",
@@ -358,7 +738,25 @@
    "Water",
    "Electricity"
   ],
-  "rarity": 7
+  "rarity": 7,
+  "stats": {
+   "hp": 100,
+   "atk": 100,
+   "def": 100,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 4,
+   "run": 450,
+   "ride": 600
+  },
+  "nocturnal": false,
+  "work": {
+   "Watering": 2,
+   "Generating Electricity": 3,
+   "Handiwork": 2,
+   "Mining": 3,
+   "Transporting": 3
+  }
  },
  {
   "id": "WizardOwl",
@@ -372,7 +770,21 @@
   "elements": [
    "Dark"
   ],
-  "rarity": 1
+  "rarity": 1,
+  "stats": {
+   "hp": 70,
+   "atk": 70,
+   "def": 80,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 1,
+   "run": 380,
+   "ride": 550
+  },
+  "nocturnal": true,
+  "work": {
+   "Gathering": 1
+  }
  },
  {
   "id": "Alpaca",
@@ -386,7 +798,21 @@
   "elements": [
    "Normal"
   ],
-  "rarity": 3
+  "rarity": 3,
+  "stats": {
+   "hp": 90,
+   "atk": 75,
+   "def": 90,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 2,
+   "run": 500,
+   "ride": 900
+  },
+  "nocturnal": false,
+  "work": {
+   "Farming": 2
+  }
  },
  {
   "id": "KingAlpaca",
@@ -400,7 +826,21 @@
   "elements": [
    "Normal"
   ],
-  "rarity": 8
+  "rarity": 8,
+  "stats": {
+   "hp": 120,
+   "atk": 85,
+   "def": 90,
+   "workSpeed": 100,
+   "stamina": 170,
+   "food": 4,
+   "run": 700,
+   "ride": 1040
+  },
+  "nocturnal": false,
+  "work": {
+   "Gathering": 2
+  }
  },
  {
   "id": "KingAlpaca_Ice",
@@ -414,7 +854,22 @@
   "elements": [
    "Ice"
   ],
-  "rarity": 9
+  "rarity": 9,
+  "stats": {
+   "hp": 120,
+   "atk": 85,
+   "def": 90,
+   "workSpeed": 100,
+   "stamina": 170,
+   "food": 4,
+   "run": 700,
+   "ride": 1040
+  },
+  "nocturnal": false,
+  "work": {
+   "Gathering": 2,
+   "Cooling": 4
+  }
  },
  {
   "id": "DreamDemon",
@@ -428,7 +883,23 @@
   "elements": [
    "Dark"
   ],
-  "rarity": 1
+  "rarity": 1,
+  "stats": {
+   "hp": 70,
+   "atk": 75,
+   "def": 60,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 1,
+   "run": 300,
+   "ride": 550
+  },
+  "nocturnal": true,
+  "work": {
+   "Handiwork": 1,
+   "Gathering": 1,
+   "Transporting": 1
+  }
  },
  {
   "id": "Monkey",
@@ -442,7 +913,25 @@
   "elements": [
    "Leaf"
   ],
-  "rarity": 1
+  "rarity": 1,
+  "stats": {
+   "hp": 80,
+   "atk": 70,
+   "def": 70,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 1,
+   "run": 300,
+   "ride": 400
+  },
+  "nocturnal": false,
+  "work": {
+   "Planting": 1,
+   "Handiwork": 1,
+   "Gathering": 1,
+   "Lumbering": 1,
+   "Transporting": 1
+  }
  },
  {
   "id": "Monkey_Fire",
@@ -456,7 +945,24 @@
   "elements": [
    "Fire"
   ],
-  "rarity": 2
+  "rarity": 2,
+  "stats": {
+   "hp": 80,
+   "atk": 75,
+   "def": 70,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 1,
+   "run": 300,
+   "ride": 400
+  },
+  "nocturnal": false,
+  "work": {
+   "Kindling": 1,
+   "Handiwork": 1,
+   "Lumbering": 1,
+   "Transporting": 1
+  }
  },
  {
   "id": "NightFox",
@@ -470,7 +976,21 @@
   "elements": [
    "Dark"
   ],
-  "rarity": 6
+  "rarity": 6,
+  "stats": {
+   "hp": 75,
+   "atk": 85,
+   "def": 70,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 1,
+   "run": 300,
+   "ride": 500
+  },
+  "nocturnal": true,
+  "work": {
+   "Gathering": 1
+  }
  },
  {
   "id": "LavaGirl",
@@ -484,7 +1004,24 @@
   "elements": [
    "Fire"
   ],
-  "rarity": 1
+  "rarity": 1,
+  "stats": {
+   "hp": 60,
+   "atk": 70,
+   "def": 80,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 2,
+   "run": 250,
+   "ride": 375
+  },
+  "nocturnal": false,
+  "work": {
+   "Kindling": 1,
+   "Handiwork": 1,
+   "Transporting": 1,
+   "Farming": 1
+  }
  },
  {
   "id": "FlameBambi",
@@ -498,7 +1035,22 @@
   "elements": [
    "Fire"
   ],
-  "rarity": 2
+  "rarity": 2,
+  "stats": {
+   "hp": 75,
+   "atk": 70,
+   "def": 75,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 1,
+   "run": 400,
+   "ride": 550
+  },
+  "nocturnal": false,
+  "work": {
+   "Kindling": 1,
+   "Farming": 1
+  }
  },
  {
   "id": "Bastet",
@@ -512,7 +1064,22 @@
   "elements": [
    "Dark"
   ],
-  "rarity": 1
+  "rarity": 1,
+  "stats": {
+   "hp": 70,
+   "atk": 60,
+   "def": 70,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 1,
+   "run": 475,
+   "ride": 550
+  },
+  "nocturnal": true,
+  "work": {
+   "Gathering": 1,
+   "Farming": 1
+  }
  },
  {
   "id": "Bastet_Ice",
@@ -526,7 +1093,22 @@
   "elements": [
    "Ice"
   ],
-  "rarity": 2
+  "rarity": 2,
+  "stats": {
+   "hp": 70,
+   "atk": 65,
+   "def": 70,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 1,
+   "run": 475,
+   "ride": 550
+  },
+  "nocturnal": false,
+  "work": {
+   "Cooling": 1,
+   "Farming": 1
+  }
  },
  {
   "id": "Boar",
@@ -540,7 +1122,21 @@
   "elements": [
    "Earth"
   ],
-  "rarity": 1
+  "rarity": 1,
+  "stats": {
+   "hp": 80,
+   "atk": 70,
+   "def": 70,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 1,
+   "run": 500,
+   "ride": 800
+  },
+  "nocturnal": false,
+  "work": {
+   "Mining": 1
+  }
  },
  {
   "id": "Kitsunebi",
@@ -554,7 +1150,21 @@
   "elements": [
    "Fire"
   ],
-  "rarity": 1
+  "rarity": 1,
+  "stats": {
+   "hp": 65,
+   "atk": 75,
+   "def": 70,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 1,
+   "run": 400,
+   "ride": 550
+  },
+  "nocturnal": false,
+  "work": {
+   "Kindling": 1
+  }
  },
  {
   "id": "Kitsunebi_Ice",
@@ -568,7 +1178,21 @@
   "elements": [
    "Ice"
   ],
-  "rarity": 1
+  "rarity": 1,
+  "stats": {
+   "hp": 65,
+   "atk": 80,
+   "def": 70,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 1,
+   "run": 400,
+   "ride": 550
+  },
+  "nocturnal": false,
+  "work": {
+   "Cooling": 2
+  }
  },
  {
   "id": "NegativeOctopus",
@@ -583,7 +1207,23 @@
    "Dark",
    "Water"
   ],
-  "rarity": 1
+  "rarity": 1,
+  "stats": {
+   "hp": 60,
+   "atk": 60,
+   "def": 70,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 2,
+   "run": 400,
+   "ride": 550
+  },
+  "nocturnal": true,
+  "work": {
+   "Watering": 1,
+   "Gathering": 1,
+   "Transporting": 2
+  }
  },
  {
   "id": "NegativeOctopus_Neutral",
@@ -598,7 +1238,23 @@
    "Normal",
    "Water"
   ],
-  "rarity": 2
+  "rarity": 2,
+  "stats": {
+   "hp": 70,
+   "atk": 60,
+   "def": 70,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 2,
+   "run": 400,
+   "ride": 550
+  },
+  "nocturnal": false,
+  "work": {
+   "Watering": 1,
+   "Gathering": 1,
+   "Transporting": 2
+  }
  },
  {
   "id": "CuteMole",
@@ -612,7 +1268,23 @@
   "elements": [
    "Earth"
   ],
-  "rarity": 1
+  "rarity": 1,
+  "stats": {
+   "hp": 65,
+   "atk": 80,
+   "def": 50,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 2,
+   "run": 300,
+   "ride": 550
+  },
+  "nocturnal": false,
+  "work": {
+   "Handiwork": 1,
+   "Mining": 1,
+   "Transporting": 1
+  }
  },
  {
   "id": "Deer",
@@ -626,7 +1298,21 @@
   "elements": [
    "Normal"
   ],
-  "rarity": 5
+  "rarity": 5,
+  "stats": {
+   "hp": 95,
+   "atk": 80,
+   "def": 80,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 2,
+   "run": 700,
+   "ride": 900
+  },
+  "nocturnal": false,
+  "work": {
+   "Lumbering": 2
+  }
  },
  {
   "id": "Deer_Ground",
@@ -640,7 +1326,21 @@
   "elements": [
    "Earth"
   ],
-  "rarity": 6
+  "rarity": 6,
+  "stats": {
+   "hp": 95,
+   "atk": 80,
+   "def": 80,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 2,
+   "run": 700,
+   "ride": 900
+  },
+  "nocturnal": false,
+  "work": {
+   "Lumbering": 2
+  }
  },
  {
   "id": "Garm",
@@ -654,7 +1354,21 @@
   "elements": [
    "Normal"
   ],
-  "rarity": 2
+  "rarity": 2,
+  "stats": {
+   "hp": 80,
+   "atk": 90,
+   "def": 75,
+   "workSpeed": 100,
+   "stamina": 70,
+   "food": 2,
+   "run": 800,
+   "ride": 1050
+  },
+  "nocturnal": false,
+  "work": {
+   "Gathering": 1
+  }
  },
  {
   "id": "BerryGoat",
@@ -668,7 +1382,22 @@
   "elements": [
    "Leaf"
   ],
-  "rarity": 3
+  "rarity": 3,
+  "stats": {
+   "hp": 100,
+   "atk": 70,
+   "def": 90,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 2,
+   "run": 400,
+   "ride": 550
+  },
+  "nocturnal": false,
+  "work": {
+   "Planting": 2,
+   "Farming": 1
+  }
  },
  {
   "id": "BerryGoat_Dark",
@@ -682,7 +1411,22 @@
   "elements": [
    "Dark"
   ],
-  "rarity": 3
+  "rarity": 3,
+  "stats": {
+   "hp": 100,
+   "atk": 75,
+   "def": 90,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 2,
+   "run": 400,
+   "ride": 550
+  },
+  "nocturnal": true,
+  "work": {
+   "Planting": 2,
+   "Farming": 1
+  }
  },
  {
   "id": "MopBaby",
@@ -696,7 +1440,22 @@
   "elements": [
    "Ice"
   ],
-  "rarity": 1
+  "rarity": 1,
+  "stats": {
+   "hp": 60,
+   "atk": 60,
+   "def": 60,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 1,
+   "run": 250,
+   "ride": 400
+  },
+  "nocturnal": false,
+  "work": {
+   "Gathering": 1,
+   "Cooling": 1
+  }
  },
  {
   "id": "MopKing",
@@ -710,7 +1469,22 @@
   "elements": [
    "Ice"
   ],
-  "rarity": 6
+  "rarity": 6,
+  "stats": {
+   "hp": 100,
+   "atk": 90,
+   "def": 90,
+   "workSpeed": 100,
+   "stamina": 120,
+   "food": 4,
+   "run": 650,
+   "ride": 1020
+  },
+  "nocturnal": false,
+  "work": {
+   "Gathering": 2,
+   "Cooling": 3
+  }
  },
  {
   "id": "TentacleTurtle",
@@ -724,7 +1498,23 @@
   "elements": [
    "Water"
   ],
-  "rarity": 3
+  "rarity": 3,
+  "stats": {
+   "hp": 75,
+   "atk": 75,
+   "def": 115,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 3,
+   "run": 320,
+   "ride": 500
+  },
+  "nocturnal": false,
+  "work": {
+   "Watering": 2,
+   "Mining": 1,
+   "Transporting": 1
+  }
  },
  {
   "id": "TentacleTurtle_Ground",
@@ -739,7 +1529,23 @@
    "Water",
    "Earth"
   ],
-  "rarity": 4
+  "rarity": 4,
+  "stats": {
+   "hp": 85,
+   "atk": 85,
+   "def": 125,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 3,
+   "run": 320,
+   "ride": 500
+  },
+  "nocturnal": false,
+  "work": {
+   "Watering": 2,
+   "Mining": 3,
+   "Transporting": 1
+  }
  },
  {
   "id": "WindChimes",
@@ -753,7 +1559,23 @@
   "elements": [
    "Earth"
   ],
-  "rarity": 1
+  "rarity": 1,
+  "stats": {
+   "hp": 80,
+   "atk": 70,
+   "def": 70,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 1,
+   "run": 400,
+   "ride": 550
+  },
+  "nocturnal": false,
+  "work": {
+   "Handiwork": 1,
+   "Gathering": 1,
+   "Transporting": 2
+  }
  },
  {
   "id": "WindChimes_Ice",
@@ -767,7 +1589,24 @@
   "elements": [
    "Ice"
   ],
-  "rarity": 2
+  "rarity": 2,
+  "stats": {
+   "hp": 80,
+   "atk": 80,
+   "def": 70,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 1,
+   "run": 400,
+   "ride": 550
+  },
+  "nocturnal": false,
+  "work": {
+   "Handiwork": 3,
+   "Gathering": 2,
+   "Cooling": 2,
+   "Transporting": 3
+  }
  },
  {
   "id": "SweetsSheep",
@@ -781,7 +1620,21 @@
   "elements": [
    "Normal"
   ],
-  "rarity": 3
+  "rarity": 3,
+  "stats": {
+   "hp": 70,
+   "atk": 70,
+   "def": 90,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 1,
+   "run": 300,
+   "ride": 400
+  },
+  "nocturnal": false,
+  "work": {
+   "Farming": 1
+  }
  },
  {
   "id": "SweetsSheep_Ground",
@@ -795,7 +1648,21 @@
   "elements": [
    "Earth"
   ],
-  "rarity": 4
+  "rarity": 4,
+  "stats": {
+   "hp": 70,
+   "atk": 70,
+   "def": 95,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 1,
+   "run": 300,
+   "ride": 400
+  },
+  "nocturnal": false,
+  "work": {
+   "Farming": 1
+  }
  },
  {
   "id": "CowPal",
@@ -809,7 +1676,21 @@
   "elements": [
    "Normal"
   ],
-  "rarity": 2
+  "rarity": 2,
+  "stats": {
+   "hp": 90,
+   "atk": 50,
+   "def": 80,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 2,
+   "run": 580,
+   "ride": 700
+  },
+  "nocturnal": false,
+  "work": {
+   "Farming": 2
+  }
  },
  {
   "id": "BlueDragon",
@@ -824,7 +1705,21 @@
    "Water",
    "Dragon"
   ],
-  "rarity": 7
+  "rarity": 7,
+  "stats": {
+   "hp": 110,
+   "atk": 100,
+   "def": 100,
+   "workSpeed": 100,
+   "stamina": 160,
+   "food": 5,
+   "run": 600,
+   "ride": 900
+  },
+  "nocturnal": false,
+  "work": {
+   "Watering": 4
+  }
  },
  {
   "id": "BlueDragon_Ice",
@@ -839,7 +1734,21 @@
    "Ice",
    "Dragon"
   ],
-  "rarity": 8
+  "rarity": 8,
+  "stats": {
+   "hp": 115,
+   "atk": 105,
+   "def": 105,
+   "workSpeed": 100,
+   "stamina": 160,
+   "food": 5,
+   "run": 600,
+   "ride": 900
+  },
+  "nocturnal": false,
+  "work": {
+   "Cooling": 4
+  }
  },
  {
   "id": "ElecCat",
@@ -853,7 +1762,24 @@
   "elements": [
    "Electricity"
   ],
-  "rarity": 1
+  "rarity": 1,
+  "stats": {
+   "hp": 60,
+   "atk": 75,
+   "def": 70,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 1,
+   "run": 350,
+   "ride": 500
+  },
+  "nocturnal": false,
+  "work": {
+   "Generating Electricity": 1,
+   "Handiwork": 1,
+   "Transporting": 1,
+   "Farming": 1
+  }
  },
  {
   "id": "Kelpie",
@@ -867,7 +1793,22 @@
   "elements": [
    "Water"
   ],
-  "rarity": 1
+  "rarity": 1,
+  "stats": {
+   "hp": 70,
+   "atk": 70,
+   "def": 70,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 1,
+   "run": 700,
+   "ride": 900
+  },
+  "nocturnal": false,
+  "work": {
+   "Watering": 1,
+   "Farming": 1
+  }
  },
  {
   "id": "Kelpie_Fire",
@@ -881,7 +1822,22 @@
   "elements": [
    "Fire"
   ],
-  "rarity": 2
+  "rarity": 2,
+  "stats": {
+   "hp": 70,
+   "atk": 70,
+   "def": 70,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 1,
+   "run": 700,
+   "ride": 900
+  },
+  "nocturnal": false,
+  "work": {
+   "Kindling": 1,
+   "Farming": 1
+  }
  },
  {
   "id": "PinkRabbit",
@@ -895,7 +1851,23 @@
   "elements": [
    "Normal"
   ],
-  "rarity": 1
+  "rarity": 1,
+  "stats": {
+   "hp": 75,
+   "atk": 65,
+   "def": 70,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 1,
+   "run": 245,
+   "ride": 350
+  },
+  "nocturnal": false,
+  "work": {
+   "Handiwork": 1,
+   "Gathering": 1,
+   "Transporting": 1
+  }
  },
  {
   "id": "PinkRabbit_Grass",
@@ -909,7 +1881,24 @@
   "elements": [
    "Leaf"
   ],
-  "rarity": 1
+  "rarity": 1,
+  "stats": {
+   "hp": 80,
+   "atk": 65,
+   "def": 70,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 1,
+   "run": 245,
+   "ride": 350
+  },
+  "nocturnal": false,
+  "work": {
+   "Planting": 2,
+   "Handiwork": 2,
+   "Gathering": 2,
+   "Transporting": 1
+  }
  },
  {
   "id": "JellyfishFairy",
@@ -923,7 +1912,23 @@
   "elements": [
    "Water"
   ],
-  "rarity": 3
+  "rarity": 3,
+  "stats": {
+   "hp": 75,
+   "atk": 90,
+   "def": 70,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 3,
+   "run": 240,
+   "ride": 450
+  },
+  "nocturnal": false,
+  "work": {
+   "Watering": 2,
+   "Handiwork": 1,
+   "Transporting": 1
+  }
  },
  {
   "id": "JellyfishGhost",
@@ -938,7 +1943,24 @@
    "Water",
    "Dark"
   ],
-  "rarity": 3
+  "rarity": 3,
+  "stats": {
+   "hp": 90,
+   "atk": 75,
+   "def": 75,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 3,
+   "run": 400,
+   "ride": 600
+  },
+  "nocturnal": true,
+  "work": {
+   "Watering": 2,
+   "Handiwork": 1,
+   "Medicine Production": 1,
+   "Transporting": 1
+  }
  },
  {
   "id": "ClioneTwins",
@@ -952,7 +1974,23 @@
   "elements": [
    "Water"
   ],
-  "rarity": 2
+  "rarity": 2,
+  "stats": {
+   "hp": 65,
+   "atk": 70,
+   "def": 65,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 3,
+   "run": 450,
+   "ride": 600
+  },
+  "nocturnal": false,
+  "work": {
+   "Watering": 1,
+   "Handiwork": 2,
+   "Transporting": 1
+  }
  },
  {
   "id": "OctopusGirl",
@@ -967,7 +2005,23 @@
    "Water",
    "Dark"
   ],
-  "rarity": 5
+  "rarity": 5,
+  "stats": {
+   "hp": 70,
+   "atk": 85,
+   "def": 70,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 3,
+   "run": 300,
+   "ride": 500
+  },
+  "nocturnal": true,
+  "work": {
+   "Watering": 2,
+   "Handiwork": 2,
+   "Transporting": 2
+  }
  },
  {
   "id": "OctopusGirl_Neutral",
@@ -982,7 +2036,23 @@
    "Water",
    "Normal"
   ],
-  "rarity": 6
+  "rarity": 6,
+  "stats": {
+   "hp": 75,
+   "atk": 85,
+   "def": 70,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 3,
+   "run": 300,
+   "ride": 500
+  },
+  "nocturnal": false,
+  "work": {
+   "Watering": 2,
+   "Handiwork": 2,
+   "Transporting": 2
+  }
  },
  {
   "id": "Eagle",
@@ -996,7 +2066,21 @@
   "elements": [
    "Normal"
   ],
-  "rarity": 2
+  "rarity": 2,
+  "stats": {
+   "hp": 75,
+   "atk": 85,
+   "def": 60,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 2,
+   "run": 600,
+   "ride": 700
+  },
+  "nocturnal": false,
+  "work": {
+   "Gathering": 2
+  }
  },
  {
   "id": "GhostBlackCat",
@@ -1010,7 +2094,24 @@
   "elements": [
    "Dark"
   ],
-  "rarity": 5
+  "rarity": 5,
+  "stats": {
+   "hp": 85,
+   "atk": 95,
+   "def": 70,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 6,
+   "run": 360,
+   "ride": 540
+  },
+  "nocturnal": true,
+  "work": {
+   "Handiwork": 2,
+   "Lumbering": 1,
+   "Medicine Production": 1,
+   "Transporting": 1
+  }
  },
  {
   "id": "HawkBird",
@@ -1024,7 +2125,21 @@
   "elements": [
    "Normal"
   ],
-  "rarity": 3
+  "rarity": 3,
+  "stats": {
+   "hp": 100,
+   "atk": 95,
+   "def": 80,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 2,
+   "run": 600,
+   "ride": 750
+  },
+  "nocturnal": false,
+  "work": {
+   "Gathering": 2
+  }
  },
  {
   "id": "CatBat",
@@ -1038,7 +2153,23 @@
   "elements": [
    "Dark"
   ],
-  "rarity": 5
+  "rarity": 5,
+  "stats": {
+   "hp": 95,
+   "atk": 95,
+   "def": 80,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 2,
+   "run": 400,
+   "ride": 550
+  },
+  "nocturnal": true,
+  "work": {
+   "Gathering": 2,
+   "Mining": 3,
+   "Transporting": 2
+  }
  },
  {
   "id": "ColorfulBird",
@@ -1052,7 +2183,21 @@
   "elements": [
    "Normal"
   ],
-  "rarity": 1
+  "rarity": 1,
+  "stats": {
+   "hp": 60,
+   "atk": 75,
+   "def": 70,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 2,
+   "run": 300,
+   "ride": 550
+  },
+  "nocturnal": false,
+  "work": {
+   "Gathering": 1
+  }
  },
  {
   "id": "Kirin",
@@ -1066,7 +2211,22 @@
   "elements": [
    "Electricity"
   ],
-  "rarity": 5
+  "rarity": 5,
+  "stats": {
+   "hp": 80,
+   "atk": 105,
+   "def": 105,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 3,
+   "run": 720,
+   "ride": 1100
+  },
+  "nocturnal": false,
+  "work": {
+   "Generating Electricity": 3,
+   "Lumbering": 1
+  }
  },
  {
   "id": "Kirin_Ice",
@@ -1080,7 +2240,22 @@
   "elements": [
    "Ice"
   ],
-  "rarity": 6
+  "rarity": 6,
+  "stats": {
+   "hp": 80,
+   "atk": 105,
+   "def": 110,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 3,
+   "run": 720,
+   "ride": 1100
+  },
+  "nocturnal": false,
+  "work": {
+   "Lumbering": 3,
+   "Cooling": 6
+  }
  },
  {
   "id": "SharkKid",
@@ -1094,7 +2269,23 @@
   "elements": [
    "Water"
   ],
-  "rarity": 2
+  "rarity": 2,
+  "stats": {
+   "hp": 90,
+   "atk": 90,
+   "def": 75,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 2,
+   "run": 400,
+   "ride": 500
+  },
+  "nocturnal": false,
+  "work": {
+   "Watering": 2,
+   "Handiwork": 2,
+   "Transporting": 1
+  }
  },
  {
   "id": "SharkKid_Fire",
@@ -1108,7 +2299,23 @@
   "elements": [
    "Fire"
   ],
-  "rarity": 3
+  "rarity": 3,
+  "stats": {
+   "hp": 90,
+   "atk": 90,
+   "def": 75,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 2,
+   "run": 400,
+   "ride": 500
+  },
+  "nocturnal": false,
+  "work": {
+   "Kindling": 2,
+   "Handiwork": 2,
+   "Transporting": 1
+  }
  },
  {
   "id": "Werewolf",
@@ -1122,7 +2329,21 @@
   "elements": [
    "Dark"
   ],
-  "rarity": 3
+  "rarity": 3,
+  "stats": {
+   "hp": 80,
+   "atk": 100,
+   "def": 80,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 3,
+   "run": 600,
+   "ride": 800
+  },
+  "nocturnal": true,
+  "work": {
+   "Handiwork": 2
+  }
  },
  {
   "id": "Werewolf_Ice",
@@ -1136,7 +2357,22 @@
   "elements": [
    "Ice"
   ],
-  "rarity": 3
+  "rarity": 3,
+  "stats": {
+   "hp": 80,
+   "atk": 105,
+   "def": 80,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 3,
+   "run": 600,
+   "ride": 800
+  },
+  "nocturnal": false,
+  "work": {
+   "Handiwork": 4,
+   "Cooling": 4
+  }
  },
  {
   "id": "DarkCrow",
@@ -1150,7 +2386,22 @@
   "elements": [
    "Dark"
   ],
-  "rarity": 3
+  "rarity": 3,
+  "stats": {
+   "hp": 75,
+   "atk": 95,
+   "def": 80,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 3,
+   "run": 920,
+   "ride": 1200
+  },
+  "nocturnal": true,
+  "work": {
+   "Lumbering": 2,
+   "Farming": 1
+  }
  },
  {
   "id": "FlameBuffalo",
@@ -1164,7 +2415,22 @@
   "elements": [
    "Fire"
   ],
-  "rarity": 4
+  "rarity": 4,
+  "stats": {
+   "hp": 85,
+   "atk": 95,
+   "def": 95,
+   "workSpeed": 100,
+   "stamina": 120,
+   "food": 3,
+   "run": 700,
+   "ride": 1050
+  },
+  "nocturnal": false,
+  "work": {
+   "Kindling": 3,
+   "Lumbering": 2
+  }
  },
  {
   "id": "FluffyBird",
@@ -1178,7 +2444,22 @@
   "elements": [
    "Ice"
   ],
-  "rarity": 2
+  "rarity": 2,
+  "stats": {
+   "hp": 60,
+   "atk": 80,
+   "def": 55,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 3,
+   "run": 300,
+   "ride": 450
+  },
+  "nocturnal": false,
+  "work": {
+   "Cooling": 2,
+   "Transporting": 1
+  }
  },
  {
   "id": "LittleBriarRose",
@@ -1192,7 +2473,25 @@
   "elements": [
    "Leaf"
   ],
-  "rarity": 1
+  "rarity": 1,
+  "stats": {
+   "hp": 80,
+   "atk": 80,
+   "def": 80,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 2,
+   "run": 400,
+   "ride": 550
+  },
+  "nocturnal": false,
+  "work": {
+   "Planting": 2,
+   "Handiwork": 2,
+   "Gathering": 2,
+   "Medicine Production": 2,
+   "Transporting": 1
+  }
  },
  {
   "id": "CuteButterfly",
@@ -1206,7 +2505,23 @@
   "elements": [
    "Leaf"
   ],
-  "rarity": 4
+  "rarity": 4,
+  "stats": {
+   "hp": 70,
+   "atk": 80,
+   "def": 80,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 2,
+   "run": 550,
+   "ride": 700
+  },
+  "nocturnal": false,
+  "work": {
+   "Planting": 2,
+   "Gathering": 2,
+   "Medicine Production": 2
+  }
  },
  {
   "id": "ElecPomeranian",
@@ -1220,7 +2535,22 @@
   "elements": [
    "Electricity"
   ],
-  "rarity": 2
+  "rarity": 2,
+  "stats": {
+   "hp": 75,
+   "atk": 80,
+   "def": 70,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 3,
+   "run": 200,
+   "ride": 400
+  },
+  "nocturnal": false,
+  "work": {
+   "Generating Electricity": 2,
+   "Transporting": 1
+  }
  },
  {
   "id": "FairyDragon",
@@ -1234,7 +2564,21 @@
   "elements": [
    "Dragon"
   ],
-  "rarity": 7
+  "rarity": 7,
+  "stats": {
+   "hp": 110,
+   "atk": 80,
+   "def": 90,
+   "workSpeed": 100,
+   "stamina": 130,
+   "food": 3,
+   "run": 630,
+   "ride": 800
+  },
+  "nocturnal": false,
+  "work": {
+   "Lumbering": 3
+  }
  },
  {
   "id": "FairyDragon_Water",
@@ -1249,7 +2593,22 @@
    "Dragon",
    "Water"
   ],
-  "rarity": 8
+  "rarity": 8,
+  "stats": {
+   "hp": 115,
+   "atk": 80,
+   "def": 95,
+   "workSpeed": 100,
+   "stamina": 130,
+   "food": 3,
+   "run": 630,
+   "ride": 800
+  },
+  "nocturnal": false,
+  "work": {
+   "Watering": 4,
+   "Lumbering": 3
+  }
  },
  {
   "id": "BirdDragon",
@@ -1264,7 +2623,22 @@
    "Fire",
    "Dark"
   ],
-  "rarity": 5
+  "rarity": 5,
+  "stats": {
+   "hp": 90,
+   "atk": 115,
+   "def": 90,
+   "workSpeed": 100,
+   "stamina": 150,
+   "food": 5,
+   "run": 700,
+   "ride": 850
+  },
+  "nocturnal": true,
+  "work": {
+   "Kindling": 2,
+   "Transporting": 3
+  }
  },
  {
   "id": "BirdDragon_Ice",
@@ -1279,7 +2653,22 @@
    "Ice",
    "Dark"
   ],
-  "rarity": 5
+  "rarity": 5,
+  "stats": {
+   "hp": 90,
+   "atk": 120,
+   "def": 95,
+   "workSpeed": 100,
+   "stamina": 150,
+   "food": 5,
+   "run": 700,
+   "ride": 850
+  },
+  "nocturnal": true,
+  "work": {
+   "Cooling": 2,
+   "Transporting": 3
+  }
  },
  {
   "id": "CatVampire",
@@ -1293,7 +2682,21 @@
   "elements": [
    "Dark"
   ],
-  "rarity": 6
+  "rarity": 6,
+  "stats": {
+   "hp": 100,
+   "atk": 105,
+   "def": 110,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 7,
+   "run": 550,
+   "ride": 700
+  },
+  "nocturnal": true,
+  "work": {
+   "Medicine Production": 3
+  }
  },
  {
   "id": "VioletFairy",
@@ -1307,7 +2710,26 @@
   "elements": [
    "Leaf"
   ],
-  "rarity": 8
+  "rarity": 8,
+  "stats": {
+   "hp": 100,
+   "atk": 100,
+   "def": 120,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 5,
+   "run": 400,
+   "ride": 550
+  },
+  "nocturnal": false,
+  "work": {
+   "Planting": 3,
+   "Handiwork": 3,
+   "Gathering": 3,
+   "Medicine Production": 3,
+   "Transporting": 2,
+   "Farming": 2
+  }
  },
  {
   "id": "SoldierBee",
@@ -1321,7 +2743,27 @@
   "elements": [
    "Leaf"
   ],
-  "rarity": 4
+  "rarity": 4,
+  "stats": {
+   "hp": 80,
+   "atk": 90,
+   "def": 90,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 3,
+   "run": 450,
+   "ride": 550
+  },
+  "nocturnal": false,
+  "work": {
+   "Planting": 2,
+   "Handiwork": 2,
+   "Gathering": 3,
+   "Lumbering": 2,
+   "Medicine Production": 2,
+   "Transporting": 2,
+   "Farming": 3
+  }
  },
  {
   "id": "QueenBee",
@@ -1335,7 +2777,25 @@
   "elements": [
    "Leaf"
   ],
-  "rarity": 8
+  "rarity": 8,
+  "stats": {
+   "hp": 90,
+   "atk": 105,
+   "def": 100,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 5,
+   "run": 450,
+   "ride": 550
+  },
+  "nocturnal": false,
+  "work": {
+   "Planting": 4,
+   "Handiwork": 4,
+   "Gathering": 4,
+   "Lumbering": 3,
+   "Medicine Production": 4
+  }
  },
  {
   "id": "PinkLizard",
@@ -1349,7 +2809,24 @@
   "elements": [
    "Dark"
   ],
-  "rarity": 5
+  "rarity": 5,
+  "stats": {
+   "hp": 120,
+   "atk": 70,
+   "def": 70,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 4,
+   "run": 750,
+   "ride": 850
+  },
+  "nocturnal": true,
+  "work": {
+   "Handiwork": 3,
+   "Mining": 2,
+   "Medicine Production": 3,
+   "Transporting": 2
+  }
  },
  {
   "id": "NaughtyCat",
@@ -1363,7 +2840,21 @@
   "elements": [
    "Normal"
   ],
-  "rarity": 6
+  "rarity": 6,
+  "stats": {
+   "hp": 110,
+   "atk": 80,
+   "def": 80,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 4,
+   "run": 650,
+   "ride": 1000
+  },
+  "nocturnal": false,
+  "work": {
+   "Gathering": 3
+  }
  },
  {
   "id": "PurpleSpider",
@@ -1377,7 +2868,24 @@
   "elements": [
    "Dark"
   ],
-  "rarity": 3
+  "rarity": 3,
+  "stats": {
+   "hp": 110,
+   "atk": 100,
+   "def": 100,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 4,
+   "run": 640,
+   "ride": 1000
+  },
+  "nocturnal": true,
+  "work": {
+   "Handiwork": 3,
+   "Gathering": 3,
+   "Medicine Production": 2,
+   "Transporting": 2
+  }
  },
  {
   "id": "IceSeal",
@@ -1392,7 +2900,22 @@
    "Ice",
    "Water"
   ],
-  "rarity": 5
+  "rarity": 5,
+  "stats": {
+   "hp": 95,
+   "atk": 105,
+   "def": 105,
+   "workSpeed": 100,
+   "stamina": 120,
+   "food": 4,
+   "run": 250,
+   "ride": 375
+  },
+  "nocturnal": false,
+  "work": {
+   "Watering": 3,
+   "Cooling": 4
+  }
  },
  {
   "id": "IceSeal_Ground",
@@ -1407,7 +2930,22 @@
    "Ice",
    "Earth"
   ],
-  "rarity": 6
+  "rarity": 6,
+  "stats": {
+   "hp": 95,
+   "atk": 105,
+   "def": 110,
+   "workSpeed": 100,
+   "stamina": 120,
+   "food": 4,
+   "run": 250,
+   "ride": 375
+  },
+  "nocturnal": false,
+  "work": {
+   "Mining": 4,
+   "Cooling": 4
+  }
  },
  {
   "id": "LizardMan",
@@ -1421,7 +2959,23 @@
   "elements": [
    "Dark"
   ],
-  "rarity": 2
+  "rarity": 2,
+  "stats": {
+   "hp": 80,
+   "atk": 80,
+   "def": 50,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 2,
+   "run": 600,
+   "ride": 800
+  },
+  "nocturnal": true,
+  "work": {
+   "Handiwork": 2,
+   "Gathering": 1,
+   "Transporting": 1
+  }
  },
  {
   "id": "LizardMan_Fire",
@@ -1435,7 +2989,24 @@
   "elements": [
    "Fire"
   ],
-  "rarity": 3
+  "rarity": 3,
+  "stats": {
+   "hp": 80,
+   "atk": 80,
+   "def": 50,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 2,
+   "run": 400,
+   "ride": 550
+  },
+  "nocturnal": false,
+  "work": {
+   "Kindling": 2,
+   "Handiwork": 2,
+   "Gathering": 1,
+   "Transporting": 1
+  }
  },
  {
   "id": "Gorilla",
@@ -1449,7 +3020,23 @@
   "elements": [
    "Normal"
   ],
-  "rarity": 5
+  "rarity": 5,
+  "stats": {
+   "hp": 90,
+   "atk": 95,
+   "def": 90,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 3,
+   "run": 550,
+   "ride": 720
+  },
+  "nocturnal": false,
+  "work": {
+   "Handiwork": 2,
+   "Lumbering": 3,
+   "Transporting": 3
+  }
  },
  {
   "id": "Gorilla_Ground",
@@ -1463,7 +3050,23 @@
   "elements": [
    "Earth"
   ],
-  "rarity": 5
+  "rarity": 5,
+  "stats": {
+   "hp": 90,
+   "atk": 100,
+   "def": 90,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 3,
+   "run": 550,
+   "ride": 720
+  },
+  "nocturnal": false,
+  "work": {
+   "Handiwork": 2,
+   "Mining": 3,
+   "Transporting": 3
+  }
  },
  {
   "id": "Serpent",
@@ -1477,7 +3080,22 @@
   "elements": [
    "Water"
   ],
-  "rarity": 4
+  "rarity": 4,
+  "stats": {
+   "hp": 90,
+   "atk": 90,
+   "def": 80,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 3,
+   "run": 500,
+   "ride": 800
+  },
+  "nocturnal": false,
+  "work": {
+   "Watering": 3,
+   "Farming": 2
+  }
  },
  {
   "id": "Serpent_Ground",
@@ -1491,7 +3109,21 @@
   "elements": [
    "Earth"
   ],
-  "rarity": 5
+  "rarity": 5,
+  "stats": {
+   "hp": 90,
+   "atk": 90,
+   "def": 100,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 3,
+   "run": 500,
+   "ride": 800
+  },
+  "nocturnal": false,
+  "work": {
+   "Gathering": 3
+  }
  },
  {
   "id": "RobinHood",
@@ -1505,7 +3137,26 @@
   "elements": [
    "Leaf"
   ],
-  "rarity": 5
+  "rarity": 5,
+  "stats": {
+   "hp": 90,
+   "atk": 105,
+   "def": 80,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 3,
+   "run": 600,
+   "ride": 750
+  },
+  "nocturnal": false,
+  "work": {
+   "Planting": 2,
+   "Handiwork": 3,
+   "Gathering": 3,
+   "Lumbering": 2,
+   "Medicine Production": 1,
+   "Transporting": 2
+  }
  },
  {
   "id": "RobinHood_Ground",
@@ -1520,7 +3171,25 @@
    "Leaf",
    "Earth"
   ],
-  "rarity": 6
+  "rarity": 6,
+  "stats": {
+   "hp": 90,
+   "atk": 105,
+   "def": 80,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 3,
+   "run": 600,
+   "ride": 750
+  },
+  "nocturnal": false,
+  "work": {
+   "Handiwork": 3,
+   "Gathering": 3,
+   "Lumbering": 2,
+   "Medicine Production": 2,
+   "Transporting": 2
+  }
  },
  {
   "id": "FlowerRabbit",
@@ -1534,7 +3203,25 @@
   "elements": [
    "Leaf"
   ],
-  "rarity": 1
+  "rarity": 1,
+  "stats": {
+   "hp": 75,
+   "atk": 65,
+   "def": 70,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 2,
+   "run": 400,
+   "ride": 550
+  },
+  "nocturnal": false,
+  "work": {
+   "Planting": 2,
+   "Handiwork": 2,
+   "Gathering": 2,
+   "Medicine Production": 1,
+   "Transporting": 1
+  }
  },
  {
   "id": "FoxMage",
@@ -1548,7 +3235,23 @@
   "elements": [
    "Fire"
   ],
-  "rarity": 6
+  "rarity": 6,
+  "stats": {
+   "hp": 90,
+   "atk": 110,
+   "def": 80,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 4,
+   "run": 440,
+   "ride": 620
+  },
+  "nocturnal": false,
+  "work": {
+   "Kindling": 3,
+   "Handiwork": 3,
+   "Transporting": 2
+  }
  },
  {
   "id": "FoxMage_Dark",
@@ -1563,7 +3266,23 @@
    "Fire",
    "Dark"
   ],
-  "rarity": 6
+  "rarity": 6,
+  "stats": {
+   "hp": 90,
+   "atk": 110,
+   "def": 85,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 4,
+   "run": 440,
+   "ride": 620
+  },
+  "nocturnal": true,
+  "work": {
+   "Kindling": 4,
+   "Handiwork": 4,
+   "Transporting": 2
+  }
  },
  {
   "id": "CatMage",
@@ -1577,7 +3296,23 @@
   "elements": [
    "Dark"
   ],
-  "rarity": 6
+  "rarity": 6,
+  "stats": {
+   "hp": 90,
+   "atk": 105,
+   "def": 90,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 4,
+   "run": 440,
+   "ride": 620
+  },
+  "nocturnal": true,
+  "work": {
+   "Handiwork": 3,
+   "Medicine Production": 3,
+   "Transporting": 2
+  }
  },
  {
   "id": "CatMage_Fire",
@@ -1592,7 +3327,24 @@
    "Dark",
    "Fire"
   ],
-  "rarity": 6
+  "rarity": 6,
+  "stats": {
+   "hp": 95,
+   "atk": 105,
+   "def": 90,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 4,
+   "run": 440,
+   "ride": 620
+  },
+  "nocturnal": true,
+  "work": {
+   "Kindling": 3,
+   "Handiwork": 3,
+   "Medicine Production": 3,
+   "Transporting": 2
+  }
  },
  {
   "id": "HadesBird",
@@ -1606,7 +3358,21 @@
   "elements": [
    "Dark"
   ],
-  "rarity": 7
+  "rarity": 7,
+  "stats": {
+   "hp": 100,
+   "atk": 125,
+   "def": 100,
+   "workSpeed": 100,
+   "stamina": 170,
+   "food": 7,
+   "run": 700,
+   "ride": 1100
+  },
+  "nocturnal": true,
+  "work": {
+   "Transporting": 4
+  }
  },
  {
   "id": "HadesBird_Electric",
@@ -1621,7 +3387,22 @@
    "Dark",
    "Electricity"
   ],
-  "rarity": 8
+  "rarity": 8,
+  "stats": {
+   "hp": 105,
+   "atk": 125,
+   "def": 100,
+   "workSpeed": 100,
+   "stamina": 170,
+   "food": 7,
+   "run": 700,
+   "ride": 1100
+  },
+  "nocturnal": true,
+  "work": {
+   "Generating Electricity": 4,
+   "Transporting": 5
+  }
  },
  {
   "id": "GrassMinotaur",
@@ -1635,7 +3416,25 @@
   "elements": [
    "Leaf"
   ],
-  "rarity": 6
+  "rarity": 6,
+  "stats": {
+   "hp": 110,
+   "atk": 105,
+   "def": 105,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 8,
+   "run": 700,
+   "ride": 1000
+  },
+  "nocturnal": false,
+  "work": {
+   "Planting": 3,
+   "Gathering": 2,
+   "Lumbering": 3,
+   "Mining": 2,
+   "Transporting": 3
+  }
  },
  {
   "id": "GrassMinotaur_Ice",
@@ -1649,7 +3448,24 @@
   "elements": [
    "Ice"
   ],
-  "rarity": 7
+  "rarity": 7,
+  "stats": {
+   "hp": 120,
+   "atk": 100,
+   "def": 105,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 8,
+   "run": 700,
+   "ride": 1000
+  },
+  "nocturnal": false,
+  "work": {
+   "Lumbering": 3,
+   "Mining": 3,
+   "Cooling": 5,
+   "Transporting": 3
+  }
  },
  {
   "id": "Mutant",
@@ -1663,7 +3479,23 @@
   "elements": [
    "Normal"
   ],
-  "rarity": 6
+  "rarity": 6,
+  "stats": {
+   "hp": 90,
+   "atk": 100,
+   "def": 90,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 4,
+   "run": 500,
+   "ride": 650
+  },
+  "nocturnal": false,
+  "work": {
+   "Handiwork": 4,
+   "Gathering": 2,
+   "Transporting": 2
+  }
  },
  {
   "id": "FengyunDeeper",
@@ -1677,7 +3509,21 @@
   "elements": [
    "Normal"
   ],
-  "rarity": 3
+  "rarity": 3,
+  "stats": {
+   "hp": 110,
+   "atk": 110,
+   "def": 90,
+   "workSpeed": 100,
+   "stamina": 140,
+   "food": 5,
+   "run": 750,
+   "ride": 1050
+  },
+  "nocturnal": false,
+  "work": {
+   "Lumbering": 3
+  }
  },
  {
   "id": "FengyunDeeper_Electric",
@@ -1691,7 +3537,22 @@
   "elements": [
    "Electricity"
   ],
-  "rarity": 3
+  "rarity": 3,
+  "stats": {
+   "hp": 110,
+   "atk": 115,
+   "def": 90,
+   "workSpeed": 100,
+   "stamina": 140,
+   "food": 5,
+   "run": 750,
+   "ride": 1050
+  },
+  "nocturnal": false,
+  "work": {
+   "Generating Electricity": 5,
+   "Lumbering": 4
+  }
  },
  {
   "id": "FlowerDinosaur",
@@ -1706,7 +3567,22 @@
    "Leaf",
    "Dragon"
   ],
-  "rarity": 6
+  "rarity": 6,
+  "stats": {
+   "hp": 110,
+   "atk": 85,
+   "def": 90,
+   "workSpeed": 100,
+   "stamina": 130,
+   "food": 4,
+   "run": 700,
+   "ride": 1030
+  },
+  "nocturnal": false,
+  "work": {
+   "Planting": 3,
+   "Lumbering": 3
+  }
  },
  {
   "id": "FlowerDinosaur_Electric",
@@ -1721,7 +3597,22 @@
    "Electricity",
    "Dragon"
   ],
-  "rarity": 7
+  "rarity": 7,
+  "stats": {
+   "hp": 110,
+   "atk": 90,
+   "def": 90,
+   "workSpeed": 100,
+   "stamina": 130,
+   "food": 4,
+   "run": 700,
+   "ride": 1030
+  },
+  "nocturnal": false,
+  "work": {
+   "Generating Electricity": 3,
+   "Lumbering": 4
+  }
  },
  {
   "id": "Ronin",
@@ -1735,7 +3626,25 @@
   "elements": [
    "Fire"
   ],
-  "rarity": 7
+  "rarity": 7,
+  "stats": {
+   "hp": 80,
+   "atk": 125,
+   "def": 80,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 5,
+   "run": 600,
+   "ride": 900
+  },
+  "nocturnal": false,
+  "work": {
+   "Kindling": 2,
+   "Handiwork": 2,
+   "Gathering": 1,
+   "Lumbering": 3,
+   "Transporting": 2
+  }
  },
  {
   "id": "Ronin_Dark",
@@ -1750,7 +3659,25 @@
    "Fire",
    "Dark"
   ],
-  "rarity": 7
+  "rarity": 7,
+  "stats": {
+   "hp": 80,
+   "atk": 130,
+   "def": 80,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 5,
+   "run": 600,
+   "ride": 900
+  },
+  "nocturnal": true,
+  "work": {
+   "Kindling": 2,
+   "Handiwork": 2,
+   "Gathering": 1,
+   "Lumbering": 5,
+   "Transporting": 2
+  }
  },
  {
   "id": "IceCrocodile",
@@ -1765,7 +3692,23 @@
    "Ice",
    "Water"
   ],
-  "rarity": 3
+  "rarity": 3,
+  "stats": {
+   "hp": 75,
+   "atk": 80,
+   "def": 85,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 3,
+   "run": 300,
+   "ride": 450
+  },
+  "nocturnal": false,
+  "work": {
+   "Watering": 2,
+   "Cooling": 3,
+   "Transporting": 1
+  }
  },
  {
   "id": "GrassMammoth",
@@ -1780,7 +3723,23 @@
    "Leaf",
    "Earth"
   ],
-  "rarity": 8
+  "rarity": 8,
+  "stats": {
+   "hp": 150,
+   "atk": 85,
+   "def": 90,
+   "workSpeed": 100,
+   "stamina": 180,
+   "food": 6,
+   "run": 600,
+   "ride": 1030
+  },
+  "nocturnal": false,
+  "work": {
+   "Planting": 4,
+   "Lumbering": 4,
+   "Mining": 4
+  }
  },
  {
   "id": "GrassMammoth_Ice",
@@ -1795,7 +3754,23 @@
    "Ice",
    "Earth"
   ],
-  "rarity": 9
+  "rarity": 9,
+  "stats": {
+   "hp": 150,
+   "atk": 85,
+   "def": 90,
+   "workSpeed": 100,
+   "stamina": 180,
+   "food": 6,
+   "run": 600,
+   "ride": 1030
+  },
+  "nocturnal": false,
+  "work": {
+   "Lumbering": 5,
+   "Mining": 4,
+   "Cooling": 5
+  }
  },
  {
   "id": "StuffedShark",
@@ -1809,7 +3784,22 @@
   "elements": [
    "Water"
   ],
-  "rarity": 3
+  "rarity": 3,
+  "stats": {
+   "hp": 75,
+   "atk": 85,
+   "def": 80,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 2,
+   "run": 250,
+   "ride": 400
+  },
+  "nocturnal": false,
+  "work": {
+   "Watering": 2,
+   "Transporting": 1
+  }
  },
  {
   "id": "StuffedShark_Fire",
@@ -1824,7 +3814,23 @@
    "Water",
    "Fire"
   ],
-  "rarity": 4
+  "rarity": 4,
+  "stats": {
+   "hp": 75,
+   "atk": 90,
+   "def": 80,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 2,
+   "run": 250,
+   "ride": 400
+  },
+  "nocturnal": false,
+  "work": {
+   "Kindling": 2,
+   "Watering": 2,
+   "Transporting": 1
+  }
  },
  {
   "id": "FlowerDoll",
@@ -1838,7 +3844,25 @@
   "elements": [
    "Leaf"
   ],
-  "rarity": 8
+  "rarity": 8,
+  "stats": {
+   "hp": 100,
+   "atk": 95,
+   "def": 100,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 6,
+   "run": 550,
+   "ride": 700
+  },
+  "nocturnal": false,
+  "work": {
+   "Planting": 4,
+   "Handiwork": 3,
+   "Gathering": 3,
+   "Medicine Production": 4,
+   "Transporting": 2
+  }
  },
  {
   "id": "FlowerDoll_Fire",
@@ -1853,7 +3877,25 @@
    "Leaf",
    "Fire"
   ],
-  "rarity": 9
+  "rarity": 9,
+  "stats": {
+   "hp": 95,
+   "atk": 105,
+   "def": 100,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 6,
+   "run": 550,
+   "ride": 700
+  },
+  "nocturnal": false,
+  "work": {
+   "Kindling": 4,
+   "Handiwork": 3,
+   "Gathering": 3,
+   "Medicine Production": 4,
+   "Transporting": 2
+  }
  },
  {
   "id": "PandaGirl",
@@ -1867,7 +3909,24 @@
   "elements": [
    "Leaf"
   ],
-  "rarity": 7
+  "rarity": 7,
+  "stats": {
+   "hp": 100,
+   "atk": 115,
+   "def": 95,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 7,
+   "run": 600,
+   "ride": 750
+  },
+  "nocturnal": false,
+  "work": {
+   "Planting": 3,
+   "Handiwork": 3,
+   "Gathering": 3,
+   "Transporting": 2
+  }
  },
  {
   "id": "Baphomet",
@@ -1882,7 +3941,24 @@
    "Fire",
    "Dark"
   ],
-  "rarity": 4
+  "rarity": 4,
+  "stats": {
+   "hp": 95,
+   "atk": 100,
+   "def": 85,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 5,
+   "run": 700,
+   "ride": 960
+  },
+  "nocturnal": true,
+  "work": {
+   "Kindling": 3,
+   "Handiwork": 2,
+   "Mining": 3,
+   "Transporting": 2
+  }
  },
  {
   "id": "Baphomet_Dark",
@@ -1896,7 +3972,23 @@
   "elements": [
    "Dark"
   ],
-  "rarity": 5
+  "rarity": 5,
+  "stats": {
+   "hp": 95,
+   "atk": 105,
+   "def": 85,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 5,
+   "run": 700,
+   "ride": 960
+  },
+  "nocturnal": true,
+  "work": {
+   "Handiwork": 3,
+   "Mining": 4,
+   "Transporting": 3
+  }
  },
  {
   "id": "RaijinDaughter",
@@ -1910,7 +4002,23 @@
   "elements": [
    "Electricity"
   ],
-  "rarity": 2
+  "rarity": 2,
+  "stats": {
+   "hp": 70,
+   "atk": 80,
+   "def": 70,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 2,
+   "run": 400,
+   "ride": 550
+  },
+  "nocturnal": false,
+  "work": {
+   "Generating Electricity": 3,
+   "Handiwork": 2,
+   "Transporting": 2
+  }
  },
  {
   "id": "RaijinDaughter_Water",
@@ -1925,7 +4033,24 @@
    "Dark",
    "Electricity"
   ],
-  "rarity": 2
+  "rarity": 2,
+  "stats": {
+   "hp": 70,
+   "atk": 80,
+   "def": 75,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 2,
+   "run": 400,
+   "ride": 550
+  },
+  "nocturnal": true,
+  "work": {
+   "Generating Electricity": 1,
+   "Handiwork": 1,
+   "Medicine Production": 1,
+   "Transporting": 2
+  }
  },
  {
   "id": "FireKirin",
@@ -1939,7 +4064,22 @@
   "elements": [
    "Fire"
   ],
-  "rarity": 6
+  "rarity": 6,
+  "stats": {
+   "hp": 100,
+   "atk": 95,
+   "def": 90,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 4,
+   "run": 850,
+   "ride": 1300
+  },
+  "nocturnal": false,
+  "work": {
+   "Kindling": 4,
+   "Lumbering": 2
+  }
  },
  {
   "id": "FireKirin_Dark",
@@ -1954,7 +4094,22 @@
    "Fire",
    "Dark"
   ],
-  "rarity": 7
+  "rarity": 7,
+  "stats": {
+   "hp": 100,
+   "atk": 95,
+   "def": 90,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 4,
+   "run": 850,
+   "ride": 1300
+  },
+  "nocturnal": true,
+  "work": {
+   "Kindling": 4,
+   "Lumbering": 3
+  }
  },
  {
   "id": "LazyDragon",
@@ -1969,7 +4124,22 @@
    "Dragon",
    "Water"
   ],
-  "rarity": 8
+  "rarity": 8,
+  "stats": {
+   "hp": 120,
+   "atk": 115,
+   "def": 110,
+   "workSpeed": 100,
+   "stamina": 200,
+   "food": 7,
+   "run": 650,
+   "ride": 1000
+  },
+  "nocturnal": false,
+  "work": {
+   "Watering": 3,
+   "Transporting": 3
+  }
  },
  {
   "id": "LazyDragon_Electric",
@@ -1984,7 +4154,22 @@
    "Dragon",
    "Electricity"
   ],
-  "rarity": 9
+  "rarity": 9,
+  "stats": {
+   "hp": 120,
+   "atk": 120,
+   "def": 110,
+   "workSpeed": 100,
+   "stamina": 200,
+   "food": 7,
+   "run": 650,
+   "ride": 1000
+  },
+  "nocturnal": false,
+  "work": {
+   "Generating Electricity": 4,
+   "Transporting": 3
+  }
  },
  {
   "id": "LazyDragon_Electric_Tower",
@@ -1999,7 +4184,22 @@
    "Dragon",
    "Electricity"
   ],
-  "rarity": 9
+  "rarity": 9,
+  "stats": {
+   "hp": 120,
+   "atk": 120,
+   "def": 110,
+   "workSpeed": 100,
+   "stamina": 200,
+   "food": 7,
+   "run": 650,
+   "ride": 1000
+  },
+  "nocturnal": false,
+  "work": {
+   "Generating Electricity": 6,
+   "Transporting": 4
+  }
  },
  {
   "id": "IceFox",
@@ -2013,7 +4213,22 @@
   "elements": [
    "Ice"
   ],
-  "rarity": 5
+  "rarity": 5,
+  "stats": {
+   "hp": 90,
+   "atk": 95,
+   "def": 105,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 4,
+   "run": 600,
+   "ride": 750
+  },
+  "nocturnal": false,
+  "work": {
+   "Cooling": 4,
+   "Farming": 3
+  }
  },
  {
   "id": "ThunderBird",
@@ -2027,7 +4242,23 @@
   "elements": [
    "Electricity"
   ],
-  "rarity": 6
+  "rarity": 6,
+  "stats": {
+   "hp": 105,
+   "atk": 115,
+   "def": 80,
+   "workSpeed": 100,
+   "stamina": 160,
+   "food": 5,
+   "run": 750,
+   "ride": 1200
+  },
+  "nocturnal": false,
+  "work": {
+   "Generating Electricity": 4,
+   "Gathering": 2,
+   "Transporting": 5
+  }
  },
  {
   "id": "ThunderBird_Ice",
@@ -2041,7 +4272,23 @@
   "elements": [
    "Ice"
   ],
-  "rarity": 7
+  "rarity": 7,
+  "stats": {
+   "hp": 105,
+   "atk": 115,
+   "def": 85,
+   "workSpeed": 100,
+   "stamina": 160,
+   "food": 5,
+   "run": 750,
+   "ride": 1200
+  },
+  "nocturnal": false,
+  "work": {
+   "Gathering": 2,
+   "Cooling": 5,
+   "Transporting": 5
+  }
  },
  {
   "id": "GhostAnglerfish",
@@ -2056,7 +4303,22 @@
    "Dark",
    "Water"
   ],
-  "rarity": 5
+  "rarity": 5,
+  "stats": {
+   "hp": 90,
+   "atk": 125,
+   "def": 105,
+   "workSpeed": 100,
+   "stamina": 320,
+   "food": 7,
+   "run": 500,
+   "ride": 800
+  },
+  "nocturnal": true,
+  "work": {
+   "Watering": 5,
+   "Transporting": 2
+  }
  },
  {
   "id": "GhostAnglerfish_Fire",
@@ -2071,7 +4333,23 @@
    "Fire",
    "Water"
   ],
-  "rarity": 6
+  "rarity": 6,
+  "stats": {
+   "hp": 90,
+   "atk": 130,
+   "def": 105,
+   "workSpeed": 100,
+   "stamina": 320,
+   "food": 7,
+   "run": 500,
+   "ride": 800
+  },
+  "nocturnal": false,
+  "work": {
+   "Kindling": 5,
+   "Watering": 5,
+   "Transporting": 2
+  }
  },
  {
   "id": "ThunderDog",
@@ -2085,7 +4363,21 @@
   "elements": [
    "Electricity"
   ],
-  "rarity": 5
+  "rarity": 5,
+  "stats": {
+   "hp": 90,
+   "atk": 100,
+   "def": 80,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 4,
+   "run": 700,
+   "ride": 1150
+  },
+  "nocturnal": false,
+  "work": {
+   "Generating Electricity": 4
+  }
  },
  {
   "id": "ThunderDog_Ice",
@@ -2099,7 +4391,21 @@
   "elements": [
    "Ice"
   ],
-  "rarity": 6
+  "rarity": 6,
+  "stats": {
+   "hp": 90,
+   "atk": 105,
+   "def": 80,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 4,
+   "run": 700,
+   "ride": 1150
+  },
+  "nocturnal": false,
+  "work": {
+   "Cooling": 3
+  }
  },
  {
   "id": "DarkScorpion",
@@ -2114,7 +4420,22 @@
    "Dark",
    "Earth"
   ],
-  "rarity": 9
+  "rarity": 9,
+  "stats": {
+   "hp": 100,
+   "atk": 100,
+   "def": 130,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 6,
+   "run": 1000,
+   "ride": 1200
+  },
+  "nocturnal": true,
+  "work": {
+   "Lumbering": 3,
+   "Mining": 5
+  }
  },
  {
   "id": "DarkScorpion_Ground",
@@ -2128,7 +4449,22 @@
   "elements": [
    "Earth"
   ],
-  "rarity": 10
+  "rarity": 10,
+  "stats": {
+   "hp": 100,
+   "atk": 105,
+   "def": 130,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 6,
+   "run": 1000,
+   "ride": 1200
+  },
+  "nocturnal": false,
+  "work": {
+   "Lumbering": 3,
+   "Mining": 6
+  }
  },
  {
   "id": "CactusDoll",
@@ -2142,7 +4478,23 @@
   "elements": [
    "Leaf"
   ],
-  "rarity": 2
+  "rarity": 2,
+  "stats": {
+   "hp": 75,
+   "atk": 85,
+   "def": 70,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 2,
+   "run": 525,
+   "ride": 630
+  },
+  "nocturnal": false,
+  "work": {
+   "Planting": 3,
+   "Gathering": 3,
+   "Transporting": 1
+  }
  },
  {
   "id": "CactusDoll_Dark",
@@ -2157,7 +4509,23 @@
    "Dark",
    "Leaf"
   ],
-  "rarity": 3
+  "rarity": 3,
+  "stats": {
+   "hp": 75,
+   "atk": 90,
+   "def": 70,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 2,
+   "run": 525,
+   "ride": 630
+  },
+  "nocturnal": true,
+  "work": {
+   "Planting": 3,
+   "Gathering": 3,
+   "Transporting": 1
+  }
  },
  {
   "id": "IceDeer",
@@ -2171,7 +4539,22 @@
   "elements": [
    "Ice"
   ],
-  "rarity": 4
+  "rarity": 4,
+  "stats": {
+   "hp": 100,
+   "atk": 85,
+   "def": 110,
+   "workSpeed": 100,
+   "stamina": 140,
+   "food": 4,
+   "run": 700,
+   "ride": 1070
+  },
+  "nocturnal": false,
+  "work": {
+   "Lumbering": 3,
+   "Cooling": 3
+  }
  },
  {
   "id": "GrassPanda",
@@ -2185,7 +4568,24 @@
   "elements": [
    "Leaf"
   ],
-  "rarity": 6
+  "rarity": 6,
+  "stats": {
+   "hp": 100,
+   "atk": 90,
+   "def": 90,
+   "workSpeed": 100,
+   "stamina": 130,
+   "food": 4,
+   "run": 600,
+   "ride": 1000
+  },
+  "nocturnal": false,
+  "work": {
+   "Planting": 3,
+   "Handiwork": 2,
+   "Lumbering": 4,
+   "Transporting": 4
+  }
  },
  {
   "id": "GrassPanda_Electric",
@@ -2199,7 +4599,24 @@
   "elements": [
    "Electricity"
   ],
-  "rarity": 7
+  "rarity": 7,
+  "stats": {
+   "hp": 100,
+   "atk": 100,
+   "def": 100,
+   "workSpeed": 100,
+   "stamina": 130,
+   "food": 4,
+   "run": 600,
+   "ride": 1000
+  },
+  "nocturnal": false,
+  "work": {
+   "Generating Electricity": 4,
+   "Handiwork": 3,
+   "Lumbering": 4,
+   "Transporting": 4
+  }
  },
  {
   "id": "GrassPanda_Electric_Tower",
@@ -2213,7 +4630,24 @@
   "elements": [
    "Electricity"
   ],
-  "rarity": 7
+  "rarity": 7,
+  "stats": {
+   "hp": 100,
+   "atk": 100,
+   "def": 100,
+   "workSpeed": 100,
+   "stamina": 130,
+   "food": 5,
+   "run": 600,
+   "ride": 1000
+  },
+  "nocturnal": false,
+  "work": {
+   "Generating Electricity": 4,
+   "Handiwork": 3,
+   "Lumbering": 4,
+   "Transporting": 4
+  }
  },
  {
   "id": "WeaselDragon",
@@ -2228,7 +4662,22 @@
    "Ice",
    "Dragon"
   ],
-  "rarity": 4
+  "rarity": 4,
+  "stats": {
+   "hp": 90,
+   "atk": 80,
+   "def": 80,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 3,
+   "run": 750,
+   "ride": 1050
+  },
+  "nocturnal": false,
+  "work": {
+   "Gathering": 1,
+   "Cooling": 2
+  }
  },
  {
   "id": "WeaselDragon_Fire",
@@ -2243,7 +4692,22 @@
    "Fire",
    "Dragon"
   ],
-  "rarity": 5
+  "rarity": 5,
+  "stats": {
+   "hp": 90,
+   "atk": 85,
+   "def": 80,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 3,
+   "run": 750,
+   "ride": 1050
+  },
+  "nocturnal": false,
+  "work": {
+   "Kindling": 4,
+   "Gathering": 3
+  }
  },
  {
   "id": "RedArmorBird",
@@ -2257,7 +4721,22 @@
   "elements": [
    "Fire"
   ],
-  "rarity": 7
+  "rarity": 7,
+  "stats": {
+   "hp": 95,
+   "atk": 105,
+   "def": 120,
+   "workSpeed": 100,
+   "stamina": 150,
+   "food": 7,
+   "run": 800,
+   "ride": 1300
+  },
+  "nocturnal": false,
+  "work": {
+   "Kindling": 4,
+   "Transporting": 5
+  }
  },
  {
   "id": "VolcanoDragon",
@@ -2272,7 +4751,22 @@
    "Fire",
    "Earth"
   ],
-  "rarity": 7
+  "rarity": 7,
+  "stats": {
+   "hp": 110,
+   "atk": 125,
+   "def": 115,
+   "workSpeed": 100,
+   "stamina": 270,
+   "food": 8,
+   "run": 650,
+   "ride": 850
+  },
+  "nocturnal": false,
+  "work": {
+   "Kindling": 5,
+   "Mining": 5
+  }
  },
  {
   "id": "VolcanoDragon_Ice",
@@ -2287,7 +4781,22 @@
    "Ice",
    "Earth"
   ],
-  "rarity": 8
+  "rarity": 8,
+  "stats": {
+   "hp": 110,
+   "atk": 125,
+   "def": 120,
+   "workSpeed": 100,
+   "stamina": 270,
+   "food": 8,
+   "run": 650,
+   "ride": 850
+  },
+  "nocturnal": false,
+  "work": {
+   "Mining": 5,
+   "Cooling": 5
+  }
  },
  {
   "id": "TropicalOstrich",
@@ -2301,7 +4810,23 @@
   "elements": [
    "Leaf"
   ],
-  "rarity": 6
+  "rarity": 6,
+  "stats": {
+   "hp": 105,
+   "atk": 110,
+   "def": 115,
+   "workSpeed": 100,
+   "stamina": 180,
+   "food": 6,
+   "run": 550,
+   "ride": 1000
+  },
+  "nocturnal": false,
+  "work": {
+   "Planting": 4,
+   "Gathering": 4,
+   "Mining": 5
+  }
  },
  {
   "id": "DrillGame",
@@ -2315,7 +4840,21 @@
   "elements": [
    "Earth"
   ],
-  "rarity": 5
+  "rarity": 5,
+  "stats": {
+   "hp": 80,
+   "atk": 95,
+   "def": 120,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 5,
+   "run": 300,
+   "ride": 420
+  },
+  "nocturnal": false,
+  "work": {
+   "Mining": 4
+  }
  },
  {
   "id": "SakuraSaurus",
@@ -2329,7 +4868,21 @@
   "elements": [
    "Leaf"
   ],
-  "rarity": 8
+  "rarity": 8,
+  "stats": {
+   "hp": 120,
+   "atk": 90,
+   "def": 100,
+   "workSpeed": 100,
+   "stamina": 150,
+   "food": 6,
+   "run": 550,
+   "ride": 1020
+  },
+  "nocturnal": false,
+  "work": {
+   "Planting": 5
+  }
  },
  {
   "id": "SakuraSaurus_Water",
@@ -2344,7 +4897,21 @@
    "Leaf",
    "Water"
   ],
-  "rarity": 8
+  "rarity": 8,
+  "stats": {
+   "hp": 120,
+   "atk": 95,
+   "def": 100,
+   "workSpeed": 100,
+   "stamina": 150,
+   "food": 6,
+   "run": 550,
+   "ride": 1020
+  },
+  "nocturnal": false,
+  "work": {
+   "Watering": 5
+  }
  },
  {
   "id": "LazyCatfish",
@@ -2359,7 +4926,24 @@
    "Earth",
    "Water"
   ],
-  "rarity": 4
+  "rarity": 4,
+  "stats": {
+   "hp": 100,
+   "atk": 70,
+   "def": 95,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 3,
+   "run": 450,
+   "ride": 600
+  },
+  "nocturnal": false,
+  "work": {
+   "Watering": 2,
+   "Mining": 2,
+   "Transporting": 1,
+   "Farming": 1
+  }
  },
  {
   "id": "LazyCatfish_Gold",
@@ -2374,7 +4958,24 @@
    "Earth",
    "Water"
   ],
-  "rarity": 5
+  "rarity": 5,
+  "stats": {
+   "hp": 105,
+   "atk": 75,
+   "def": 100,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 3,
+   "run": 450,
+   "ride": 600
+  },
+  "nocturnal": false,
+  "work": {
+   "Watering": 2,
+   "Mining": 2,
+   "Transporting": 1,
+   "Farming": 4
+  }
  },
  {
   "id": "Plesiosaur",
@@ -2389,7 +4990,23 @@
    "Leaf",
    "Earth"
   ],
-  "rarity": 8
+  "rarity": 8,
+  "stats": {
+   "hp": 130,
+   "atk": 95,
+   "def": 120,
+   "workSpeed": 100,
+   "stamina": 270,
+   "food": 7,
+   "run": 600,
+   "ride": 1020
+  },
+  "nocturnal": false,
+  "work": {
+   "Planting": 5,
+   "Gathering": 5,
+   "Mining": 3
+  }
  },
  {
   "id": "AmaterasuWolf",
@@ -2403,7 +5020,21 @@
   "elements": [
    "Fire"
   ],
-  "rarity": 6
+  "rarity": 6,
+  "stats": {
+   "hp": 100,
+   "atk": 115,
+   "def": 100,
+   "workSpeed": 100,
+   "stamina": 140,
+   "food": 5,
+   "run": 700,
+   "ride": 1100
+  },
+  "nocturnal": false,
+  "work": {
+   "Kindling": 3
+  }
  },
  {
   "id": "AmaterasuWolf_Dark",
@@ -2417,7 +5048,21 @@
   "elements": [
    "Dark"
   ],
-  "rarity": 6
+  "rarity": 6,
+  "stats": {
+   "hp": 100,
+   "atk": 115,
+   "def": 105,
+   "workSpeed": 100,
+   "stamina": 140,
+   "food": 5,
+   "run": 700,
+   "ride": 1100
+  },
+  "nocturnal": true,
+  "work": {
+   "Kindling": 4
+  }
  },
  {
   "id": "Manticore",
@@ -2431,7 +5076,22 @@
   "elements": [
    "Fire"
   ],
-  "rarity": 7
+  "rarity": 7,
+  "stats": {
+   "hp": 105,
+   "atk": 110,
+   "def": 80,
+   "workSpeed": 100,
+   "stamina": 150,
+   "food": 6,
+   "run": 800,
+   "ride": 1200
+  },
+  "nocturnal": false,
+  "work": {
+   "Kindling": 5,
+   "Lumbering": 3
+  }
  },
  {
   "id": "Manticore_Dark",
@@ -2446,7 +5106,22 @@
    "Fire",
    "Dark"
   ],
-  "rarity": 8
+  "rarity": 8,
+  "stats": {
+   "hp": 105,
+   "atk": 115,
+   "def": 80,
+   "workSpeed": 100,
+   "stamina": 150,
+   "food": 6,
+   "run": 800,
+   "ride": 1200
+  },
+  "nocturnal": true,
+  "work": {
+   "Kindling": 5,
+   "Lumbering": 3
+  }
  },
  {
   "id": "HerculesBeetle",
@@ -2461,7 +5136,24 @@
    "Earth",
    "Leaf"
   ],
-  "rarity": 8
+  "rarity": 8,
+  "stats": {
+   "hp": 120,
+   "atk": 100,
+   "def": 120,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 6,
+   "run": 500,
+   "ride": 600
+  },
+  "nocturnal": false,
+  "work": {
+   "Planting": 3,
+   "Handiwork": 3,
+   "Lumbering": 4,
+   "Transporting": 5
+  }
  },
  {
   "id": "HerculesBeetle_Ground",
@@ -2475,7 +5167,23 @@
   "elements": [
    "Earth"
   ],
-  "rarity": 9
+  "rarity": 9,
+  "stats": {
+   "hp": 120,
+   "atk": 105,
+   "def": 120,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 6,
+   "run": 500,
+   "ride": 600
+  },
+  "nocturnal": false,
+  "work": {
+   "Handiwork": 2,
+   "Mining": 5,
+   "Transporting": 5
+  }
  },
  {
   "id": "SnowPeafowl",
@@ -2489,7 +5197,22 @@
   "elements": [
    "Ice"
   ],
-  "rarity": 4
+  "rarity": 4,
+  "stats": {
+   "hp": 110,
+   "atk": 100,
+   "def": 100,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 5,
+   "run": 500,
+   "ride": 750
+  },
+  "nocturnal": false,
+  "work": {
+   "Gathering": 2,
+   "Cooling": 4
+  }
  },
  {
   "id": "DarkFlameFox",
@@ -2504,7 +5227,24 @@
    "Dark",
    "Fire"
   ],
-  "rarity": 5
+  "rarity": 5,
+  "stats": {
+   "hp": 110,
+   "atk": 115,
+   "def": 90,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 8,
+   "run": 500,
+   "ride": 750
+  },
+  "nocturnal": true,
+  "work": {
+   "Kindling": 4,
+   "Handiwork": 5,
+   "Medicine Production": 3,
+   "Transporting": 2
+  }
  },
  {
   "id": "WhiteMoth",
@@ -2518,7 +5258,23 @@
   "elements": [
    "Ice"
   ],
-  "rarity": 7
+  "rarity": 7,
+  "stats": {
+   "hp": 110,
+   "atk": 90,
+   "def": 100,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 5,
+   "run": 400,
+   "ride": 550
+  },
+  "nocturnal": false,
+  "work": {
+   "Medicine Production": 3,
+   "Cooling": 3,
+   "Farming": 3
+  }
  },
  {
   "id": "WhiteMoth_Neutral",
@@ -2532,7 +5288,22 @@
   "elements": [
    "Normal"
   ],
-  "rarity": 8
+  "rarity": 8,
+  "stats": {
+   "hp": 115,
+   "atk": 90,
+   "def": 100,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 5,
+   "run": 400,
+   "ride": 550
+  },
+  "nocturnal": false,
+  "work": {
+   "Medicine Production": 3,
+   "Farming": 4
+  }
  },
  {
   "id": "GhostBeast",
@@ -2546,7 +5317,22 @@
   "elements": [
    "Dark"
   ],
-  "rarity": 6
+  "rarity": 6,
+  "stats": {
+   "hp": 75,
+   "atk": 105,
+   "def": 80,
+   "workSpeed": 100,
+   "stamina": 130,
+   "food": 5,
+   "run": 700,
+   "ride": 1100
+  },
+  "nocturnal": true,
+  "work": {
+   "Gathering": 4,
+   "Mining": 4
+  }
  },
  {
   "id": "MushroomDragon",
@@ -2560,7 +5346,25 @@
   "elements": [
    "Leaf"
   ],
-  "rarity": 4
+  "rarity": 4,
+  "stats": {
+   "hp": 110,
+   "atk": 80,
+   "def": 90,
+   "workSpeed": 100,
+   "stamina": 220,
+   "food": 5,
+   "run": 740,
+   "ride": 1050
+  },
+  "nocturnal": false,
+  "work": {
+   "Planting": 3,
+   "Handiwork": 2,
+   "Gathering": 3,
+   "Lumbering": 2,
+   "Farming": 3
+  }
  },
  {
   "id": "MushroomDragon_Dark",
@@ -2575,7 +5379,24 @@
    "Leaf",
    "Dark"
   ],
-  "rarity": 5
+  "rarity": 5,
+  "stats": {
+   "hp": 110,
+   "atk": 85,
+   "def": 90,
+   "workSpeed": 100,
+   "stamina": 220,
+   "food": 5,
+   "run": 740,
+   "ride": 1050
+  },
+  "nocturnal": true,
+  "work": {
+   "Planting": 3,
+   "Handiwork": 3,
+   "Gathering": 3,
+   "Lumbering": 2
+  }
  },
  {
   "id": "IceWitch",
@@ -2589,7 +5410,24 @@
   "elements": [
    "Ice"
   ],
-  "rarity": 4
+  "rarity": 4,
+  "stats": {
+   "hp": 95,
+   "atk": 115,
+   "def": 105,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 5,
+   "run": 400,
+   "ride": 600
+  },
+  "nocturnal": false,
+  "work": {
+   "Handiwork": 5,
+   "Medicine Production": 4,
+   "Cooling": 5,
+   "Transporting": 2
+  }
  },
  {
   "id": "MummyPal",
@@ -2604,7 +5442,23 @@
    "Dark",
    "Earth"
   ],
-  "rarity": 5
+  "rarity": 5,
+  "stats": {
+   "hp": 105,
+   "atk": 120,
+   "def": 105,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 6,
+   "run": 480,
+   "ride": 720
+  },
+  "nocturnal": true,
+  "work": {
+   "Handiwork": 5,
+   "Medicine Production": 4,
+   "Transporting": 2
+  }
  },
  {
   "id": "Umihebi",
@@ -2619,7 +5473,21 @@
    "Dragon",
    "Water"
   ],
-  "rarity": 8
+  "rarity": 8,
+  "stats": {
+   "hp": 130,
+   "atk": 120,
+   "def": 100,
+   "workSpeed": 100,
+   "stamina": 150,
+   "food": 8,
+   "run": 600,
+   "ride": 1000
+  },
+  "nocturnal": false,
+  "work": {
+   "Watering": 7
+  }
  },
  {
   "id": "Umihebi_Fire",
@@ -2634,7 +5502,21 @@
    "Dragon",
    "Fire"
   ],
-  "rarity": 9
+  "rarity": 9,
+  "stats": {
+   "hp": 130,
+   "atk": 130,
+   "def": 100,
+   "workSpeed": 100,
+   "stamina": 150,
+   "food": 8,
+   "run": 600,
+   "ride": 1000
+  },
+  "nocturnal": false,
+  "work": {
+   "Kindling": 7
+  }
  },
  {
   "id": "Suzaku",
@@ -2648,7 +5530,21 @@
   "elements": [
    "Fire"
   ],
-  "rarity": 8
+  "rarity": 8,
+  "stats": {
+   "hp": 120,
+   "atk": 105,
+   "def": 105,
+   "workSpeed": 100,
+   "stamina": 350,
+   "food": 7,
+   "run": 850,
+   "ride": 1100
+  },
+  "nocturnal": false,
+  "work": {
+   "Kindling": 5
+  }
  },
  {
   "id": "Suzaku_Water",
@@ -2662,7 +5558,21 @@
   "elements": [
    "Water"
   ],
-  "rarity": 9
+  "rarity": 9,
+  "stats": {
+   "hp": 125,
+   "atk": 105,
+   "def": 105,
+   "workSpeed": 100,
+   "stamina": 350,
+   "food": 7,
+   "run": 850,
+   "ride": 1100
+  },
+  "nocturnal": false,
+  "work": {
+   "Watering": 6
+  }
  },
  {
   "id": "FeatherOstrich",
@@ -2676,7 +5586,21 @@
   "elements": [
    "Earth"
   ],
-  "rarity": 5
+  "rarity": 5,
+  "stats": {
+   "hp": 95,
+   "atk": 90,
+   "def": 80,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 3,
+   "run": 900,
+   "ride": 1200
+  },
+  "nocturnal": false,
+  "work": {
+   "Gathering": 2
+  }
  },
  {
   "id": "SkyDragon",
@@ -2690,7 +5614,24 @@
   "elements": [
    "Dragon"
   ],
-  "rarity": 7
+  "rarity": 7,
+  "stats": {
+   "hp": 105,
+   "atk": 100,
+   "def": 100,
+   "workSpeed": 100,
+   "stamina": 220,
+   "food": 6,
+   "run": 800,
+   "ride": 950
+  },
+  "nocturnal": false,
+  "work": {
+   "Handiwork": 2,
+   "Gathering": 3,
+   "Mining": 4,
+   "Transporting": 5
+  }
  },
  {
   "id": "SkyDragon_Grass",
@@ -2705,7 +5646,25 @@
    "Dragon",
    "Leaf"
   ],
-  "rarity": 8
+  "rarity": 8,
+  "stats": {
+   "hp": 105,
+   "atk": 105,
+   "def": 100,
+   "workSpeed": 100,
+   "stamina": 220,
+   "food": 6,
+   "run": 800,
+   "ride": 950
+  },
+  "nocturnal": false,
+  "work": {
+   "Planting": 5,
+   "Handiwork": 2,
+   "Gathering": 4,
+   "Mining": 3,
+   "Transporting": 4
+  }
  },
  {
   "id": "LeafPrincess",
@@ -2719,7 +5678,24 @@
   "elements": [
    "Leaf"
   ],
-  "rarity": 4
+  "rarity": 4,
+  "stats": {
+   "hp": 90,
+   "atk": 90,
+   "def": 80,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 4,
+   "run": 400,
+   "ride": 800
+  },
+  "nocturnal": false,
+  "work": {
+   "Planting": 3,
+   "Handiwork": 3,
+   "Gathering": 2,
+   "Medicine Production": 3
+  }
  },
  {
   "id": "SmallArmadillo",
@@ -2733,7 +5709,21 @@
   "elements": [
    "Earth"
   ],
-  "rarity": 4
+  "rarity": 4,
+  "stats": {
+   "hp": 75,
+   "atk": 70,
+   "def": 90,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 3,
+   "run": 800,
+   "ride": 900
+  },
+  "nocturnal": false,
+  "work": {
+   "Mining": 1
+  }
  },
  {
   "id": "GuardianDog",
@@ -2747,7 +5737,21 @@
   "elements": [
    "Normal"
   ],
-  "rarity": 4
+  "rarity": 4,
+  "stats": {
+   "hp": 85,
+   "atk": 85,
+   "def": 85,
+   "workSpeed": 100,
+   "stamina": 140,
+   "food": 3,
+   "run": 750,
+   "ride": 1080
+  },
+  "nocturnal": false,
+  "work": {
+   "Gathering": 2
+  }
  },
  {
   "id": "SwordCutlassfish",
@@ -2761,7 +5765,23 @@
   "elements": [
    "Water"
   ],
-  "rarity": 5
+  "rarity": 5,
+  "stats": {
+   "hp": 70,
+   "atk": 100,
+   "def": 80,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 5,
+   "run": 500,
+   "ride": 800
+  },
+  "nocturnal": false,
+  "work": {
+   "Watering": 4,
+   "Gathering": 1,
+   "Lumbering": 4
+  }
  },
  {
   "id": "SwordCutlassfish_Fire",
@@ -2776,7 +5796,24 @@
    "Water",
    "Fire"
   ],
-  "rarity": 5
+  "rarity": 5,
+  "stats": {
+   "hp": 70,
+   "atk": 105,
+   "def": 80,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 5,
+   "run": 500,
+   "ride": 800
+  },
+  "nocturnal": false,
+  "work": {
+   "Kindling": 3,
+   "Watering": 2,
+   "Gathering": 2,
+   "Lumbering": 3
+  }
  },
  {
   "id": "VolcanicMonster",
@@ -2791,7 +5828,22 @@
    "Fire",
    "Earth"
   ],
-  "rarity": 6
+  "rarity": 6,
+  "stats": {
+   "hp": 110,
+   "atk": 105,
+   "def": 120,
+   "workSpeed": 100,
+   "stamina": 220,
+   "food": 7,
+   "run": 550,
+   "ride": 1000
+  },
+  "nocturnal": false,
+  "work": {
+   "Kindling": 5,
+   "Mining": 5
+  }
  },
  {
   "id": "VolcanicMonster_Ice",
@@ -2806,7 +5858,22 @@
    "Ice",
    "Earth"
   ],
-  "rarity": 7
+  "rarity": 7,
+  "stats": {
+   "hp": 110,
+   "atk": 105,
+   "def": 130,
+   "workSpeed": 100,
+   "stamina": 220,
+   "food": 7,
+   "run": 550,
+   "ride": 1000
+  },
+  "nocturnal": false,
+  "work": {
+   "Mining": 5,
+   "Cooling": 5
+  }
  },
  {
   "id": "NightBlueHorse",
@@ -2820,7 +5887,21 @@
   "elements": [
    "Dark"
   ],
-  "rarity": 7
+  "rarity": 7,
+  "stats": {
+   "hp": 110,
+   "atk": 100,
+   "def": 100,
+   "workSpeed": 100,
+   "stamina": 230,
+   "food": 6,
+   "run": 900,
+   "ride": 1250
+  },
+  "nocturnal": true,
+  "work": {
+   "Gathering": 5
+  }
  },
  {
   "id": "NightBlueHorse_Neutral",
@@ -2834,7 +5915,21 @@
   "elements": [
    "Normal"
   ],
-  "rarity": 8
+  "rarity": 8,
+  "stats": {
+   "hp": 110,
+   "atk": 105,
+   "def": 100,
+   "workSpeed": 100,
+   "stamina": 230,
+   "food": 6,
+   "run": 900,
+   "ride": 1250
+  },
+  "nocturnal": false,
+  "work": {
+   "Gathering": 7
+  }
  },
  {
   "id": "RockBeast",
@@ -2848,7 +5943,21 @@
   "elements": [
    "Earth"
   ],
-  "rarity": 6
+  "rarity": 6,
+  "stats": {
+   "hp": 100,
+   "atk": 105,
+   "def": 120,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 8,
+   "run": 350,
+   "ride": 550
+  },
+  "nocturnal": false,
+  "work": {
+   "Mining": 5
+  }
  },
  {
   "id": "RockBeast_Ice",
@@ -2862,7 +5971,22 @@
   "elements": [
    "Ice"
   ],
-  "rarity": 7
+  "rarity": 7,
+  "stats": {
+   "hp": 100,
+   "atk": 110,
+   "def": 120,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 8,
+   "run": 350,
+   "ride": 550
+  },
+  "nocturnal": false,
+  "work": {
+   "Mining": 5,
+   "Cooling": 6
+  }
  },
  {
   "id": "WhiteTiger",
@@ -2876,7 +6000,24 @@
   "elements": [
    "Ice"
   ],
-  "rarity": 7
+  "rarity": 7,
+  "stats": {
+   "hp": 100,
+   "atk": 100,
+   "def": 110,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 7,
+   "run": 720,
+   "ride": 900
+  },
+  "nocturnal": false,
+  "work": {
+   "Handiwork": 3,
+   "Lumbering": 4,
+   "Cooling": 4,
+   "Transporting": 4
+  }
  },
  {
   "id": "WhiteTiger_Ground",
@@ -2890,7 +6031,24 @@
   "elements": [
    "Earth"
   ],
-  "rarity": 7
+  "rarity": 7,
+  "stats": {
+   "hp": 100,
+   "atk": 105,
+   "def": 110,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 7,
+   "run": 720,
+   "ride": 900
+  },
+  "nocturnal": false,
+  "work": {
+   "Handiwork": 2,
+   "Lumbering": 6,
+   "Mining": 5,
+   "Transporting": 4
+  }
  },
  {
   "id": "SmallYeti",
@@ -2904,7 +6062,24 @@
   "elements": [
    "Ice"
   ],
-  "rarity": 3
+  "rarity": 3,
+  "stats": {
+   "hp": 80,
+   "atk": 75,
+   "def": 85,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 5,
+   "run": 400,
+   "ride": 600
+  },
+  "nocturnal": false,
+  "work": {
+   "Handiwork": 2,
+   "Mining": 3,
+   "Cooling": 3,
+   "Transporting": 2
+  }
  },
  {
   "id": "Yeti",
@@ -2918,7 +6093,24 @@
   "elements": [
    "Ice"
   ],
-  "rarity": 7
+  "rarity": 7,
+  "stats": {
+   "hp": 140,
+   "atk": 80,
+   "def": 100,
+   "workSpeed": 100,
+   "stamina": 240,
+   "food": 7,
+   "run": 600,
+   "ride": 1050
+  },
+  "nocturnal": false,
+  "work": {
+   "Handiwork": 3,
+   "Lumbering": 5,
+   "Cooling": 5,
+   "Transporting": 6
+  }
  },
  {
   "id": "Yeti_Grass",
@@ -2932,7 +6124,24 @@
   "elements": [
    "Leaf"
   ],
-  "rarity": 8
+  "rarity": 8,
+  "stats": {
+   "hp": 140,
+   "atk": 80,
+   "def": 110,
+   "workSpeed": 100,
+   "stamina": 240,
+   "food": 7,
+   "run": 600,
+   "ride": 1050
+  },
+  "nocturnal": false,
+  "work": {
+   "Planting": 3,
+   "Handiwork": 3,
+   "Lumbering": 5,
+   "Transporting": 6
+  }
  },
  {
   "id": "CandleGhost",
@@ -2947,7 +6156,25 @@
    "Dark",
    "Fire"
   ],
-  "rarity": 7
+  "rarity": 7,
+  "stats": {
+   "hp": 105,
+   "atk": 125,
+   "def": 90,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 7,
+   "run": 800,
+   "ride": 1000
+  },
+  "nocturnal": true,
+  "work": {
+   "Kindling": 3,
+   "Handiwork": 3,
+   "Gathering": 2,
+   "Mining": 3,
+   "Farming": 2
+  }
  },
  {
   "id": "VenusFlytrap",
@@ -2961,7 +6188,24 @@
   "elements": [
    "Leaf"
   ],
-  "rarity": 6
+  "rarity": 6,
+  "stats": {
+   "hp": 85,
+   "atk": 90,
+   "def": 85,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 7,
+   "run": 600,
+   "ride": 750
+  },
+  "nocturnal": false,
+  "work": {
+   "Planting": 6,
+   "Handiwork": 4,
+   "Gathering": 4,
+   "Transporting": 2
+  }
  },
  {
   "id": "KingBahamut",
@@ -2975,7 +6219,22 @@
   "elements": [
    "Fire"
   ],
-  "rarity": 9
+  "rarity": 9,
+  "stats": {
+   "hp": 100,
+   "atk": 125,
+   "def": 120,
+   "workSpeed": 100,
+   "stamina": 190,
+   "food": 9,
+   "run": 800,
+   "ride": 1200
+  },
+  "nocturnal": false,
+  "work": {
+   "Kindling": 6,
+   "Mining": 7
+  }
  },
  {
   "id": "KingBahamut_Dragon",
@@ -2990,7 +6249,22 @@
    "Dragon",
    "Fire"
   ],
-  "rarity": 10
+  "rarity": 10,
+  "stats": {
+   "hp": 105,
+   "atk": 130,
+   "def": 125,
+   "workSpeed": 100,
+   "stamina": 190,
+   "food": 9,
+   "run": 800,
+   "ride": 1200
+  },
+  "nocturnal": false,
+  "work": {
+   "Kindling": 6,
+   "Mining": 7
+  }
  },
  {
   "id": "GrassGolem",
@@ -3005,7 +6279,25 @@
    "Earth",
    "Leaf"
   ],
-  "rarity": 8
+  "rarity": 8,
+  "stats": {
+   "hp": 110,
+   "atk": 105,
+   "def": 125,
+   "workSpeed": 100,
+   "stamina": 210,
+   "food": 8,
+   "run": 600,
+   "ride": 800
+  },
+  "nocturnal": false,
+  "work": {
+   "Planting": 3,
+   "Gathering": 3,
+   "Lumbering": 5,
+   "Mining": 6,
+   "Transporting": 6
+  }
  },
  {
   "id": "GrassGolem_Dark",
@@ -3020,7 +6312,25 @@
    "Earth",
    "Dark"
   ],
-  "rarity": 8
+  "rarity": 8,
+  "stats": {
+   "hp": 110,
+   "atk": 110,
+   "def": 125,
+   "workSpeed": 100,
+   "stamina": 210,
+   "food": 8,
+   "run": 600,
+   "ride": 800
+  },
+  "nocturnal": true,
+  "work": {
+   "Planting": 3,
+   "Gathering": 3,
+   "Lumbering": 5,
+   "Mining": 6,
+   "Transporting": 6
+  }
  },
  {
   "id": "Anubis",
@@ -3034,7 +6344,23 @@
   "elements": [
    "Earth"
   ],
-  "rarity": 10
+  "rarity": 10,
+  "stats": {
+   "hp": 120,
+   "atk": 130,
+   "def": 100,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 8,
+   "run": 800,
+   "ride": 1000
+  },
+  "nocturnal": false,
+  "work": {
+   "Handiwork": 6,
+   "Mining": 6,
+   "Transporting": 4
+  }
  },
  {
   "id": "Sekhmet",
@@ -3048,7 +6374,23 @@
   "elements": [
    "Earth"
   ],
-  "rarity": 5
+  "rarity": 5,
+  "stats": {
+   "hp": 110,
+   "atk": 115,
+   "def": 100,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 7,
+   "run": 600,
+   "ride": 900
+  },
+  "nocturnal": false,
+  "work": {
+   "Handiwork": 6,
+   "Mining": 3,
+   "Transporting": 2
+  }
  },
  {
   "id": "ScorpionMan",
@@ -3063,7 +6405,23 @@
    "Dark",
    "Earth"
   ],
-  "rarity": 5
+  "rarity": 5,
+  "stats": {
+   "hp": 90,
+   "atk": 110,
+   "def": 90,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 5,
+   "run": 720,
+   "ride": -1
+  },
+  "nocturnal": true,
+  "work": {
+   "Gathering": 2,
+   "Lumbering": 4,
+   "Medicine Production": 2
+  }
  },
  {
   "id": "ScorpionMan_Electric",
@@ -3078,7 +6436,24 @@
    "Electricity",
    "Earth"
   ],
-  "rarity": 6
+  "rarity": 6,
+  "stats": {
+   "hp": 90,
+   "atk": 115,
+   "def": 90,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 5,
+   "run": 720,
+   "ride": -1
+  },
+  "nocturnal": false,
+  "work": {
+   "Generating Electricity": 3,
+   "Gathering": 2,
+   "Lumbering": 4,
+   "Medicine Production": 2
+  }
  },
  {
   "id": "CubeTurtle",
@@ -3092,7 +6467,21 @@
   "elements": [
    "Earth"
   ],
-  "rarity": 8
+  "rarity": 8,
+  "stats": {
+   "hp": 95,
+   "atk": 100,
+   "def": 135,
+   "workSpeed": 100,
+   "stamina": 200,
+   "food": 8,
+   "run": 360,
+   "ride": 540
+  },
+  "nocturnal": false,
+  "work": {
+   "Mining": 4
+  }
  },
  {
   "id": "CubeTurtle_Neutral",
@@ -3106,7 +6495,21 @@
   "elements": [
    "Normal"
   ],
-  "rarity": 8
+  "rarity": 8,
+  "stats": {
+   "hp": 95,
+   "atk": 100,
+   "def": 140,
+   "workSpeed": 100,
+   "stamina": 200,
+   "food": 8,
+   "run": 360,
+   "ride": 540
+  },
+  "nocturnal": false,
+  "work": {
+   "Mining": 6
+  }
  },
  {
   "id": "BadCatgirl",
@@ -3120,7 +6523,24 @@
   "elements": [
    "Dark"
   ],
-  "rarity": 4
+  "rarity": 4,
+  "stats": {
+   "hp": 110,
+   "atk": 100,
+   "def": 100,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 6,
+   "run": 600,
+   "ride": 900
+  },
+  "nocturnal": true,
+  "work": {
+   "Handiwork": 4,
+   "Gathering": 4,
+   "Lumbering": 2,
+   "Transporting": 3
+  }
  },
  {
   "id": "MimicDog",
@@ -3134,7 +6554,22 @@
   "elements": [
    "Normal"
   ],
-  "rarity": 7
+  "rarity": 7,
+  "stats": {
+   "hp": 60,
+   "atk": 60,
+   "def": 130,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 3,
+   "run": 2000,
+   "ride": -1
+  },
+  "nocturnal": false,
+  "work": {
+   "Gathering": 1,
+   "Transporting": 2
+  }
  },
  {
   "id": "DarkAlien",
@@ -3148,7 +6583,22 @@
   "elements": [
    "Dark"
   ],
-  "rarity": 7
+  "rarity": 7,
+  "stats": {
+   "hp": 90,
+   "atk": 125,
+   "def": 85,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 4,
+   "run": 550,
+   "ride": 700
+  },
+  "nocturnal": true,
+  "work": {
+   "Lumbering": 3,
+   "Transporting": 2
+  }
  },
  {
   "id": "WhiteAlienDragon",
@@ -3162,7 +6612,21 @@
   "elements": [
    "Dragon"
   ],
-  "rarity": 9
+  "rarity": 9,
+  "stats": {
+   "hp": 110,
+   "atk": 120,
+   "def": 130,
+   "workSpeed": 100,
+   "stamina": 250,
+   "food": 7,
+   "run": 790,
+   "ride": 1200
+  },
+  "nocturnal": false,
+  "work": {
+   "Mining": 4
+  }
  },
  {
   "id": "BlueberryFairy",
@@ -3177,7 +6641,25 @@
    "Leaf",
    "Dark"
   ],
-  "rarity": 5
+  "rarity": 5,
+  "stats": {
+   "hp": 105,
+   "atk": 95,
+   "def": 100,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 5,
+   "run": 550,
+   "ride": 700
+  },
+  "nocturnal": true,
+  "work": {
+   "Planting": 3,
+   "Handiwork": 1,
+   "Gathering": 2,
+   "Medicine Production": 3,
+   "Transporting": 1
+  }
  },
  {
   "id": "GhostRabbit",
@@ -3191,7 +6673,22 @@
   "elements": [
    "Dark"
   ],
-  "rarity": 6
+  "rarity": 6,
+  "stats": {
+   "hp": 105,
+   "atk": 95,
+   "def": 105,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 6,
+   "run": 380,
+   "ride": 500
+  },
+  "nocturnal": true,
+  "work": {
+   "Handiwork": 4,
+   "Transporting": 2
+  }
  },
  {
   "id": "GhostRabbit_Grass",
@@ -3205,7 +6702,23 @@
   "elements": [
    "Leaf"
   ],
-  "rarity": 7
+  "rarity": 7,
+  "stats": {
+   "hp": 110,
+   "atk": 95,
+   "def": 105,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 6,
+   "run": 380,
+   "ride": 500
+  },
+  "nocturnal": false,
+  "work": {
+   "Planting": 3,
+   "Handiwork": 4,
+   "Transporting": 2
+  }
  },
  {
   "id": "BlackPuppy",
@@ -3219,7 +6732,21 @@
   "elements": [
    "Dark"
   ],
-  "rarity": 2
+  "rarity": 2,
+  "stats": {
+   "hp": 85,
+   "atk": 90,
+   "def": 85,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 3,
+   "run": 550,
+   "ride": 700
+  },
+  "nocturnal": true,
+  "work": {
+   "Gathering": 2
+  }
  },
  {
   "id": "BlackPuppy_Ice",
@@ -3234,7 +6761,22 @@
    "Dark",
    "Ice"
   ],
-  "rarity": 3
+  "rarity": 3,
+  "stats": {
+   "hp": 85,
+   "atk": 90,
+   "def": 90,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 3,
+   "run": 550,
+   "ride": 700
+  },
+  "nocturnal": true,
+  "work": {
+   "Gathering": 2,
+   "Cooling": 2
+  }
  },
  {
   "id": "MysteryMask",
@@ -3248,7 +6790,21 @@
   "elements": [
    "Dark"
   ],
-  "rarity": 4
+  "rarity": 4,
+  "stats": {
+   "hp": 95,
+   "atk": 105,
+   "def": 100,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 5,
+   "run": 400,
+   "ride": 520
+  },
+  "nocturnal": true,
+  "work": {
+   "Gathering": 5
+  }
  },
  {
   "id": "IceNarwhal",
@@ -3263,7 +6819,22 @@
    "Ice",
    "Water"
   ],
-  "rarity": 8
+  "rarity": 8,
+  "stats": {
+   "hp": 105,
+   "atk": 115,
+   "def": 110,
+   "workSpeed": 100,
+   "stamina": 200,
+   "food": 8,
+   "run": 600,
+   "ride": 750
+  },
+  "nocturnal": false,
+  "work": {
+   "Watering": 5,
+   "Cooling": 6
+  }
  },
  {
   "id": "IceNarwhal_Fire",
@@ -3278,7 +6849,22 @@
    "Ice",
    "Fire"
   ],
-  "rarity": 8
+  "rarity": 8,
+  "stats": {
+   "hp": 105,
+   "atk": 120,
+   "def": 110,
+   "workSpeed": 100,
+   "stamina": 200,
+   "food": 8,
+   "run": 600,
+   "ride": 750
+  },
+  "nocturnal": false,
+  "work": {
+   "Kindling": 5,
+   "Cooling": 6
+  }
  },
  {
   "id": "GrassRabbitMan",
@@ -3292,7 +6878,25 @@
   "elements": [
    "Leaf"
   ],
-  "rarity": 8
+  "rarity": 8,
+  "stats": {
+   "hp": 90,
+   "atk": 115,
+   "def": 90,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 6,
+   "run": 500,
+   "ride": 700
+  },
+  "nocturnal": false,
+  "work": {
+   "Planting": 4,
+   "Handiwork": 5,
+   "Gathering": 5,
+   "Lumbering": 3,
+   "Transporting": 3
+  }
  },
  {
   "id": "GrimGirl",
@@ -3306,7 +6910,24 @@
   "elements": [
    "Dark"
   ],
-  "rarity": 4
+  "rarity": 4,
+  "stats": {
+   "hp": 95,
+   "atk": 115,
+   "def": 105,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 7,
+   "run": 550,
+   "ride": 660
+  },
+  "nocturnal": true,
+  "work": {
+   "Handiwork": 6,
+   "Lumbering": 3,
+   "Medicine Production": 5,
+   "Transporting": 2
+  }
  },
  {
   "id": "GoldenHorse",
@@ -3320,7 +6941,21 @@
   "elements": [
    "Earth"
   ],
-  "rarity": 8
+  "rarity": 8,
+  "stats": {
+   "hp": 120,
+   "atk": 110,
+   "def": 110,
+   "workSpeed": 100,
+   "stamina": 200,
+   "food": 8,
+   "run": 840,
+   "ride": 1260
+  },
+  "nocturnal": false,
+  "work": {
+   "Gathering": 5
+  }
  },
  {
   "id": "SifuDog",
@@ -3334,7 +6969,25 @@
   "elements": [
    "Normal"
   ],
-  "rarity": 6
+  "rarity": 6,
+  "stats": {
+   "hp": 90,
+   "atk": 100,
+   "def": 100,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 5,
+   "run": 300,
+   "ride": 550
+  },
+  "nocturnal": false,
+  "work": {
+   "Handiwork": 4,
+   "Gathering": 3,
+   "Lumbering": 3,
+   "Medicine Production": 2,
+   "Transporting": 3
+  }
  },
  {
   "id": "SumoDog",
@@ -3348,7 +7001,22 @@
   "elements": [
    "Earth"
   ],
-  "rarity": 4
+  "rarity": 4,
+  "stats": {
+   "hp": 115,
+   "atk": 95,
+   "def": 100,
+   "workSpeed": 100,
+   "stamina": 110,
+   "food": 6,
+   "run": 600,
+   "ride": 810
+  },
+  "nocturnal": false,
+  "work": {
+   "Mining": 4,
+   "Transporting": 3
+  }
  },
  {
   "id": "WhiteDeer",
@@ -3362,7 +7030,22 @@
   "elements": [
    "Normal"
   ],
-  "rarity": 6
+  "rarity": 6,
+  "stats": {
+   "hp": 120,
+   "atk": 110,
+   "def": 100,
+   "workSpeed": 100,
+   "stamina": 260,
+   "food": 8,
+   "run": 800,
+   "ride": 1200
+  },
+  "nocturnal": false,
+  "work": {
+   "Gathering": 4,
+   "Lumbering": 7
+  }
  },
  {
   "id": "WhiteDeer_Dark",
@@ -3376,7 +7059,22 @@
   "elements": [
    "Dark"
   ],
-  "rarity": 7
+  "rarity": 7,
+  "stats": {
+   "hp": 120,
+   "atk": 115,
+   "def": 100,
+   "workSpeed": 100,
+   "stamina": 260,
+   "food": 8,
+   "run": 800,
+   "ride": 1200
+  },
+  "nocturnal": true,
+  "work": {
+   "Gathering": 4,
+   "Lumbering": 8
+  }
  },
  {
   "id": "BlackMetalDragon",
@@ -3391,7 +7089,22 @@
    "Dragon",
    "Dark"
   ],
-  "rarity": 9
+  "rarity": 9,
+  "stats": {
+   "hp": 100,
+   "atk": 125,
+   "def": 125,
+   "workSpeed": 100,
+   "stamina": 300,
+   "food": 7,
+   "run": 700,
+   "ride": 1100
+  },
+  "nocturnal": true,
+  "work": {
+   "Handiwork": 3,
+   "Mining": 7
+  }
  },
  {
   "id": "WingGolem",
@@ -3405,7 +7118,23 @@
   "elements": [
    "Earth"
   ],
-  "rarity": 9
+  "rarity": 9,
+  "stats": {
+   "hp": 105,
+   "atk": 110,
+   "def": 135,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 9,
+   "run": 550,
+   "ride": 700
+  },
+  "nocturnal": false,
+  "work": {
+   "Gathering": 4,
+   "Mining": 7,
+   "Transporting": 7
+  }
  },
  {
   "id": "WingGolem_Fire",
@@ -3419,7 +7148,23 @@
   "elements": [
    "Fire"
   ],
-  "rarity": 10
+  "rarity": 10,
+  "stats": {
+   "hp": 105,
+   "atk": 115,
+   "def": 135,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 9,
+   "run": 550,
+   "ride": 700
+  },
+  "nocturnal": false,
+  "work": {
+   "Kindling": 5,
+   "Mining": 7,
+   "Transporting": 7
+  }
  },
  {
   "id": "WhiteShieldDragon",
@@ -3433,7 +7178,21 @@
   "elements": [
    "Dragon"
   ],
-  "rarity": 8
+  "rarity": 8,
+  "stats": {
+   "hp": 120,
+   "atk": 110,
+   "def": 115,
+   "workSpeed": 100,
+   "stamina": 280,
+   "food": 8,
+   "run": 700,
+   "ride": 1050
+  },
+  "nocturnal": false,
+  "work": {
+   "Lumbering": 6
+  }
  },
  {
   "id": "BlueThunderHorse",
@@ -3447,7 +7206,21 @@
   "elements": [
    "Electricity"
   ],
-  "rarity": 7
+  "rarity": 7,
+  "stats": {
+   "hp": 130,
+   "atk": 120,
+   "def": 110,
+   "workSpeed": 100,
+   "stamina": 220,
+   "food": 8,
+   "run": 900,
+   "ride": 1260
+  },
+  "nocturnal": false,
+  "work": {
+   "Generating Electricity": 5
+  }
  },
  {
   "id": "LongCat",
@@ -3461,7 +7234,21 @@
   "elements": [
    "Normal"
   ],
-  "rarity": 2
+  "rarity": 2,
+  "stats": {
+   "hp": 75,
+   "atk": 80,
+   "def": 70,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 4,
+   "run": 700,
+   "ride": 900
+  },
+  "nocturnal": false,
+  "work": {
+   "Gathering": 2
+  }
  },
  {
   "id": "ElecSnail",
@@ -3475,7 +7262,21 @@
   "elements": [
    "Electricity"
   ],
-  "rarity": 2
+  "rarity": 2,
+  "stats": {
+   "hp": 65,
+   "atk": 70,
+   "def": 75,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 4,
+   "run": 360,
+   "ride": 945
+  },
+  "nocturnal": false,
+  "work": {
+   "Generating Electricity": 4
+  }
  },
  {
   "id": "ElecSnail_Ground",
@@ -3490,7 +7291,21 @@
    "Electricity",
    "Earth"
   ],
-  "rarity": 3
+  "rarity": 3,
+  "stats": {
+   "hp": 65,
+   "atk": 70,
+   "def": 80,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 4,
+   "run": 360,
+   "ride": 945
+  },
+  "nocturnal": false,
+  "work": {
+   "Generating Electricity": 4
+  }
  },
  {
   "id": "DandelionGirl",
@@ -3504,7 +7319,22 @@
   "elements": [
    "Leaf"
   ],
-  "rarity": 3
+  "rarity": 3,
+  "stats": {
+   "hp": 70,
+   "atk": 75,
+   "def": 60,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 3,
+   "run": 300,
+   "ride": 450
+  },
+  "nocturnal": false,
+  "work": {
+   "Planting": 2,
+   "Transporting": 2
+  }
  },
  {
   "id": "BrownRabbit",
@@ -3518,7 +7348,24 @@
   "elements": [
    "Earth"
   ],
-  "rarity": 3
+  "rarity": 3,
+  "stats": {
+   "hp": 70,
+   "atk": 75,
+   "def": 80,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 4,
+   "run": 480,
+   "ride": 720
+  },
+  "nocturnal": false,
+  "work": {
+   "Handiwork": 3,
+   "Gathering": 4,
+   "Mining": 2,
+   "Transporting": 1
+  }
  },
  {
   "id": "HoodGhost",
@@ -3532,7 +7379,22 @@
   "elements": [
    "Dark"
   ],
-  "rarity": 3
+  "rarity": 3,
+  "stats": {
+   "hp": 70,
+   "atk": 85,
+   "def": 80,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 3,
+   "run": 400,
+   "ride": 550
+  },
+  "nocturnal": true,
+  "work": {
+   "Handiwork": 1,
+   "Transporting": 1
+  }
  },
  {
   "id": "ElecLizard",
@@ -3546,7 +7408,21 @@
   "elements": [
    "Electricity"
   ],
-  "rarity": 4
+  "rarity": 4,
+  "stats": {
+   "hp": 80,
+   "atk": 75,
+   "def": 70,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 4,
+   "run": 300,
+   "ride": 390
+  },
+  "nocturnal": false,
+  "work": {
+   "Generating Electricity": 3
+  }
  },
  {
   "id": "OniGhostGirl",
@@ -3560,7 +7436,23 @@
   "elements": [
    "Dark"
   ],
-  "rarity": 4
+  "rarity": 4,
+  "stats": {
+   "hp": 70,
+   "atk": 85,
+   "def": 80,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 5,
+   "run": 400,
+   "ride": 600
+  },
+  "nocturnal": true,
+  "work": {
+   "Handiwork": 3,
+   "Medicine Production": 4,
+   "Transporting": 2
+  }
  },
  {
   "id": "KingSunfish",
@@ -3574,7 +7466,21 @@
   "elements": [
    "Water"
   ],
-  "rarity": 4
+  "rarity": 4,
+  "stats": {
+   "hp": 90,
+   "atk": 90,
+   "def": 85,
+   "workSpeed": 100,
+   "stamina": 220,
+   "food": 6,
+   "run": 500,
+   "ride": 900
+  },
+  "nocturnal": false,
+  "work": {
+   "Watering": 4
+  }
  },
  {
   "id": "KingSunfish_Thunder",
@@ -3589,7 +7495,22 @@
    "Water",
    "Electricity"
   ],
-  "rarity": 5
+  "rarity": 5,
+  "stats": {
+   "hp": 90,
+   "atk": 95,
+   "def": 85,
+   "workSpeed": 100,
+   "stamina": 220,
+   "food": 6,
+   "run": 500,
+   "ride": 900
+  },
+  "nocturnal": false,
+  "work": {
+   "Watering": 4,
+   "Generating Electricity": 6
+  }
  },
  {
   "id": "SleeveRabbit",
@@ -3603,7 +7524,22 @@
   "elements": [
    "Normal"
   ],
-  "rarity": 4
+  "rarity": 4,
+  "stats": {
+   "hp": 105,
+   "atk": 100,
+   "def": 100,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 7,
+   "run": 600,
+   "ride": 700
+  },
+  "nocturnal": false,
+  "work": {
+   "Handiwork": 6,
+   "Gathering": 5
+  }
  },
  {
   "id": "GhostDragon",
@@ -3618,7 +7554,21 @@
    "Dragon",
    "Dark"
   ],
-  "rarity": 7
+  "rarity": 7,
+  "stats": {
+   "hp": 115,
+   "atk": 125,
+   "def": 120,
+   "workSpeed": 100,
+   "stamina": 130,
+   "food": 9,
+   "run": 1400,
+   "ride": 2750
+  },
+  "nocturnal": true,
+  "work": {
+   "Transporting": 6
+  }
  },
  {
   "id": "GhostDragon_Fire",
@@ -3633,7 +7583,22 @@
    "Dragon",
    "Fire"
   ],
-  "rarity": 8
+  "rarity": 8,
+  "stats": {
+   "hp": 115,
+   "atk": 130,
+   "def": 120,
+   "workSpeed": 100,
+   "stamina": 130,
+   "food": 9,
+   "run": 1400,
+   "ride": 2750
+  },
+  "nocturnal": false,
+  "work": {
+   "Kindling": 6,
+   "Transporting": 6
+  }
  },
  {
   "id": "ThunderFluffyBird",
@@ -3647,7 +7612,23 @@
   "elements": [
    "Electricity"
   ],
-  "rarity": 6
+  "rarity": 6,
+  "stats": {
+   "hp": 75,
+   "atk": 85,
+   "def": 80,
+   "workSpeed": 100,
+   "stamina": 140,
+   "food": 6,
+   "run": 700,
+   "ride": 1000
+  },
+  "nocturnal": false,
+  "work": {
+   "Generating Electricity": 6,
+   "Gathering": 3,
+   "Transporting": 3
+  }
  },
  {
   "id": "RedFlowerBird",
@@ -3661,7 +7642,22 @@
   "elements": [
    "Leaf"
   ],
-  "rarity": 5
+  "rarity": 5,
+  "stats": {
+   "hp": 85,
+   "atk": 85,
+   "def": 90,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 6,
+   "run": 600,
+   "ride": 600
+  },
+  "nocturnal": false,
+  "work": {
+   "Planting": 5,
+   "Gathering": 5
+  }
  },
  {
   "id": "FoxExorcist",
@@ -3675,7 +7671,23 @@
   "elements": [
    "Fire"
   ],
-  "rarity": 7
+  "rarity": 7,
+  "stats": {
+   "hp": 110,
+   "atk": 125,
+   "def": 105,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 8,
+   "run": 500,
+   "ride": 600
+  },
+  "nocturnal": false,
+  "work": {
+   "Kindling": 7,
+   "Handiwork": 6,
+   "Transporting": 2
+  }
  },
  {
   "id": "LotusDragon",
@@ -3690,7 +7702,22 @@
    "Leaf",
    "Water"
   ],
-  "rarity": 9
+  "rarity": 9,
+  "stats": {
+   "hp": 130,
+   "atk": 115,
+   "def": 120,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 9,
+   "run": 700,
+   "ride": 1500
+  },
+  "nocturnal": false,
+  "work": {
+   "Watering": 5,
+   "Planting": 7
+  }
  },
  {
   "id": "ClownRabbit",
@@ -3704,7 +7731,24 @@
   "elements": [
    "Fire"
   ],
-  "rarity": 7
+  "rarity": 7,
+  "stats": {
+   "hp": 100,
+   "atk": 110,
+   "def": 100,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 8,
+   "run": 500,
+   "ride": 750
+  },
+  "nocturnal": false,
+  "work": {
+   "Kindling": 7,
+   "Handiwork": 5,
+   "Medicine Production": 4,
+   "Transporting": 2
+  }
  },
  {
   "id": "ThiefBird",
@@ -3718,7 +7762,22 @@
   "elements": [
    "Dark"
   ],
-  "rarity": 5
+  "rarity": 5,
+  "stats": {
+   "hp": 110,
+   "atk": 115,
+   "def": 95,
+   "workSpeed": 100,
+   "stamina": 200,
+   "food": 8,
+   "run": 950,
+   "ride": 1350
+  },
+  "nocturnal": true,
+  "work": {
+   "Gathering": 5,
+   "Transporting": 5
+  }
  },
  {
   "id": "SnakeGirl",
@@ -3732,7 +7791,24 @@
   "elements": [
    "Dark"
   ],
-  "rarity": 5
+  "rarity": 5,
+  "stats": {
+   "hp": 80,
+   "atk": 85,
+   "def": 90,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 6,
+   "run": 450,
+   "ride": 600
+  },
+  "nocturnal": true,
+  "work": {
+   "Handiwork": 6,
+   "Gathering": 6,
+   "Medicine Production": 5,
+   "Transporting": 2
+  }
  },
  {
   "id": "MushroomLady",
@@ -3746,7 +7822,24 @@
   "elements": [
    "Leaf"
   ],
-  "rarity": 6
+  "rarity": 6,
+  "stats": {
+   "hp": 105,
+   "atk": 95,
+   "def": 90,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 7,
+   "run": 300,
+   "ride": 600
+  },
+  "nocturnal": false,
+  "work": {
+   "Planting": 6,
+   "Handiwork": 4,
+   "Gathering": 4,
+   "Medicine Production": 6
+  }
  },
  {
   "id": "LanternButler",
@@ -3761,7 +7854,23 @@
    "Dark",
    "Fire"
   ],
-  "rarity": 5
+  "rarity": 5,
+  "stats": {
+   "hp": 90,
+   "atk": 100,
+   "def": 95,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 7,
+   "run": 300,
+   "ride": 450
+  },
+  "nocturnal": true,
+  "work": {
+   "Kindling": 4,
+   "Handiwork": 4,
+   "Medicine Production": 4
+  }
  },
  {
   "id": "MoonChild",
@@ -3775,7 +7884,23 @@
   "elements": [
    "Dark"
   ],
-  "rarity": 2
+  "rarity": 2,
+  "stats": {
+   "hp": 80,
+   "atk": 90,
+   "def": 60,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 5,
+   "run": 450,
+   "ride": 600
+  },
+  "nocturnal": true,
+  "work": {
+   "Handiwork": 6,
+   "Medicine Production": 6,
+   "Transporting": 1
+  }
  },
  {
   "id": "MonochromeQueen",
@@ -3790,7 +7915,23 @@
    "Dark",
    "Normal"
   ],
-  "rarity": 7
+  "rarity": 7,
+  "stats": {
+   "hp": 110,
+   "atk": 115,
+   "def": 115,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 9,
+   "run": 450,
+   "ride": 600
+  },
+  "nocturnal": true,
+  "work": {
+   "Handiwork": 8,
+   "Gathering": 4,
+   "Transporting": 2
+  }
  },
  {
   "id": "KabukiMan",
@@ -3804,7 +7945,24 @@
   "elements": [
    "Fire"
   ],
-  "rarity": 7
+  "rarity": 7,
+  "stats": {
+   "hp": 105,
+   "atk": 120,
+   "def": 100,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 8,
+   "run": 400,
+   "ride": 500
+  },
+  "nocturnal": false,
+  "work": {
+   "Kindling": 8,
+   "Handiwork": 6,
+   "Gathering": 5,
+   "Transporting": 5
+  }
  },
  {
   "id": "DomeArmorDragon",
@@ -3819,7 +7977,21 @@
    "Dragon",
    "Earth"
   ],
-  "rarity": 8
+  "rarity": 8,
+  "stats": {
+   "hp": 105,
+   "atk": 125,
+   "def": 140,
+   "workSpeed": 100,
+   "stamina": 300,
+   "food": 9,
+   "run": 850,
+   "ride": 1100
+  },
+  "nocturnal": false,
+  "work": {
+   "Mining": 8
+  }
  },
  {
   "id": "ElecPanda",
@@ -3833,7 +8005,24 @@
   "elements": [
    "Electricity"
   ],
-  "rarity": 8
+  "rarity": 8,
+  "stats": {
+   "hp": 120,
+   "atk": 105,
+   "def": 105,
+   "workSpeed": 100,
+   "stamina": 180,
+   "food": 6,
+   "run": 600,
+   "ride": 1000
+  },
+  "nocturnal": false,
+  "work": {
+   "Generating Electricity": 5,
+   "Handiwork": 4,
+   "Lumbering": 3,
+   "Transporting": 5
+  }
  },
  {
   "id": "LilyQueen",
@@ -3847,7 +8036,24 @@
   "elements": [
    "Leaf"
   ],
-  "rarity": 9
+  "rarity": 9,
+  "stats": {
+   "hp": 120,
+   "atk": 120,
+   "def": 110,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 8,
+   "run": 450,
+   "ride": 550
+  },
+  "nocturnal": false,
+  "work": {
+   "Planting": 7,
+   "Handiwork": 5,
+   "Gathering": 6,
+   "Medicine Production": 5
+  }
  },
  {
   "id": "LilyQueen_Dark",
@@ -3861,7 +8067,23 @@
   "elements": [
    "Dark"
   ],
-  "rarity": 10
+  "rarity": 10,
+  "stats": {
+   "hp": 115,
+   "atk": 120,
+   "def": 115,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 8,
+   "run": 450,
+   "ride": 550
+  },
+  "nocturnal": true,
+  "work": {
+   "Handiwork": 5,
+   "Gathering": 6,
+   "Medicine Production": 7
+  }
  },
  {
   "id": "ThunderDragonMan",
@@ -3876,7 +8098,23 @@
    "Dragon",
    "Electricity"
   ],
-  "rarity": 9
+  "rarity": 9,
+  "stats": {
+   "hp": 120,
+   "atk": 130,
+   "def": 115,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 9,
+   "run": 900,
+   "ride": 1200
+  },
+  "nocturnal": false,
+  "work": {
+   "Generating Electricity": 8,
+   "Handiwork": 3,
+   "Transporting": 4
+  }
  },
  {
   "id": "Horus",
@@ -3890,7 +8128,22 @@
   "elements": [
    "Fire"
   ],
-  "rarity": 9
+  "rarity": 9,
+  "stats": {
+   "hp": 105,
+   "atk": 110,
+   "def": 115,
+   "workSpeed": 100,
+   "stamina": 230,
+   "food": 9,
+   "run": 1000,
+   "ride": 1400
+  },
+  "nocturnal": false,
+  "work": {
+   "Kindling": 6,
+   "Transporting": 3
+  }
  },
  {
   "id": "Horus_Water",
@@ -3904,7 +8157,22 @@
   "elements": [
    "Water"
   ],
-  "rarity": 9
+  "rarity": 9,
+  "stats": {
+   "hp": 110,
+   "atk": 110,
+   "def": 115,
+   "workSpeed": 100,
+   "stamina": 230,
+   "food": 9,
+   "run": 1000,
+   "ride": 1400
+  },
+  "nocturnal": false,
+  "work": {
+   "Watering": 6,
+   "Transporting": 5
+  }
  },
  {
   "id": "BlackGriffon",
@@ -3918,7 +8186,21 @@
   "elements": [
    "Dark"
   ],
-  "rarity": 10
+  "rarity": 10,
+  "stats": {
+   "hp": 120,
+   "atk": 120,
+   "def": 140,
+   "workSpeed": 100,
+   "stamina": 250,
+   "food": 8,
+   "run": 850,
+   "ride": 1200
+  },
+  "nocturnal": true,
+  "work": {
+   "Gathering": 2
+  }
  },
  {
   "id": "MoonQueen",
@@ -3933,7 +8215,23 @@
    "Dark",
    "Normal"
   ],
-  "rarity": 9
+  "rarity": 9,
+  "stats": {
+   "hp": 130,
+   "atk": 115,
+   "def": 110,
+   "workSpeed": 100,
+   "stamina": 300,
+   "food": 9,
+   "run": 1000,
+   "ride": 1600
+  },
+  "nocturnal": true,
+  "work": {
+   "Handiwork": 7,
+   "Medicine Production": 6,
+   "Transporting": 3
+  }
  },
  {
   "id": "SnowTigerBeastman",
@@ -3947,7 +8245,23 @@
   "elements": [
    "Ice"
   ],
-  "rarity": 8
+  "rarity": 8,
+  "stats": {
+   "hp": 140,
+   "atk": 130,
+   "def": 120,
+   "workSpeed": 100,
+   "stamina": 270,
+   "food": 9,
+   "run": 750,
+   "ride": 1100
+  },
+  "nocturnal": false,
+  "work": {
+   "Lumbering": 6,
+   "Mining": 5,
+   "Cooling": 8
+  }
  },
  {
   "id": "BlueSkyDragon",
@@ -3962,7 +8276,22 @@
    "Dragon",
    "Water"
   ],
-  "rarity": 9
+  "rarity": 9,
+  "stats": {
+   "hp": 140,
+   "atk": 135,
+   "def": 120,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 9,
+   "run": 1400,
+   "ride": 2800
+  },
+  "nocturnal": false,
+  "work": {
+   "Watering": 8,
+   "Gathering": 5
+  }
  },
  {
   "id": "Mothman",
@@ -3976,7 +8305,25 @@
   "elements": [
    "Leaf"
   ],
-  "rarity": 8
+  "rarity": 8,
+  "stats": {
+   "hp": 140,
+   "atk": 120,
+   "def": 110,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 9,
+   "run": 500,
+   "ride": 750
+  },
+  "nocturnal": false,
+  "work": {
+   "Planting": 6,
+   "Handiwork": 6,
+   "Gathering": 4,
+   "Medicine Production": 8,
+   "Transporting": 2
+  }
  },
  {
   "id": "FlowerPrince",
@@ -3991,7 +8338,25 @@
    "Leaf",
    "Dark"
   ],
-  "rarity": 8
+  "rarity": 8,
+  "stats": {
+   "hp": 125,
+   "atk": 135,
+   "def": 110,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 9,
+   "run": 1000,
+   "ride": 1000
+  },
+  "nocturnal": true,
+  "work": {
+   "Planting": 8,
+   "Handiwork": 6,
+   "Gathering": 5,
+   "Medicine Production": 6,
+   "Transporting": 3
+  }
  },
  {
   "id": "NightLady",
@@ -4005,7 +8370,23 @@
   "elements": [
    "Dark"
   ],
-  "rarity": 20
+  "rarity": 20,
+  "stats": {
+   "hp": 120,
+   "atk": 150,
+   "def": 100,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 7,
+   "run": 600,
+   "ride": 800
+  },
+  "nocturnal": true,
+  "work": {
+   "Handiwork": 5,
+   "Medicine Production": 5,
+   "Transporting": 4
+  }
  },
  {
   "id": "NightLady_Dark",
@@ -4019,7 +8400,23 @@
   "elements": [
    "Dark"
   ],
-  "rarity": 20
+  "rarity": 20,
+  "stats": {
+   "hp": 120,
+   "atk": 150,
+   "def": 100,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 7,
+   "run": 600,
+   "ride": 800
+  },
+  "nocturnal": true,
+  "work": {
+   "Handiwork": 6,
+   "Medicine Production": 7,
+   "Transporting": 4
+  }
  },
  {
   "id": "DarkMechaDragon",
@@ -4034,7 +8431,21 @@
    "Dark",
    "Dragon"
   ],
-  "rarity": 8
+  "rarity": 8,
+  "stats": {
+   "hp": 130,
+   "atk": 120,
+   "def": 120,
+   "workSpeed": 100,
+   "stamina": 300,
+   "food": 8,
+   "run": 550,
+   "ride": 660
+  },
+  "nocturnal": true,
+  "work": {
+   "Gathering": 2
+  }
  },
  {
   "id": "LegendDeer",
@@ -4048,7 +8459,22 @@
   "elements": [
    "Normal"
   ],
-  "rarity": 10
+  "rarity": 10,
+  "stats": {
+   "hp": 135,
+   "atk": 130,
+   "def": 110,
+   "workSpeed": 100,
+   "stamina": 400,
+   "food": 9,
+   "run": 900,
+   "ride": 1900
+  },
+  "nocturnal": false,
+  "work": {
+   "Gathering": 7,
+   "Lumbering": 7
+  }
  },
  {
   "id": "SaintCentaur",
@@ -4062,7 +8488,22 @@
   "elements": [
    "Normal"
   ],
-  "rarity": 20
+  "rarity": 20,
+  "stats": {
+   "hp": 130,
+   "atk": 120,
+   "def": 145,
+   "workSpeed": 100,
+   "stamina": 400,
+   "food": 9,
+   "run": 800,
+   "ride": 1800
+  },
+  "nocturnal": false,
+  "work": {
+   "Lumbering": 6,
+   "Mining": 6
+  }
  },
  {
   "id": "BlackCentaur",
@@ -4076,7 +8517,22 @@
   "elements": [
    "Dark"
   ],
-  "rarity": 20
+  "rarity": 20,
+  "stats": {
+   "hp": 130,
+   "atk": 145,
+   "def": 120,
+   "workSpeed": 100,
+   "stamina": 350,
+   "food": 9,
+   "run": 1300,
+   "ride": 1900
+  },
+  "nocturnal": true,
+  "work": {
+   "Lumbering": 6,
+   "Mining": 6
+  }
  },
  {
   "id": "IceHorse",
@@ -4090,7 +8546,21 @@
   "elements": [
    "Ice"
   ],
-  "rarity": 20
+  "rarity": 20,
+  "stats": {
+   "hp": 140,
+   "atk": 140,
+   "def": 120,
+   "workSpeed": 100,
+   "stamina": 300,
+   "food": 9,
+   "run": 1200,
+   "ride": 1800
+  },
+  "nocturnal": false,
+  "work": {
+   "Cooling": 7
+  }
  },
  {
   "id": "IceHorse_Dark",
@@ -4104,7 +8574,21 @@
   "elements": [
    "Dark"
   ],
-  "rarity": 20
+  "rarity": 20,
+  "stats": {
+   "hp": 140,
+   "atk": 140,
+   "def": 135,
+   "workSpeed": 100,
+   "stamina": 300,
+   "food": 9,
+   "run": 1200,
+   "ride": 1800
+  },
+  "nocturnal": true,
+  "work": {
+   "Gathering": 7
+  }
  },
  {
   "id": "PoseidonOrca",
@@ -4118,7 +8602,21 @@
   "elements": [
    "Water"
   ],
-  "rarity": 20
+  "rarity": 20,
+  "stats": {
+   "hp": 105,
+   "atk": 145,
+   "def": 125,
+   "workSpeed": 100,
+   "stamina": 410,
+   "food": 9,
+   "run": 750,
+   "ride": 1120
+  },
+  "nocturnal": false,
+  "work": {
+   "Watering": 7
+  }
  },
  {
   "id": "JetDragon",
@@ -4132,7 +8630,21 @@
   "elements": [
    "Dragon"
   ],
-  "rarity": 20
+  "rarity": 20,
+  "stats": {
+   "hp": 115,
+   "atk": 140,
+   "def": 120,
+   "workSpeed": 100,
+   "stamina": 110,
+   "food": 9,
+   "run": 1700,
+   "ride": 3300
+  },
+  "nocturnal": false,
+  "work": {
+   "Gathering": 8
+  }
  },
  {
   "id": "KingWhale",
@@ -4146,7 +8658,19 @@
   "elements": [
    "Water"
   ],
-  "rarity": 10
+  "rarity": 10,
+  "stats": {
+   "hp": 180,
+   "atk": 120,
+   "def": 200,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 9,
+   "run": 3000,
+   "ride": 3000
+  },
+  "nocturnal": false,
+  "work": {}
  },
  {
   "id": "WorldTreeDragon",
@@ -4158,6 +8682,18 @@
   "ignoreCombi": true,
   "maleProb": 50,
   "elements": [],
-  "rarity": 10
+  "rarity": 10,
+  "stats": {
+   "hp": 200,
+   "atk": 200,
+   "def": 200,
+   "workSpeed": 100,
+   "stamina": 100,
+   "food": 9,
+   "run": -1,
+   "ride": -1
+  },
+  "nocturnal": false,
+  "work": {}
  }
 ]

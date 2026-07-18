@@ -55,6 +55,22 @@ def display_name(key):
     return f"{b} (Special)" if b else None
 
 
+WORK_LABELS = {
+    "WorkSuitability_EmitFlame": "Kindling",
+    "WorkSuitability_Watering": "Watering",
+    "WorkSuitability_Seeding": "Planting",
+    "WorkSuitability_GenerateElectricity": "Generating Electricity",
+    "WorkSuitability_Handcraft": "Handiwork",
+    "WorkSuitability_Collection": "Gathering",
+    "WorkSuitability_Deforest": "Lumbering",
+    "WorkSuitability_Mining": "Mining",
+    "WorkSuitability_OilExtraction": "Oil Extracting",
+    "WorkSuitability_ProductMedicine": "Medicine Production",
+    "WorkSuitability_Cool": "Cooling",
+    "WorkSuitability_Transport": "Transporting",
+    "WorkSuitability_MonsterFarm": "Farming",
+}
+
 pals = []
 for key, r in monster.items():
     if r.get("ZukanIndex", 0) <= 0 or EXCLUDE_KEY.search(key):
@@ -74,6 +90,18 @@ for key, r in monster.items():
         "elements": [e for e in (enum_val(r.get("ElementType1")), enum_val(r.get("ElementType2")))
                      if e and e != "None"],
         "rarity": r.get("Rarity", 1),
+        "stats": {
+            "hp": r.get("Hp", 0),
+            "atk": r.get("ShotAttack", 0),
+            "def": r.get("Defense", 0),
+            "workSpeed": r.get("CraftSpeed", 0),
+            "stamina": r.get("Stamina", 0),
+            "food": r.get("FoodAmount", 0),
+            "run": r.get("RunSpeed", 0),
+            "ride": r.get("RideSprintSpeed", 0),
+        },
+        "nocturnal": bool(r.get("Nocturnal")),
+        "work": {WORK_LABELS[k]: r[k] for k in WORK_LABELS if r.get(k, 0) > 0},
     })
 pals.sort(key=lambda p: (p["zukan"], p["suffix"]))
 

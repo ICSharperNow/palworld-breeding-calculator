@@ -40,3 +40,32 @@ export function rarityTier(r: number): RarityTier {
 export function genderText(p: Pal): string {
   return `${p.maleProb}% ♂ / ${100 - p.maleProb}% ♀`
 }
+
+// what deals bonus damage TO each element (Palworld type chart)
+export const WEAK_TO: Record<string, string> = {
+  Normal: 'Dark',
+  Fire: 'Water',
+  Water: 'Electricity',
+  Electricity: 'Earth',
+  Leaf: 'Fire',
+  Earth: 'Leaf',
+  Ice: 'Fire',
+  Dragon: 'Ice',
+  Dark: 'Dragon',
+}
+
+export const WORK_ICONS: Record<string, string> = {
+  Kindling: '🔥',
+  Watering: '💧',
+  Planting: '🌱',
+  'Generating Electricity': '⚡',
+  Handiwork: '✋',
+  Gathering: '🧺',
+  Lumbering: '🪓',
+  Mining: '⛏️',
+  'Oil Extracting': '🛢️',
+  'Medicine Production': '💊',
+  Cooling: '❄️',
+  Transporting: '📦',
+  Farming: '🐄',
+}
