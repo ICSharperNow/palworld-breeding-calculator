@@ -49,9 +49,18 @@ foreach (var path in targets)
 // --- pal icons: decode textures, downscale, write webp per character id ---
 var iconDir = Path.Combine(outDir, "icons");
 Directory.CreateDirectory(iconDir);
-var iconTable = provider.LoadPackageObject<UDataTable>(
-    "Pal/Content/Pal/DataTable/Character/DT_PalCharacterIconDataTable.DT_PalCharacterIconDataTable");
+UDataTable? iconTable = null;
+try
+{
+    iconTable = provider.LoadPackageObject<UDataTable>(
+        "Pal/Content/Pal/DataTable/Character/DT_PalCharacterIconDataTable.DT_PalCharacterIconDataTable");
+}
+catch (Exception e)
+{
+    Console.WriteLine($"FAIL icon table: {e.Message}");
+}
 int ok = 0, fail = 0;
+if (iconTable != null)
 foreach (var (rowName, row) in iconTable.RowMap)
 {
     try
@@ -83,8 +92,8 @@ try
     // T_TreeMap is the World Tree interior map
     foreach (var (texName, fileName, outW) in new[]
     {
-        ("T_WorldMap", "worldmap.webp", 1600),
-        ("T_TreeMap", "treemap.webp", 1100),
+        ("T_WorldMap", "worldmap.webp", 3072),
+        ("T_TreeMap", "treemap.webp", 2048),
     })
     {
         var mapTex = provider.LoadPackageObject<UTexture2D>(

@@ -13,7 +13,7 @@ import {
 } from './lib/breeding'
 import { passives, inheritChance, exactChance } from './lib/passives'
 import { rarityTier, genderText, ELEMENT_COLORS } from './lib/ui'
-import { spawnsFor, worldMap, treeMap, SPAWN_GRID, gameCoords, centroid } from './lib/spawns'
+import { spawnsFor, worldMap, treeMap, SPAWN_GRID, gameCoords } from './lib/spawns'
 import { PalPicker, ElementChips, PalIcon } from './PalPicker'
 
 function mixColors(a: string, b: string): string {
@@ -26,6 +26,49 @@ function hexToRgba(hex: string, alpha: number): string {
   const [r, g, b] = [1, 3, 5].map(i => parseInt(hex.slice(i, i + 2), 16))
   return `rgba(${r}, ${g}, ${b}, ${alpha})`
 }
+
+interface SpawnCluster {
+  cx: number
+  cy: number
+  maxd: number
+  size: number
+}
+
+// group cells into clusters: cells within LINK grid units join the same one
+function clusterCells(cells: [number, number][], link: number): SpawnCluster[] {
+  const unvisited = new Set(cells.map((_, i) => i))
+  const out: SpawnCluster[] = []
+  while (unvisited.size > 0) {
+    const seed = unvisited.values().next().value!
+    unvisited.delete(seed)
+    const members = [seed]
+    const queue = [seed]
+    while (queue.length > 0) {
+      const cur = cells[queue.pop()!]
+      for (const i of [...unvisited]) {
+        const p = cells[i]
+        if (Math.abs(p[0] - cur[0]) <= link && Math.abs(p[1] - cur[1]) <= link) {
+          unvisited.delete(i)
+          members.push(i)
+          queue.push(i)
+        }
+      }
+    }
+    let sx = 0, sy = 0
+    for (const i of members) { sx += cells[i][0]; sy += cells[i][1] }
+    const cx = sx / members.length
+    const cy = sy / members.length
+    let maxd = 0
+    for (const i of members) {
+      const d = Math.hypot(cells[i][0] - cx, cells[i][1] - cy)
+      if (d > maxd) maxd = d
+    }
+    out.push({ cx, cy, maxd, size: members.length })
+  }
+  return out
+}
+
+const CLUSTER_LINK = 14 // grid units
 
 function SpawnMapView({ palId, onRequestClose }: { palId: string | null; onRequestClose?: () => void }) {
   const info = palId ? spawnsFor(palId) : null
@@ -55,8 +98,28 @@ function SpawnMapView({ palId, onRequestClose }: { palId: string | null; onReque
 
   const pts = info ? (which === 'main' ? info.main : info.tree) : { day: [], night: [] }
   const mapSrc = which === 'main' ? worldMap : treeMap
-  const cen = centroid([pts.day, pts.night])
-  const cenCoords = cen ? gameCoords(cen[0] / (SPAWN_GRID - 1), cen[1] / (SPAWN_GRID - 1), which) : null
+
+  // clusters of the currently visible cells - drive both the attention rings
+  // and the "best spot" readout (center of the densest cluster, so it never
+  // averages between islands into open water)
+  const clusters = useMemo(() => {
+    const seen = new Set<number>()
+    const shown: [number, number][] = []
+    const add = (set: [number, number][]) => {
+      for (const [x, y] of set) {
+        const k = y * SPAWN_GRID + x
+        if (!seen.has(k)) { seen.add(k); shown.push([x, y]) }
+      }
+    }
+    if (showDay) add(pts.day)
+    if (showNight) add(pts.night)
+    return clusterCells(shown, CLUSTER_LINK)
+  }, [pts, showDay, showNight])
+
+  const best = clusters.length > 0 ? clusters.reduce((a, b) => (b.size > a.size ? b : a)) : null
+  const bestCoords = best
+    ? gameCoords(best.cx / (SPAWN_GRID - 1), best.cy / (SPAWN_GRID - 1), which)
+    : null
 
   const clampPan = (p: [number, number], z: number): [number, number] => {
     const lim = (z - 1) / 2 / z
@@ -72,10 +135,11 @@ function SpawnMapView({ palId, onRequestClose }: { palId: string | null; onReque
     const dot = Math.max(4, cell * 1.9)
     const dayKeys = new Set(pts.day.map(([x, y]) => y * SPAWN_GRID + x))
     const nightKeys = new Set(pts.night.map(([x, y]) => y * SPAWN_GRID + x))
+    const halo = Math.max(1.5, cell * 0.3)
     const draw = (keys: Iterable<number>, color: string) => {
       // dark halo first so the dots stand out on any terrain color
       ctx.fillStyle = 'rgba(10, 14, 20, 0.55)'
-      for (const k of keys) ctx.fillRect((k % SPAWN_GRID) * cell - 1.5, Math.floor(k / SPAWN_GRID) * cell - 1.5, dot + 3, dot + 3)
+      for (const k of keys) ctx.fillRect((k % SPAWN_GRID) * cell - halo, Math.floor(k / SPAWN_GRID) * cell - halo, dot + halo * 2, dot + halo * 2)
       ctx.fillStyle = color
       for (const k of keys) ctx.fillRect((k % SPAWN_GRID) * cell, Math.floor(k / SPAWN_GRID) * cell, dot, dot)
     }
@@ -92,53 +156,25 @@ function SpawnMapView({ palId, onRequestClose }: { palId: string | null; onReque
 
     // attention rings around each spawn cluster - small habitats are easy to
     // miss on the full map, so circle every cluster of visible cells
-    const shown: [number, number][] = []
-    if (showDay) for (const k of dayKeys) shown.push([k % SPAWN_GRID, Math.floor(k / SPAWN_GRID)])
-    if (showNight) for (const k of nightKeys) if (!showDay || !dayKeys.has(k)) shown.push([k % SPAWN_GRID, Math.floor(k / SPAWN_GRID)])
-    if (shown.length > 0) {
-      const LINK = 14 // grid units - cells closer than this join one cluster
-      const unvisited = new Set(shown.map((_, i) => i))
-      const rings: { cx: number; cy: number; r: number }[] = []
-      while (unvisited.size > 0) {
-        const seed = unvisited.values().next().value!
-        unvisited.delete(seed)
-        const members = [seed]
-        const queue = [seed]
-        while (queue.length > 0) {
-          const cur = shown[queue.pop()!]
-          for (const i of [...unvisited]) {
-            const p = shown[i]
-            if (Math.abs(p[0] - cur[0]) <= LINK && Math.abs(p[1] - cur[1]) <= LINK) {
-              unvisited.delete(i)
-              members.push(i)
-              queue.push(i)
-            }
-          }
-        }
-        let sx = 0, sy = 0
-        for (const i of members) { sx += shown[i][0]; sy += shown[i][1] }
-        const cx = sx / members.length
-        const cy = sy / members.length
-        let maxd = 0
-        for (const i of members) {
-          const d = Math.hypot(shown[i][0] - cx, shown[i][1] - cy)
-          if (d > maxd) maxd = d
-        }
-        rings.push({ cx: cx * cell + cell / 2, cy: cy * cell + cell / 2, r: Math.max(30, (maxd + 6) * cell) })
-      }
+    if (clusters.length > 0) {
+      const rings = clusters.map(c => ({
+        cx: c.cx * cell + cell / 2,
+        cy: c.cy * cell + cell / 2,
+        r: Math.max(W * 0.03, (c.maxd + 6) * cell),
+      }))
       ctx.save()
       for (const ring of rings) {
         ctx.beginPath()
         ctx.arc(ring.cx, ring.cy, ring.r, 0, Math.PI * 2)
-        ctx.lineWidth = 6
+        ctx.lineWidth = W * 0.003
         ctx.strokeStyle = 'rgba(10, 14, 20, 0.6)'
         ctx.stroke()
         ctx.beginPath()
         ctx.arc(ring.cx, ring.cy, ring.r, 0, Math.PI * 2)
-        ctx.lineWidth = 3
+        ctx.lineWidth = W * 0.0016
         ctx.strokeStyle = 'rgba(255, 255, 255, 0.95)'
         ctx.shadowColor = 'rgba(255, 255, 255, 0.8)'
-        ctx.shadowBlur = 12
+        ctx.shadowBlur = W * 0.006
         ctx.stroke()
         ctx.shadowBlur = 0
       }
@@ -263,8 +299,8 @@ function SpawnMapView({ palId, onRequestClose }: { palId: string | null; onReque
           <img src={mapSrc} alt="Map" draggable={false} />
           <canvas
             ref={canvasRef}
-            width={1024}
-            height={1024}
+            width={2048}
+            height={2048}
             key={`${palId}-${which}-${showDay}-${showNight}-${dayColor}-${nightColor}`}
           />
         </div>
@@ -284,9 +320,12 @@ function SpawnMapView({ palId, onRequestClose }: { palId: string | null; onReque
             <span className="swatch both" style={{ background: mixColors(dayColor, nightColor) }} /> = day &amp; night
           </span>
         )}
-        {cenCoords && (
-          <span className="mapcentroid" title="Center of this pal's spawn area (approximate in-game coordinates)">
-            center: ({cenCoords[0]}, {cenCoords[1]})
+        {bestCoords && (
+          <span
+            className="mapcentroid"
+            title={`Center of the pal's biggest spawn cluster${clusters.length > 1 ? ` (of ${clusters.length} areas)` : ''} - approximate in-game coordinates`}
+          >
+            best spot: ({bestCoords[0]}, {bestCoords[1]})
           </span>
         )}
       </div>
