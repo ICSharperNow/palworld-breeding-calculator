@@ -79,15 +79,21 @@ Console.WriteLine($"icons: {ok} ok, {fail} failed");
 // --- world map texture for the spawn overlay ---
 try
 {
+    // T_WorldMap is the current in-game world map (referenced by DT_WorldMapUIData)
     var mapTex = provider.LoadPackageObject<UTexture2D>(
-        "Pal/Content/Pal/DataTable/WorldMapUIData/Data/MainWorld5/T_Mainworld5_Combined_221005.T_Mainworld5_Combined_221005");
+        "Pal/Content/Pal/Texture/UI/Map/T_WorldMap.T_WorldMap");
     using var mapBmp = mapTex.Decode()?.ToSkBitmap();
     if (mapBmp != null)
     {
-        using var mapResized = mapBmp.Resize(new SKImageInfo(1400, 1400 * mapBmp.Height / mapBmp.Width), SKFilterQuality.High);
-        using var mapImg = SKImage.FromBitmap(mapResized);
+        const int outW = 1600;
+        using var mapResized = mapBmp.Resize(new SKImageInfo(outW, outW * mapBmp.Height / mapBmp.Width), SKFilterQuality.High);
+        // flatten onto opaque dark water so alpha in the source can't wash the colors out
+        using var surface = SKSurface.Create(new SKImageInfo(mapResized.Width, mapResized.Height, SKColorType.Rgb888x));
+        surface.Canvas.Clear(new SKColor(12, 44, 74));
+        surface.Canvas.DrawBitmap(mapResized, 0, 0);
+        using var mapImg = surface.Snapshot();
         File.WriteAllBytes(Path.Combine(outDir, "worldmap.webp"),
-            mapImg.Encode(SKEncodedImageFormat.Webp, 78).ToArray());
+            mapImg.Encode(SKEncodedImageFormat.Webp, 82).ToArray());
         Console.WriteLine($"world map: {mapBmp.Width}x{mapBmp.Height} -> worldmap.webp");
     }
 }

@@ -46,6 +46,7 @@ PAK_INCLUDES = [
     "Pal/Content/Pal/Texture/PalIcon/Normal",
     "Pal/Content/Pal/DataTable/UI",
     "Pal/Content/Pal/DataTable/WorldMapUIData",
+    "Pal/Content/Pal/Texture/UI/Map",
 ]
 
 

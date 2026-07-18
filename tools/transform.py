@@ -115,11 +115,15 @@ passives.sort(key=lambda p: (-p["rank"], p["name"]))
 # --- spawn locations: quantized day/night habitat points from the game's own
 # Paldeck distribution table, plus the world-map bounds that position them ---
 SPAWN_GRID = 320
+# World-to-T_WorldMap bounds, calibrated by fitting the full spawn point cloud
+# onto the map texture's landmass (maximizing points-on-land F-score). The
+# DT_WorldMapUIData landscape bounds only cover the original continent; these
+# extend to the whole 1.0 world texture (Sakurajima, Feybreak, oil rigs).
+MAP_MIN_X, MAP_MAX_X = -1105255.0, 355765.0   # world X: south edge .. north edge
+MAP_MIN_Y, MAP_MAX_Y = -730039.0, 730981.0    # world Y: west edge .. east edge
 try:
     dist = rows("DT_PaldexDistributionData")
-    wm = rows("DT_WorldMapUIData")["MainMap"]
-    mn, mx = wm["landScapeRealPositionMin"], wm["landScapeRealPositionMax"]
-    min_x, max_x, min_y, max_y = mn["X"], mx["X"], mn["Y"], mx["Y"]
+    min_x, max_x, min_y, max_y = MAP_MIN_X, MAP_MAX_X, MAP_MIN_Y, MAP_MAX_Y
     spawns = {}
     for key, r in dist.items():
         pal_id = pal_ids_ci.get(key.lower())
