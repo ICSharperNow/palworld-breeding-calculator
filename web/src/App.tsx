@@ -514,14 +514,16 @@ function PalDetailModal({ id, hasBack, onBack, onClose }: { id: string; hasBack:
             </div>
             <h3>Work suitability</h3>
             <div className="worklist">
-              {Object.entries(pal.work).map(([w, lv]) => (
-                <div key={w} className="workrow">
-                  <span className="workicon">{WORK_ICONS[w] ?? '🔧'}</span>
-                  <span className="statlabel">{w}</span>
-                  <b>Lv {lv}</b>
-                </div>
-              ))}
-              {Object.keys(pal.work).length === 0 && <span className="muted small">none</span>}
+              {Object.keys(WORK_ICONS).map(w => {
+                const lv = pal.work[w] ?? 0
+                return (
+                  <div key={w} className={`workrow ${lv === 0 ? 'none' : ''}`}>
+                    <span className="workicon">{WORK_ICONS[w]}</span>
+                    <span className="statlabel">{w}</span>
+                    <b>{lv > 0 ? `Lv ${lv}` : '—'}</b>
+                  </div>
+                )
+              })}
             </div>
           </div>
         </div>

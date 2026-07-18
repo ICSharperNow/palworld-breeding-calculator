@@ -218,6 +218,8 @@ nav button.active {
 .worklist { display: flex; flex-direction: column; gap: 3px; }
 .workrow { display: flex; align-items: center; gap: 8px; }
 .workrow .statlabel { min-width: 160px; }
+.workrow.none { opacity: .38; }
+.workrow.none .workicon { filter: grayscale(1); }
 .workicon { width: 22px; text-align: center; }
 .modal-combos { display: flex; flex-direction: column; gap: 2px; max-height: 180px; overflow-y: auto; }
 .modal h3 { margin: 16px 0 6px; }
