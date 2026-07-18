@@ -26,6 +26,8 @@ var targets = new[]
     "Pal/Content/L10N/en/Pal/DataTable/Text/DT_PalNameText_Common",
     "Pal/Content/L10N/en/Pal/DataTable/Text/DT_SkillNameText_Common",
     "Pal/Content/L10N/en/Pal/DataTable/Text/DT_SkillDescText_Common",
+    "Pal/Content/Pal/DataTable/UI/DT_PaldexDistributionData",
+    "Pal/Content/Pal/DataTable/WorldMapUIData/DT_WorldMapUIData",
 };
 
 foreach (var path in targets)
@@ -73,3 +75,23 @@ foreach (var (rowName, row) in iconTable.RowMap)
     }
 }
 Console.WriteLine($"icons: {ok} ok, {fail} failed");
+
+// --- world map texture for the spawn overlay ---
+try
+{
+    var mapTex = provider.LoadPackageObject<UTexture2D>(
+        "Pal/Content/Pal/DataTable/WorldMapUIData/Data/MainWorld5/T_Mainworld5_Combined_221005.T_Mainworld5_Combined_221005");
+    using var mapBmp = mapTex.Decode()?.ToSkBitmap();
+    if (mapBmp != null)
+    {
+        using var mapResized = mapBmp.Resize(new SKImageInfo(1400, 1400 * mapBmp.Height / mapBmp.Width), SKFilterQuality.High);
+        using var mapImg = SKImage.FromBitmap(mapResized);
+        File.WriteAllBytes(Path.Combine(outDir, "worldmap.webp"),
+            mapImg.Encode(SKEncodedImageFormat.Webp, 78).ToArray());
+        Console.WriteLine($"world map: {mapBmp.Width}x{mapBmp.Height} -> worldmap.webp");
+    }
+}
+catch (Exception e)
+{
+    Console.WriteLine($"FAIL worldmap: {e.Message}");
+}

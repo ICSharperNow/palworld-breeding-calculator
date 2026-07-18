@@ -47,7 +47,7 @@ export function PalPicker({ value, onChange, placeholder = 'Search pal…' }: Pr
   const matches = q
     ? pals.filter(p => p.name.toLowerCase().includes(q) || String(p.zukan).startsWith(q))
     : pals
-  const shown = matches.slice(0, 60)
+  const shown = matches
 
   return (
     <div className="picker" ref={rootRef}>

@@ -27,6 +27,10 @@ portable HTML file (~1.4 MB). Works offline, no server, no tracking.
 
 Every pal shown anywhere is **clickable** - a detail popup shows its stats, unique combos,
 and shortcuts into the other tools, with back/close returning you exactly where you were.
+The popup also has a **📍 Spawn map**: the world map with the pal's actual day/night
+habitat areas drawn on it, straight from the game's own Paldeck distribution data
+(`DT_PaldexDistributionData`), with day/night toggles. Pals that never spawn wild
+(legendaries, breed-only variants) say so instead.
 
 ![Find Parents](docs/screenshots/ss-parents.png)
 ![Plan Builder](docs/screenshots/plan1.png)
@@ -118,7 +122,8 @@ Palworld Breeding Calculator.html   ← the app, ready to open
 web/                                ← React + Vite source
   src/lib/breeding.ts               ← breeding formula, path finder, bloodline planner
   src/lib/passives.ts               ← passive inheritance math
-  src/data/                         ← generated dataset (pals, combos, passives, icons)
+  src/data/                         ← generated dataset (pals, combos, passives, icons,
+                                       spawn maps, world map)
 tools/
   update.py                         ← auto-detects game patches, regenerates everything
   exporter/                         ← C# CUE4Parse DataTable + icon exporter

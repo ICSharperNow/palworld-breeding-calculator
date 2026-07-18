@@ -112,6 +112,45 @@ for key, r in passive.items():
     })
 passives.sort(key=lambda p: (-p["rank"], p["name"]))
 
+# --- spawn locations: quantized day/night habitat points from the game's own
+# Paldeck distribution table, plus the world-map bounds that position them ---
+SPAWN_GRID = 320
+try:
+    dist = rows("DT_PaldexDistributionData")
+    wm = rows("DT_WorldMapUIData")["MainMap"]
+    mn, mx = wm["landScapeRealPositionMin"], wm["landScapeRealPositionMax"]
+    min_x, max_x, min_y, max_y = mn["X"], mx["X"], mn["Y"], mx["Y"]
+    spawns = {}
+    for key, r in dist.items():
+        pal_id = pal_ids_ci.get(key.lower())
+        if not pal_id:
+            continue
+        entry = {}
+        tree = False
+        for grp, short in (("dayTimeLocations", "d"), ("nightTimeLocations", "n")):
+            pts = set()
+            for loc in (r.get(grp) or {}).get("Locations", []):
+                if not (min_x <= loc["X"] <= max_x and min_y <= loc["Y"] <= max_y):
+                    tree = True  # World Tree / off-map area
+                    continue
+                u = int((loc["Y"] - min_y) / (max_y - min_y) * (SPAWN_GRID - 1))
+                v = int((1 - (loc["X"] - min_x) / (max_x - min_x)) * (SPAWN_GRID - 1))
+                pts.add(v * SPAWN_GRID + u)
+            if pts:
+                srt = sorted(pts)
+                entry[short] = [srt[0]] + [b - a for a, b in zip(srt, srt[1:])]
+        if tree:
+            entry["t"] = 1
+        if entry:
+            spawns[pal_id] = entry
+    json.dump({"grid": SPAWN_GRID, "pals": spawns}, open(OUT / "spawns.json", "w"),
+              separators=(",", ":"))
+    import shutil
+    shutil.copyfile(RAW / "worldmap.webp", OUT / "worldmap.webp")
+    print(f"spawns: {len(spawns)} pals with habitat data")
+except FileNotFoundError as e:
+    print(f"spawn data skipped ({e})")
+
 # --- icons: embed as data URIs so the single-file build stays portable ---
 import base64
 

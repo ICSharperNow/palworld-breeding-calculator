@@ -13,7 +13,76 @@ import {
 } from './lib/breeding'
 import { passives, inheritChance, exactChance } from './lib/passives'
 import { rarityTier, genderText, ELEMENT_COLORS } from './lib/ui'
+import { spawnsFor, worldMap, SPAWN_GRID } from './lib/spawns'
 import { PalPicker, ElementChips, PalIcon } from './PalPicker'
+
+function SpawnMapOverlay({ palId, onClose }: { palId: string; onClose: () => void }) {
+  const pal = palById.get(palId)!
+  const info = spawnsFor(palId)!
+  const [showDay, setShowDay] = useState(true)
+  const [showNight, setShowNight] = useState(true)
+  const canvasRef = (node: HTMLCanvasElement | null) => {
+    if (!node || !info) return
+    const ctx = node.getContext('2d')!
+    const W = node.width
+    ctx.clearRect(0, 0, W, W)
+    const cell = W / SPAWN_GRID
+    const dot = Math.max(2.4, cell * 1.15)
+    const dayKeys = new Set(info.day.map(([x, y]) => y * SPAWN_GRID + x))
+    const nightKeys = new Set(info.night.map(([x, y]) => y * SPAWN_GRID + x))
+    const draw = (keys: Iterable<number>, color: string) => {
+      ctx.fillStyle = color
+      for (const k of keys) ctx.fillRect((k % SPAWN_GRID) * cell, Math.floor(k / SPAWN_GRID) * cell, dot, dot)
+    }
+    if (showDay && showNight) {
+      draw([...dayKeys].filter(k => !nightKeys.has(k)), 'rgba(255, 200, 60, 0.85)')
+      draw([...nightKeys].filter(k => !dayKeys.has(k)), 'rgba(110, 170, 255, 0.85)')
+      draw([...dayKeys].filter(k => nightKeys.has(k)), 'rgba(126, 231, 135, 0.85)')
+    } else if (showDay) {
+      draw(dayKeys, 'rgba(255, 200, 60, 0.85)')
+    } else if (showNight) {
+      draw(nightKeys, 'rgba(110, 170, 255, 0.85)')
+    }
+  }
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        e.stopPropagation()
+        onClose()
+      }
+    }
+    document.addEventListener('keydown', onKey, true)
+    return () => document.removeEventListener('keydown', onKey, true)
+  }, [onClose])
+
+  return (
+    <div className="modal-backdrop mapdrop" onMouseDown={e => { if (e.target === e.currentTarget) onClose() }}>
+      <div className="mapmodal">
+        <div className="modal-nav">
+          <span className="maptitle">
+            <PalIcon id={palId} size={30} />
+            {pal.name} — spawn locations
+          </span>
+          <button className="modal-btn close" onClick={onClose}>× Close</button>
+        </div>
+        <div className="mapwrap">
+          <img src={worldMap} alt="World map" draggable={false} />
+          <canvas ref={canvasRef} width={1024} height={1024} key={`${showDay}-${showNight}`} />
+        </div>
+        <div className="maplegend">
+          <button className={`legend day ${showDay ? 'on' : ''}`} onClick={() => setShowDay(!showDay)}>
+            ☀ Day {info.day.length ? '' : '(none)'}
+          </button>
+          <button className={`legend night ${showNight ? 'on' : ''}`} onClick={() => setShowNight(!showNight)}>
+            ☾ Night {info.night.length ? '' : '(none)'}
+          </button>
+          {showDay && showNight && <span className="note"><span className="swatch both" /> = day &amp; night</span>}
+          {info.tree && <span className="note">also spawns in the World Tree (off this map)</span>}
+        </div>
+      </div>
+    </div>
+  )
+}
 
 function SortBar<T extends string>({ options, value, onChange }: {
   options: readonly (readonly [T, string])[]
@@ -125,14 +194,18 @@ function PalDetailModal({ id, hasBack, onBack, onClose }: { id: string; hasBack:
   const asChild = combos.filter(c => c.child === id)
   const asParent = combos.filter(c => (c.a === id || c.b === id) && c.child !== id)
   const selfChild = breedOutcomes(id, id)[0]?.child
+  const spawnInfo = spawnsFor(id)
+  const [showMap, setShowMap] = useState(false)
+  useEffect(() => setShowMap(false), [id])
 
   useEffect(() => {
+    if (showMap) return // map overlay owns Escape while open
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') (hasBack ? onBack : onClose)()
     }
     document.addEventListener('keydown', onKey)
     return () => document.removeEventListener('keydown', onKey)
-  }, [hasBack, onBack, onClose])
+  }, [hasBack, onBack, onClose, showMap])
 
   return (
     <div className="modal-backdrop" onMouseDown={e => { if (e.target === e.currentTarget) onClose() }}>
@@ -190,10 +263,16 @@ function PalDetailModal({ id, hasBack, onBack, onClose }: { id: string; hasBack:
           </>
         )}
         <div className="modal-actions">
+          {spawnInfo ? (
+            <button className="modal-btn primary" onClick={() => setShowMap(true)}>📍 Spawn map</button>
+          ) : (
+            <span className="note">No wild spawns — breeding or special sources only.</span>
+          )}
           <button className="modal-btn primary" onClick={() => gotoReverse(id)}>🎯 Find all parents</button>
           <button className="modal-btn primary" onClick={() => gotoPath(id)}>🗺️ Plan path from it</button>
         </div>
       </div>
+      {showMap && <SpawnMapOverlay palId={id} onClose={() => setShowMap(false)} />}
     </div>
   )
 }
