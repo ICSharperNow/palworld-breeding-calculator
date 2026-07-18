@@ -27,12 +27,13 @@ function hexToRgba(hex: string, alpha: number): string {
   return `rgba(${r}, ${g}, ${b}, ${alpha})`
 }
 
-function SpawnMapOverlay({ palId, onClose }: { palId: string; onClose: () => void }) {
-  const pal = palById.get(palId)!
-  const info = spawnsFor(palId)!
-  const hasMain = info.main.day.length > 0 || info.main.night.length > 0
-  const hasTree = info.tree.day.length > 0 || info.tree.night.length > 0
-  const [which, setWhich] = useState<'main' | 'tree'>(hasMain ? 'main' : 'tree')
+function SpawnMapView({ palId, onRequestClose }: { palId: string | null; onRequestClose?: () => void }) {
+  const info = palId ? spawnsFor(palId) : null
+  const hasMain = !!info && (info.main.day.length > 0 || info.main.night.length > 0)
+  const hasTree = !!info && (info.tree.day.length > 0 || info.tree.night.length > 0)
+  const [whichRaw, setWhich] = useState<'main' | 'tree'>('main')
+  // pal with no main-map spawns forces the tree map and vice versa
+  const which = whichRaw === 'tree' ? (hasTree || !info ? 'tree' : 'main') : (hasMain || !info ? 'main' : 'tree')
   const [showDay, setShowDay] = useState(true)
   const [showNight, setShowNight] = useState(true)
   const [dayColor, setDayColor] = useState('#ffc83c')
@@ -46,7 +47,7 @@ function SpawnMapOverlay({ palId, onClose }: { palId: string; onClose: () => voi
   const viewRef = useRef({ zoom: 1, pan: [0, 0] as [number, number] })
   viewRef.current = { zoom, pan }
 
-  const pts = which === 'main' ? info.main : info.tree
+  const pts = info ? (which === 'main' ? info.main : info.tree) : { day: [], night: [] }
   const mapSrc = which === 'main' ? worldMap : treeMap
   const cen = centroid([pts.day, pts.night])
   const cenCoords = cen ? gameCoords(cen[0] / (SPAWN_GRID - 1), cen[1] / (SPAWN_GRID - 1), which) : null
@@ -87,14 +88,18 @@ function SpawnMapOverlay({ palId, onClose }: { palId: string; onClose: () => voi
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
-        e.stopPropagation()
-        if (full) setFull(false)
-        else onClose()
+        if (full) {
+          e.stopPropagation()
+          setFull(false)
+        } else if (onRequestClose) {
+          e.stopPropagation()
+          onRequestClose()
+        }
       }
     }
     document.addEventListener('keydown', onKey, true)
     return () => document.removeEventListener('keydown', onKey, true)
-  }, [onClose, full])
+  }, [onRequestClose, full])
 
   // pointer position (0..1 in displayed square) -> map fraction, accounting for zoom/pan
   const toMapFrac = (clientX: number, clientY: number): [number, number] => {
@@ -156,68 +161,86 @@ function SpawnMapOverlay({ palId, onClose }: { palId: string; onClose: () => voi
 
   const reset = () => { setZoom(1); setPan([0, 0]) }
 
+  const view = (
+    <>
+      <div className="maptoolbar">
+        <span className="mapnavbtns">
+          <button className={`modal-btn ${which === 'main' ? 'primary' : ''}`} disabled={!!info && !hasMain} onClick={() => { setWhich('main'); reset() }}>World</button>
+          <button className={`modal-btn ${which === 'tree' ? 'primary' : ''}`} disabled={!!info && !hasTree} onClick={() => { setWhich('tree'); reset() }}>World Tree</button>
+          {!hasMain && hasTree && <span className="note">World Tree only</span>}
+        </span>
+        <span className="mapnavbtns">
+          {zoom > 1 && <button className="modal-btn" onClick={reset}>reset zoom</button>}
+          <button className="modal-btn" onClick={() => setFull(!full)}>{full ? '🗗 Exit fullscreen' : '🗖 Fullscreen'}</button>
+        </span>
+      </div>
+      <div
+        className="mapwrap"
+        ref={wrapRef}
+        onMouseDown={onMouseDown}
+        onMouseMove={onMove}
+        onMouseLeave={() => setHover(null)}
+      >
+        <div
+          className="mapinner"
+          style={{ transform: `scale(${zoom}) translate(${pan[0] * 100}%, ${pan[1] * 100}%)` }}
+        >
+          <img src={mapSrc} alt="Map" draggable={false} />
+          <canvas
+            ref={canvasRef}
+            width={1024}
+            height={1024}
+            key={`${palId}-${which}-${showDay}-${showNight}-${dayColor}-${nightColor}`}
+          />
+        </div>
+        {hover && <div className="maphover">({hover[0]}, {hover[1]})</div>}
+      </div>
+      <div className="maplegend">
+        <button className={`legend day ${showDay ? 'on' : ''}`} style={{ borderColor: showDay ? dayColor : undefined }} onClick={() => setShowDay(!showDay)}>
+          ☀ Day {pts.day.length ? '' : '(none)'}
+        </button>
+        <input type="color" className="colorpick" value={dayColor} onChange={e => setDayColor(e.target.value)} title="Day highlight color" />
+        <button className={`legend night ${showNight ? 'on' : ''}`} style={{ borderColor: showNight ? nightColor : undefined }} onClick={() => setShowNight(!showNight)}>
+          ☾ Night {pts.night.length ? '' : '(none)'}
+        </button>
+        <input type="color" className="colorpick" value={nightColor} onChange={e => setNightColor(e.target.value)} title="Night highlight color" />
+        {showDay && showNight && (
+          <span className="note">
+            <span className="swatch both" style={{ background: mixColors(dayColor, nightColor) }} /> = day &amp; night
+          </span>
+        )}
+        {cenCoords && (
+          <span className="mapcentroid" title="Center of this pal's spawn area (approximate in-game coordinates)">
+            center: ({cenCoords[0]}, {cenCoords[1]})
+          </span>
+        )}
+      </div>
+    </>
+  )
+
+  if (full) {
+    return (
+      <div className="modal-backdrop mapdrop full">
+        <div className="mapmodal full">{view}</div>
+      </div>
+    )
+  }
+  return <div className="mapview">{view}</div>
+}
+
+function SpawnMapOverlay({ palId, onClose }: { palId: string; onClose: () => void }) {
+  const pal = palById.get(palId)!
   return (
-    <div className={`modal-backdrop mapdrop ${full ? 'full' : ''}`} onMouseDown={e => { if (e.target === e.currentTarget) onClose() }}>
-      <div className={`mapmodal ${full ? 'full' : ''}`}>
+    <div className="modal-backdrop mapdrop" onMouseDown={e => { if (e.target === e.currentTarget) onClose() }}>
+      <div className="mapmodal">
         <div className="modal-nav">
           <span className="maptitle">
             <PalIcon id={palId} size={30} />
             {pal.name} — spawn locations
           </span>
-          <span className="mapnavbtns">
-            {hasMain && hasTree && (
-              <>
-                <button className={`modal-btn ${which === 'main' ? 'primary' : ''}`} onClick={() => { setWhich('main'); reset() }}>World</button>
-                <button className={`modal-btn ${which === 'tree' ? 'primary' : ''}`} onClick={() => { setWhich('tree'); reset() }}>World Tree</button>
-              </>
-            )}
-            {!hasMain && hasTree && <span className="note">World Tree only</span>}
-            {zoom > 1 && <button className="modal-btn" onClick={reset}>reset zoom</button>}
-            <button className="modal-btn" onClick={() => setFull(!full)}>{full ? '🗗 Exit fullscreen' : '🗖 Fullscreen'}</button>
-            <button className="modal-btn close" onClick={onClose}>× Close</button>
-          </span>
+          <button className="modal-btn close" onClick={onClose}>× Close</button>
         </div>
-        <div
-          className="mapwrap"
-          ref={wrapRef}
-          onMouseDown={onMouseDown}
-          onMouseMove={onMove}
-          onMouseLeave={() => setHover(null)}
-        >
-          <div
-            className="mapinner"
-            style={{ transform: `scale(${zoom}) translate(${pan[0] * 100}%, ${pan[1] * 100}%)` }}
-          >
-            <img src={mapSrc} alt="Map" draggable={false} />
-            <canvas
-              ref={canvasRef}
-              width={1024}
-              height={1024}
-              key={`${which}-${showDay}-${showNight}-${dayColor}-${nightColor}`}
-            />
-          </div>
-          {hover && <div className="maphover">({hover[0]}, {hover[1]})</div>}
-        </div>
-        <div className="maplegend">
-          <button className={`legend day ${showDay ? 'on' : ''}`} style={{ borderColor: showDay ? dayColor : undefined }} onClick={() => setShowDay(!showDay)}>
-            ☀ Day {pts.day.length ? '' : '(none)'}
-          </button>
-          <input type="color" className="colorpick" value={dayColor} onChange={e => setDayColor(e.target.value)} title="Day highlight color" />
-          <button className={`legend night ${showNight ? 'on' : ''}`} style={{ borderColor: showNight ? nightColor : undefined }} onClick={() => setShowNight(!showNight)}>
-            ☾ Night {pts.night.length ? '' : '(none)'}
-          </button>
-          <input type="color" className="colorpick" value={nightColor} onChange={e => setNightColor(e.target.value)} title="Night highlight color" />
-          {showDay && showNight && (
-            <span className="note">
-              <span className="swatch both" style={{ background: mixColors(dayColor, nightColor) }} /> = day &amp; night
-            </span>
-          )}
-          {cenCoords && (
-            <span className="mapcentroid" title="Center of this pal's spawn area (approximate in-game coordinates)">
-              center: ({cenCoords[0]}, {cenCoords[1]})
-            </span>
-          )}
-        </div>
+        <SpawnMapView palId={palId} onRequestClose={onClose} />
       </div>
     </div>
   )
@@ -1073,12 +1096,107 @@ function PlanTab() {
   )
 }
 
+function MapTab() {
+  const [sel, setSel] = useState<string | null>(null)
+  const [q, setQ] = useState('')
+  const f = q.trim().toLowerCase()
+  const spawnable = pals.filter(p => spawnsFor(p.id))
+  const list = f
+    ? spawnable.filter(p => p.name.toLowerCase().includes(f) || String(p.zukan).startsWith(f))
+    : spawnable
+  return (
+    <section>
+      <p className="lede">
+        Where every pal spawns - pick one from the list. Scroll to zoom, drag to pan;
+        {' '}{spawnable.length} pals have wild spawn areas.
+      </p>
+      <div className="maptab">
+        <div className="maptab-list">
+          <input className="filter" value={q} onChange={e => setQ(e.target.value)} placeholder="Search pals…" />
+          <div className="maptab-pals">
+            {list.map(p => {
+              const inf = spawnsFor(p.id)!
+              const treeOnly = inf.main.day.length === 0 && inf.main.night.length === 0
+              return (
+                <button
+                  key={p.id}
+                  className={`maplist-row ${sel === p.id ? 'sel' : ''}`}
+                  onClick={() => setSel(p.id)}
+                >
+                  <PalIcon id={p.id} size={28} />
+                  <span className="maplist-name">{p.name}</span>
+                  <span className="decknum">#{p.zukan}{p.suffix}</span>
+                  {treeOnly && <span className="treetag" title="World Tree only">🌳</span>}
+                </button>
+              )
+            })}
+            {list.length === 0 && <p className="muted">No matches.</p>}
+          </div>
+        </div>
+        <div className="maptab-map">
+          {sel && (
+            <div className="maptab-selected">
+              <PalLink id={sel} strong showZukan />
+              <span className="muted small">(click for details)</span>
+            </div>
+          )}
+          <SpawnMapView palId={sel} key={sel ?? 'none'} />
+          {!sel && <p className="muted">Select a pal to highlight its spawn areas.</p>}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+const PDEX_SORTS = [
+  ['best', 'Best tier first'],
+  ['worst', 'Worst tier first'],
+  ['name', 'Name'],
+] as const
+type PdexSort = (typeof PDEX_SORTS)[number][0]
+
+function PassiveDexTab() {
+  const [q, setQ] = useState('')
+  const [sort, setSort] = useState<PdexSort>('best')
+  const f = q.trim().toLowerCase()
+  let list = f
+    ? passives.filter(p => p.name.toLowerCase().includes(f) || p.desc.toLowerCase().includes(f))
+    : [...passives]
+  if (sort === 'name') list.sort((a, b) => a.name.localeCompare(b.name))
+  else if (sort === 'worst') list.sort((a, b) => a.rank - b.rank || a.name.localeCompare(b.name))
+  else list.sort((a, b) => b.rank - a.rank || a.name.localeCompare(b.name))
+  return (
+    <section>
+      <p className="lede">
+        All {passives.length} passive skills a pal can have, with their in-game descriptions.
+        Tier runs from −1 (negative) to +4 (best).
+      </p>
+      <input className="filter" value={q} onChange={e => setQ(e.target.value)} placeholder="Search name or description…" />
+      <SortBar options={PDEX_SORTS} value={sort} onChange={setSort} />
+      <div className="pdexlist">
+        {list.map(p => (
+          <div key={p.id} className={`pdexrow pr${Math.max(-1, Math.min(4, p.rank))}`}>
+            <span className="pdexname">
+              {p.name}
+              <span className="prank">{p.rank > 0 ? '+'.repeat(p.rank) : p.rank < 0 ? '−' : ''}</span>
+            </span>
+            <span className="pdexdesc">{p.desc || <span className="muted">(no description)</span>}</span>
+          </div>
+        ))}
+        {list.length === 0 && <p className="muted">No matches.</p>}
+      </div>
+    </section>
+  )
+}
+
 const TABS = [
   ['breed', '🥚', 'Breed'],
   ['reverse', '🎯', 'Find Parents'],
   ['path', '🗺️', 'Path Finder'],
   ['plan', '🧬', 'Plan Builder'],
   ['passives', '✨', 'Passive Odds'],
+  ['pdex', '📜', 'Passive Skills'],
+  ['map', '🌍', 'Spawn Map'],
   ['deck', '📖', 'Paldeck'],
 ] as const
 
@@ -1127,6 +1245,8 @@ export default function App() {
         <div className={tab === 'path' ? '' : 'hidden'}><PathTab start={pathStart} setStart={setPathStart} /></div>
         <div className={tab === 'plan' ? '' : 'hidden'}><PlanTab /></div>
         <div className={tab === 'passives' ? '' : 'hidden'}><PassivesTab /></div>
+        <div className={tab === 'pdex' ? '' : 'hidden'}><PassiveDexTab /></div>
+        <div className={tab === 'map' ? '' : 'hidden'}><MapTab /></div>
         <div className={tab === 'deck' ? '' : 'hidden'}><PaldeckTab /></div>
         <footer className="muted small">
           Breeding data, names and icons extracted from Pal-Windows.pak (v1.0) ·{' '}

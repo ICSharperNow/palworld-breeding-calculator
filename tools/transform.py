@@ -98,16 +98,53 @@ for k, v in combi.items():
     })
 
 # --- passives obtainable on pals ---
+EFFECT_LABELS = {
+    "ShotAttack": "Attack",
+    "CraftSpeed": "Work Speed",
+    "Defense": "Defense",
+    "MaxHP": "Max HP",
+    "MoveSpeed": "Movement Speed",
+    "SwimSpeed": "Swim Speed",
+    "AutoHPRegeneRate": "HP regeneration",
+    "ReloadSpeedUp": "Reload speed",
+    "PlayerSP_DecreaseRate": "Player stamina drain",
+    "SelfDeathAddItemDrop": "Item drops on defeat",
+    "WorkSuitabilityAddRank_MonsterFarm": "Ranch work suitability",
+}
+
+
+def passive_desc(key, r):
+    ds = skill_descs.get(f"PASSIVE_{key}") or skill_descs.get(f"PASSIVE_{key}_DESC")
+    if ds:
+        text = ds["TextData"]["LocalizedString"]
+        for i in (1, 2, 3, 4):
+            v = r.get(f"EffectValue{i}", 0)
+            text = text.replace(f"{{EffectValue{i}}}", f"{v:g}")
+        return re.sub(r"<[^>]*>", "", text).strip()
+    # no localized text: synthesize from the effect data
+    parts = []
+    for i in (1, 2, 3, 4):
+        t = (r.get(f"EffectType{i}") or "").split("::")[-1]
+        if t in ("no", "None", ""):
+            continue
+        v = r.get(f"EffectValue{i}", 0)
+        label = EFFECT_LABELS.get(t, t)
+        if t == "WorkSuitabilityAddRank_MonsterFarm":
+            parts.append(f"{label} {v:+g}")
+        else:
+            parts.append(f"{label} {v:+g}%")
+    return " · ".join(parts)
+
+
 passives = []
 for key, r in passive.items():
     if not (r.get("AddPal") or r.get("AddRarePal")):
         continue
     nm = skill_names.get(f"PASSIVE_{key}")
-    ds = skill_descs.get(f"PASSIVE_{key}")
     passives.append({
         "id": key,
         "name": nm["TextData"]["LocalizedString"] if nm else key,
-        "desc": ds["TextData"]["LocalizedString"] if ds else "",
+        "desc": passive_desc(key, r),
         "rank": r.get("Rank", 0),
     })
 passives.sort(key=lambda p: (-p["rank"], p["name"]))
