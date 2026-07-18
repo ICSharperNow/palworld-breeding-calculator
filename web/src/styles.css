@@ -328,9 +328,28 @@ h3 { margin: 20px 0 6px; font-size: 15px; }
   box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55);
 }
 .maptitle { display: inline-flex; align-items: center; gap: 9px; font-weight: 650; font-size: 16px; }
-.mapwrap { position: relative; border-radius: 10px; overflow: hidden; border: 1px solid var(--border); }
+.mapnavbtns { display: inline-flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.mapmodal.full { max-width: none; width: calc(100vw - 24px); height: calc(100vh - 24px); display: flex; flex-direction: column; }
+.mapdrop.full { padding: 12px; align-items: stretch; }
+.mapmodal.full .mapwrap { flex: 1; min-height: 0; }
+.mapmodal.full .mapwrap .mapinner img { width: auto; height: 100%; max-width: 100%; margin: 0 auto; }
+.mapwrap {
+  position: relative; border-radius: 10px; overflow: hidden; border: 1px solid var(--border);
+  cursor: crosshair; user-select: none; background: #0c2c4a;
+}
+.mapinner { position: relative; transform-origin: center; }
 .mapwrap img { display: block; width: 100%; height: auto; }
 .mapwrap canvas { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
+.maphover {
+  position: absolute; top: 8px; left: 8px; z-index: 2;
+  background: rgba(10, 14, 20, 0.8); color: #dfe6ee;
+  font: 13px ui-monospace, monospace; padding: 3px 9px; border-radius: 7px; pointer-events: none;
+}
+.colorpick {
+  width: 26px; height: 26px; padding: 0; border: 1px solid var(--border); border-radius: 7px;
+  background: none; cursor: pointer;
+}
+.mapcentroid { margin-left: auto; font: 13px ui-monospace, monospace; color: var(--accent2); }
 .maplegend { display: flex; align-items: center; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
 .legend {
   background: var(--panel); color: var(--muted); border: 1px solid var(--border);

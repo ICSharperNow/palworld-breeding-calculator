@@ -123,35 +123,59 @@ MAP_MIN_X, MAP_MAX_X = -1105255.0, 355765.0   # world X: south edge .. north edg
 MAP_MIN_Y, MAP_MAX_Y = -730039.0, 730981.0    # world Y: west edge .. east edge
 try:
     dist = rows("DT_PaldexDistributionData")
-    min_x, max_x, min_y, max_y = MAP_MIN_X, MAP_MAX_X, MAP_MIN_Y, MAP_MAX_Y
+    wm_tree = rows("DT_WorldMapUIData")["Tree"]
+    t_mn, t_mx = wm_tree["landScapeRealPositionMin"], wm_tree["landScapeRealPositionMax"]
+    TREE = (t_mn["X"], t_mx["X"], t_mn["Y"], t_mx["Y"])
+    MAIN = (MAP_MIN_X, MAP_MAX_X, MAP_MIN_Y, MAP_MAX_Y)
+
+    def cell(loc, bounds):
+        min_x, max_x, min_y, max_y = bounds
+        if not (min_x <= loc["X"] <= max_x and min_y <= loc["Y"] <= max_y):
+            return None
+        u = int((loc["Y"] - min_y) / (max_y - min_y) * (SPAWN_GRID - 1))
+        v = int((1 - (loc["X"] - min_x) / (max_x - min_x)) * (SPAWN_GRID - 1))
+        return v * SPAWN_GRID + u
+
+    def delta(pts):
+        srt = sorted(pts)
+        return [srt[0]] + [b - a for a, b in zip(srt, srt[1:])]
+
     spawns = {}
+    stray = 0
     for key, r in dist.items():
         pal_id = pal_ids_ci.get(key.lower())
         if not pal_id:
             continue
         entry = {}
-        tree = False
-        for grp, short in (("dayTimeLocations", "d"), ("nightTimeLocations", "n")):
-            pts = set()
+        # short keys: d/n = main map day/night, td/tn = World Tree day/night
+        for grp, main_key, tree_key in (("dayTimeLocations", "d", "td"),
+                                        ("nightTimeLocations", "n", "tn")):
+            main_pts, tree_pts = set(), set()
             for loc in (r.get(grp) or {}).get("Locations", []):
-                if not (min_x <= loc["X"] <= max_x and min_y <= loc["Y"] <= max_y):
-                    tree = True  # World Tree / off-map area
+                c = cell(loc, MAIN)
+                if c is not None:
+                    main_pts.add(c)
                     continue
-                u = int((loc["Y"] - min_y) / (max_y - min_y) * (SPAWN_GRID - 1))
-                v = int((1 - (loc["X"] - min_x) / (max_x - min_x)) * (SPAWN_GRID - 1))
-                pts.add(v * SPAWN_GRID + u)
-            if pts:
-                srt = sorted(pts)
-                entry[short] = [srt[0]] + [b - a for a, b in zip(srt, srt[1:])]
-        if tree:
-            entry["t"] = 1
+                c = cell(loc, TREE)
+                if c is not None:
+                    tree_pts.add(c)
+                else:
+                    stray += 1
+            if main_pts:
+                entry[main_key] = delta(main_pts)
+            if tree_pts:
+                entry[tree_key] = delta(tree_pts)
         if entry:
             spawns[pal_id] = entry
-    json.dump({"grid": SPAWN_GRID, "pals": spawns}, open(OUT / "spawns.json", "w"),
-              separators=(",", ":"))
+    json.dump({"grid": SPAWN_GRID,
+               "bounds": {"main": MAIN, "tree": TREE},
+               "pals": spawns},
+              open(OUT / "spawns.json", "w"), separators=(",", ":"))
     import shutil
     shutil.copyfile(RAW / "worldmap.webp", OUT / "worldmap.webp")
-    print(f"spawns: {len(spawns)} pals with habitat data")
+    shutil.copyfile(RAW / "treemap.webp", OUT / "treemap.webp")
+    tree_pals = sum(1 for v in spawns.values() if "td" in v or "tn" in v)
+    print(f"spawns: {len(spawns)} pals ({tree_pals} in World Tree, {stray} stray points)")
 except FileNotFoundError as e:
     print(f"spawn data skipped ({e})")
 

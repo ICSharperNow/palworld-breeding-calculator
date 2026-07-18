@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useMemo, useState, type CSSProperties } from 'react'
+import { createContext, useContext, useEffect, useMemo, useRef, useState, type CSSProperties } from 'react'
 import {
   Pal,
   pals,
@@ -13,71 +13,210 @@ import {
 } from './lib/breeding'
 import { passives, inheritChance, exactChance } from './lib/passives'
 import { rarityTier, genderText, ELEMENT_COLORS } from './lib/ui'
-import { spawnsFor, worldMap, SPAWN_GRID } from './lib/spawns'
+import { spawnsFor, worldMap, treeMap, SPAWN_GRID, gameCoords, centroid } from './lib/spawns'
 import { PalPicker, ElementChips, PalIcon } from './PalPicker'
+
+function mixColors(a: string, b: string): string {
+  const pa = [1, 3, 5].map(i => parseInt(a.slice(i, i + 2), 16))
+  const pb = [1, 3, 5].map(i => parseInt(b.slice(i, i + 2), 16))
+  return '#' + pa.map((v, i) => Math.round((v + pb[i]) / 2).toString(16).padStart(2, '0')).join('')
+}
+
+function hexToRgba(hex: string, alpha: number): string {
+  const [r, g, b] = [1, 3, 5].map(i => parseInt(hex.slice(i, i + 2), 16))
+  return `rgba(${r}, ${g}, ${b}, ${alpha})`
+}
 
 function SpawnMapOverlay({ palId, onClose }: { palId: string; onClose: () => void }) {
   const pal = palById.get(palId)!
   const info = spawnsFor(palId)!
+  const hasMain = info.main.day.length > 0 || info.main.night.length > 0
+  const hasTree = info.tree.day.length > 0 || info.tree.night.length > 0
+  const [which, setWhich] = useState<'main' | 'tree'>(hasMain ? 'main' : 'tree')
   const [showDay, setShowDay] = useState(true)
   const [showNight, setShowNight] = useState(true)
+  const [dayColor, setDayColor] = useState('#ffc83c')
+  const [nightColor, setNightColor] = useState('#6eaaff')
+  const [full, setFull] = useState(false)
+  const [zoom, setZoom] = useState(1)
+  const [pan, setPan] = useState<[number, number]>([0, 0])
+  const [hover, setHover] = useState<[number, number] | null>(null)
+  const wrapRef = useRef<HTMLDivElement>(null)
+  const dragRef = useRef<null | { x: number; y: number; px: number; py: number }>(null)
+  const viewRef = useRef({ zoom: 1, pan: [0, 0] as [number, number] })
+  viewRef.current = { zoom, pan }
+
+  const pts = which === 'main' ? info.main : info.tree
+  const mapSrc = which === 'main' ? worldMap : treeMap
+  const cen = centroid([pts.day, pts.night])
+  const cenCoords = cen ? gameCoords(cen[0] / (SPAWN_GRID - 1), cen[1] / (SPAWN_GRID - 1), which) : null
+
+  const clampPan = (p: [number, number], z: number): [number, number] => {
+    const lim = (z - 1) / 2 / z
+    return [Math.max(-lim, Math.min(lim, p[0])), Math.max(-lim, Math.min(lim, p[1]))]
+  }
+
   const canvasRef = (node: HTMLCanvasElement | null) => {
-    if (!node || !info) return
+    if (!node) return
     const ctx = node.getContext('2d')!
     const W = node.width
     ctx.clearRect(0, 0, W, W)
     const cell = W / SPAWN_GRID
-    const dot = Math.max(2.4, cell * 1.15)
-    const dayKeys = new Set(info.day.map(([x, y]) => y * SPAWN_GRID + x))
-    const nightKeys = new Set(info.night.map(([x, y]) => y * SPAWN_GRID + x))
+    const dot = Math.max(4, cell * 1.9)
+    const dayKeys = new Set(pts.day.map(([x, y]) => y * SPAWN_GRID + x))
+    const nightKeys = new Set(pts.night.map(([x, y]) => y * SPAWN_GRID + x))
     const draw = (keys: Iterable<number>, color: string) => {
+      // dark halo first so the dots stand out on any terrain color
+      ctx.fillStyle = 'rgba(10, 14, 20, 0.55)'
+      for (const k of keys) ctx.fillRect((k % SPAWN_GRID) * cell - 1.5, Math.floor(k / SPAWN_GRID) * cell - 1.5, dot + 3, dot + 3)
       ctx.fillStyle = color
       for (const k of keys) ctx.fillRect((k % SPAWN_GRID) * cell, Math.floor(k / SPAWN_GRID) * cell, dot, dot)
     }
+    const both = mixColors(dayColor, nightColor)
     if (showDay && showNight) {
-      draw([...dayKeys].filter(k => !nightKeys.has(k)), 'rgba(255, 200, 60, 0.85)')
-      draw([...nightKeys].filter(k => !dayKeys.has(k)), 'rgba(110, 170, 255, 0.85)')
-      draw([...dayKeys].filter(k => nightKeys.has(k)), 'rgba(126, 231, 135, 0.85)')
+      draw([...dayKeys].filter(k => !nightKeys.has(k)), hexToRgba(dayColor, 0.85))
+      draw([...nightKeys].filter(k => !dayKeys.has(k)), hexToRgba(nightColor, 0.85))
+      draw([...dayKeys].filter(k => nightKeys.has(k)), hexToRgba(both, 0.9))
     } else if (showDay) {
-      draw(dayKeys, 'rgba(255, 200, 60, 0.85)')
+      draw(dayKeys, hexToRgba(dayColor, 0.85))
     } else if (showNight) {
-      draw(nightKeys, 'rgba(110, 170, 255, 0.85)')
+      draw(nightKeys, hexToRgba(nightColor, 0.85))
     }
   }
+
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         e.stopPropagation()
-        onClose()
+        if (full) setFull(false)
+        else onClose()
       }
     }
     document.addEventListener('keydown', onKey, true)
     return () => document.removeEventListener('keydown', onKey, true)
-  }, [onClose])
+  }, [onClose, full])
+
+  // pointer position (0..1 in displayed square) -> map fraction, accounting for zoom/pan
+  const toMapFrac = (clientX: number, clientY: number): [number, number] => {
+    const rect = wrapRef.current!.getBoundingClientRect()
+    const { zoom: z, pan: p } = viewRef.current
+    const sx = (clientX - rect.left) / rect.width
+    const sy = (clientY - rect.top) / rect.height
+    return [(sx - 0.5) / z + 0.5 - p[0], (sy - 0.5) / z + 0.5 - p[1]]
+  }
+
+  useEffect(() => {
+    const node = wrapRef.current
+    if (!node) return
+    const onWheel = (e: WheelEvent) => {
+      e.preventDefault()
+      const [mu, mv] = toMapFrac(e.clientX, e.clientY)
+      const { zoom: z } = viewRef.current
+      const nz = Math.max(1, Math.min(10, z * (e.deltaY < 0 ? 1.25 : 0.8)))
+      const rect = node.getBoundingClientRect()
+      const sx = (e.clientX - rect.left) / rect.width
+      const sy = (e.clientY - rect.top) / rect.height
+      // keep the point under the cursor fixed while zooming
+      const lim = (nz - 1) / 2 / nz
+      const npan: [number, number] = [
+        Math.max(-lim, Math.min(lim, (sx - 0.5) / nz + 0.5 - mu)),
+        Math.max(-lim, Math.min(lim, (sy - 0.5) / nz + 0.5 - mv)),
+      ]
+      setZoom(nz)
+      setPan(npan)
+    }
+    node.addEventListener('wheel', onWheel, { passive: false })
+    return () => node.removeEventListener('wheel', onWheel)
+  }, [])
+
+  const onMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
+    const { pan: p } = viewRef.current
+    dragRef.current = { x: e.clientX, y: e.clientY, px: p[0], py: p[1] }
+    const move = (ev: MouseEvent) => {
+      if (!dragRef.current || !wrapRef.current) return
+      const rect = wrapRef.current.getBoundingClientRect()
+      const { zoom: z } = viewRef.current
+      const dx = (ev.clientX - dragRef.current.x) / rect.width / z
+      const dy = (ev.clientY - dragRef.current.y) / rect.height / z
+      setPan(clampPan([dragRef.current.px + dx, dragRef.current.py + dy], z))
+    }
+    const up = () => {
+      dragRef.current = null
+      document.removeEventListener('mousemove', move)
+      document.removeEventListener('mouseup', up)
+    }
+    document.addEventListener('mousemove', move)
+    document.addEventListener('mouseup', up)
+  }
+
+  const onMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const [u, v] = toMapFrac(e.clientX, e.clientY)
+    setHover(u >= 0 && u <= 1 && v >= 0 && v <= 1 ? gameCoords(u, v, which) : null)
+  }
+
+  const reset = () => { setZoom(1); setPan([0, 0]) }
 
   return (
-    <div className="modal-backdrop mapdrop" onMouseDown={e => { if (e.target === e.currentTarget) onClose() }}>
-      <div className="mapmodal">
+    <div className={`modal-backdrop mapdrop ${full ? 'full' : ''}`} onMouseDown={e => { if (e.target === e.currentTarget) onClose() }}>
+      <div className={`mapmodal ${full ? 'full' : ''}`}>
         <div className="modal-nav">
           <span className="maptitle">
             <PalIcon id={palId} size={30} />
             {pal.name} — spawn locations
           </span>
-          <button className="modal-btn close" onClick={onClose}>× Close</button>
+          <span className="mapnavbtns">
+            {hasMain && hasTree && (
+              <>
+                <button className={`modal-btn ${which === 'main' ? 'primary' : ''}`} onClick={() => { setWhich('main'); reset() }}>World</button>
+                <button className={`modal-btn ${which === 'tree' ? 'primary' : ''}`} onClick={() => { setWhich('tree'); reset() }}>World Tree</button>
+              </>
+            )}
+            {!hasMain && hasTree && <span className="note">World Tree only</span>}
+            {zoom > 1 && <button className="modal-btn" onClick={reset}>reset zoom</button>}
+            <button className="modal-btn" onClick={() => setFull(!full)}>{full ? '🗗 Exit fullscreen' : '🗖 Fullscreen'}</button>
+            <button className="modal-btn close" onClick={onClose}>× Close</button>
+          </span>
         </div>
-        <div className="mapwrap">
-          <img src={worldMap} alt="World map" draggable={false} />
-          <canvas ref={canvasRef} width={1024} height={1024} key={`${showDay}-${showNight}`} />
+        <div
+          className="mapwrap"
+          ref={wrapRef}
+          onMouseDown={onMouseDown}
+          onMouseMove={onMove}
+          onMouseLeave={() => setHover(null)}
+        >
+          <div
+            className="mapinner"
+            style={{ transform: `scale(${zoom}) translate(${pan[0] * 100}%, ${pan[1] * 100}%)` }}
+          >
+            <img src={mapSrc} alt="Map" draggable={false} />
+            <canvas
+              ref={canvasRef}
+              width={1024}
+              height={1024}
+              key={`${which}-${showDay}-${showNight}-${dayColor}-${nightColor}`}
+            />
+          </div>
+          {hover && <div className="maphover">({hover[0]}, {hover[1]})</div>}
         </div>
         <div className="maplegend">
-          <button className={`legend day ${showDay ? 'on' : ''}`} onClick={() => setShowDay(!showDay)}>
-            ☀ Day {info.day.length ? '' : '(none)'}
+          <button className={`legend day ${showDay ? 'on' : ''}`} style={{ borderColor: showDay ? dayColor : undefined }} onClick={() => setShowDay(!showDay)}>
+            ☀ Day {pts.day.length ? '' : '(none)'}
           </button>
-          <button className={`legend night ${showNight ? 'on' : ''}`} onClick={() => setShowNight(!showNight)}>
-            ☾ Night {info.night.length ? '' : '(none)'}
+          <input type="color" className="colorpick" value={dayColor} onChange={e => setDayColor(e.target.value)} title="Day highlight color" />
+          <button className={`legend night ${showNight ? 'on' : ''}`} style={{ borderColor: showNight ? nightColor : undefined }} onClick={() => setShowNight(!showNight)}>
+            ☾ Night {pts.night.length ? '' : '(none)'}
           </button>
-          {showDay && showNight && <span className="note"><span className="swatch both" /> = day &amp; night</span>}
-          {info.tree && <span className="note">also spawns in the World Tree (off this map)</span>}
+          <input type="color" className="colorpick" value={nightColor} onChange={e => setNightColor(e.target.value)} title="Night highlight color" />
+          {showDay && showNight && (
+            <span className="note">
+              <span className="swatch both" style={{ background: mixColors(dayColor, nightColor) }} /> = day &amp; night
+            </span>
+          )}
+          {cenCoords && (
+            <span className="mapcentroid" title="Center of this pal's spawn area (approximate in-game coordinates)">
+              center: ({cenCoords[0]}, {cenCoords[1]})
+            </span>
+          )}
         </div>
       </div>
     </div>

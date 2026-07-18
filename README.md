@@ -29,7 +29,10 @@ Every pal shown anywhere is **clickable** - a detail popup shows its stats, uniq
 and shortcuts into the other tools, with back/close returning you exactly where you were.
 The popup also has a **📍 Spawn map**: the world map with the pal's actual day/night
 habitat areas drawn on it, straight from the game's own Paldeck distribution data
-(`DT_PaldexDistributionData`), with day/night toggles. Pals that never spawn wild
+(`DT_PaldexDistributionData`). It supports scroll-wheel zoom with drag panning,
+fullscreen, day/night toggles with customizable highlight colors, live in-game
+coordinates under the cursor, the spawn-area center coordinates, and a separate
+World Tree map for the 41 pals that spawn there. Pals that never spawn wild
 (legendaries, breed-only variants) say so instead.
 
 ![Find Parents](docs/screenshots/ss-parents.png)

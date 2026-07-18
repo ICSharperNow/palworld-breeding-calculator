@@ -79,22 +79,27 @@ Console.WriteLine($"icons: {ok} ok, {fail} failed");
 // --- world map texture for the spawn overlay ---
 try
 {
-    // T_WorldMap is the current in-game world map (referenced by DT_WorldMapUIData)
-    var mapTex = provider.LoadPackageObject<UTexture2D>(
-        "Pal/Content/Pal/Texture/UI/Map/T_WorldMap.T_WorldMap");
-    using var mapBmp = mapTex.Decode()?.ToSkBitmap();
-    if (mapBmp != null)
+    // T_WorldMap is the current in-game world map (referenced by DT_WorldMapUIData);
+    // T_TreeMap is the World Tree interior map
+    foreach (var (texName, fileName, outW) in new[]
     {
-        const int outW = 1600;
+        ("T_WorldMap", "worldmap.webp", 1600),
+        ("T_TreeMap", "treemap.webp", 1100),
+    })
+    {
+        var mapTex = provider.LoadPackageObject<UTexture2D>(
+            $"Pal/Content/Pal/Texture/UI/Map/{texName}.{texName}");
+        using var mapBmp = mapTex.Decode()?.ToSkBitmap();
+        if (mapBmp == null) { Console.WriteLine($"FAIL {texName}: decode"); continue; }
         using var mapResized = mapBmp.Resize(new SKImageInfo(outW, outW * mapBmp.Height / mapBmp.Width), SKFilterQuality.High);
         // flatten onto opaque dark water so alpha in the source can't wash the colors out
         using var surface = SKSurface.Create(new SKImageInfo(mapResized.Width, mapResized.Height, SKColorType.Rgb888x));
         surface.Canvas.Clear(new SKColor(12, 44, 74));
         surface.Canvas.DrawBitmap(mapResized, 0, 0);
         using var mapImg = surface.Snapshot();
-        File.WriteAllBytes(Path.Combine(outDir, "worldmap.webp"),
+        File.WriteAllBytes(Path.Combine(outDir, fileName),
             mapImg.Encode(SKEncodedImageFormat.Webp, 82).ToArray());
-        Console.WriteLine($"world map: {mapBmp.Width}x{mapBmp.Height} -> worldmap.webp");
+        Console.WriteLine($"{texName}: {mapBmp.Width}x{mapBmp.Height} -> {fileName}");
     }
 }
 catch (Exception e)
