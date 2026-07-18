@@ -186,6 +186,18 @@ nav button.active {
 }
 .palref.linked:hover { background: var(--panel2); color: var(--accent2); }
 .palcard.clickable { cursor: pointer; transition: transform .08s, border-color .12s; }
+.palcard-icon.zoomable { cursor: zoom-in; border-radius: 50%; transition: transform .1s; }
+.palcard-icon.zoomable:hover { transform: scale(1.06); }
+
+/* pal image lightbox */
+.imgdrop { z-index: 150; align-items: center; }
+.imgbox {
+  display: flex; flex-direction: column; align-items: center; gap: 12px;
+  background: var(--bg); border: 1px solid var(--border); border-radius: 18px;
+  padding: 26px 34px; box-shadow: 0 24px 60px rgba(0,0,0,.55);
+}
+.imgbox .palicon { width: min(360px, 70vw); height: auto; }
+.imgcaption { font-size: 18px; font-weight: 650; }
 .palcard.clickable:hover { transform: translateY(-2px); border-color: var(--accent); }
 
 /* pal detail modal */
@@ -220,7 +232,8 @@ nav button.active {
 .workrow .statlabel { min-width: 160px; }
 .workrow.none { opacity: .38; }
 .workrow.none .workicon { filter: grayscale(1); }
-.workicon { width: 22px; text-align: center; }
+.workicon { width: 22px; text-align: center; display: inline-flex; justify-content: center; }
+.workicon img { display: block; }
 .modal-combos { display: flex; flex-direction: column; gap: 2px; max-height: 180px; overflow-y: auto; }
 .modal h3 { margin: 16px 0 6px; }
 

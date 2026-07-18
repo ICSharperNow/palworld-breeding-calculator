@@ -71,7 +71,7 @@ foreach (var (rowName, row) in iconTable.RowMap)
         var tex = provider.LoadPackageObject<UTexture2D>(objPath);
         using var bitmap = tex.Decode()?.ToSkBitmap();
         if (bitmap == null) { fail++; continue; }
-        using var resized = bitmap.Resize(new SKImageInfo(96, 96), SKFilterQuality.High);
+        using var resized = bitmap.Resize(new SKImageInfo(160, 160), SKFilterQuality.High);
         using var img = SKImage.FromBitmap(resized);
         using var data = img.Encode(SKEncodedImageFormat.Webp, 80);
         File.WriteAllBytes(Path.Combine(iconDir, rowName.Text + ".webp"), data.ToArray());
@@ -84,6 +84,78 @@ foreach (var (rowName, row) in iconTable.RowMap)
     }
 }
 Console.WriteLine($"icons: {ok} ok, {fail} failed");
+
+// crop transparent padding around a glyph, keeping a small margin
+static SKBitmap TrimAlpha(SKBitmap src)
+{
+    int minX = src.Width, minY = src.Height, maxX = -1, maxY = -1;
+    for (int y = 0; y < src.Height; y++)
+        for (int x = 0; x < src.Width; x++)
+            if (src.GetPixel(x, y).Alpha > 16)
+            {
+                if (x < minX) minX = x;
+                if (x > maxX) maxX = x;
+                if (y < minY) minY = y;
+                if (y > maxY) maxY = y;
+            }
+    if (maxX < 0) return src;
+    var margin = Math.Max(2, (maxX - minX) / 12);
+    minX = Math.Max(0, minX - margin);
+    minY = Math.Max(0, minY - margin);
+    maxX = Math.Min(src.Width - 1, maxX + margin);
+    maxY = Math.Min(src.Height - 1, maxY + margin);
+    // keep it square, centered on the glyph
+    var w = maxX - minX + 1;
+    var h = maxY - minY + 1;
+    var size = Math.Max(w, h);
+    var cx = (minX + maxX) / 2;
+    var cy = (minY + maxY) / 2;
+    var left = Math.Max(0, Math.Min(src.Width - size, cx - size / 2));
+    var top = Math.Max(0, Math.Min(src.Height - size, cy - size / 2));
+    var outBmp = new SKBitmap(size, size);
+    src.ExtractSubset(outBmp, new SKRectI(left, top, left + size, top + size));
+    return outBmp;
+}
+
+// --- work suitability icons (the in-game ones) ---
+var workIconDir = Path.Combine(outDir, "workicons");
+Directory.CreateDirectory(workIconDir);
+var workIcons = new[]
+{
+    "EmitFlame", "Watering", "Seeding", "GenerateElectricity", "Handcraft",
+    "Collection", "Deforest", "Mining", "ProductMedicine", "Cool", "Transport", "MonsterFarm",
+};
+foreach (var w in workIcons)
+{
+    try
+    {
+        var tex = provider.LoadPackageObject<UTexture2D>(
+            $"Pal/Content/Pal/Texture/UI/InGame/SkillIcon/T_icon_skill_pal_WorkRank_{w}.T_icon_skill_pal_WorkRank_{w}");
+        using var bmp = tex.Decode()?.ToSkBitmap();
+        if (bmp == null) { Console.WriteLine($"FAIL workicon {w}"); continue; }
+        using var trimmed = TrimAlpha(bmp);
+        using var rs = trimmed.Resize(new SKImageInfo(48, 48), SKFilterQuality.High);
+        using var img = SKImage.FromBitmap(rs);
+        File.WriteAllBytes(Path.Combine(workIconDir, w + ".webp"), img.Encode(SKEncodedImageFormat.Webp, 85).ToArray());
+    }
+    catch (Exception e) { Console.WriteLine($"FAIL workicon {w}: {e.Message}"); }
+}
+// no dedicated WorkRank icon for oil extraction; the research oil icon matches the in-game look
+try
+{
+    var oil = provider.LoadPackageObject<UTexture2D>(
+        "Pal/Content/Pal/Texture/UI/IngameMenu/Research/EffectIcon/T_icon_Research_OilSpeed.T_icon_Research_OilSpeed");
+    using var bmp = oil.Decode()?.ToSkBitmap();
+    if (bmp != null)
+    {
+        using var trimmed = TrimAlpha(bmp);
+        using var rs = trimmed.Resize(new SKImageInfo(48, 48), SKFilterQuality.High);
+        using var img = SKImage.FromBitmap(rs);
+        File.WriteAllBytes(Path.Combine(workIconDir, "OilExtraction.webp"), img.Encode(SKEncodedImageFormat.Webp, 85).ToArray());
+    }
+}
+catch (Exception e) { Console.WriteLine($"FAIL workicon OilExtraction: {e.Message}"); }
+Console.WriteLine("work icons exported");
 
 // --- world map texture for the spawn overlay ---
 try

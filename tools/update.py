@@ -47,6 +47,8 @@ PAK_INCLUDES = [
     "Pal/Content/Pal/DataTable/UI",
     "Pal/Content/Pal/DataTable/WorldMapUIData",
     "Pal/Content/Pal/Texture/UI/Map",
+    "Pal/Content/Pal/Texture/UI/InGame/SkillIcon",
+    "Pal/Content/Pal/Texture/UI/IngameMenu/Research/EffectIcon",
 ]
 
 

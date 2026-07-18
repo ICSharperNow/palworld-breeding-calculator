@@ -286,6 +286,33 @@ for p in pals:
 json.dump(icons, open(OUT / "icons.json", "w"))
 print(f"icons embedded: {len(icons)}/{len(pals)}")
 
+# --- work suitability icons (in-game textures) keyed by display label ---
+WORK_ICON_FILES = {
+    "Kindling": "EmitFlame",
+    "Watering": "Watering",
+    "Planting": "Seeding",
+    "Generating Electricity": "GenerateElectricity",
+    "Handiwork": "Handcraft",
+    "Gathering": "Collection",
+    "Lumbering": "Deforest",
+    "Mining": "Mining",
+    "Oil Extracting": "OilExtraction",
+    "Medicine Production": "ProductMedicine",
+    "Cooling": "Cool",
+    "Transporting": "Transport",
+    "Farming": "MonsterFarm",
+}
+wi_dir = RAW / "workicons"
+if wi_dir.is_dir():
+    import base64 as _b64
+    work_icons = {}
+    for label, fname in WORK_ICON_FILES.items():
+        f = wi_dir / f"{fname}.webp"
+        if f.is_file():
+            work_icons[label] = "data:image/webp;base64," + _b64.b64encode(f.read_bytes()).decode()
+    json.dump(work_icons, open(OUT / "workicons.json", "w"))
+    print(f"work icons: {len(work_icons)}/13")
+
 json.dump(pals, open(OUT / "pals.json", "w"), indent=1)
 json.dump(combos, open(OUT / "combos.json", "w"), indent=1)
 json.dump(passives, open(OUT / "passives.json", "w"), indent=1)

@@ -13,6 +13,9 @@ import {
 } from './lib/breeding'
 import { passives, inheritChance, exactChance } from './lib/passives'
 import { rarityTier, genderText, ELEMENT_COLORS, WEAK_TO, WORK_ICONS } from './lib/ui'
+import workIconsJson from './data/workicons.json'
+
+const workIconSrc = workIconsJson as Record<string, string>
 import { spawnsFor, worldMap, treeMap, SPAWN_GRID, gameCoords } from './lib/spawns'
 import { PalPicker, ElementChips, PalIcon } from './PalPicker'
 
@@ -437,7 +440,13 @@ function PalLink({ id, size = 30, strong, showZukan }: { id: string; size?: numb
   )
 }
 
-function PalCard({ pal, note, big, clickable = true }: { pal: Pal; note?: string; big?: boolean; clickable?: boolean }) {
+function PalCard({ pal, note, big, clickable = true, onIconClick }: {
+  pal: Pal
+  note?: string
+  big?: boolean
+  clickable?: boolean
+  onIconClick?: () => void
+}) {
   const { openPal } = useContext(DetailCtx)
   const tier = rarityTier(pal.rarity)
   return (
@@ -446,7 +455,11 @@ function PalCard({ pal, note, big, clickable = true }: { pal: Pal; note?: string
       onClick={clickable ? () => openPal(pal.id) : undefined}
       title={clickable ? `${pal.name} - details` : undefined}
     >
-      <div className="palcard-icon">
+      <div
+        className={`palcard-icon ${onIconClick ? 'zoomable' : ''}`}
+        onClick={onIconClick ? e => { e.stopPropagation(); onIconClick() } : undefined}
+        title={onIconClick ? 'View image' : undefined}
+      >
         <PalIcon id={pal.id} size={big ? 88 : 64} />
       </div>
       <div className="palcard-body">
@@ -472,7 +485,8 @@ function PalDetailModal({ id, hasBack, onBack, onClose }: { id: string; hasBack:
   const selfChild = breedOutcomes(id, id)[0]?.child
   const spawnInfo = spawnsFor(id)
   const [showMap, setShowMap] = useState(false)
-  useEffect(() => setShowMap(false), [id])
+  const [showImg, setShowImg] = useState(false)
+  useEffect(() => { setShowMap(false); setShowImg(false) }, [id])
 
   useEffect(() => {
     if (showMap) return // map overlay owns Escape while open
@@ -490,7 +504,7 @@ function PalDetailModal({ id, hasBack, onBack, onClose }: { id: string; hasBack:
           {hasBack && <button className="modal-btn" onClick={onBack}>← Back</button>}
           <button className="modal-btn close" onClick={onClose}>× Close</button>
         </div>
-        <PalCard pal={pal} big clickable={false} />
+        <PalCard pal={pal} big clickable={false} onIconClick={() => setShowImg(true)} />
         <div className="modal-cols">
           <div>
             <h3>Stats</h3>
@@ -530,7 +544,11 @@ function PalDetailModal({ id, hasBack, onBack, onClose }: { id: string; hasBack:
                 const lv = pal.work[w] ?? 0
                 return (
                   <div key={w} className={`workrow ${lv === 0 ? 'none' : ''}`}>
-                    <span className="workicon">{WORK_ICONS[w]}</span>
+                    <span className="workicon">
+                      {workIconSrc[w]
+                        ? <img src={workIconSrc[w]} width={20} height={20} alt="" />
+                        : WORK_ICONS[w]}
+                    </span>
                     <span className="statlabel">{w}</span>
                     <b>{lv > 0 ? `Lv ${lv}` : '—'}</b>
                   </div>
@@ -586,6 +604,15 @@ function PalDetailModal({ id, hasBack, onBack, onClose }: { id: string; hasBack:
         </div>
       </div>
       {showMap && <SpawnMapOverlay palId={id} onClose={() => setShowMap(false)} />}
+      {showImg && (
+        <div className="modal-backdrop imgdrop" onMouseDown={e => { if (e.target === e.currentTarget) setShowImg(false) }}>
+          <div className="imgbox">
+            <PalIcon id={id} size={360} />
+            <div className="imgcaption">{pal.name}</div>
+            <button className="modal-btn close" onClick={() => setShowImg(false)}>× Close</button>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
