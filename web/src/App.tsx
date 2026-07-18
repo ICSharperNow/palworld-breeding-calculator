@@ -101,12 +101,24 @@ function SpawnMapView({ palId, onRequestClose }: { palId: string | null; onReque
     return () => document.removeEventListener('keydown', onKey, true)
   }, [onRequestClose, full])
 
+  // The map itself is the largest centered square inside the wrap (in
+  // fullscreen the wrap is wider than the letterboxed map).
+  const baseRect = () => {
+    const r = wrapRef.current!.getBoundingClientRect()
+    const size = Math.min(r.width, r.height)
+    return {
+      left: r.left + (r.width - size) / 2,
+      top: r.top + (r.height - size) / 2,
+      size,
+    }
+  }
+
   // pointer position (0..1 in displayed square) -> map fraction, accounting for zoom/pan
   const toMapFrac = (clientX: number, clientY: number): [number, number] => {
-    const rect = wrapRef.current!.getBoundingClientRect()
+    const rect = baseRect()
     const { zoom: z, pan: p } = viewRef.current
-    const sx = (clientX - rect.left) / rect.width
-    const sy = (clientY - rect.top) / rect.height
+    const sx = (clientX - rect.left) / rect.size
+    const sy = (clientY - rect.top) / rect.size
     return [(sx - 0.5) / z + 0.5 - p[0], (sy - 0.5) / z + 0.5 - p[1]]
   }
 
@@ -118,9 +130,9 @@ function SpawnMapView({ palId, onRequestClose }: { palId: string | null; onReque
       const [mu, mv] = toMapFrac(e.clientX, e.clientY)
       const { zoom: z } = viewRef.current
       const nz = Math.max(1, Math.min(10, z * (e.deltaY < 0 ? 1.25 : 0.8)))
-      const rect = node.getBoundingClientRect()
-      const sx = (e.clientX - rect.left) / rect.width
-      const sy = (e.clientY - rect.top) / rect.height
+      const rect = baseRect()
+      const sx = (e.clientX - rect.left) / rect.size
+      const sy = (e.clientY - rect.top) / rect.size
       // keep the point under the cursor fixed while zooming
       const lim = (nz - 1) / 2 / nz
       const npan: [number, number] = [
@@ -132,17 +144,18 @@ function SpawnMapView({ palId, onRequestClose }: { palId: string | null; onReque
     }
     node.addEventListener('wheel', onWheel, { passive: false })
     return () => node.removeEventListener('wheel', onWheel)
-  }, [])
+    // re-attach when fullscreen remounts the map container
+  }, [full])
 
   const onMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
     const { pan: p } = viewRef.current
     dragRef.current = { x: e.clientX, y: e.clientY, px: p[0], py: p[1] }
     const move = (ev: MouseEvent) => {
       if (!dragRef.current || !wrapRef.current) return
-      const rect = wrapRef.current.getBoundingClientRect()
+      const rect = baseRect()
       const { zoom: z } = viewRef.current
-      const dx = (ev.clientX - dragRef.current.x) / rect.width / z
-      const dy = (ev.clientY - dragRef.current.y) / rect.height / z
+      const dx = (ev.clientX - dragRef.current.x) / rect.size / z
+      const dy = (ev.clientY - dragRef.current.y) / rect.size / z
       setPan(clampPan([dragRef.current.px + dx, dragRef.current.py + dy], z))
     }
     const up = () => {

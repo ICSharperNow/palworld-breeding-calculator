@@ -23,17 +23,20 @@ portable HTML file (~1.4 MB). Works offline, no server, no tracking.
 | 🗺️ **Path Finder** | Shortest breeding chain to a goal pal - from one pal (paldb-style, wild partners allowed) or restricted to pals you own - with passive carry-through odds |
 | 🧬 **Plan Builder** | Enter several pals + the passives on each → a full step-by-step plan that merges everything onto one bloodline and ends at your goal species, with per-egg odds and expected egg counts |
 | ✨ **Passive Odds** | Inheritance probability for any desired passive set |
+| 📜 **Passive Skills** | Every pal passive with its in-game description, searchable, sortable by tier or name |
+| 🌍 **Spawn Map** | Full-page interactive map - pick any of the 259 spawnable pals from the list and see exactly where it spawns, on the world or World Tree map |
 | 📖 **Paldeck** | Browse all 291 pals - sort by number, name, rarity, element, breeding power; filter by element |
 
 Every pal shown anywhere is **clickable** - a detail popup shows its stats, unique combos,
 and shortcuts into the other tools, with back/close returning you exactly where you were.
-The popup also has a **📍 Spawn map**: the world map with the pal's actual day/night
-habitat areas drawn on it, straight from the game's own Paldeck distribution data
-(`DT_PaldexDistributionData`). It supports scroll-wheel zoom with drag panning,
-fullscreen, day/night toggles with customizable highlight colors, live in-game
-coordinates under the cursor, the spawn-area center coordinates, and a separate
-World Tree map for the 41 pals that spawn there. Pals that never spawn wild
-(legendaries, breed-only variants) say so instead.
+The popup also has a **📍 Spawn map** (the same map view as the Spawn Map tab): the
+world map with the pal's actual day/night habitat areas drawn on it, straight from the
+game's own Paldeck distribution data (`DT_PaldexDistributionData`). It supports
+scroll-wheel zoom anchored at the cursor with drag panning, fullscreen, day/night
+toggles with customizable highlight colors, live in-game coordinates under the cursor,
+the spawn-area center coordinates, and a separate World Tree map for the 41 pals that
+spawn there. Pals that never spawn wild (legendaries, breed-only variants) say so
+instead.
 
 ![Find Parents](docs/screenshots/ss-parents.png)
 ![Plan Builder](docs/screenshots/plan1.png)
