@@ -85,7 +85,7 @@ function PalLink({ id, size = 30, strong, showZukan }: { id: string; size?: numb
   const p = palById.get(id)
   if (!p) return null
   return (
-    <button className={`palref linked ${strong ? 'strong' : ''}`} onClick={() => openPal(id)} title={`${label(p)} — details`}>
+    <button className={`palref linked ${strong ? 'strong' : ''}`} onClick={() => openPal(id)} title={`${label(p)} - details`}>
       <PalIcon id={id} size={size} />
       {showZukan ? label(p) : p.name}
     </button>
@@ -99,7 +99,7 @@ function PalCard({ pal, note, big, clickable = true }: { pal: Pal; note?: string
     <div
       className={`palcard ${tier.cls} ${big ? 'big' : ''} ${clickable ? 'clickable' : ''}`}
       onClick={clickable ? () => openPal(pal.id) : undefined}
-      title={clickable ? `${pal.name} — details` : undefined}
+      title={clickable ? `${pal.name} - details` : undefined}
     >
       <div className="palcard-icon">
         <PalIcon id={pal.id} size={big ? 88 : 64} />
@@ -147,7 +147,7 @@ function PalDetailModal({ id, hasBack, onBack, onClose }: { id: string; hasBack:
           <div><span className="statlabel">Parent pairs</span><b>{pairCount}</b></div>
           <div>
             <span className="statlabel">Locked breeding</span>
-            <b>{pal.ignoreCombi ? 'yes — unique combos only' : 'no'}</b>
+            <b>{pal.ignoreCombi ? 'yes - unique combos only' : 'no'}</b>
           </div>
           {selfChild && selfChild.id !== pal.id && (
             <div><span className="statlabel">Bred with itself</span><PalLink id={selfChild.id} size={24} /></div>
@@ -210,7 +210,7 @@ function BreedTab() {
   const palB = b ? palById.get(b) : undefined
   return (
     <section>
-      <p className="lede">Pick two parents — the egg is deterministic, given by each pal's hidden breeding power.</p>
+      <p className="lede">Pick two parents - the egg is deterministic, given by each pal's hidden breeding power.</p>
       <div className="pickers">
         <PalPicker value={a} onChange={setA} placeholder="Parent 1" />
         <button
@@ -276,7 +276,7 @@ function ReverseTab({ target, setTarget }: { target: string | null; setTarget: (
   const targetPal = target ? palById.get(target) : undefined
   return (
     <section>
-      <p className="lede">Pick the pal you want — every parent pair that hatches it.</p>
+      <p className="lede">Pick the pal you want - every parent pair that hatches it.</p>
       <div className="pickers">
         <PalPicker value={target} onChange={setTarget} placeholder="Target child" />
         {pairs.length > 0 && (
@@ -314,7 +314,7 @@ function ReverseTab({ target, setTarget }: { target: string | null; setTarget: (
                 {p.genderNote && <span className="note">({p.genderNote})</span>}
               </div>
             ))}
-            {shown.length === 0 && <p className="muted">No pairs{f ? ' match the filter' : ' — only obtainable in the wild or from its locked combo'}.</p>}
+            {shown.length === 0 && <p className="muted">No pairs{f ? ' match the filter' : ' - only obtainable in the wild or from its locked combo'}.</p>}
           </div>
         </>
       )}
@@ -361,7 +361,7 @@ function PathTab({ start, setStart }: { start: string | null; setStart: (id: str
   return (
     <section>
       <p className="lede">
-        Plan the shortest breeding chain to a goal pal — and the odds of carrying your
+        Plan the shortest breeding chain to a goal pal - and the odds of carrying your
         passives all the way through it.
       </p>
       <div className="modes">
@@ -392,7 +392,7 @@ function PathTab({ start, setStart }: { start: string | null; setStart: (id: str
                 <button onClick={() => setOwned(owned.filter(o => o !== id))}>×</button>
               </span>
             ))}
-            {owned.length === 0 && <span className="muted">Nothing yet — add a few pals.</span>}
+            {owned.length === 0 && <span className="muted">Nothing yet - add a few pals.</span>}
           </div>
         </>
       )}
@@ -440,8 +440,8 @@ function PathTab({ start, setStart }: { start: string | null; setStart: (id: str
       {(result === null || bloodline === null) && (
         <p className="warn">
           {mode === 'owned'
-            ? 'Not reachable — breeding power always lands between the parents\', so you can\'t breed "down" past your best pal. Catch something stronger and retry.'
-            : 'Not reachable by breeding — this pal only comes from the wild or a locked combo.'}
+            ? 'Not reachable - breeding power always lands between the parents\', so you can\'t breed "down" past your best pal. Catch something stronger and retry.'
+            : 'Not reachable by breeding - this pal only comes from the wild or a locked combo.'}
         </p>
       )}
       {(result || bloodline) && chainLen === 0 && <p className="lede">That's already the target.</p>}
@@ -626,8 +626,8 @@ function PassivesTab() {
               <div style={{ width: `${Math.min(100, atLeast * 100)}%` }} />
             </div>
             <p className="muted small">
-              Model: the child rolls 1–4 passives from the parents' combined pool
-              (40 / 30 / 20 / 10%). Random wild mutations aren't modeled — treat as close
+              Model: the child rolls 1-4 passives from the parents' combined pool
+              (40 / 30 / 20 / 10%). Random wild mutations aren't modeled - treat as close
               estimates. Expected eggs for one success: ~{atLeast > 0 ? Math.ceil(1 / atLeast) : '∞'}.
             </p>
           </div>
@@ -650,7 +650,7 @@ function PaldeckTab() {
   list = sortPals(list, sort)
   return (
     <section>
-      <p className="lede">Every breedable pal in 1.0 — {pals.length} of them. Click one for details.</p>
+      <p className="lede">Every breedable pal in 1.0 - {pals.length} of them. Click one for details.</p>
       <input className="filter" value={q} onChange={e => setQ(e.target.value)} placeholder="Search by name or number…" />
       <SortBar options={PAL_SORTS} value={sort} onChange={setSort} />
       <ElementBar value={elem} onChange={setElem} />
@@ -663,7 +663,7 @@ function PaldeckTab() {
               key={p.id}
               className={`deckcell ${tier.cls}`}
               onClick={() => openPal(p.id)}
-              title={`${label(p)} — ${tier.name}`}
+              title={`${label(p)} - ${tier.name}`}
             >
               <PalIcon id={p.id} size={56} />
               <span className="deckname">{p.name}</span>
@@ -754,7 +754,7 @@ function PlanTab() {
   return (
     <section>
       <p className="lede">
-        Enter the pals you have and the passives on each that you care about — get a
+        Enter the pals you have and the passives on each that you care about - get a
         step-by-step plan that merges everything onto one pal, optionally ending at a goal
         species.
       </p>
@@ -785,21 +785,21 @@ function PlanTab() {
       <button className="modal-btn" onClick={() => setEntries([...entries, { palId: null, passives: [] }])}>
         + Add another pal
       </button>
-      <h3>Goal species <span className="muted">(optional — where the bloodline should end up)</span></h3>
+      <h3>Goal species <span className="muted">(optional - where the bloodline should end up)</span></h3>
       <div className="pickers">
         <PalPicker value={target} onChange={setTarget} placeholder="Goal pal (optional)" />
       </div>
 
       {plan === 'too-many' && (
         <p className="warn">
-          {union.length} passives tracked — a pal can only hold 4. Trim the list.
+          {union.length} passives tracked - a pal can only hold 4. Trim the list.
         </p>
       )}
       {plan === 'unreachable' && (
         <p className="warn">Goal species can't be reached by breeding from the merged line.</p>
       )}
       {plan && typeof plan === 'object' && allSteps.length === 0 && (
-        <p className="lede">Nothing to breed — one pal, already at the goal. It's done.</p>
+        <p className="lede">Nothing to breed - one pal, already at the goal. It's done.</p>
       )}
       {plan && typeof plan === 'object' && allSteps.length > 0 && (
         <>

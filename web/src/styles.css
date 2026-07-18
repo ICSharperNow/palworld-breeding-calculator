@@ -128,7 +128,7 @@ nav button.active {
   text-shadow: 0 1px 1px rgba(0,0,0,.4);
 }
 
-/* breeding equation — one line on desktop, wraps only on narrow screens */
+/* breeding equation - one line on desktop, wraps only on narrow screens */
 .equation { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: 20px; }
 @media (min-width: 760px) {
   .equation { flex-wrap: nowrap; }

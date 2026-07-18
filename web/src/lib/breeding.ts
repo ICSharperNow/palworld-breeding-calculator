@@ -160,7 +160,7 @@ export interface BloodlineStep {
 
 /**
  * Shortest bloodline chain from one pal to a target, where every step
- * breeds the current descendant with ANY pal (wild catches allowed) —
+ * breeds the current descendant with ANY pal (wild catches allowed) -
  * the paldb-style planner. The child of each step becomes the carrier
  * of the next, so passives can ride the whole chain.
  */
