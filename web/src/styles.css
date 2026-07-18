@@ -230,8 +230,8 @@ nav button.active {
 .worklist { display: flex; flex-direction: column; gap: 3px; }
 .workrow { display: flex; align-items: center; gap: 8px; }
 .workrow .statlabel { min-width: 160px; }
-.workrow.none { opacity: .38; }
-.workrow.none .workicon { filter: grayscale(1); }
+/* icons keep their color even for suitabilities the pal lacks; only the text dims */
+.workrow.none .statlabel, .workrow.none b { opacity: .45; }
 .workicon {
   width: 24px; height: 24px; border-radius: 50%; flex-shrink: 0;
   display: inline-flex; justify-content: center; align-items: center;
