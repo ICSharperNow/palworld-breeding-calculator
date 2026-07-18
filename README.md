@@ -56,43 +56,60 @@ The app is React + Vite + TypeScript with zero runtime dependencies beyond React
 single-file build comes from `vite-plugin-singlefile` - copy `dist/index.html` wherever
 you like.
 
-## Regenerate the data after a game patch
+## Updating after a game patch - automatic
 
-Everything in `web/src/data/` is generated from your installed game. To refresh:
-
-**1. Extract the DataTables and icons** with [repak](https://github.com/trumank/repak):
+One command. It finds your Palworld install (Steam library auto-detection, Windows and
+WSL), reads the installed version (Steam buildid), and regenerates everything only when
+the game actually changed:
 
 ```sh
+python3 tools/update.py
+```
+
+- Game unchanged → prints `game unchanged - nothing to do` and exits.
+- Game updated → downloads [repak](https://github.com/trumank/repak) and the current
+  community [`Mappings.usmap`](https://github.com/PalworldModding/UsefulFiles)
+  automatically, extracts the DataTables and icons from the pak, exports and transforms
+  the data, rebuilds the web app, and refreshes `Palworld Breeding Calculator.html`.
+
+Requirements: Python 3, [.NET 10 SDK](https://dotnet.microsoft.com/download), Node.js.
+
+Useful flags:
+
+```sh
+python3 tools/update.py --check                 # just report whether an update is needed
+python3 tools/update.py --force                 # regenerate even if unchanged
+python3 tools/update.py --game-dir "D:/SteamLibrary/steamapps/common/Palworld"
+```
+
+The detected game path is remembered in `tools/.gamepath`; the installed version stamp
+lives in `data/version.json`. The repo ships with freshly extracted 1.0 data already in
+place, so you only run this after a patch.
+
+<details>
+<summary><b>Manual pipeline</b> (what update.py does under the hood)</summary>
+
+```sh
+# 1. extract DataTables + icons
 repak unpack -o extracted \
   -i "Pal/Content/Pal/DataTable/Character" \
   -i "Pal/Content/Pal/DataTable/PassiveSkill" \
   -i "Pal/Content/L10N/en/Pal/DataTable/Text" \
   -i "Pal/Content/Pal/Texture/PalIcon/Normal" \
   "<Palworld install>/Pal/Content/Paks/Pal-Windows.pak"
-```
 
-**2. Export to JSON + decode icons** (`tools/exporter`, needs the [.NET 10 SDK](https://dotnet.microsoft.com/download)
-and a current `Mappings.usmap` from [PalworldModding/UsefulFiles](https://github.com/PalworldModding/UsefulFiles)):
-
-```sh
+# 2. export to JSON + decode icons (needs Mappings.usmap)
 dotnet run --project tools/exporter -- extracted Mappings.usmap data/raw
-```
 
-**3. Transform into the app dataset** (Python 3, stdlib only):
-
-```sh
+# 3. transform into the app dataset
 python3 tools/transform.py data/raw web/src/data
-```
 
-**4. Rebuild:**
-
-```sh
+# 4. rebuild
 cd web && npm install && npm run build
 cp dist/index.html "../Palworld Breeding Calculator.html"
 ```
 
-The repo ships with freshly extracted 1.0 data (`data/raw/`) already in place, so steps 1-3
-are only needed after a patch.
+</details>
 
 ## Repository layout
 
@@ -103,9 +120,11 @@ web/                                ← React + Vite source
   src/lib/passives.ts               ← passive inheritance math
   src/data/                         ← generated dataset (pals, combos, passives, icons)
 tools/
+  update.py                         ← auto-detects game patches, regenerates everything
   exporter/                         ← C# CUE4Parse DataTable + icon exporter
   transform.py                      ← raw JSON → app dataset
 data/raw/                           ← DataTable JSON exports from the 1.0 pak
+data/version.json                   ← installed game version stamp (patch detection)
 ```
 
 ## Disclaimer

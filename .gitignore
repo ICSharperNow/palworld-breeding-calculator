@@ -3,3 +3,6 @@ dist/
 *.tsbuildinfo
 tools/exporter/bin/
 tools/exporter/obj/
+tools/bin/
+tools/.gamepath
+tools/Mappings.usmap
