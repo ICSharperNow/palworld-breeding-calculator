@@ -1,4 +1,5 @@
 import { createContext, useContext, useEffect, useMemo, useRef, useState, type CSSProperties } from 'react'
+import { createPortal } from 'react-dom'
 import {
   Pal,
   pals,
@@ -336,10 +337,13 @@ function SpawnMapView({ palId, onRequestClose }: { palId: string | null; onReque
   )
 
   if (full) {
-    return (
+    // portal to <body>: ancestor backdrop-filter would otherwise trap the
+    // fixed-position fullscreen layer inside the popup
+    return createPortal(
       <div className="modal-backdrop mapdrop full">
         <div className="mapmodal full">{view}</div>
-      </div>
+      </div>,
+      document.body,
     )
   }
   return <div className="mapview">{view}</div>
