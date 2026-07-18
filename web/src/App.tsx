@@ -504,6 +504,18 @@ function PalDetailModal({ id, hasBack, onBack, onClose }: { id: string; hasBack:
               <div><span className="statlabel">Run / ride speed</span><b>{pal.stats.run} / {pal.stats.ride}</b></div>
               {pal.nocturnal && <div><span className="statlabel">Active</span><b>🌙 nocturnal</b></div>}
             </div>
+            <h3>Breeding</h3>
+            <div className="deckstats">
+              <div><span className="statlabel">Breeding power</span><b>{pal.rank}</b></div>
+              <div><span className="statlabel">Parent pairs</span><b>{pairCount}</b></div>
+              <div>
+                <span className="statlabel">Locked breeding</span>
+                <b>{pal.ignoreCombi ? 'yes - unique combos only' : 'no'}</b>
+              </div>
+              {selfChild && selfChild.id !== pal.id && (
+                <div><span className="statlabel">Bred with itself</span><PalLink id={selfChild.id} size={24} /></div>
+              )}
+            </div>
           </div>
           <div>
             <h3>Weak to</h3>
@@ -526,18 +538,6 @@ function PalDetailModal({ id, hasBack, onBack, onClose }: { id: string; hasBack:
               })}
             </div>
           </div>
-        </div>
-        <h3>Breeding</h3>
-        <div className="deckstats">
-          <div><span className="statlabel">Breeding power</span><b>{pal.rank}</b></div>
-          <div><span className="statlabel">Parent pairs</span><b>{pairCount}</b></div>
-          <div>
-            <span className="statlabel">Locked breeding</span>
-            <b>{pal.ignoreCombi ? 'yes - unique combos only' : 'no'}</b>
-          </div>
-          {selfChild && selfChild.id !== pal.id && (
-            <div><span className="statlabel">Bred with itself</span><PalLink id={selfChild.id} size={24} /></div>
-          )}
         </div>
         {asChild.length > 0 && (
           <>
