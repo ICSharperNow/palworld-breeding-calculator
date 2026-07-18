@@ -31,9 +31,15 @@ function SpawnMapView({ palId, onRequestClose }: { palId: string | null; onReque
   const info = palId ? spawnsFor(palId) : null
   const hasMain = !!info && (info.main.day.length > 0 || info.main.night.length > 0)
   const hasTree = !!info && (info.tree.day.length > 0 || info.tree.night.length > 0)
-  const [whichRaw, setWhich] = useState<'main' | 'tree'>('main')
-  // pal with no main-map spawns forces the tree map and vice versa
-  const which = whichRaw === 'tree' ? (hasTree || !info ? 'tree' : 'main') : (hasMain || !info ? 'main' : 'tree')
+  const [which, setWhich] = useState<'main' | 'tree'>('main')
+  // when a newly selected pal has no spawns on the current map but does on the
+  // other, jump there once - the user can still switch freely afterwards
+  useEffect(() => {
+    if (!info) return
+    if (which === 'main' && !hasMain && hasTree) setWhich('tree')
+    else if (which === 'tree' && !hasTree && hasMain) setWhich('main')
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [palId])
   const [showDay, setShowDay] = useState(true)
   const [showNight, setShowNight] = useState(true)
   const [dayColor, setDayColor] = useState('#ffc83c')
@@ -82,6 +88,61 @@ function SpawnMapView({ palId, onRequestClose }: { palId: string | null; onReque
       draw(dayKeys, hexToRgba(dayColor, 0.85))
     } else if (showNight) {
       draw(nightKeys, hexToRgba(nightColor, 0.85))
+    }
+
+    // attention rings around each spawn cluster - small habitats are easy to
+    // miss on the full map, so circle every cluster of visible cells
+    const shown: [number, number][] = []
+    if (showDay) for (const k of dayKeys) shown.push([k % SPAWN_GRID, Math.floor(k / SPAWN_GRID)])
+    if (showNight) for (const k of nightKeys) if (!showDay || !dayKeys.has(k)) shown.push([k % SPAWN_GRID, Math.floor(k / SPAWN_GRID)])
+    if (shown.length > 0) {
+      const LINK = 14 // grid units - cells closer than this join one cluster
+      const unvisited = new Set(shown.map((_, i) => i))
+      const rings: { cx: number; cy: number; r: number }[] = []
+      while (unvisited.size > 0) {
+        const seed = unvisited.values().next().value!
+        unvisited.delete(seed)
+        const members = [seed]
+        const queue = [seed]
+        while (queue.length > 0) {
+          const cur = shown[queue.pop()!]
+          for (const i of [...unvisited]) {
+            const p = shown[i]
+            if (Math.abs(p[0] - cur[0]) <= LINK && Math.abs(p[1] - cur[1]) <= LINK) {
+              unvisited.delete(i)
+              members.push(i)
+              queue.push(i)
+            }
+          }
+        }
+        let sx = 0, sy = 0
+        for (const i of members) { sx += shown[i][0]; sy += shown[i][1] }
+        const cx = sx / members.length
+        const cy = sy / members.length
+        let maxd = 0
+        for (const i of members) {
+          const d = Math.hypot(shown[i][0] - cx, shown[i][1] - cy)
+          if (d > maxd) maxd = d
+        }
+        rings.push({ cx: cx * cell + cell / 2, cy: cy * cell + cell / 2, r: Math.max(30, (maxd + 6) * cell) })
+      }
+      ctx.save()
+      for (const ring of rings) {
+        ctx.beginPath()
+        ctx.arc(ring.cx, ring.cy, ring.r, 0, Math.PI * 2)
+        ctx.lineWidth = 6
+        ctx.strokeStyle = 'rgba(10, 14, 20, 0.6)'
+        ctx.stroke()
+        ctx.beginPath()
+        ctx.arc(ring.cx, ring.cy, ring.r, 0, Math.PI * 2)
+        ctx.lineWidth = 3
+        ctx.strokeStyle = 'rgba(255, 255, 255, 0.95)'
+        ctx.shadowColor = 'rgba(255, 255, 255, 0.8)'
+        ctx.shadowBlur = 12
+        ctx.stroke()
+        ctx.shadowBlur = 0
+      }
+      ctx.restore()
     }
   }
 
@@ -178,9 +239,10 @@ function SpawnMapView({ palId, onRequestClose }: { palId: string | null; onReque
     <>
       <div className="maptoolbar">
         <span className="mapnavbtns">
-          <button className={`modal-btn ${which === 'main' ? 'primary' : ''}`} disabled={!!info && !hasMain} onClick={() => { setWhich('main'); reset() }}>World</button>
-          <button className={`modal-btn ${which === 'tree' ? 'primary' : ''}`} disabled={!!info && !hasTree} onClick={() => { setWhich('tree'); reset() }}>World Tree</button>
-          {!hasMain && hasTree && <span className="note">World Tree only</span>}
+          <button className={`modal-btn ${which === 'main' ? 'primary' : ''}`} onClick={() => { setWhich('main'); reset() }}>World</button>
+          <button className={`modal-btn ${which === 'tree' ? 'primary' : ''}`} onClick={() => { setWhich('tree'); reset() }}>World Tree</button>
+          {info && which === 'main' && !hasMain && hasTree && <span className="note">no world spawns - see World Tree</span>}
+          {info && which === 'tree' && !hasTree && hasMain && <span className="note">no World Tree spawns - see World</span>}
         </span>
         <span className="mapnavbtns">
           {zoom > 1 && <button className="modal-btn" onClick={reset}>reset zoom</button>}
@@ -1168,9 +1230,61 @@ const PDEX_SORTS = [
 ] as const
 type PdexSort = (typeof PDEX_SORTS)[number][0]
 
+function PassiveDetailModal({ id, onClose }: { id: string; onClose: () => void }) {
+  const p = passives.find(x => x.id === id)!
+  const totalWeight = useMemo(() => passives.reduce((a, x) => a + x.weight, 0), [])
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') { e.stopPropagation(); onClose() } }
+    document.addEventListener('keydown', onKey, true)
+    return () => document.removeEventListener('keydown', onKey, true)
+  }, [onClose])
+  return (
+    <div className="modal-backdrop" onMouseDown={e => { if (e.target === e.currentTarget) onClose() }}>
+      <div className="modal">
+        <div className="modal-nav">
+          <button className="modal-btn close" onClick={onClose}>× Close</button>
+        </div>
+        <div className="pdetail-head">
+          <h2>{p.name}</h2>
+          <span className={`prank big r${p.rank}`}>
+            {p.rank > 0 ? '+'.repeat(p.rank) : p.rank < 0 ? '−' : '·'}
+          </span>
+        </div>
+        <p className="pdetail-desc">{p.desc}</p>
+        {p.effects.length > 0 && (
+          <>
+            <h3>Effects</h3>
+            <div className="deckstats">
+              {p.effects.map((e, i) => (
+                <div key={i}>
+                  <span className="statlabel">{e.t}</span>
+                  {e.v !== 0 && <b>{e.v > 0 ? '+' : ''}{e.v}{e.t.includes('suitability') ? '' : '%'}</b>}
+                  {e.v === 0 && <b>✓</b>}
+                </div>
+              ))}
+            </div>
+          </>
+        )}
+        <h3>Details</h3>
+        <div className="deckstats">
+          <div><span className="statlabel">Tier</span><b>{p.rank > 0 ? `+${p.rank}` : p.rank}</b></div>
+          <div>
+            <span className="statlabel">Wild roll chance</span>
+            <b>{totalWeight > 0 && p.weight > 0 ? `${((p.weight / totalWeight) * 100).toFixed(1)}%` : 'never rolled'}</b>
+            <span className="muted small"> (per passive slot on a wild pal)</span>
+          </div>
+          {p.rareOnly && <div><span className="statlabel">Source</span><b>lucky / rare pals only</b></div>}
+          <div><span className="statlabel">Internal id</span><b>{p.id}</b></div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
 function PassiveDexTab() {
   const [q, setQ] = useState('')
   const [sort, setSort] = useState<PdexSort>('best')
+  const [sel, setSel] = useState<string | null>(null)
   const f = q.trim().toLowerCase()
   let list = f
     ? passives.filter(p => p.name.toLowerCase().includes(f) || p.desc.toLowerCase().includes(f))
@@ -1182,22 +1296,23 @@ function PassiveDexTab() {
     <section>
       <p className="lede">
         All {passives.length} passive skills a pal can have, with their in-game descriptions.
-        Tier runs from −1 (negative) to +4 (best).
+        Tier runs from −1 (negative) to +4 (best). Click one for details.
       </p>
       <input className="filter" value={q} onChange={e => setQ(e.target.value)} placeholder="Search name or description…" />
       <SortBar options={PDEX_SORTS} value={sort} onChange={setSort} />
       <div className="pdexlist">
         {list.map(p => (
-          <div key={p.id} className={`pdexrow pr${Math.max(-1, Math.min(4, p.rank))}`}>
+          <button key={p.id} className={`pdexrow clickable pr${Math.max(-1, Math.min(4, p.rank))}`} onClick={() => setSel(p.id)}>
             <span className="pdexname">
               {p.name}
               <span className="prank">{p.rank > 0 ? '+'.repeat(p.rank) : p.rank < 0 ? '−' : ''}</span>
             </span>
             <span className="pdexdesc">{p.desc || <span className="muted">(no description)</span>}</span>
-          </div>
+          </button>
         ))}
         {list.length === 0 && <p className="muted">No matches.</p>}
       </div>
+      {sel && <PassiveDetailModal id={sel} onClose={() => setSel(null)} />}
     </section>
   )
 }

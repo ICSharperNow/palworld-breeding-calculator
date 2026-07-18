@@ -5,6 +5,9 @@ export interface Passive {
   name: string
   desc: string
   rank: number
+  effects: { t: string; v: number }[]
+  weight: number
+  rareOnly: boolean
 }
 
 export const passives = passivesJson as Passive[]

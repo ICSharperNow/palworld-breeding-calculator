@@ -3,516 +3,1280 @@
   "id": "PAL_ALLAttack_up3",
   "name": "Demon God",
   "desc": "Attack +30% \u00b7 Defense +5%",
-  "rank": 4
+  "rank": 4,
+  "effects": [
+   {
+    "t": "Attack",
+    "v": 30.0
+   },
+   {
+    "t": "Defense",
+    "v": 5.0
+   }
+  ],
+  "weight": 5,
+  "rareOnly": false
  },
  {
   "id": "Deffence_up3",
   "name": "Diamond Body",
   "desc": "Defense +30%\r\nImmune to Flinch\r\nImmune to Knockback",
-  "rank": 4
+  "rank": 4,
+  "effects": [
+   {
+    "t": "Defense",
+    "v": 30.0
+   },
+   {
+    "t": "Immune to Flinch",
+    "v": 0.0
+   },
+   {
+    "t": "Immune to Knockback",
+    "v": 0.0
+   }
+  ],
+  "weight": 5,
+  "rareOnly": false
  },
  {
   "id": "Stamina_Up_3",
   "name": "Eternal Engine",
   "desc": "Max stamina +75%\r\n*This effect is only valid for rideable pals.",
-  "rank": 4
+  "rank": 4,
+  "effects": [
+   {
+    "t": "PalSP_Increase",
+    "v": 75.0
+   }
+  ],
+  "weight": 5,
+  "rareOnly": false
  },
  {
   "id": "PAL_Sanity_Down_3",
   "name": "Heart of the Immovable King",
   "desc": "SAN drops +20.0% slower.",
-  "rank": 4
+  "rank": 4,
+  "effects": [
+   {
+    "t": "Sanity_Decrease",
+    "v": -20.0
+   }
+  ],
+  "weight": 5,
+  "rareOnly": false
  },
  {
   "id": "SwimSpeed_up_3",
   "name": "King of the Waves",
   "desc": "Swim Speed +50%",
-  "rank": 4
+  "rank": 4,
+  "effects": [
+   {
+    "t": "Swim Speed",
+    "v": 50.0
+   }
+  ],
+  "weight": 5,
+  "rareOnly": false
  },
  {
   "id": "SelfDeathAddItemDrop_up_3",
   "name": "Lavish Hospitality",
   "desc": "Item drops on defeat +100%",
-  "rank": 4
+  "rank": 4,
+  "effects": [
+   {
+    "t": "Item drops on defeat",
+    "v": 100.0
+   }
+  ],
+  "weight": 5,
+  "rareOnly": false
  },
  {
   "id": "RideJumpCount_Increase1",
   "name": "Lightfooted",
   "desc": "Mounted Jump Count +1",
-  "rank": 4
+  "rank": 4,
+  "effects": [
+   {
+    "t": "RideJumpCount_Increase",
+    "v": 1.0
+   }
+  ],
+  "weight": 5,
+  "rareOnly": false
  },
  {
   "id": "Rare",
   "name": "Lucky",
   "desc": "Attack +15% \u00b7 Defense +15% \u00b7 Work Speed +20%",
-  "rank": 4
+  "rank": 4,
+  "effects": [
+   {
+    "t": "Attack",
+    "v": 15.0
+   },
+   {
+    "t": "Defense",
+    "v": 15.0
+   },
+   {
+    "t": "Work Speed",
+    "v": 20.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": true
  },
  {
   "id": "PAL_FullStomach_Down_3",
   "name": "Mastery of Fasting",
   "desc": "Hunger decreases +20.0% slower.",
-  "rank": 4
+  "rank": 4,
+  "effects": [
+   {
+    "t": "FullStomatch_Decrease",
+    "v": -20.0
+   }
+  ],
+  "weight": 5,
+  "rareOnly": false
  },
  {
   "id": "WorkSuitabilityAddRank_MonsterFarm_2",
   "name": "Ranch Master",
   "desc": "Ranch work suitability +2",
-  "rank": 4
+  "rank": 4,
+  "effects": [
+   {
+    "t": "Ranch work suitability",
+    "v": 2.0
+   }
+  ],
+  "weight": 5,
+  "rareOnly": false
  },
  {
   "id": "CraftSpeed_up3",
   "name": "Remarkable Craftsmanship",
   "desc": "Work Speed +75%",
-  "rank": 4
+  "rank": 4,
+  "effects": [
+   {
+    "t": "Work Speed",
+    "v": 75.0
+   }
+  ],
+  "weight": 5,
+  "rareOnly": false
  },
  {
   "id": "MoveSpeed_up_3",
   "name": "Swift",
   "desc": "Movement Speed +30%",
-  "rank": 4
+  "rank": 4,
+  "effects": [
+   {
+    "t": "Movement Speed",
+    "v": 30.0
+   }
+  ],
+  "weight": 5,
+  "rareOnly": false
  },
  {
   "id": "Vampire",
   "name": "Vampiric",
   "desc": "Absorbs a portion of the damage dealt to restore . \r\nDoes not sleep at night and continues to work.",
-  "rank": 4
+  "rank": 4,
+  "effects": [
+   {
+    "t": "Nocturnal",
+    "v": 0.0
+   },
+   {
+    "t": "LifeSteal",
+    "v": 5.0
+   }
+  ],
+  "weight": 5,
+  "rareOnly": false
  },
  {
   "id": "SwimSpeed_up_2",
   "name": "Ace Swimmer",
   "desc": "Swim Speed +40%",
-  "rank": 3
+  "rank": 3,
+  "effects": [
+   {
+    "t": "Swim Speed",
+    "v": 40.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "CraftSpeed_up2",
   "name": "Artisan",
   "desc": "Work Speed +50%",
-  "rank": 3
+  "rank": 3,
+  "effects": [
+   {
+    "t": "Work Speed",
+    "v": 50.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "Deffence_up2",
   "name": "Burly Body",
   "desc": "Defense +20%\r\nImmune to Flinch",
-  "rank": 3
+  "rank": 3,
+  "effects": [
+   {
+    "t": "Defense",
+    "v": 20.0
+   },
+   {
+    "t": "Immune to Flinch",
+    "v": 0.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "PAL_FullStomach_Down_2",
   "name": "Diet Lover",
   "desc": "Hunger decreases +15.0% slower.",
-  "rank": 3
+  "rank": 3,
+  "effects": [
+   {
+    "t": "FullStomatch_Decrease",
+    "v": -15.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "WorkSuitabilityAddRank_MonsterFarm_1",
   "name": "Farmhand",
   "desc": "Ranch work suitability +1",
-  "rank": 3
+  "rank": 3,
+  "effects": [
+   {
+    "t": "Ranch work suitability",
+    "v": 1.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "PAL_ALLAttack_up2",
   "name": "Ferocious",
   "desc": "Attack +20%",
-  "rank": 3
+  "rank": 3,
+  "effects": [
+   {
+    "t": "Attack",
+    "v": 20.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "AutoHPRegeneRate_Passive",
   "name": "Healing Coach",
   "desc": "HP regeneration +5%",
-  "rank": 3
+  "rank": 3,
+  "effects": [
+   {
+    "t": "HP regeneration",
+    "v": 5.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "Stamina_Up_1",
   "name": "Infinite Stamina",
   "desc": "Max stamina +50%\r\n*This effect is only valid for rideable pals.",
-  "rank": 3
+  "rank": 3,
+  "effects": [
+   {
+    "t": "PalSP_Increase",
+    "v": 50.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "TrainerLogging_up1",
   "name": "Logging Foreman",
   "desc": "25% increase in Player Logging Efficiency.",
-  "rank": 3
+  "rank": 3,
+  "effects": [
+   {
+    "t": "Logging",
+    "v": 25.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "TrainerMining_up1",
   "name": "Mine Foreman",
   "desc": "25% increase in Player Mining Efficiency.",
-  "rank": 3
+  "rank": 3,
+  "effects": [
+   {
+    "t": "Mining",
+    "v": 25.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "TrainerWorkSpeed_UP_1",
   "name": "Motivational Leader",
   "desc": "25% increase in Player Work Speed.",
-  "rank": 3
+  "rank": 3,
+  "effects": [
+   {
+    "t": "Work Speed",
+    "v": 25.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "SalePrice_Up_1",
   "name": "Noble",
   "desc": "Increases the value of items when sold by +5%",
-  "rank": 3
+  "rank": 3,
+  "effects": [
+   {
+    "t": "ShopSellPrice_Money_Increase",
+    "v": 5.0
+   },
+   {
+    "t": "ShopBuyPrice_Money_Increase",
+    "v": -5.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "Test_PalEgg_HatchingSpeed_Up",
   "name": "Philanthropist",
   "desc": "When assigned to a Breeding Farm, breeding speed is increased by 100%.",
-  "rank": 3
+  "rank": 3,
+  "effects": [
+   {
+    "t": "BreedSpeed",
+    "v": 100.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "ReloadSpeedUp_Passive",
   "name": "Reload Master",
   "desc": "Reload speed +4%",
-  "rank": 3
+  "rank": 3,
+  "effects": [
+   {
+    "t": "Reload speed",
+    "v": 4.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "MoveSpeed_up_2",
   "name": "Runner",
   "desc": "Movement Speed +20%",
-  "rank": 3
+  "rank": 3,
+  "effects": [
+   {
+    "t": "Movement Speed",
+    "v": 20.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "CoolTimeReduction_Up_1",
   "name": "Serenity",
   "desc": "Active skill cooldown reduction 30%\r\nAttack +10%",
-  "rank": 3
+  "rank": 3,
+  "effects": [
+   {
+    "t": "ActiveSkillCoolTime_Decrease",
+    "v": 30.0
+   },
+   {
+    "t": "Attack",
+    "v": 10.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "SelfDeathAddItemDrop_up_2",
   "name": "Service-Minded",
   "desc": "Item drops on defeat +50%",
-  "rank": 3
+  "rank": 3,
+  "effects": [
+   {
+    "t": "Item drops on defeat",
+    "v": 50.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "TrainerDEF_UP_1",
   "name": "Stronghold Strategist",
   "desc": "10% increase in Player Defense.",
-  "rank": 3
+  "rank": 3,
+  "effects": [
+   {
+    "t": "Defense",
+    "v": 10.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "TrainerATK_UP_1",
   "name": "Vanguard",
   "desc": "10% increase in Player Attack.",
-  "rank": 3
+  "rank": 3,
+  "effects": [
+   {
+    "t": "Attack",
+    "v": 10.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "PlayerSP_DecreaseRate_Passive",
   "name": "Wellness Watcher",
   "desc": "Player stamina drain -5%",
-  "rank": 3
+  "rank": 3,
+  "effects": [
+   {
+    "t": "Player stamina drain",
+    "v": -5.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "PAL_Sanity_Down_2",
   "name": "Workaholic",
   "desc": "SAN drops +15.0% slower.",
-  "rank": 3
+  "rank": 3,
+  "effects": [
+   {
+    "t": "Sanity_Decrease",
+    "v": -15.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "Deffence_up2_2",
   "name": "Heavyweight",
   "desc": "Defense +20%\r\nImmune to Knockback",
-  "rank": 2
+  "rank": 2,
+  "effects": [
+   {
+    "t": "Defense",
+    "v": 20.0
+   },
+   {
+    "t": "Immune to Knockback",
+    "v": 0.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "Noukin",
   "name": "Musclehead",
   "desc": "Attack +30% \u00b7 Work Speed -50%",
-  "rank": 2
+  "rank": 2,
+  "effects": [
+   {
+    "t": "Attack",
+    "v": 30.0
+   },
+   {
+    "t": "Work Speed",
+    "v": -50.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "ElementResist_Normal_1_PAL",
   "name": "Abnormal",
   "desc": "10% decrease in incoming Neutral damage.",
-  "rank": 1
+  "rank": 1,
+  "effects": [
+   {
+    "t": "ElementResist_Normal",
+    "v": 10.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "PAL_oraora",
   "name": "Aggressive",
   "desc": "Attack +10% \u00b7 Defense -10%",
-  "rank": 1
+  "rank": 1,
+  "effects": [
+   {
+    "t": "Attack",
+    "v": 10.0
+   },
+   {
+    "t": "Defense",
+    "v": -10.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "ElementBoost_Dragon_1_PAL",
   "name": "Blood of the Dragon",
   "desc": "10% increase in Dragon attack damage.",
-  "rank": 1
+  "rank": 1,
+  "effects": [
+   {
+    "t": "ElementBoost_Dragon",
+    "v": 10.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "ElementResist_Leaf_1_PAL",
   "name": "Botanical Barrier",
   "desc": "10% decrease in incoming Grass damage.",
-  "rank": 1
+  "rank": 1,
+  "effects": [
+   {
+    "t": "ElementResist_Leaf",
+    "v": 10.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "PAL_ALLAttack_up1",
   "name": "Brave",
   "desc": "Attack +10%",
-  "rank": 1
+  "rank": 1,
+  "effects": [
+   {
+    "t": "Attack",
+    "v": 10.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "ElementBoost_Thunder_1_PAL",
   "name": "Capacitor",
   "desc": "10% increase in Lightning attack damage.",
-  "rank": 1
+  "rank": 1,
+  "effects": [
+   {
+    "t": "ElementBoost_Electricity",
+    "v": 10.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "ElementResist_Dark_1_PAL",
   "name": "Cheery",
   "desc": "10% decrease in incoming Dark damage.",
-  "rank": 1
+  "rank": 1,
+  "effects": [
+   {
+    "t": "ElementResist_Dark",
+    "v": 10.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "ElementBoost_Ice_1_PAL",
   "name": "Coldblooded",
   "desc": "10% increase in Ice attack damage.",
-  "rank": 1
+  "rank": 1,
+  "effects": [
+   {
+    "t": "ElementBoost_Ice",
+    "v": 10.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "PAL_conceited",
   "name": "Conceited",
   "desc": "Work Speed +10% \u00b7 Defense -10%",
-  "rank": 1
+  "rank": 1,
+  "effects": [
+   {
+    "t": "Work Speed",
+    "v": 10.0
+   },
+   {
+    "t": "Defense",
+    "v": -10.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "PAL_FullStomach_Down_1",
   "name": "Dainty Eater",
   "desc": "Hunger decreases +10.0% slower.",
-  "rank": 1
+  "rank": 1,
+  "effects": [
+   {
+    "t": "FullStomatch_Decrease",
+    "v": -10.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "ElementResist_Dragon_1_PAL",
   "name": "Dragonkiller",
   "desc": "10% decrease in incoming Dragon damage.",
-  "rank": 1
+  "rank": 1,
+  "effects": [
+   {
+    "t": "ElementResist_Dragon",
+    "v": 10.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "ElementResist_Earth_1_PAL",
   "name": "Earthquake Resistant",
   "desc": "10% decrease in incoming Earth damage.",
-  "rank": 1
+  "rank": 1,
+  "effects": [
+   {
+    "t": "ElementResist_Earth",
+    "v": 10.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "SalePrice_Up_2",
   "name": "Fine Furs",
   "desc": "Increases the value of items when sold by +3%",
-  "rank": 1
+  "rank": 1,
+  "effects": [
+   {
+    "t": "ShopSellPrice_Money_Increase",
+    "v": 3.0
+   },
+   {
+    "t": "ShopBuyPrice_Money_Increase",
+    "v": -3.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "Stamina_Up_2",
   "name": "Fit as a Fiddle",
   "desc": "Max stamina +25%\r\n*This effect is only valid for rideable pals.",
-  "rank": 1
+  "rank": 1,
+  "effects": [
+   {
+    "t": "PalSP_Increase",
+    "v": 25.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "ElementBoost_Leaf_1_PAL",
   "name": "Fragrant Foliage",
   "desc": "10% increase in Grass attack damage.",
-  "rank": 1
+  "rank": 1,
+  "effects": [
+   {
+    "t": "ElementBoost_Leaf",
+    "v": 10.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "Deffence_up1",
   "name": "Hard Skin",
   "desc": "Defense +10%",
-  "rank": 1
+  "rank": 1,
+  "effects": [
+   {
+    "t": "Defense",
+    "v": 10.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "ElementResist_Ice_1_PAL",
   "name": "Heated Body",
   "desc": "10% decrease in incoming Ice damage.",
-  "rank": 1
+  "rank": 1,
+  "effects": [
+   {
+    "t": "ElementResist_Ice",
+    "v": 10.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "PAL_rude",
   "name": "Hooligan",
   "desc": "Attack +15% \u00b7 Work Speed -10%",
-  "rank": 1
+  "rank": 1,
+  "effects": [
+   {
+    "t": "Attack",
+    "v": 15.0
+   },
+   {
+    "t": "Work Speed",
+    "v": -10.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "ElementBoost_Aqua_1_PAL",
   "name": "Hydromaniac",
   "desc": "10% increase in Water attack damage.",
-  "rank": 1
+  "rank": 1,
+  "effects": [
+   {
+    "t": "ElementBoost_Water",
+    "v": 10.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "CoolTimeReduction_Up_2",
   "name": "Impatient",
   "desc": "Active skill cooldown reduction 15%",
-  "rank": 1
+  "rank": 1,
+  "effects": [
+   {
+    "t": "ActiveSkillCoolTime_Decrease",
+    "v": 15.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "Nocturnal",
   "name": "Insomnia",
   "desc": "Does not sleep and continues to work even at night.",
-  "rank": 1
+  "rank": 1,
+  "effects": [
+   {
+    "t": "Nocturnal",
+    "v": 0.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "ElementResist_Thunder_1_PAL",
   "name": "Insulated Body",
   "desc": "10% decrease in incoming Lightning damage.",
-  "rank": 1
+  "rank": 1,
+  "effects": [
+   {
+    "t": "ElementResist_Electricity",
+    "v": 10.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "PAL_masochist",
   "name": "Masochist",
   "desc": "Defense +15% \u00b7 Attack -15%",
-  "rank": 1
+  "rank": 1,
+  "effects": [
+   {
+    "t": "Defense",
+    "v": 15.0
+   },
+   {
+    "t": "Attack",
+    "v": -15.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "MoveSpeed_up_1",
   "name": "Nimble",
   "desc": "Movement Speed +10%",
-  "rank": 1
+  "rank": 1,
+  "effects": [
+   {
+    "t": "Movement Speed",
+    "v": 10.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "PAL_Sanity_Down_1",
   "name": "Positive Thinker",
   "desc": "SAN drops +10.0% slower.",
-  "rank": 1
+  "rank": 1,
+  "effects": [
+   {
+    "t": "Sanity_Decrease",
+    "v": -10.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "ElementBoost_Earth_1_PAL",
   "name": "Power of Gaia",
   "desc": "10% increase in Earth attack damage.",
-  "rank": 1
+  "rank": 1,
+  "effects": [
+   {
+    "t": "ElementBoost_Earth",
+    "v": 10.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "ElementBoost_Fire_1_PAL",
   "name": "Pyromaniac",
   "desc": "10% increase in Fire attack damage.",
-  "rank": 1
+  "rank": 1,
+  "effects": [
+   {
+    "t": "ElementBoost_Fire",
+    "v": 10.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "PAL_sadist",
   "name": "Sadist",
   "desc": "Attack +15% \u00b7 Defense -15%",
-  "rank": 1
+  "rank": 1,
+  "effects": [
+   {
+    "t": "Attack",
+    "v": 15.0
+   },
+   {
+    "t": "Defense",
+    "v": -15.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "CraftSpeed_up1",
   "name": "Serious",
   "desc": "Work Speed +20%",
-  "rank": 1
+  "rank": 1,
+  "effects": [
+   {
+    "t": "Work Speed",
+    "v": 20.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "SwimSpeed_up_1",
   "name": "Sleek Stroke",
   "desc": "Swim Speed +30%",
-  "rank": 1
+  "rank": 1,
+  "effects": [
+   {
+    "t": "Swim Speed",
+    "v": 30.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "ElementBoost_Normal_1_PAL",
   "name": "Spirit of Zen",
   "desc": "10% increase in Neutral attack damage.",
-  "rank": 1
+  "rank": 1,
+  "effects": [
+   {
+    "t": "ElementBoost_Normal",
+    "v": 10.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "ElementResist_Fire_1_PAL",
   "name": "Suntan Lover",
   "desc": "10% decrease in incoming Fire damage.",
-  "rank": 1
+  "rank": 1,
+  "effects": [
+   {
+    "t": "ElementResist_Fire",
+    "v": 10.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "ElementBoost_Dark_1_PAL",
   "name": "Veil of Darkness",
   "desc": "10% increase in Dark attack damage.",
-  "rank": 1
+  "rank": 1,
+  "effects": [
+   {
+    "t": "ElementBoost_Dark",
+    "v": 10.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "ElementResist_Aqua_1_PAL",
   "name": "Waterproof",
   "desc": "10% decrease in incoming Water damage.",
-  "rank": 1
+  "rank": 1,
+  "effects": [
+   {
+    "t": "ElementResist_Water",
+    "v": 10.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "PAL_CorporateSlave",
   "name": "Work Slave",
   "desc": "Work Speed +30% \u00b7 Attack -30%",
-  "rank": 1
+  "rank": 1,
+  "effects": [
+   {
+    "t": "Work Speed",
+    "v": 30.0
+   },
+   {
+    "t": "Attack",
+    "v": -30.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "CraftSpeed_down1",
   "name": "Clumsy",
   "desc": "Work Speed -10%",
-  "rank": -1
+  "rank": -1,
+  "effects": [
+   {
+    "t": "Work Speed",
+    "v": -10.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "PAL_ALLAttack_down1",
   "name": "Coward",
   "desc": "Attack -10%",
-  "rank": -1
+  "rank": -1,
+  "effects": [
+   {
+    "t": "Attack",
+    "v": -10.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "Deffence_down1",
   "name": "Downtrodden",
   "desc": "Defense -10%",
-  "rank": -1
+  "rank": -1,
+  "effects": [
+   {
+    "t": "Defense",
+    "v": -10.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "CoolTimeReduction_Down_1",
   "name": "Easygoing",
   "desc": "Active skill cooldown extension -15%",
-  "rank": -1
+  "rank": -1,
+  "effects": [
+   {
+    "t": "ActiveSkillCoolTime_Decrease",
+    "v": -15.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "PAL_FullStomach_Up_1",
   "name": "Glutton",
   "desc": "Hunger decreases +10.0% faster.",
-  "rank": -1
+  "rank": -1,
+  "effects": [
+   {
+    "t": "FullStomatch_Decrease",
+    "v": 10.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "NonKilling",
   "name": "Mercy Hit",
   "desc": "Pacifist.\r\nWill not reduce the target's Health below 1.",
-  "rank": -1
+  "rank": -1,
+  "effects": [
+   {
+    "t": "NonKilling",
+    "v": 0.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "NightOwl",
   "name": "Night Owl",
   "desc": "Tends to nap through the day, due to being nocturnal.",
-  "rank": -1
+  "rank": -1,
+  "effects": [
+   {
+    "t": "NightOwl",
+    "v": 0.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "SalePrice_Down_1",
   "name": "Shabby",
   "desc": "Decrease the value of items when sold by -10%",
-  "rank": -1
+  "rank": -1,
+  "effects": [
+   {
+    "t": "ShopSellPrice_Money_Increase",
+    "v": -10.0
+   },
+   {
+    "t": "ShopBuyPrice_Money_Increase",
+    "v": 10.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "Stamina_Down_1",
   "name": "Sickly",
   "desc": "Max Stamina -25%\r\n*This effect is only valid for rideable pals.",
-  "rank": -1
+  "rank": -1,
+  "effects": [
+   {
+    "t": "PalSP_Increase",
+    "v": -25.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "PAL_Sanity_Up_1",
   "name": "Unstable",
   "desc": "SAN drops +10.0% faster.",
-  "rank": -1
+  "rank": -1,
+  "effects": [
+   {
+    "t": "Sanity_Decrease",
+    "v": 10.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "PAL_FullStomach_Up_2",
   "name": "Bottomless Stomach",
   "desc": "Hunger decreases +15.0% faster.",
-  "rank": -2
+  "rank": -2,
+  "effects": [
+   {
+    "t": "FullStomatch_Decrease",
+    "v": 15.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "PAL_Sanity_Up_2",
   "name": "Destructive",
   "desc": "SAN drops +15.0% faster.",
-  "rank": -2
+  "rank": -2,
+  "effects": [
+   {
+    "t": "Sanity_Decrease",
+    "v": 15.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "Deffence_down2",
   "name": "Brittle",
   "desc": "Defense -20%",
-  "rank": -3
+  "rank": -3,
+  "effects": [
+   {
+    "t": "Defense",
+    "v": -20.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "PAL_ALLAttack_down2",
   "name": "Pacifist",
   "desc": "Attack -20%",
-  "rank": -3
+  "rank": -3,
+  "effects": [
+   {
+    "t": "Attack",
+    "v": -20.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  },
  {
   "id": "CraftSpeed_down2",
   "name": "Slacker",
   "desc": "Work Speed -30%",
-  "rank": -3
+  "rank": -3,
+  "effects": [
+   {
+    "t": "Work Speed",
+    "v": -30.0
+   }
+  ],
+  "weight": 100,
+  "rareOnly": false
  }
 ]

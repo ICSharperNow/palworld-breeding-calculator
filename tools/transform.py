@@ -110,6 +110,13 @@ EFFECT_LABELS = {
     "PlayerSP_DecreaseRate": "Player stamina drain",
     "SelfDeathAddItemDrop": "Item drops on defeat",
     "WorkSuitabilityAddRank_MonsterFarm": "Ranch work suitability",
+    "LeanBackInvalid_ForPassiveSkill": "Immune to Flinch",
+    "KnockbackInvalid_ForPassiveSkill": "Immune to Knockback",
+    "SanityDecreaseRate": "Sanity drain",
+    "HungerDecreaseRate": "Hunger drain",
+    "GainStatusPointRate": "Stat points gained",
+    "CraftSpeedBySanity": "Work Speed (by sanity)",
+    "MaxSP": "Max stamina",
 }
 
 
@@ -141,11 +148,20 @@ for key, r in passive.items():
     if not (r.get("AddPal") or r.get("AddRarePal")):
         continue
     nm = skill_names.get(f"PASSIVE_{key}")
+    effects = []
+    for i in (1, 2, 3, 4):
+        t = (r.get(f"EffectType{i}") or "").split("::")[-1]
+        if t in ("no", "None", ""):
+            continue
+        effects.append({"t": EFFECT_LABELS.get(t, t), "v": r.get(f"EffectValue{i}", 0)})
     passives.append({
         "id": key,
         "name": nm["TextData"]["LocalizedString"] if nm else key,
         "desc": passive_desc(key, r),
         "rank": r.get("Rank", 0),
+        "effects": effects,
+        "weight": r.get("LotteryWeight", 0),
+        "rareOnly": bool(r.get("AddRarePal")) and not r.get("AddPal"),
     })
 passives.sort(key=lambda p: (-p["rank"], p["name"]))
 

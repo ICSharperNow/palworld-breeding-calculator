@@ -393,7 +393,13 @@ h3 { margin: 20px 0 6px; font-size: 15px; }
 .pdexrow.pr3, .pdexrow.pr4 { border-color: rgba(232, 196, 84, 0.5); }
 .pdexrow.pr-1 { opacity: .75; }
 .pdexname { font-weight: 650; min-width: 200px; display: inline-flex; gap: 7px; align-items: baseline; }
-.pdexdesc { flex: 1; color: var(--muted); font-size: 14px; min-width: 240px; }
+.pdexdesc { flex: 1; color: var(--muted); font-size: 14px; min-width: 240px; text-align: left; }
+.pdexrow.clickable { cursor: pointer; color: var(--text); font: inherit; transition: border-color .12s, transform .08s; }
+.pdexrow.clickable:hover { border-color: var(--accent); transform: translateY(-1px); }
+.pdetail-head { display: flex; align-items: center; gap: 12px; }
+.pdetail-head h2 { margin: 0; }
+.prank.big { font-size: 20px; }
+.pdetail-desc { white-space: pre-line; color: var(--muted); }
 .maplegend { display: flex; align-items: center; gap: 10px; margin-top: 12px; flex-wrap: wrap; }
 .legend {
   background: var(--panel); color: var(--muted); border: 1px solid var(--border);
