@@ -353,7 +353,7 @@ function SpawnMapOverlay({ palId, onClose }: { palId: string; onClose: () => voi
         <div className="modal-nav">
           <span className="maptitle">
             <PalIcon id={palId} size={30} />
-            {pal.name} — spawn locations
+            {pal.name} - spawn locations
           </span>
           <button className="modal-btn close" onClick={onClose}>× Close</button>
         </div>
@@ -550,7 +550,7 @@ function PalDetailModal({ id, hasBack, onBack, onClose }: { id: string; hasBack:
                         : WORK_ICONS[w]}
                     </span>
                     <span className="statlabel">{w}</span>
-                    <b>{lv > 0 ? `Lv ${lv}` : '—'}</b>
+                    <b>{lv > 0 ? `Lv ${lv}` : '-'}</b>
                   </div>
                 )
               })}
@@ -597,7 +597,7 @@ function PalDetailModal({ id, hasBack, onBack, onClose }: { id: string; hasBack:
           {spawnInfo ? (
             <button className="modal-btn primary" onClick={() => setShowMap(true)}>📍 Spawn map</button>
           ) : (
-            <span className="note">No wild spawns — breeding or special sources only.</span>
+            <span className="note">No wild spawns - breeding or special sources only.</span>
           )}
           <button className="modal-btn primary" onClick={() => gotoReverse(id)}>🎯 Find all parents</button>
           <button className="modal-btn primary" onClick={() => gotoPath(id)}>🗺️ Plan path from it</button>

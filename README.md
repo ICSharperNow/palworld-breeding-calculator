@@ -1,84 +1,109 @@
 # 🥚 Palworld 1.0 Breeding Calculator
 
-A fast, single-file breeding calculator and pal toolbox for **Palworld 1.0**, with every
-number pulled **directly from the game files** - not from stale community spreadsheets.
-When Pocketpair ships a patch, one command detects it and re-extracts everything.
+A fast, single-file breeding calculator and complete pal toolbox for **Palworld 1.0**,
+with every number pulled **directly from the game files** - not from stale community
+spreadsheets. When Pocketpair ships a patch, one command detects it and re-extracts
+everything.
 
-**291 pals · 185 unique combos · 86 passives · full spawn maps · in-game icons**
-
-![Breed tab](docs/screenshots/ss-breed.png)
+**291 pals · 185 unique combos · 86 passives · ~150k spawn points · in-game icons and maps**
 
 ## ✨ No install - just open it
 
 Download **[`Palworld Breeding Calculator.html`](Palworld%20Breeding%20Calculator.html)**
-and double-click it. That's the whole app: every pal, icon, map, and formula is bundled
-into one portable HTML file (~2 MB). Works offline, no server, no tracking.
+and double-click it. That's the entire app: every pal, icon, map, and formula bundled
+into one portable HTML file. Works offline, no server, no tracking.
 
-## The tools
+---
 
-### 🥚 Breed
-Pick two parents and see the exact child as a visual equation, including the gendered
-unique combos (Katress × Wixen works both ways). Swap button included.
+## 🥚 Breed
 
-### 🎯 Find Parents
-Pick a target pal and get every parent pair that produces it - Anubis has 69. Sort by
-Paldeck number, name, common-parents-first, rarest-first, or element; filter by parent
-name or element chips.
+Pick two parents and watch the egg resolve as a visual equation - rarity-colored cards,
+element chips, gender odds. Handles every 1.0 rule: unique combos, legendary self-locks,
+and the two gender-dependent pairs (Katress × Wixen both ways).
+
+![Breed](docs/screenshots/ss-breed.png)
+
+## 🎯 Find Parents
+
+Pick the pal you want and see every parent pair that hatches it (Anubis has 69). Sort by
+Paldeck number, name, common-parents-first, rarest-first, or element - and filter with
+element chips or a name search.
 
 ![Find Parents](docs/screenshots/ss-parents.png)
 
-### 🗺️ Path Finder
-Shortest breeding chain to a goal pal, two ways:
+## 🗺️ Path Finder
 
-- **From one pal** (paldb-style): any partner allowed, wild catches assumed. Each step
-  shows the partner to use plus how many alternatives would work.
-- **Only pals I own**: restricted to your box, with alternative final pairings.
+The shortest breeding chain to any goal:
+
+- **From one pal** - any partner allowed (wild catches assumed), every step listing the
+  partner to use plus how many alternatives would also work
+- **Only pals I own** - restricted to your box, with alternative final pairings
 
 Tag up to 4 passives to carry through the chain and get per-egg keep odds, whole-chain
-first-try probability, and expected total eggs.
+first-try probability, and expected egg totals.
 
-### 🧬 Plan Builder
-The multi-pal planner: enter several pals and the passives on each, plus an optional
-goal species. It builds a full step-by-step plan that merges every tracked passive onto
-one bloodline (cheapest merges first) and walks it to the goal, with per-egg odds,
-whole-plan first-try probability, and expected egg count.
+![Path Finder](docs/screenshots/ss-path.png)
 
-![Plan Builder](docs/screenshots/plan1.png)
+## 🧬 Plan Builder
 
-### ✨ Passive Odds
-Mark the passives the two parents have between them and the ones you want on the child -
-get the probability of inheriting at least the desired set, the exact set, and the
-expected number of eggs (40/30/20/10 inheritance model).
+The multi-pal planner. Enter several pals and the passives on each, pick an optional goal
+species, and get a complete step-by-step plan that merges every tracked passive onto one
+bloodline and walks it to the goal - cheapest merges first so the hard rolls come late,
+with per-egg odds and expected egg counts for the whole operation.
 
-### 📜 Passive Skills
-Every passive a pal can have, with real in-game descriptions, tier badges (−1 to +4),
-search, and tier/name sorting. Click any skill for details: effect breakdown, wild roll
-chance from the game's lottery weights, and rare-only sourcing.
+![Plan Builder](docs/screenshots/ss-plan.png)
+
+## ✨ Passive Odds
+
+Mark the passives the two parents share, mark the ones you want on the child, and get
+the exact inheritance probability (at-least and exact-set) plus expected eggs, using the
+datamined 40/30/20/10 model.
+
+## 📜 Passive Skills
+
+Every passive a pal can have, with real in-game descriptions and tier badges (-1 to +4).
+Search, sort by tier or name, and click any skill for a detail view: effect breakdown,
+wild roll chance computed from the game's lottery weights, and rare-only sourcing.
 
 ![Passive Skills](docs/screenshots/ss-passives.png)
 
-### 🌍 Spawn Map
-Where every pal spawns, from the game's own Paldeck distribution data (~150k spawn
-points). Pick any of the 259 spawnable pals from the searchable list:
+## 🌍 Spawn Map
 
-- Day / night areas in customizable highlight colors (overlap auto-blends)
-- Glowing attention rings around every spawn cluster - tiny habitats are unmissable
-- Scroll-wheel zoom anchored at the cursor, drag panning, fullscreen
-- Live in-game coordinates under the crosshair + spawn-center coordinates
-- Separate **World Tree** map for the 41 pals that spawn there (World-Tree-only pals
-  are flagged 🌳)
+Where every pal actually spawns, from the game's own Paldeck distribution data - the same
+~150k coordinates the in-game habitat map uses, drawn on the real 1.0 world map texture:
+
+- Glowing **attention rings** around every spawn cluster, so tiny habitats are unmissable
+- **Day / night** areas in customizable colors (overlap auto-blends)
+- Scroll-wheel **zoom** anchored at the cursor, drag panning, **fullscreen**
+- Live **in-game coordinates** under the crosshair, plus a **best spot** readout at the
+  center of the densest cluster
+- A separate **World Tree** map for the 41 pals that spawn there (World-Tree-only pals
+  flagged 🌳)
 
 ![Spawn Map](docs/screenshots/ss-map.png)
 
-### 📖 Paldeck
-Browse all 291 pals with rarity-colored frames. Sort by number, name, rarity, element,
-or breeding power; filter by element.
+## 📖 Paldeck
 
-### Everything is clickable
-Any pal shown anywhere - result cards, parent pairs, path steps, deck cells - opens a
-detail popup: stats, gender ratio, rarity, breeding power, unique combos, its own spawn
-map, and shortcut buttons into Find Parents and Path Finder. Details stack with a Back
-button, and closing returns you exactly where you were.
+All 291 pals in a rarity-framed grid - gold legendaries, pink mythics. Sort by number,
+name, rarity, element, or breeding power; filter by element.
+
+![Paldeck](docs/screenshots/ss-paldeck.png)
+
+## Everything is clickable
+
+Any pal shown anywhere opens a full detail popup - and details stack with a Back button,
+so you can wander and always find your way back to what you were doing:
+
+- Base **stats** (HP, attack, defense, work speed, stamina, food, run/ride, nocturnal)
+- **Elemental weakness** from the type chart
+- All 13 **work suitabilities** with the game's own colored icons and levels
+- **Breeding** info: power, parent-pair count, locks, self-breed result, unique combos
+- Its own **spawn map**, an image lightbox on the portrait, and shortcuts into
+  Find Parents and Path Finder
+
+![Pal details](docs/screenshots/ss-detail.png)
+
+---
 
 ## How breeding works in 1.0 (as datamined)
 
@@ -148,6 +173,8 @@ repak unpack -o extracted \
   -i "Pal/Content/Pal/DataTable/UI" \
   -i "Pal/Content/Pal/DataTable/WorldMapUIData" \
   -i "Pal/Content/Pal/Texture/UI/Map" \
+  -i "Pal/Content/Pal/Texture/UI/InGame/SkillIcon" \
+  -i "Pal/Content/Pal/Texture/UI/IngameMenu/Research/EffectIcon" \
   "<Palworld install>/Pal/Content/Paks/Pal-Windows.pak"
 
 # 2. export to JSON + decode icons and maps (needs Mappings.usmap)
