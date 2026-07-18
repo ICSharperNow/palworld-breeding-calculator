@@ -1,0 +1,42 @@
+import { Pal } from './breeding'
+
+export const ELEMENT_COLORS: Record<string, string> = {
+  Normal: '#8f9aa6',
+  Fire: '#e2574c',
+  Water: '#4d9de0',
+  Leaf: '#57a75c',
+  Electricity: '#d9a520',
+  Ice: '#5bb8c9',
+  Earth: '#b0855b',
+  Dark: '#8e6bb8',
+  Dragon: '#5f6ec7',
+}
+
+export const ELEMENT_ICONS: Record<string, string> = {
+  Normal: '○',
+  Fire: '🔥',
+  Water: '💧',
+  Leaf: '🌿',
+  Electricity: '⚡',
+  Ice: '❄️',
+  Earth: '⛰️',
+  Dark: '🌙',
+  Dragon: '🐉',
+}
+
+export interface RarityTier {
+  name: string
+  cls: string
+}
+
+export function rarityTier(r: number): RarityTier {
+  if (r >= 20) return { name: 'Mythic', cls: 'mythic' }
+  if (r >= 10) return { name: 'Legendary', cls: 'legendary' }
+  if (r >= 8) return { name: 'Epic', cls: 'epic' }
+  if (r >= 5) return { name: 'Rare', cls: 'rare' }
+  return { name: 'Common', cls: 'common' }
+}
+
+export function genderText(p: Pal): string {
+  return `${p.maleProb}% ♂ / ${100 - p.maleProb}% ♀`
+}

@@ -1,0 +1,5 @@
+node_modules/
+dist/
+*.tsbuildinfo
+tools/exporter/bin/
+tools/exporter/obj/

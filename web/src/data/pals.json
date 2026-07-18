@@ -1,0 +1,4163 @@
+[
+ {
+  "id": "SheepBall",
+  "name": "Lamball",
+  "zukan": 1,
+  "suffix": "",
+  "rank": 3050,
+  "prio": 305000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Normal"
+  ],
+  "rarity": 1
+ },
+ {
+  "id": "PinkCat",
+  "name": "Cattiva",
+  "zukan": 2,
+  "suffix": "",
+  "rank": 2760,
+  "prio": 276000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Normal"
+  ],
+  "rarity": 1
+ },
+ {
+  "id": "ChickenPal",
+  "name": "Chikipi",
+  "zukan": 3,
+  "suffix": "",
+  "rank": 3080,
+  "prio": 308000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Normal"
+  ],
+  "rarity": 1
+ },
+ {
+  "id": "Carbunclo",
+  "name": "Lifmunk",
+  "zukan": 4,
+  "suffix": "",
+  "rank": 3020,
+  "prio": 302000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Leaf"
+  ],
+  "rarity": 1
+ },
+ {
+  "id": "BluePlatypus",
+  "name": "Fuack",
+  "zukan": 5,
+  "suffix": "",
+  "rank": 2980,
+  "prio": 298000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Water"
+  ],
+  "rarity": 1
+ },
+ {
+  "id": "BluePlatypus_Fire",
+  "name": "Fuack Ignis",
+  "zukan": 5,
+  "suffix": "B",
+  "rank": 2300,
+  "prio": 575,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Water",
+   "Fire"
+  ],
+  "rarity": 2
+ },
+ {
+  "id": "CuteFox",
+  "name": "Vixy",
+  "zukan": 6,
+  "suffix": "",
+  "rank": 3060,
+  "prio": 306000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Normal"
+  ],
+  "rarity": 2
+ },
+ {
+  "id": "FlyingManta",
+  "name": "Celaray",
+  "zukan": 7,
+  "suffix": "",
+  "rank": 2740,
+  "prio": 274000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Water"
+  ],
+  "rarity": 3
+ },
+ {
+  "id": "FlyingManta_Thunder",
+  "name": "Celaray Lux",
+  "zukan": 7,
+  "suffix": "B",
+  "rank": 2380,
+  "prio": 574,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Water",
+   "Electricity"
+  ],
+  "rarity": 4
+ },
+ {
+  "id": "WoolFox",
+  "name": "Cremis",
+  "zukan": 8,
+  "suffix": "",
+  "rank": 2890,
+  "prio": 289000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Normal"
+  ],
+  "rarity": 1
+ },
+ {
+  "id": "KendoFrog",
+  "name": "Croajiro",
+  "zukan": 9,
+  "suffix": "",
+  "rank": 2600,
+  "prio": 260000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Water"
+  ],
+  "rarity": 4
+ },
+ {
+  "id": "KendoFrog_Dark",
+  "name": "Croajiro Noct",
+  "zukan": 9,
+  "suffix": "B",
+  "rank": 1860,
+  "prio": 186000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Water",
+   "Dark"
+  ],
+  "rarity": 5
+ },
+ {
+  "id": "LeafMomonga",
+  "name": "Herbil",
+  "zukan": 10,
+  "suffix": "",
+  "rank": 2630,
+  "prio": 263000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Leaf",
+   "Normal"
+  ],
+  "rarity": 3
+ },
+ {
+  "id": "Ganesha",
+  "name": "Teafant",
+  "zukan": 11,
+  "suffix": "",
+  "rank": 3070,
+  "prio": 307000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Water"
+  ],
+  "rarity": 1
+ },
+ {
+  "id": "PlantSlime",
+  "name": "Gumoss",
+  "zukan": 12,
+  "suffix": "",
+  "rank": 2950,
+  "prio": 295000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Leaf",
+   "Earth"
+  ],
+  "rarity": 1
+ },
+ {
+  "id": "PlantSlime_Flower",
+  "name": "Gumoss (Special)",
+  "zukan": 12,
+  "suffix": "",
+  "rank": 2950,
+  "prio": 295000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Leaf",
+   "Earth"
+  ],
+  "rarity": 10
+ },
+ {
+  "id": "SamuraiDog",
+  "name": "Pupperai",
+  "zukan": 13,
+  "suffix": "",
+  "rank": 2930,
+  "prio": 293000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Earth"
+  ],
+  "rarity": 2
+ },
+ {
+  "id": "CloverFairy",
+  "name": "Clovee",
+  "zukan": 14,
+  "suffix": "",
+  "rank": 2970,
+  "prio": 297000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Leaf",
+   "Normal"
+  ],
+  "rarity": 2
+ },
+ {
+  "id": "Hedgehog",
+  "name": "Jolthog",
+  "zukan": 15,
+  "suffix": "",
+  "rank": 3030,
+  "prio": 303000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Electricity"
+  ],
+  "rarity": 1
+ },
+ {
+  "id": "Hedgehog_Ice",
+  "name": "Jolthog Cryst",
+  "zukan": 15,
+  "suffix": "B",
+  "rank": 2850,
+  "prio": 285000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Ice"
+  ],
+  "rarity": 2
+ },
+ {
+  "id": "NegativeKoala",
+  "name": "Depresso",
+  "zukan": 16,
+  "suffix": "",
+  "rank": 3000,
+  "prio": 300000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dark"
+  ],
+  "rarity": 1
+ },
+ {
+  "id": "Penguin",
+  "name": "Pengullet",
+  "zukan": 17,
+  "suffix": "",
+  "rank": 2960,
+  "prio": 296000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Water",
+   "Ice"
+  ],
+  "rarity": 1
+ },
+ {
+  "id": "Penguin_Electric",
+  "name": "Pengullet Lux",
+  "zukan": 17,
+  "suffix": "B",
+  "rank": 2490,
+  "prio": 572,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Water",
+   "Electricity"
+  ],
+  "rarity": 2
+ },
+ {
+  "id": "CaptainPenguin",
+  "name": "Penking",
+  "zukan": 18,
+  "suffix": "",
+  "rank": 2070,
+  "prio": 207000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Water",
+   "Ice"
+  ],
+  "rarity": 6
+ },
+ {
+  "id": "CaptainPenguin_Black",
+  "name": "Penking Lux",
+  "zukan": 18,
+  "suffix": "B",
+  "rank": 1850,
+  "prio": 573,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Water",
+   "Electricity"
+  ],
+  "rarity": 7
+ },
+ {
+  "id": "WizardOwl",
+  "name": "Hoocrates",
+  "zukan": 19,
+  "suffix": "",
+  "rank": 2940,
+  "prio": 294000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dark"
+  ],
+  "rarity": 1
+ },
+ {
+  "id": "Alpaca",
+  "name": "Melpaca",
+  "zukan": 20,
+  "suffix": "",
+  "rank": 2720,
+  "prio": 272000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Normal"
+  ],
+  "rarity": 3
+ },
+ {
+  "id": "KingAlpaca",
+  "name": "Kingpaca",
+  "zukan": 21,
+  "suffix": "",
+  "rank": 2220,
+  "prio": 222000,
+  "ignoreCombi": false,
+  "maleProb": 90,
+  "elements": [
+   "Normal"
+  ],
+  "rarity": 8
+ },
+ {
+  "id": "KingAlpaca_Ice",
+  "name": "Kingpaca Cryst",
+  "zukan": 21,
+  "suffix": "B",
+  "rank": 1530,
+  "prio": 153000,
+  "ignoreCombi": false,
+  "maleProb": 90,
+  "elements": [
+   "Ice"
+  ],
+  "rarity": 9
+ },
+ {
+  "id": "DreamDemon",
+  "name": "Daedream",
+  "zukan": 22,
+  "suffix": "",
+  "rank": 2910,
+  "prio": 291000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dark"
+  ],
+  "rarity": 1
+ },
+ {
+  "id": "Monkey",
+  "name": "Tanzee",
+  "zukan": 23,
+  "suffix": "",
+  "rank": 2900,
+  "prio": 290000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Leaf"
+  ],
+  "rarity": 1
+ },
+ {
+  "id": "Monkey_Fire",
+  "name": "Tanzee Ignis",
+  "zukan": 23,
+  "suffix": "B",
+  "rank": 2830,
+  "prio": 283000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Fire"
+  ],
+  "rarity": 2
+ },
+ {
+  "id": "NightFox",
+  "name": "Nox",
+  "zukan": 24,
+  "suffix": "",
+  "rank": 2920,
+  "prio": 292000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dark"
+  ],
+  "rarity": 6
+ },
+ {
+  "id": "LavaGirl",
+  "name": "Flambelle",
+  "zukan": 25,
+  "suffix": "",
+  "rank": 2700,
+  "prio": 270000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Fire"
+  ],
+  "rarity": 1
+ },
+ {
+  "id": "FlameBambi",
+  "name": "Rooby",
+  "zukan": 26,
+  "suffix": "",
+  "rank": 2870,
+  "prio": 287000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Fire"
+  ],
+  "rarity": 2
+ },
+ {
+  "id": "Bastet",
+  "name": "Mau",
+  "zukan": 27,
+  "suffix": "",
+  "rank": 3040,
+  "prio": 304000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dark"
+  ],
+  "rarity": 1
+ },
+ {
+  "id": "Bastet_Ice",
+  "name": "Mau Cryst",
+  "zukan": 27,
+  "suffix": "B",
+  "rank": 2750,
+  "prio": 275000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Ice"
+  ],
+  "rarity": 2
+ },
+ {
+  "id": "Boar",
+  "name": "Rushoar",
+  "zukan": 28,
+  "suffix": "",
+  "rank": 2880,
+  "prio": 288000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Earth"
+  ],
+  "rarity": 1
+ },
+ {
+  "id": "Kitsunebi",
+  "name": "Foxparks",
+  "zukan": 29,
+  "suffix": "",
+  "rank": 2990,
+  "prio": 299000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Fire"
+  ],
+  "rarity": 1
+ },
+ {
+  "id": "Kitsunebi_Ice",
+  "name": "Foxparks Cryst",
+  "zukan": 29,
+  "suffix": "B",
+  "rank": 2500,
+  "prio": 250000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Ice"
+  ],
+  "rarity": 1
+ },
+ {
+  "id": "NegativeOctopus",
+  "name": "Killamari",
+  "zukan": 30,
+  "suffix": "",
+  "rank": 2770,
+  "prio": 277000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dark",
+   "Water"
+  ],
+  "rarity": 1
+ },
+ {
+  "id": "NegativeOctopus_Neutral",
+  "name": "Killamari Primo",
+  "zukan": 30,
+  "suffix": "B",
+  "rank": 2540,
+  "prio": 571,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Normal",
+   "Water"
+  ],
+  "rarity": 2
+ },
+ {
+  "id": "CuteMole",
+  "name": "Fuddler",
+  "zukan": 31,
+  "suffix": "",
+  "rank": 2790,
+  "prio": 279000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Earth"
+  ],
+  "rarity": 1
+ },
+ {
+  "id": "Deer",
+  "name": "Eikthyrdeer",
+  "zukan": 32,
+  "suffix": "",
+  "rank": 2710,
+  "prio": 271000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Normal"
+  ],
+  "rarity": 5
+ },
+ {
+  "id": "Deer_Ground",
+  "name": "Eikthyrdeer Terra",
+  "zukan": 32,
+  "suffix": "B",
+  "rank": 2580,
+  "prio": 258000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Earth"
+  ],
+  "rarity": 6
+ },
+ {
+  "id": "Garm",
+  "name": "Direhowl",
+  "zukan": 33,
+  "suffix": "",
+  "rank": 2680,
+  "prio": 268000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Normal"
+  ],
+  "rarity": 2
+ },
+ {
+  "id": "BerryGoat",
+  "name": "Caprity",
+  "zukan": 34,
+  "suffix": "",
+  "rank": 2610,
+  "prio": 261000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Leaf"
+  ],
+  "rarity": 3
+ },
+ {
+  "id": "BerryGoat_Dark",
+  "name": "Caprity Noct",
+  "zukan": 34,
+  "suffix": "B",
+  "rank": 1940,
+  "prio": 194000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dark"
+  ],
+  "rarity": 3
+ },
+ {
+  "id": "MopBaby",
+  "name": "Swee",
+  "zukan": 35,
+  "suffix": "",
+  "rank": 2840,
+  "prio": 284000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Ice"
+  ],
+  "rarity": 1
+ },
+ {
+  "id": "MopKing",
+  "name": "Sweepa",
+  "zukan": 36,
+  "suffix": "",
+  "rank": 2150,
+  "prio": 215000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Ice"
+  ],
+  "rarity": 6
+ },
+ {
+  "id": "TentacleTurtle",
+  "name": "Turtacle",
+  "zukan": 37,
+  "suffix": "",
+  "rank": 2410,
+  "prio": 241000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Water"
+  ],
+  "rarity": 3
+ },
+ {
+  "id": "TentacleTurtle_Ground",
+  "name": "Turtacle Terra",
+  "zukan": 37,
+  "suffix": "B",
+  "rank": 1330,
+  "prio": 577,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Water",
+   "Earth"
+  ],
+  "rarity": 4
+ },
+ {
+  "id": "WindChimes",
+  "name": "Hangyu",
+  "zukan": 38,
+  "suffix": "",
+  "rank": 2780,
+  "prio": 278000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Earth"
+  ],
+  "rarity": 1
+ },
+ {
+  "id": "WindChimes_Ice",
+  "name": "Hangyu Cryst",
+  "zukan": 38,
+  "suffix": "B",
+  "rank": 2510,
+  "prio": 251000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Ice"
+  ],
+  "rarity": 2
+ },
+ {
+  "id": "SweetsSheep",
+  "name": "Woolipop",
+  "zukan": 39,
+  "suffix": "",
+  "rank": 2820,
+  "prio": 282000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Normal"
+  ],
+  "rarity": 3
+ },
+ {
+  "id": "SweetsSheep_Ground",
+  "name": "Woolipop Terra",
+  "zukan": 39,
+  "suffix": "B",
+  "rank": 2030,
+  "prio": 203000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Earth"
+  ],
+  "rarity": 4
+ },
+ {
+  "id": "CowPal",
+  "name": "Mozzarina",
+  "zukan": 40,
+  "suffix": "",
+  "rank": 2800,
+  "prio": 280000,
+  "ignoreCombi": false,
+  "maleProb": 20,
+  "elements": [
+   "Normal"
+  ],
+  "rarity": 2
+ },
+ {
+  "id": "BlueDragon",
+  "name": "Azurobe",
+  "zukan": 41,
+  "suffix": "",
+  "rank": 1830,
+  "prio": 183000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Water",
+   "Dragon"
+  ],
+  "rarity": 7
+ },
+ {
+  "id": "BlueDragon_Ice",
+  "name": "Azurobe Cryst",
+  "zukan": 41,
+  "suffix": "B",
+  "rank": 1220,
+  "prio": 578,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Ice",
+   "Dragon"
+  ],
+  "rarity": 8
+ },
+ {
+  "id": "ElecCat",
+  "name": "Sparkit",
+  "zukan": 42,
+  "suffix": "",
+  "rank": 3010,
+  "prio": 301000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Electricity"
+  ],
+  "rarity": 1
+ },
+ {
+  "id": "Kelpie",
+  "name": "Kelpsea",
+  "zukan": 43,
+  "suffix": "",
+  "rank": 2810,
+  "prio": 281000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Water"
+  ],
+  "rarity": 1
+ },
+ {
+  "id": "Kelpie_Fire",
+  "name": "Kelpsea Ignis",
+  "zukan": 43,
+  "suffix": "B",
+  "rank": 2470,
+  "prio": 247000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Fire"
+  ],
+  "rarity": 2
+ },
+ {
+  "id": "PinkRabbit",
+  "name": "Ribbuny",
+  "zukan": 44,
+  "suffix": "",
+  "rank": 2860,
+  "prio": 286000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Normal"
+  ],
+  "rarity": 1
+ },
+ {
+  "id": "PinkRabbit_Grass",
+  "name": "Ribbuny Botan",
+  "zukan": 44,
+  "suffix": "B",
+  "rank": 2460,
+  "prio": 246000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Leaf"
+  ],
+  "rarity": 1
+ },
+ {
+  "id": "JellyfishFairy",
+  "name": "Jelliette",
+  "zukan": 45,
+  "suffix": "",
+  "rank": 2650,
+  "prio": 265000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Water"
+  ],
+  "rarity": 3
+ },
+ {
+  "id": "JellyfishGhost",
+  "name": "Jellroy",
+  "zukan": 46,
+  "suffix": "",
+  "rank": 2590,
+  "prio": 259000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Water",
+   "Dark"
+  ],
+  "rarity": 3
+ },
+ {
+  "id": "ClioneTwins",
+  "name": "Amione",
+  "zukan": 47,
+  "suffix": "",
+  "rank": 2520,
+  "prio": 252000,
+  "ignoreCombi": false,
+  "maleProb": 40,
+  "elements": [
+   "Water"
+  ],
+  "rarity": 2
+ },
+ {
+  "id": "OctopusGirl",
+  "name": "Gloopie",
+  "zukan": 48,
+  "suffix": "",
+  "rank": 2530,
+  "prio": 253000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Water",
+   "Dark"
+  ],
+  "rarity": 5
+ },
+ {
+  "id": "OctopusGirl_Neutral",
+  "name": "Gloopie Primo",
+  "zukan": 48,
+  "suffix": "B",
+  "rank": 1630,
+  "prio": 163000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Water",
+   "Normal"
+  ],
+  "rarity": 6
+ },
+ {
+  "id": "Eagle",
+  "name": "Galeclaw",
+  "zukan": 49,
+  "suffix": "",
+  "rank": 2570,
+  "prio": 257000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Normal"
+  ],
+  "rarity": 2
+ },
+ {
+  "id": "GhostBlackCat",
+  "name": "Wispaw",
+  "zukan": 50,
+  "suffix": "",
+  "rank": 2250,
+  "prio": 225000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dark"
+  ],
+  "rarity": 5
+ },
+ {
+  "id": "HawkBird",
+  "name": "Nitewing",
+  "zukan": 51,
+  "suffix": "",
+  "rank": 2560,
+  "prio": 256000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Normal"
+  ],
+  "rarity": 3
+ },
+ {
+  "id": "CatBat",
+  "name": "Tombat",
+  "zukan": 52,
+  "suffix": "",
+  "rank": 2340,
+  "prio": 234000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dark"
+  ],
+  "rarity": 5
+ },
+ {
+  "id": "ColorfulBird",
+  "name": "Tocotoco",
+  "zukan": 53,
+  "suffix": "",
+  "rank": 2730,
+  "prio": 273000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Normal"
+  ],
+  "rarity": 1
+ },
+ {
+  "id": "Kirin",
+  "name": "Univolt",
+  "zukan": 54,
+  "suffix": "",
+  "rank": 2270,
+  "prio": 227000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Electricity"
+  ],
+  "rarity": 5
+ },
+ {
+  "id": "Kirin_Ice",
+  "name": "Univolt Cryst",
+  "zukan": 54,
+  "suffix": "B",
+  "rank": 540,
+  "prio": 54000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Ice"
+  ],
+  "rarity": 6
+ },
+ {
+  "id": "SharkKid",
+  "name": "Gobfin",
+  "zukan": 55,
+  "suffix": "",
+  "rank": 2550,
+  "prio": 255000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Water"
+  ],
+  "rarity": 2
+ },
+ {
+  "id": "SharkKid_Fire",
+  "name": "Gobfin Ignis",
+  "zukan": 55,
+  "suffix": "B",
+  "rank": 2430,
+  "prio": 243000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Fire"
+  ],
+  "rarity": 3
+ },
+ {
+  "id": "Werewolf",
+  "name": "Loupmoon",
+  "zukan": 56,
+  "suffix": "",
+  "rank": 2110,
+  "prio": 211000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dark"
+  ],
+  "rarity": 3
+ },
+ {
+  "id": "Werewolf_Ice",
+  "name": "Loupmoon Cryst",
+  "zukan": 56,
+  "suffix": "B",
+  "rank": 1290,
+  "prio": 129000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Ice"
+  ],
+  "rarity": 3
+ },
+ {
+  "id": "DarkCrow",
+  "name": "Cawgnito",
+  "zukan": 57,
+  "suffix": "",
+  "rank": 2370,
+  "prio": 237000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dark"
+  ],
+  "rarity": 3
+ },
+ {
+  "id": "FlameBuffalo",
+  "name": "Arsox",
+  "zukan": 58,
+  "suffix": "",
+  "rank": 2320,
+  "prio": 232000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Fire"
+  ],
+  "rarity": 4
+ },
+ {
+  "id": "FluffyBird",
+  "name": "Muffly",
+  "zukan": 59,
+  "suffix": "",
+  "rank": 2480,
+  "prio": 248000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Ice"
+  ],
+  "rarity": 2
+ },
+ {
+  "id": "LittleBriarRose",
+  "name": "Bristla",
+  "zukan": 60,
+  "suffix": "",
+  "rank": 2690,
+  "prio": 269000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Leaf"
+  ],
+  "rarity": 1
+ },
+ {
+  "id": "CuteButterfly",
+  "name": "Cinnamoth",
+  "zukan": 61,
+  "suffix": "",
+  "rank": 2620,
+  "prio": 262000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Leaf"
+  ],
+  "rarity": 4
+ },
+ {
+  "id": "ElecPomeranian",
+  "name": "Puffolt",
+  "zukan": 62,
+  "suffix": "",
+  "rank": 2360,
+  "prio": 236000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Electricity"
+  ],
+  "rarity": 2
+ },
+ {
+  "id": "FairyDragon",
+  "name": "Elphidran",
+  "zukan": 63,
+  "suffix": "",
+  "rank": 2280,
+  "prio": 228000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dragon"
+  ],
+  "rarity": 7
+ },
+ {
+  "id": "FairyDragon_Water",
+  "name": "Elphidran Aqua",
+  "zukan": 63,
+  "suffix": "B",
+  "rank": 1640,
+  "prio": 164000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dragon",
+   "Water"
+  ],
+  "rarity": 8
+ },
+ {
+  "id": "BirdDragon",
+  "name": "Vanwyrm",
+  "zukan": 64,
+  "suffix": "",
+  "rank": 1650,
+  "prio": 165000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Fire",
+   "Dark"
+  ],
+  "rarity": 5
+ },
+ {
+  "id": "BirdDragon_Ice",
+  "name": "Vanwyrm Cryst",
+  "zukan": 64,
+  "suffix": "B",
+  "rank": 1430,
+  "prio": 143000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Ice",
+   "Dark"
+  ],
+  "rarity": 5
+ },
+ {
+  "id": "CatVampire",
+  "name": "Felbat",
+  "zukan": 65,
+  "suffix": "",
+  "rank": 1570,
+  "prio": 157000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dark"
+  ],
+  "rarity": 6
+ },
+ {
+  "id": "VioletFairy",
+  "name": "Vaelet",
+  "zukan": 66,
+  "suffix": "",
+  "rank": 1480,
+  "prio": 148000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Leaf"
+  ],
+  "rarity": 8
+ },
+ {
+  "id": "SoldierBee",
+  "name": "Beegarde",
+  "zukan": 67,
+  "suffix": "",
+  "rank": 2350,
+  "prio": 235000,
+  "ignoreCombi": false,
+  "maleProb": 10,
+  "elements": [
+   "Leaf"
+  ],
+  "rarity": 4
+ },
+ {
+  "id": "QueenBee",
+  "name": "Elizabee",
+  "zukan": 68,
+  "suffix": "",
+  "rank": 1790,
+  "prio": 179000,
+  "ignoreCombi": false,
+  "maleProb": 10,
+  "elements": [
+   "Leaf"
+  ],
+  "rarity": 8
+ },
+ {
+  "id": "PinkLizard",
+  "name": "Lovander",
+  "zukan": 69,
+  "suffix": "",
+  "rank": 2090,
+  "prio": 209000,
+  "ignoreCombi": false,
+  "maleProb": 30,
+  "elements": [
+   "Dark"
+  ],
+  "rarity": 5
+ },
+ {
+  "id": "NaughtyCat",
+  "name": "Grintale",
+  "zukan": 70,
+  "suffix": "",
+  "rank": 2120,
+  "prio": 212000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Normal"
+  ],
+  "rarity": 6
+ },
+ {
+  "id": "PurpleSpider",
+  "name": "Tarantriss",
+  "zukan": 71,
+  "suffix": "",
+  "rank": 1730,
+  "prio": 173000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dark"
+  ],
+  "rarity": 3
+ },
+ {
+  "id": "IceSeal",
+  "name": "Polapup",
+  "zukan": 72,
+  "suffix": "",
+  "rank": 1660,
+  "prio": 166000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Ice",
+   "Water"
+  ],
+  "rarity": 5
+ },
+ {
+  "id": "IceSeal_Ground",
+  "name": "Polapup Terra",
+  "zukan": 72,
+  "suffix": "B",
+  "rank": 1100,
+  "prio": 110000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Ice",
+   "Earth"
+  ],
+  "rarity": 6
+ },
+ {
+  "id": "LizardMan",
+  "name": "Leezpunk",
+  "zukan": 73,
+  "suffix": "",
+  "rank": 2670,
+  "prio": 267000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dark"
+  ],
+  "rarity": 2
+ },
+ {
+  "id": "LizardMan_Fire",
+  "name": "Leezpunk Ignis",
+  "zukan": 73,
+  "suffix": "B",
+  "rank": 2640,
+  "prio": 264000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Fire"
+  ],
+  "rarity": 3
+ },
+ {
+  "id": "Gorilla",
+  "name": "Gorirat",
+  "zukan": 74,
+  "suffix": "",
+  "rank": 2140,
+  "prio": 214000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Normal"
+  ],
+  "rarity": 5
+ },
+ {
+  "id": "Gorilla_Ground",
+  "name": "Gorirat Terra",
+  "zukan": 74,
+  "suffix": "B",
+  "rank": 1880,
+  "prio": 188000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Earth"
+  ],
+  "rarity": 5
+ },
+ {
+  "id": "Serpent",
+  "name": "Surfent",
+  "zukan": 75,
+  "suffix": "",
+  "rank": 2440,
+  "prio": 244000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Water"
+  ],
+  "rarity": 4
+ },
+ {
+  "id": "Serpent_Ground",
+  "name": "Surfent Terra",
+  "zukan": 75,
+  "suffix": "B",
+  "rank": 1840,
+  "prio": 184000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Earth"
+  ],
+  "rarity": 5
+ },
+ {
+  "id": "RobinHood",
+  "name": "Robinquill",
+  "zukan": 76,
+  "suffix": "",
+  "rank": 2260,
+  "prio": 226000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Leaf"
+  ],
+  "rarity": 5
+ },
+ {
+  "id": "RobinHood_Ground",
+  "name": "Robinquill Terra",
+  "zukan": 76,
+  "suffix": "B",
+  "rank": 2050,
+  "prio": 205000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Leaf",
+   "Earth"
+  ],
+  "rarity": 6
+ },
+ {
+  "id": "FlowerRabbit",
+  "name": "Flopie",
+  "zukan": 77,
+  "suffix": "",
+  "rank": 2660,
+  "prio": 266000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Leaf"
+  ],
+  "rarity": 1
+ },
+ {
+  "id": "FoxMage",
+  "name": "Wixen",
+  "zukan": 78,
+  "suffix": "",
+  "rank": 2080,
+  "prio": 208000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Fire"
+  ],
+  "rarity": 6
+ },
+ {
+  "id": "FoxMage_Dark",
+  "name": "Wixen Noct",
+  "zukan": 78,
+  "suffix": "B",
+  "rank": 1490,
+  "prio": 149000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Fire",
+   "Dark"
+  ],
+  "rarity": 6
+ },
+ {
+  "id": "CatMage",
+  "name": "Katress",
+  "zukan": 79,
+  "suffix": "",
+  "rank": 2040,
+  "prio": 204000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dark"
+  ],
+  "rarity": 6
+ },
+ {
+  "id": "CatMage_Fire",
+  "name": "Katress Ignis",
+  "zukan": 79,
+  "suffix": "B",
+  "rank": 1800,
+  "prio": 180000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dark",
+   "Fire"
+  ],
+  "rarity": 6
+ },
+ {
+  "id": "HadesBird",
+  "name": "Helzephyr",
+  "zukan": 80,
+  "suffix": "",
+  "rank": 1130,
+  "prio": 113000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dark"
+  ],
+  "rarity": 7
+ },
+ {
+  "id": "HadesBird_Electric",
+  "name": "Helzephyr Lux",
+  "zukan": 80,
+  "suffix": "B",
+  "rank": 960,
+  "prio": 96000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dark",
+   "Electricity"
+  ],
+  "rarity": 8
+ },
+ {
+  "id": "GrassMinotaur",
+  "name": "Elgrove",
+  "zukan": 81,
+  "suffix": "",
+  "rank": 2020,
+  "prio": 202000,
+  "ignoreCombi": false,
+  "maleProb": 60,
+  "elements": [
+   "Leaf"
+  ],
+  "rarity": 6
+ },
+ {
+  "id": "GrassMinotaur_Ice",
+  "name": "Elgrove Cryst",
+  "zukan": 81,
+  "suffix": "B",
+  "rank": 440,
+  "prio": 44000,
+  "ignoreCombi": false,
+  "maleProb": 60,
+  "elements": [
+   "Ice"
+  ],
+  "rarity": 7
+ },
+ {
+  "id": "Mutant",
+  "name": "Lunaris",
+  "zukan": 82,
+  "suffix": "",
+  "rank": 2010,
+  "prio": 201000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Normal"
+  ],
+  "rarity": 6
+ },
+ {
+  "id": "FengyunDeeper",
+  "name": "Fenglope",
+  "zukan": 83,
+  "suffix": "",
+  "rank": 1960,
+  "prio": 196000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Normal"
+  ],
+  "rarity": 3
+ },
+ {
+  "id": "FengyunDeeper_Electric",
+  "name": "Fenglope Lux",
+  "zukan": 83,
+  "suffix": "B",
+  "rank": 900,
+  "prio": 90000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Electricity"
+  ],
+  "rarity": 3
+ },
+ {
+  "id": "FlowerDinosaur",
+  "name": "Dinossom",
+  "zukan": 84,
+  "suffix": "",
+  "rank": 2100,
+  "prio": 210000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Leaf",
+   "Dragon"
+  ],
+  "rarity": 6
+ },
+ {
+  "id": "FlowerDinosaur_Electric",
+  "name": "Dinossom Lux",
+  "zukan": 84,
+  "suffix": "B",
+  "rank": 1890,
+  "prio": 189000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Electricity",
+   "Dragon"
+  ],
+  "rarity": 7
+ },
+ {
+  "id": "Ronin",
+  "name": "Bushi",
+  "zukan": 85,
+  "suffix": "",
+  "rank": 1560,
+  "prio": 156000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Fire"
+  ],
+  "rarity": 7
+ },
+ {
+  "id": "Ronin_Dark",
+  "name": "Bushi Noct",
+  "zukan": 85,
+  "suffix": "B",
+  "rank": 840,
+  "prio": 84000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Fire",
+   "Dark"
+  ],
+  "rarity": 7
+ },
+ {
+  "id": "IceCrocodile",
+  "name": "Munchill",
+  "zukan": 86,
+  "suffix": "",
+  "rank": 2130,
+  "prio": 213000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Ice",
+   "Water"
+  ],
+  "rarity": 3
+ },
+ {
+  "id": "GrassMammoth",
+  "name": "Mammorest",
+  "zukan": 87,
+  "suffix": "",
+  "rank": 1340,
+  "prio": 134000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Leaf",
+   "Earth"
+  ],
+  "rarity": 8
+ },
+ {
+  "id": "GrassMammoth_Ice",
+  "name": "Mammorest Cryst",
+  "zukan": 87,
+  "suffix": "B",
+  "rank": 1070,
+  "prio": 107000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Ice",
+   "Earth"
+  ],
+  "rarity": 9
+ },
+ {
+  "id": "StuffedShark",
+  "name": "Finsider",
+  "zukan": 88,
+  "suffix": "",
+  "rank": 2450,
+  "prio": 245000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Water"
+  ],
+  "rarity": 3
+ },
+ {
+  "id": "StuffedShark_Fire",
+  "name": "Finsider Ignis",
+  "zukan": 88,
+  "suffix": "B",
+  "rank": 2240,
+  "prio": 581,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Water",
+   "Fire"
+  ],
+  "rarity": 4
+ },
+ {
+  "id": "FlowerDoll",
+  "name": "Petallia",
+  "zukan": 89,
+  "suffix": "",
+  "rank": 1720,
+  "prio": 172000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Leaf"
+  ],
+  "rarity": 8
+ },
+ {
+  "id": "FlowerDoll_Fire",
+  "name": "Petallia Ignis",
+  "zukan": 89,
+  "suffix": "B",
+  "rank": 820,
+  "prio": 82000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Leaf",
+   "Fire"
+  ],
+  "rarity": 9
+ },
+ {
+  "id": "PandaGirl",
+  "name": "Leafan",
+  "zukan": 90,
+  "suffix": "",
+  "rank": 1410,
+  "prio": 141000,
+  "ignoreCombi": false,
+  "maleProb": 40,
+  "elements": [
+   "Leaf"
+  ],
+  "rarity": 7
+ },
+ {
+  "id": "Baphomet",
+  "name": "Incineram",
+  "zukan": 91,
+  "suffix": "",
+  "rank": 1470,
+  "prio": 147000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Fire",
+   "Dark"
+  ],
+  "rarity": 4
+ },
+ {
+  "id": "Baphomet_Dark",
+  "name": "Incineram Noct",
+  "zukan": 91,
+  "suffix": "B",
+  "rank": 1310,
+  "prio": 131000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dark"
+  ],
+  "rarity": 5
+ },
+ {
+  "id": "RaijinDaughter",
+  "name": "Dazzi",
+  "zukan": 92,
+  "suffix": "",
+  "rank": 2400,
+  "prio": 240000,
+  "ignoreCombi": false,
+  "maleProb": 20,
+  "elements": [
+   "Electricity"
+  ],
+  "rarity": 2
+ },
+ {
+  "id": "RaijinDaughter_Water",
+  "name": "Dazzi Noct",
+  "zukan": 92,
+  "suffix": "B",
+  "rank": 1910,
+  "prio": 191000,
+  "ignoreCombi": false,
+  "maleProb": 20,
+  "elements": [
+   "Dark",
+   "Electricity"
+  ],
+  "rarity": 2
+ },
+ {
+  "id": "FireKirin",
+  "name": "Pyrin",
+  "zukan": 93,
+  "suffix": "",
+  "rank": 1980,
+  "prio": 198000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Fire"
+  ],
+  "rarity": 6
+ },
+ {
+  "id": "FireKirin_Dark",
+  "name": "Pyrin Noct",
+  "zukan": 93,
+  "suffix": "B",
+  "rank": 1870,
+  "prio": 187000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Fire",
+   "Dark"
+  ],
+  "rarity": 7
+ },
+ {
+  "id": "LazyDragon",
+  "name": "Relaxaurus",
+  "zukan": 94,
+  "suffix": "",
+  "rank": 1090,
+  "prio": 109000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dragon",
+   "Water"
+  ],
+  "rarity": 8
+ },
+ {
+  "id": "LazyDragon_Electric",
+  "name": "Relaxaurus Lux",
+  "zukan": 94,
+  "suffix": "B",
+  "rank": 770,
+  "prio": 77000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dragon",
+   "Electricity"
+  ],
+  "rarity": 9
+ },
+ {
+  "id": "LazyDragon_Electric_Tower",
+  "name": "Relaxaurus (Special)",
+  "zukan": 94,
+  "suffix": "B",
+  "rank": 770,
+  "prio": 77000,
+  "ignoreCombi": true,
+  "maleProb": 50,
+  "elements": [
+   "Dragon",
+   "Electricity"
+  ],
+  "rarity": 9
+ },
+ {
+  "id": "IceFox",
+  "name": "Foxcicle",
+  "zukan": 95,
+  "suffix": "",
+  "rank": 1970,
+  "prio": 197000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Ice"
+  ],
+  "rarity": 5
+ },
+ {
+  "id": "ThunderBird",
+  "name": "Beakon",
+  "zukan": 96,
+  "suffix": "",
+  "rank": 1690,
+  "prio": 169000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Electricity"
+  ],
+  "rarity": 6
+ },
+ {
+  "id": "ThunderBird_Ice",
+  "name": "Beakon Cryst",
+  "zukan": 96,
+  "suffix": "B",
+  "rank": 580,
+  "prio": 58000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Ice"
+  ],
+  "rarity": 7
+ },
+ {
+  "id": "GhostAnglerfish",
+  "name": "Ghangler",
+  "zukan": 97,
+  "suffix": "",
+  "rank": 880,
+  "prio": 88000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dark",
+   "Water"
+  ],
+  "rarity": 5
+ },
+ {
+  "id": "GhostAnglerfish_Fire",
+  "name": "Ghangler Ignis",
+  "zukan": 97,
+  "suffix": "B",
+  "rank": 720,
+  "prio": 72000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Fire",
+   "Water"
+  ],
+  "rarity": 6
+ },
+ {
+  "id": "ThunderDog",
+  "name": "Rayhound",
+  "zukan": 98,
+  "suffix": "",
+  "rank": 1920,
+  "prio": 192000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Electricity"
+  ],
+  "rarity": 5
+ },
+ {
+  "id": "ThunderDog_Ice",
+  "name": "Rayhound Cryst",
+  "zukan": 98,
+  "suffix": "B",
+  "rank": 1600,
+  "prio": 160000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Ice"
+  ],
+  "rarity": 6
+ },
+ {
+  "id": "DarkScorpion",
+  "name": "Menasting",
+  "zukan": 99,
+  "suffix": "",
+  "rank": 1120,
+  "prio": 112000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dark",
+   "Earth"
+  ],
+  "rarity": 9
+ },
+ {
+  "id": "DarkScorpion_Ground",
+  "name": "Menasting Terra",
+  "zukan": 99,
+  "suffix": "B",
+  "rank": 640,
+  "prio": 64000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Earth"
+  ],
+  "rarity": 10
+ },
+ {
+  "id": "CactusDoll",
+  "name": "Needoll",
+  "zukan": 100,
+  "suffix": "",
+  "rank": 2420,
+  "prio": 242000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Leaf"
+  ],
+  "rarity": 2
+ },
+ {
+  "id": "CactusDoll_Dark",
+  "name": "Needoll Noct",
+  "zukan": 100,
+  "suffix": "B",
+  "rank": 1580,
+  "prio": 158000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dark",
+   "Leaf"
+  ],
+  "rarity": 3
+ },
+ {
+  "id": "IceDeer",
+  "name": "Reindrix",
+  "zukan": 101,
+  "suffix": "",
+  "rank": 1930,
+  "prio": 193000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Ice"
+  ],
+  "rarity": 4
+ },
+ {
+  "id": "GrassPanda",
+  "name": "Mossanda",
+  "zukan": 102,
+  "suffix": "",
+  "rank": 2060,
+  "prio": 206000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Leaf"
+  ],
+  "rarity": 6
+ },
+ {
+  "id": "GrassPanda_Electric",
+  "name": "Mossanda Lux",
+  "zukan": 102,
+  "suffix": "B",
+  "rank": 1440,
+  "prio": 144000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Electricity"
+  ],
+  "rarity": 7
+ },
+ {
+  "id": "GrassPanda_Electric_Tower",
+  "name": "Mossanda (Special)",
+  "zukan": 102,
+  "suffix": "B",
+  "rank": 1440,
+  "prio": 144000,
+  "ignoreCombi": true,
+  "maleProb": 50,
+  "elements": [
+   "Electricity"
+  ],
+  "rarity": 7
+ },
+ {
+  "id": "WeaselDragon",
+  "name": "Chillet",
+  "zukan": 103,
+  "suffix": "",
+  "rank": 2330,
+  "prio": 233000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Ice",
+   "Dragon"
+  ],
+  "rarity": 4
+ },
+ {
+  "id": "WeaselDragon_Fire",
+  "name": "Chillet Ignis",
+  "zukan": 103,
+  "suffix": "B",
+  "rank": 1950,
+  "prio": 195000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Fire",
+   "Dragon"
+  ],
+  "rarity": 5
+ },
+ {
+  "id": "RedArmorBird",
+  "name": "Ragnahawk",
+  "zukan": 104,
+  "suffix": "",
+  "rank": 1050,
+  "prio": 105000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Fire"
+  ],
+  "rarity": 7
+ },
+ {
+  "id": "VolcanoDragon",
+  "name": "Moldron",
+  "zukan": 105,
+  "suffix": "",
+  "rank": 750,
+  "prio": 75000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Fire",
+   "Earth"
+  ],
+  "rarity": 7
+ },
+ {
+  "id": "VolcanoDragon_Ice",
+  "name": "Moldron Cryst",
+  "zukan": 105,
+  "suffix": "B",
+  "rank": 380,
+  "prio": 38000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Ice",
+   "Earth"
+  ],
+  "rarity": 8
+ },
+ {
+  "id": "TropicalOstrich",
+  "name": "Palumba",
+  "zukan": 106,
+  "suffix": "",
+  "rank": 1240,
+  "prio": 124000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Leaf"
+  ],
+  "rarity": 6
+ },
+ {
+  "id": "DrillGame",
+  "name": "Digtoise",
+  "zukan": 107,
+  "suffix": "",
+  "rank": 1550,
+  "prio": 155000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Earth"
+  ],
+  "rarity": 5
+ },
+ {
+  "id": "SakuraSaurus",
+  "name": "Broncherry",
+  "zukan": 108,
+  "suffix": "",
+  "rank": 1380,
+  "prio": 138000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Leaf"
+  ],
+  "rarity": 8
+ },
+ {
+  "id": "SakuraSaurus_Water",
+  "name": "Broncherry Aqua",
+  "zukan": 108,
+  "suffix": "B",
+  "rank": 1080,
+  "prio": 108000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Leaf",
+   "Water"
+  ],
+  "rarity": 8
+ },
+ {
+  "id": "LazyCatfish",
+  "name": "Dumud",
+  "zukan": 109,
+  "suffix": "",
+  "rank": 2290,
+  "prio": 229000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Earth",
+   "Water"
+  ],
+  "rarity": 4
+ },
+ {
+  "id": "LazyCatfish_Gold",
+  "name": "Dumud Gild",
+  "zukan": 109,
+  "suffix": "B",
+  "rank": 1620,
+  "prio": 576,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Earth",
+   "Water"
+  ],
+  "rarity": 5
+ },
+ {
+  "id": "Plesiosaur",
+  "name": "Braloha",
+  "zukan": 110,
+  "suffix": "",
+  "rank": 1030,
+  "prio": 103000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Leaf",
+   "Earth"
+  ],
+  "rarity": 8
+ },
+ {
+  "id": "AmaterasuWolf",
+  "name": "Kitsun",
+  "zukan": 111,
+  "suffix": "",
+  "rank": 1670,
+  "prio": 167000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Fire"
+  ],
+  "rarity": 6
+ },
+ {
+  "id": "AmaterasuWolf_Dark",
+  "name": "Kitsun Noct",
+  "zukan": 111,
+  "suffix": "B",
+  "rank": 800,
+  "prio": 80000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dark"
+  ],
+  "rarity": 6
+ },
+ {
+  "id": "Manticore",
+  "name": "Blazehowl",
+  "zukan": 112,
+  "suffix": "",
+  "rank": 1360,
+  "prio": 136000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Fire"
+  ],
+  "rarity": 7
+ },
+ {
+  "id": "Manticore_Dark",
+  "name": "Blazehowl Noct",
+  "zukan": 112,
+  "suffix": "B",
+  "rank": 1270,
+  "prio": 127000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Fire",
+   "Dark"
+  ],
+  "rarity": 8
+ },
+ {
+  "id": "HerculesBeetle",
+  "name": "Warsect",
+  "zukan": 113,
+  "suffix": "",
+  "rank": 1280,
+  "prio": 128000,
+  "ignoreCombi": false,
+  "maleProb": 85,
+  "elements": [
+   "Earth",
+   "Leaf"
+  ],
+  "rarity": 8
+ },
+ {
+  "id": "HerculesBeetle_Ground",
+  "name": "Warsect Terra",
+  "zukan": 113,
+  "suffix": "B",
+  "rank": 630,
+  "prio": 63000,
+  "ignoreCombi": false,
+  "maleProb": 85,
+  "elements": [
+   "Earth"
+  ],
+  "rarity": 9
+ },
+ {
+  "id": "SnowPeafowl",
+  "name": "Frostplume",
+  "zukan": 114,
+  "suffix": "",
+  "rank": 860,
+  "prio": 86000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Ice"
+  ],
+  "rarity": 4
+ },
+ {
+  "id": "DarkFlameFox",
+  "name": "Majex",
+  "zukan": 115,
+  "suffix": "",
+  "rank": 1010,
+  "prio": 101000,
+  "ignoreCombi": false,
+  "maleProb": 40,
+  "elements": [
+   "Dark",
+   "Fire"
+  ],
+  "rarity": 5
+ },
+ {
+  "id": "WhiteMoth",
+  "name": "Sibelyx",
+  "zukan": 116,
+  "suffix": "",
+  "rank": 1810,
+  "prio": 181000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Ice"
+  ],
+  "rarity": 7
+ },
+ {
+  "id": "WhiteMoth_Neutral",
+  "name": "Sibelyx Primo",
+  "zukan": 116,
+  "suffix": "B",
+  "rank": 650,
+  "prio": 65000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Normal"
+  ],
+  "rarity": 8
+ },
+ {
+  "id": "GhostBeast",
+  "name": "Maraith",
+  "zukan": 117,
+  "suffix": "",
+  "rank": 1710,
+  "prio": 171000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dark"
+  ],
+  "rarity": 6
+ },
+ {
+  "id": "MushroomDragon",
+  "name": "Shroomer",
+  "zukan": 118,
+  "suffix": "",
+  "rank": 1520,
+  "prio": 152000,
+  "ignoreCombi": false,
+  "maleProb": 55,
+  "elements": [
+   "Leaf"
+  ],
+  "rarity": 4
+ },
+ {
+  "id": "MushroomDragon_Dark",
+  "name": "Shroomer Noct",
+  "zukan": 118,
+  "suffix": "B",
+  "rank": 1450,
+  "prio": 145000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Leaf",
+   "Dark"
+  ],
+  "rarity": 5
+ },
+ {
+  "id": "IceWitch",
+  "name": "Icelyn",
+  "zukan": 119,
+  "suffix": "",
+  "rank": 1260,
+  "prio": 126000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Ice"
+  ],
+  "rarity": 4
+ },
+ {
+  "id": "MummyPal",
+  "name": "Gildra",
+  "zukan": 120,
+  "suffix": "",
+  "rank": 1170,
+  "prio": 117000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dark",
+   "Earth"
+  ],
+  "rarity": 5
+ },
+ {
+  "id": "Umihebi",
+  "name": "Jormuntide",
+  "zukan": 121,
+  "suffix": "",
+  "rank": 590,
+  "prio": 59000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dragon",
+   "Water"
+  ],
+  "rarity": 8
+ },
+ {
+  "id": "Umihebi_Fire",
+  "name": "Jormuntide Ignis",
+  "zukan": 121,
+  "suffix": "B",
+  "rank": 170,
+  "prio": 17000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dragon",
+   "Fire"
+  ],
+  "rarity": 9
+ },
+ {
+  "id": "Suzaku",
+  "name": "Suzaku",
+  "zukan": 122,
+  "suffix": "",
+  "rank": 1200,
+  "prio": 120000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Fire"
+  ],
+  "rarity": 8
+ },
+ {
+  "id": "Suzaku_Water",
+  "name": "Suzaku Aqua",
+  "zukan": 122,
+  "suffix": "B",
+  "rank": 740,
+  "prio": 74000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Water"
+  ],
+  "rarity": 9
+ },
+ {
+  "id": "FeatherOstrich",
+  "name": "Dazemu",
+  "zukan": 123,
+  "suffix": "",
+  "rank": 2210,
+  "prio": 221000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Earth"
+  ],
+  "rarity": 5
+ },
+ {
+  "id": "SkyDragon",
+  "name": "Quivern",
+  "zukan": 124,
+  "suffix": "",
+  "rank": 1210,
+  "prio": 121000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dragon"
+  ],
+  "rarity": 7
+ },
+ {
+  "id": "SkyDragon_Grass",
+  "name": "Quivern Botan",
+  "zukan": 124,
+  "suffix": "B",
+  "rank": 1300,
+  "prio": 130000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dragon",
+   "Leaf"
+  ],
+  "rarity": 8
+ },
+ {
+  "id": "LeafPrincess",
+  "name": "Lullu",
+  "zukan": 125,
+  "suffix": "",
+  "rank": 1990,
+  "prio": 199000,
+  "ignoreCombi": false,
+  "maleProb": 30,
+  "elements": [
+   "Leaf"
+  ],
+  "rarity": 4
+ },
+ {
+  "id": "SmallArmadillo",
+  "name": "Kikit",
+  "zukan": 126,
+  "suffix": "",
+  "rank": 2310,
+  "prio": 231000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Earth"
+  ],
+  "rarity": 4
+ },
+ {
+  "id": "GuardianDog",
+  "name": "Yakumo",
+  "zukan": 127,
+  "suffix": "",
+  "rank": 2230,
+  "prio": 223000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Normal"
+  ],
+  "rarity": 4
+ },
+ {
+  "id": "SwordCutlassfish",
+  "name": "Skutlass",
+  "zukan": 128,
+  "suffix": "",
+  "rank": 1420,
+  "prio": 142000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Water"
+  ],
+  "rarity": 5
+ },
+ {
+  "id": "SwordCutlassfish_Fire",
+  "name": "Skutlass Ignis",
+  "zukan": 128,
+  "suffix": "B",
+  "rank": 1590,
+  "prio": 159000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Water",
+   "Fire"
+  ],
+  "rarity": 5
+ },
+ {
+  "id": "VolcanicMonster",
+  "name": "Reptyro",
+  "zukan": 129,
+  "suffix": "",
+  "rank": 1060,
+  "prio": 106000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Fire",
+   "Earth"
+  ],
+  "rarity": 6
+ },
+ {
+  "id": "VolcanicMonster_Ice",
+  "name": "Reptyro Cryst",
+  "zukan": 129,
+  "suffix": "B",
+  "rank": 600,
+  "prio": 60000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Ice",
+   "Earth"
+  ],
+  "rarity": 7
+ },
+ {
+  "id": "NightBlueHorse",
+  "name": "Starryon",
+  "zukan": 130,
+  "suffix": "",
+  "rank": 1150,
+  "prio": 115000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dark"
+  ],
+  "rarity": 7
+ },
+ {
+  "id": "NightBlueHorse_Neutral",
+  "name": "Starryon Primo",
+  "zukan": 130,
+  "suffix": "B",
+  "rank": 430,
+  "prio": 43000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Normal"
+  ],
+  "rarity": 8
+ },
+ {
+  "id": "RockBeast",
+  "name": "Pierdon",
+  "zukan": 131,
+  "suffix": "",
+  "rank": 1110,
+  "prio": 111000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Earth"
+  ],
+  "rarity": 6
+ },
+ {
+  "id": "RockBeast_Ice",
+  "name": "Pierdon Cryst",
+  "zukan": 131,
+  "suffix": "B",
+  "rank": 460,
+  "prio": 46000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Ice"
+  ],
+  "rarity": 7
+ },
+ {
+  "id": "WhiteTiger",
+  "name": "Cryolinx",
+  "zukan": 132,
+  "suffix": "",
+  "rank": 1040,
+  "prio": 104000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Ice"
+  ],
+  "rarity": 7
+ },
+ {
+  "id": "WhiteTiger_Ground",
+  "name": "Cryolinx Terra",
+  "zukan": 132,
+  "suffix": "B",
+  "rank": 470,
+  "prio": 47000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Earth"
+  ],
+  "rarity": 7
+ },
+ {
+  "id": "SmallYeti",
+  "name": "Snugloo",
+  "zukan": 133,
+  "suffix": "",
+  "rank": 2390,
+  "prio": 239000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Ice"
+  ],
+  "rarity": 3
+ },
+ {
+  "id": "Yeti",
+  "name": "Wumpo",
+  "zukan": 134,
+  "suffix": "",
+  "rank": 830,
+  "prio": 83000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Ice"
+  ],
+  "rarity": 7
+ },
+ {
+  "id": "Yeti_Grass",
+  "name": "Wumpo Botan",
+  "zukan": 134,
+  "suffix": "B",
+  "rank": 610,
+  "prio": 61000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Leaf"
+  ],
+  "rarity": 8
+ },
+ {
+  "id": "CandleGhost",
+  "name": "Sootseer",
+  "zukan": 135,
+  "suffix": "",
+  "rank": 980,
+  "prio": 98000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dark",
+   "Fire"
+  ],
+  "rarity": 7
+ },
+ {
+  "id": "VenusFlytrap",
+  "name": "Carnibora",
+  "zukan": 136,
+  "suffix": "",
+  "rank": 1700,
+  "prio": 170000,
+  "ignoreCombi": false,
+  "maleProb": 40,
+  "elements": [
+   "Leaf"
+  ],
+  "rarity": 6
+ },
+ {
+  "id": "KingBahamut",
+  "name": "Blazamut",
+  "zukan": 137,
+  "suffix": "",
+  "rank": 410,
+  "prio": 41000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Fire"
+  ],
+  "rarity": 9
+ },
+ {
+  "id": "KingBahamut_Dragon",
+  "name": "Blazamut Ryu",
+  "zukan": 137,
+  "suffix": "B",
+  "rank": 100,
+  "prio": 10000,
+  "ignoreCombi": true,
+  "maleProb": 50,
+  "elements": [
+   "Dragon",
+   "Fire"
+  ],
+  "rarity": 10
+ },
+ {
+  "id": "GrassGolem",
+  "name": "Dualith",
+  "zukan": 138,
+  "suffix": "",
+  "rank": 510,
+  "prio": 51000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Earth",
+   "Leaf"
+  ],
+  "rarity": 8
+ },
+ {
+  "id": "GrassGolem_Dark",
+  "name": "Dualith Noct",
+  "zukan": 138,
+  "suffix": "B",
+  "rank": 250,
+  "prio": 25000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Earth",
+   "Dark"
+  ],
+  "rarity": 8
+ },
+ {
+  "id": "Anubis",
+  "name": "Anubis",
+  "zukan": 139,
+  "suffix": "",
+  "rank": 480,
+  "prio": 48000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Earth"
+  ],
+  "rarity": 10
+ },
+ {
+  "id": "Sekhmet",
+  "name": "Sekhmet",
+  "zukan": 140,
+  "suffix": "",
+  "rank": 870,
+  "prio": 87000,
+  "ignoreCombi": false,
+  "maleProb": 30,
+  "elements": [
+   "Earth"
+  ],
+  "rarity": 5
+ },
+ {
+  "id": "ScorpionMan",
+  "name": "Prixter",
+  "zukan": 141,
+  "suffix": "",
+  "rank": 1510,
+  "prio": 151000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dark",
+   "Earth"
+  ],
+  "rarity": 5
+ },
+ {
+  "id": "ScorpionMan_Electric",
+  "name": "Prixter Lux",
+  "zukan": 141,
+  "suffix": "B",
+  "rank": 850,
+  "prio": 85000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Electricity",
+   "Earth"
+  ],
+  "rarity": 6
+ },
+ {
+  "id": "CubeTurtle",
+  "name": "Tetroise ",
+  "zukan": 142,
+  "suffix": "",
+  "rank": 790,
+  "prio": 79000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Earth"
+  ],
+  "rarity": 8
+ },
+ {
+  "id": "CubeTurtle_Neutral",
+  "name": "Tetroise Primo",
+  "zukan": 142,
+  "suffix": "B",
+  "rank": 200,
+  "prio": 20000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Normal"
+  ],
+  "rarity": 8
+ },
+ {
+  "id": "BadCatgirl",
+  "name": "Nyafia",
+  "zukan": 143,
+  "suffix": "",
+  "rank": 1250,
+  "prio": 125000,
+  "ignoreCombi": false,
+  "maleProb": 40,
+  "elements": [
+   "Dark"
+  ],
+  "rarity": 4
+ },
+ {
+  "id": "MimicDog",
+  "name": "Mimog",
+  "zukan": 144,
+  "suffix": "",
+  "rank": 1740,
+  "prio": 174000,
+  "ignoreCombi": true,
+  "maleProb": 80,
+  "elements": [
+   "Normal"
+  ],
+  "rarity": 7
+ },
+ {
+  "id": "DarkAlien",
+  "name": "Xenovader",
+  "zukan": 145,
+  "suffix": "",
+  "rank": 1820,
+  "prio": 182000,
+  "ignoreCombi": true,
+  "maleProb": 50,
+  "elements": [
+   "Dark"
+  ],
+  "rarity": 7
+ },
+ {
+  "id": "WhiteAlienDragon",
+  "name": "Xenogard",
+  "zukan": 146,
+  "suffix": "",
+  "rank": 990,
+  "prio": 99000,
+  "ignoreCombi": true,
+  "maleProb": 50,
+  "elements": [
+   "Dragon"
+  ],
+  "rarity": 9
+ },
+ {
+  "id": "BlueberryFairy",
+  "name": "Prunelia",
+  "zukan": 147,
+  "suffix": "",
+  "rank": 1390,
+  "prio": 139000,
+  "ignoreCombi": false,
+  "maleProb": 40,
+  "elements": [
+   "Leaf",
+   "Dark"
+  ],
+  "rarity": 5
+ },
+ {
+  "id": "GhostRabbit",
+  "name": "Nitemary",
+  "zukan": 148,
+  "suffix": "",
+  "rank": 1230,
+  "prio": 123000,
+  "ignoreCombi": false,
+  "maleProb": 40,
+  "elements": [
+   "Dark"
+  ],
+  "rarity": 6
+ },
+ {
+  "id": "GhostRabbit_Grass",
+  "name": "Nitemary Botan",
+  "zukan": 148,
+  "suffix": "B",
+  "rank": 1320,
+  "prio": 132000,
+  "ignoreCombi": false,
+  "maleProb": 40,
+  "elements": [
+   "Leaf"
+  ],
+  "rarity": 7
+ },
+ {
+  "id": "BlackPuppy",
+  "name": "Smokie",
+  "zukan": 149,
+  "suffix": "",
+  "rank": 1760,
+  "prio": 176000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dark"
+  ],
+  "rarity": 2
+ },
+ {
+  "id": "BlackPuppy_Ice",
+  "name": "Smokie Cryst",
+  "zukan": 149,
+  "suffix": "B",
+  "rank": 1610,
+  "prio": 161000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dark",
+   "Ice"
+  ],
+  "rarity": 3
+ },
+ {
+  "id": "MysteryMask",
+  "name": "Omascul",
+  "zukan": 150,
+  "suffix": "",
+  "rank": 1140,
+  "prio": 114000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dark"
+  ],
+  "rarity": 4
+ },
+ {
+  "id": "IceNarwhal",
+  "name": "Whalaska",
+  "zukan": 151,
+  "suffix": "",
+  "rank": 710,
+  "prio": 71000,
+  "ignoreCombi": false,
+  "maleProb": 58,
+  "elements": [
+   "Ice",
+   "Water"
+  ],
+  "rarity": 8
+ },
+ {
+  "id": "IceNarwhal_Fire",
+  "name": "Whalaska Ignis",
+  "zukan": 151,
+  "suffix": "B",
+  "rank": 370,
+  "prio": 37000,
+  "ignoreCombi": false,
+  "maleProb": 42,
+  "elements": [
+   "Ice",
+   "Fire"
+  ],
+  "rarity": 8
+ },
+ {
+  "id": "GrassRabbitMan",
+  "name": "Verdash",
+  "zukan": 152,
+  "suffix": "",
+  "rank": 1160,
+  "prio": 116000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Leaf"
+  ],
+  "rarity": 8
+ },
+ {
+  "id": "GrimGirl",
+  "name": "Splatterina",
+  "zukan": 153,
+  "suffix": "",
+  "rank": 780,
+  "prio": 78000,
+  "ignoreCombi": false,
+  "maleProb": 38,
+  "elements": [
+   "Dark"
+  ],
+  "rarity": 4
+ },
+ {
+  "id": "GoldenHorse",
+  "name": "Gildane",
+  "zukan": 154,
+  "suffix": "",
+  "rank": 730,
+  "prio": 73000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Earth"
+  ],
+  "rarity": 8
+ },
+ {
+  "id": "SifuDog",
+  "name": "Dogen",
+  "zukan": 155,
+  "suffix": "",
+  "rank": 1460,
+  "prio": 146000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Normal"
+  ],
+  "rarity": 6
+ },
+ {
+  "id": "SumoDog",
+  "name": "Bulldosu",
+  "zukan": 156,
+  "suffix": "",
+  "rank": 1190,
+  "prio": 119000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Earth"
+  ],
+  "rarity": 4
+ },
+ {
+  "id": "WhiteDeer",
+  "name": "Celesdir",
+  "zukan": 157,
+  "suffix": "",
+  "rank": 570,
+  "prio": 57000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Normal"
+  ],
+  "rarity": 6
+ },
+ {
+  "id": "WhiteDeer_Dark",
+  "name": "Celesdir Noct",
+  "zukan": 157,
+  "suffix": "B",
+  "rank": 270,
+  "prio": 27000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dark"
+  ],
+  "rarity": 7
+ },
+ {
+  "id": "BlackMetalDragon",
+  "name": "Astegon",
+  "zukan": 158,
+  "suffix": "",
+  "rank": 490,
+  "prio": 49000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dragon",
+   "Dark"
+  ],
+  "rarity": 9
+ },
+ {
+  "id": "WingGolem",
+  "name": "Knocklem",
+  "zukan": 159,
+  "suffix": "",
+  "rank": 260,
+  "prio": 26000,
+  "ignoreCombi": false,
+  "maleProb": 70,
+  "elements": [
+   "Earth"
+  ],
+  "rarity": 9
+ },
+ {
+  "id": "WingGolem_Fire",
+  "name": "Knocklem Ignis",
+  "zukan": 159,
+  "suffix": "B",
+  "rank": 210,
+  "prio": 21000,
+  "ignoreCombi": false,
+  "maleProb": 70,
+  "elements": [
+   "Fire"
+  ],
+  "rarity": 10
+ },
+ {
+  "id": "WhiteShieldDragon",
+  "name": "Silvegis",
+  "zukan": 160,
+  "suffix": "",
+  "rank": 560,
+  "prio": 56000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dragon"
+  ],
+  "rarity": 8
+ },
+ {
+  "id": "BlueThunderHorse",
+  "name": "Azurmane",
+  "zukan": 161,
+  "suffix": "",
+  "rank": 420,
+  "prio": 42000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Electricity"
+  ],
+  "rarity": 7
+ },
+ {
+  "id": "LongCat",
+  "name": "Valentail",
+  "zukan": 162,
+  "suffix": "",
+  "rank": 1900,
+  "prio": 190000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Normal"
+  ],
+  "rarity": 2
+ },
+ {
+  "id": "ElecSnail",
+  "name": "Snock",
+  "zukan": 163,
+  "suffix": "",
+  "rank": 1780,
+  "prio": 178000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Electricity"
+  ],
+  "rarity": 2
+ },
+ {
+  "id": "ElecSnail_Ground",
+  "name": "Snock Lux",
+  "zukan": 163,
+  "suffix": "B",
+  "rank": 1500,
+  "prio": 150000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Electricity",
+   "Earth"
+  ],
+  "rarity": 3
+ },
+ {
+  "id": "DandelionGirl",
+  "name": "Souffline",
+  "zukan": 164,
+  "suffix": "",
+  "rank": 2000,
+  "prio": 200000,
+  "ignoreCombi": false,
+  "maleProb": 40,
+  "elements": [
+   "Leaf"
+  ],
+  "rarity": 3
+ },
+ {
+  "id": "BrownRabbit",
+  "name": "Lapiron",
+  "zukan": 165,
+  "suffix": "",
+  "rank": 1680,
+  "prio": 168000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Earth"
+  ],
+  "rarity": 3
+ },
+ {
+  "id": "HoodGhost",
+  "name": "Hoodle",
+  "zukan": 166,
+  "suffix": "",
+  "rank": 1770,
+  "prio": 177000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dark"
+  ],
+  "rarity": 3
+ },
+ {
+  "id": "ElecLizard",
+  "name": "Slowatt",
+  "zukan": 167,
+  "suffix": "",
+  "rank": 1750,
+  "prio": 175000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Electricity"
+  ],
+  "rarity": 4
+ },
+ {
+  "id": "OniGhostGirl",
+  "name": "Bakemi",
+  "zukan": 168,
+  "suffix": "",
+  "rank": 1540,
+  "prio": 154000,
+  "ignoreCombi": false,
+  "maleProb": 40,
+  "elements": [
+   "Dark"
+  ],
+  "rarity": 4
+ },
+ {
+  "id": "KingSunfish",
+  "name": "Solmora",
+  "zukan": 169,
+  "suffix": "",
+  "rank": 1370,
+  "prio": 137000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Water"
+  ],
+  "rarity": 4
+ },
+ {
+  "id": "KingSunfish_Thunder",
+  "name": "Solmora Lux",
+  "zukan": 169,
+  "suffix": "B",
+  "rank": 1000,
+  "prio": 100000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Water",
+   "Electricity"
+  ],
+  "rarity": 5
+ },
+ {
+  "id": "SleeveRabbit",
+  "name": "Lapure",
+  "zukan": 170,
+  "suffix": "",
+  "rank": 810,
+  "prio": 81000,
+  "ignoreCombi": false,
+  "maleProb": 40,
+  "elements": [
+   "Normal"
+  ],
+  "rarity": 4
+ },
+ {
+  "id": "GhostDragon",
+  "name": "Eidrolon",
+  "zukan": 171,
+  "suffix": "",
+  "rank": 300,
+  "prio": 30000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dragon",
+   "Dark"
+  ],
+  "rarity": 7
+ },
+ {
+  "id": "GhostDragon_Fire",
+  "name": "Eidrolon Ignis",
+  "zukan": 171,
+  "suffix": "B",
+  "rank": 140,
+  "prio": 14000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dragon",
+   "Fire"
+  ],
+  "rarity": 8
+ },
+ {
+  "id": "ThunderFluffyBird",
+  "name": "Dynamoff",
+  "zukan": 172,
+  "suffix": "",
+  "rank": 1400,
+  "prio": 140000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Electricity"
+  ],
+  "rarity": 6
+ },
+ {
+  "id": "RedFlowerBird",
+  "name": "Tropicaw",
+  "zukan": 173,
+  "suffix": "",
+  "rank": 1350,
+  "prio": 135000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Leaf"
+  ],
+  "rarity": 5
+ },
+ {
+  "id": "FoxExorcist",
+  "name": "Flaracle",
+  "zukan": 174,
+  "suffix": "",
+  "rank": 390,
+  "prio": 39000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Fire"
+  ],
+  "rarity": 7
+ },
+ {
+  "id": "LotusDragon",
+  "name": "Ophydia",
+  "zukan": 175,
+  "suffix": "",
+  "rank": 230,
+  "prio": 23000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Leaf",
+   "Water"
+  ],
+  "rarity": 9
+ },
+ {
+  "id": "ClownRabbit",
+  "name": "Dupin",
+  "zukan": 176,
+  "suffix": "",
+  "rank": 520,
+  "prio": 52000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Fire"
+  ],
+  "rarity": 7
+ },
+ {
+  "id": "ThiefBird",
+  "name": "Roujay",
+  "zukan": 177,
+  "suffix": "",
+  "rank": 530,
+  "prio": 53000,
+  "ignoreCombi": false,
+  "maleProb": 60,
+  "elements": [
+   "Dark"
+  ],
+  "rarity": 5
+ },
+ {
+  "id": "SnakeGirl",
+  "name": "Venusa",
+  "zukan": 178,
+  "suffix": "",
+  "rank": 970,
+  "prio": 97000,
+  "ignoreCombi": false,
+  "maleProb": 40,
+  "elements": [
+   "Dark"
+  ],
+  "rarity": 5
+ },
+ {
+  "id": "MushroomLady",
+  "name": "Mycora",
+  "zukan": 179,
+  "suffix": "",
+  "rank": 760,
+  "prio": 76000,
+  "ignoreCombi": false,
+  "maleProb": 30,
+  "elements": [
+   "Leaf"
+  ],
+  "rarity": 6
+ },
+ {
+  "id": "LanternButler",
+  "name": "Loomen",
+  "zukan": 180,
+  "suffix": "",
+  "rank": 890,
+  "prio": 89000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dark",
+   "Fire"
+  ],
+  "rarity": 5
+ },
+ {
+  "id": "MoonChild",
+  "name": "Wistella",
+  "zukan": 181,
+  "suffix": "",
+  "rank": 1180,
+  "prio": 118000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dark"
+  ],
+  "rarity": 2
+ },
+ {
+  "id": "MonochromeQueen",
+  "name": "Solenne",
+  "zukan": 182,
+  "suffix": "",
+  "rank": 280,
+  "prio": 28000,
+  "ignoreCombi": false,
+  "maleProb": 30,
+  "elements": [
+   "Dark",
+   "Normal"
+  ],
+  "rarity": 7
+ },
+ {
+  "id": "KabukiMan",
+  "name": "Renjishi",
+  "zukan": 183,
+  "suffix": "",
+  "rank": 290,
+  "prio": 29000,
+  "ignoreCombi": false,
+  "maleProb": 60,
+  "elements": [
+   "Fire"
+  ],
+  "rarity": 7
+ },
+ {
+  "id": "DomeArmorDragon",
+  "name": "Aegidron",
+  "zukan": 184,
+  "suffix": "",
+  "rank": 30,
+  "prio": 3000,
+  "ignoreCombi": false,
+  "maleProb": 50,
+  "elements": [
+   "Dragon",
+   "Earth"
+  ],
+  "rarity": 8
+ },
+ {
+  "id": "ElecPanda",
+  "name": "Grizzbolt",
+  "zukan": 185,
+  "suffix": "",
+  "rank": 1020,
+  "prio": 102000,
+  "ignoreCombi": true,
+  "maleProb": 50,
+  "elements": [
+   "Electricity"
+  ],
+  "rarity": 8
+ },
+ {
+  "id": "LilyQueen",
+  "name": "Lyleen",
+  "zukan": 186,
+  "suffix": "",
+  "rank": 240,
+  "prio": 24000,
+  "ignoreCombi": true,
+  "maleProb": 30,
+  "elements": [
+   "Leaf"
+  ],
+  "rarity": 9
+ },
+ {
+  "id": "LilyQueen_Dark",
+  "name": "Lyleen Noct",
+  "zukan": 186,
+  "suffix": "B",
+  "rank": 220,
+  "prio": 22000,
+  "ignoreCombi": true,
+  "maleProb": 30,
+  "elements": [
+   "Dark"
+  ],
+  "rarity": 10
+ },
+ {
+  "id": "ThunderDragonMan",
+  "name": "Orserk",
+  "zukan": 187,
+  "suffix": "",
+  "rank": 120,
+  "prio": 12000,
+  "ignoreCombi": true,
+  "maleProb": 50,
+  "elements": [
+   "Dragon",
+   "Electricity"
+  ],
+  "rarity": 9
+ },
+ {
+  "id": "Horus",
+  "name": "Faleris",
+  "zukan": 188,
+  "suffix": "",
+  "rank": 500,
+  "prio": 50000,
+  "ignoreCombi": true,
+  "maleProb": 50,
+  "elements": [
+   "Fire"
+  ],
+  "rarity": 9
+ },
+ {
+  "id": "Horus_Water",
+  "name": "Faleris Aqua",
+  "zukan": 188,
+  "suffix": "B",
+  "rank": 450,
+  "prio": 45000,
+  "ignoreCombi": true,
+  "maleProb": 50,
+  "elements": [
+   "Water"
+  ],
+  "rarity": 9
+ },
+ {
+  "id": "BlackGriffon",
+  "name": "Shadowbeak",
+  "zukan": 189,
+  "suffix": "",
+  "rank": 550,
+  "prio": 55000,
+  "ignoreCombi": true,
+  "maleProb": 50,
+  "elements": [
+   "Dark"
+  ],
+  "rarity": 10
+ },
+ {
+  "id": "MoonQueen",
+  "name": "Selyne",
+  "zukan": 190,
+  "suffix": "",
+  "rank": 360,
+  "prio": 36000,
+  "ignoreCombi": true,
+  "maleProb": 20,
+  "elements": [
+   "Dark",
+   "Normal"
+  ],
+  "rarity": 9
+ },
+ {
+  "id": "SnowTigerBeastman",
+  "name": "Bastigor",
+  "zukan": 191,
+  "suffix": "",
+  "rank": 50,
+  "prio": 5000,
+  "ignoreCombi": true,
+  "maleProb": 60,
+  "elements": [
+   "Ice"
+  ],
+  "rarity": 8
+ },
+ {
+  "id": "BlueSkyDragon",
+  "name": "Shaolong",
+  "zukan": 192,
+  "suffix": "",
+  "rank": 40,
+  "prio": 4000,
+  "ignoreCombi": true,
+  "maleProb": 50,
+  "elements": [
+   "Dragon",
+   "Water"
+  ],
+  "rarity": 9
+ },
+ {
+  "id": "Mothman",
+  "name": "Silvance",
+  "zukan": 193,
+  "suffix": "",
+  "rank": 80,
+  "prio": 8000,
+  "ignoreCombi": true,
+  "maleProb": 50,
+  "elements": [
+   "Leaf"
+  ],
+  "rarity": 8
+ },
+ {
+  "id": "FlowerPrince",
+  "name": "Dandilord",
+  "zukan": 194,
+  "suffix": "",
+  "rank": 60,
+  "prio": 6000,
+  "ignoreCombi": true,
+  "maleProb": 60,
+  "elements": [
+   "Leaf",
+   "Dark"
+  ],
+  "rarity": 8
+ },
+ {
+  "id": "NightLady",
+  "name": "Bellanoir",
+  "zukan": 195,
+  "suffix": "",
+  "rank": 620,
+  "prio": 62000,
+  "ignoreCombi": true,
+  "maleProb": 10,
+  "elements": [
+   "Dark"
+  ],
+  "rarity": 20
+ },
+ {
+  "id": "NightLady_Dark",
+  "name": "Bellanoir Libero",
+  "zukan": 195,
+  "suffix": "B",
+  "rank": 130,
+  "prio": 13000,
+  "ignoreCombi": true,
+  "maleProb": 10,
+  "elements": [
+   "Dark"
+  ],
+  "rarity": 20
+ },
+ {
+  "id": "DarkMechaDragon",
+  "name": "Xenolord",
+  "zukan": 196,
+  "suffix": "",
+  "rank": 400,
+  "prio": 40000,
+  "ignoreCombi": true,
+  "maleProb": 50,
+  "elements": [
+   "Dark",
+   "Dragon"
+  ],
+  "rarity": 8
+ },
+ {
+  "id": "LegendDeer",
+  "name": "Hartalis",
+  "zukan": 197,
+  "suffix": "",
+  "rank": 90,
+  "prio": 9000,
+  "ignoreCombi": true,
+  "maleProb": 50,
+  "elements": [
+   "Normal"
+  ],
+  "rarity": 10
+ },
+ {
+  "id": "SaintCentaur",
+  "name": "Paladius",
+  "zukan": 198,
+  "suffix": "",
+  "rank": 180,
+  "prio": 18000,
+  "ignoreCombi": true,
+  "maleProb": 50,
+  "elements": [
+   "Normal"
+  ],
+  "rarity": 20
+ },
+ {
+  "id": "BlackCentaur",
+  "name": "Necromus",
+  "zukan": 199,
+  "suffix": "",
+  "rank": 190,
+  "prio": 19000,
+  "ignoreCombi": true,
+  "maleProb": 50,
+  "elements": [
+   "Dark"
+  ],
+  "rarity": 20
+ },
+ {
+  "id": "IceHorse",
+  "name": "Frostallion",
+  "zukan": 200,
+  "suffix": "",
+  "rank": 150,
+  "prio": 15000,
+  "ignoreCombi": true,
+  "maleProb": 50,
+  "elements": [
+   "Ice"
+  ],
+  "rarity": 20
+ },
+ {
+  "id": "IceHorse_Dark",
+  "name": "Frostallion Noct",
+  "zukan": 200,
+  "suffix": "B",
+  "rank": 110,
+  "prio": 11000,
+  "ignoreCombi": true,
+  "maleProb": 50,
+  "elements": [
+   "Dark"
+  ],
+  "rarity": 20
+ },
+ {
+  "id": "PoseidonOrca",
+  "name": "Neptilius",
+  "zukan": 201,
+  "suffix": "",
+  "rank": 160,
+  "prio": 16000,
+  "ignoreCombi": true,
+  "maleProb": 50,
+  "elements": [
+   "Water"
+  ],
+  "rarity": 20
+ },
+ {
+  "id": "JetDragon",
+  "name": "Jetragon",
+  "zukan": 202,
+  "suffix": "",
+  "rank": 70,
+  "prio": 7000,
+  "ignoreCombi": true,
+  "maleProb": 50,
+  "elements": [
+   "Dragon"
+  ],
+  "rarity": 20
+ },
+ {
+  "id": "KingWhale",
+  "name": "Panthalus",
+  "zukan": 203,
+  "suffix": "",
+  "rank": 20,
+  "prio": 2000,
+  "ignoreCombi": true,
+  "maleProb": 50,
+  "elements": [
+   "Water"
+  ],
+  "rarity": 10
+ },
+ {
+  "id": "WorldTreeDragon",
+  "name": "Astralym",
+  "zukan": 204,
+  "suffix": "",
+  "rank": 10,
+  "prio": 1000,
+  "ignoreCombi": true,
+  "maleProb": 50,
+  "elements": [],
+  "rarity": 10
+ }
+]
