@@ -5,7 +5,7 @@ with every number pulled **directly from the game files** - not from stale commu
 spreadsheets. When Pocketpair ships a patch, one command detects it and re-extracts
 everything.
 
-**291 pals · 185 unique combos · 86 passives · ~150k spawn points · in-game icons and maps**
+**9 tools · 291 pals · 185 unique combos · 115 passives · 72 world bosses · ~150k spawn points · in-game icons and maps**
 
 ## ✨ No install - just open it
 
@@ -61,9 +61,11 @@ datamined 40/30/20/10 model.
 
 ## 📜 Passive Skills
 
-Every passive a pal can have, with real in-game descriptions and tier badges (-1 to +4).
-Search, sort by tier or name, and click any skill for a detail view: effect breakdown,
-wild roll chance computed from the game's lottery weights, and rare-only sourcing.
+All 115 passives a pal can have, with real in-game descriptions and tier badges (-1 up
+to the +5 World Tree passives) - including the innate ones like Legend, the element
+Emperor and Lord set, and mutation pal passives. Search, sort by tier or name, and click
+any skill for a detail view: effect breakdown, wild roll chance computed from the game's
+lottery weights, and sourcing (lottery, lucky-only, or innate/special).
 
 ![Passive Skills](docs/screenshots/ss-passives.png)
 
