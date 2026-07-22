@@ -11,6 +11,10 @@ export function PalIcon({ id, size = 32 }: { id: string; size?: number }) {
   return <img className="palicon" src={src} width={size} height={size} alt="" />
 }
 
+export function palIconSrc(id: string): string | undefined {
+  return icons[id]
+}
+
 export function ElementChips({ pal }: { pal: Pal }) {
   return (
     <span className="chips">

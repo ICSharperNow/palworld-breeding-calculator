@@ -28,6 +28,8 @@ var targets = new[]
     "Pal/Content/L10N/en/Pal/DataTable/Text/DT_SkillDescText_Common",
     "Pal/Content/Pal/DataTable/UI/DT_PaldexDistributionData",
     "Pal/Content/Pal/DataTable/WorldMapUIData/DT_WorldMapUIData",
+    "Pal/Content/Pal/DataTable/Spawner/DT_PalSpawnerPlacement",
+    "Pal/Content/Pal/DataTable/Spawner/DT_PalWildSpawner",
 };
 
 foreach (var path in targets)

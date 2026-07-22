@@ -82,6 +82,16 @@ Where every pal actually spawns, from the game's own Paldeck distribution data -
 
 ![Spawn Map](docs/screenshots/ss-map.png)
 
+## 👑 Boss Tracker
+
+All 72 world (alpha) bosses from the game's spawner tables, each marked on the map with
+its portrait and level. Click a boss on the map or in the list to check it off - defeated
+bosses get a red X and a struck-through list entry, with a running progress counter.
+Progress persists in your browser, works on both the world and World Tree maps, and the
+full zoom / pan / fullscreen kit carries over.
+
+![Boss Tracker](docs/screenshots/ss-bosses.png)
+
 ## 📖 Paldeck
 
 All 291 pals in a rarity-framed grid - gold legendaries, pink mythics. Sort by number,

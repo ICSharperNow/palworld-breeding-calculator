@@ -266,6 +266,61 @@ try:
 except FileNotFoundError as e:
     print(f"spawn data skipped ({e})")
 
+# --- world (field) bosses: FieldBoss spawner placements joined to their pal ---
+try:
+    placement = rows("DT_PalSpawnerPlacement")
+    wild = rows("DT_PalWildSpawner")
+    boss_by_name = {}
+    for w in wild.values():
+        if not str(w.get("SpawnerType", "")).endswith("FieldBoss"):
+            continue
+        pal_ref = w.get("Pal_1", "")
+        if pal_ref in ("RowName", "None", ""):
+            continue  # junk rows
+        boss_by_name.setdefault(w["SpawnerName"], w)
+
+    def norm(X, Y, bounds):
+        min_x, max_x, min_y, max_y = bounds
+        u = (Y - min_y) / (max_y - min_y)
+        v = 1 - (X - min_x) / (max_x - min_x)
+        return round(u, 4), round(v, 4)
+
+    bosses = []
+    for v in placement.values():
+        if not str(v.get("SpawnerType", "")).endswith("FieldBoss"):
+            continue
+        w = boss_by_name.get(v["SpawnerName"])
+        if not w:
+            continue
+        base = w["Pal_1"]
+        for pre in ("BOSS_", "Boss_", "boss_"):
+            if base.startswith(pre):
+                base = base[len(pre):]
+        pal_id = pal_ids_ci.get(base.lower())
+        if not pal_id:
+            continue
+        X, Y = v["Location"]["X"], v["Location"]["Y"]
+        if MAP_MIN_X <= X <= MAP_MAX_X and MAP_MIN_Y <= Y <= MAP_MAX_Y:
+            m, (u, vv) = "main", norm(X, Y, (MAP_MIN_X, MAP_MAX_X, MAP_MIN_Y, MAP_MAX_Y))
+        elif TREE[0] <= X <= TREE[1] and TREE[2] <= Y <= TREE[3]:
+            m, (u, vv) = "tree", norm(X, Y, TREE)
+        else:
+            continue
+        bosses.append({
+            # stable across regenerations: spawner name + rounded world coords
+            "id": f"{v['SpawnerName']}@{round(X)},{round(Y)}",
+            "pal": pal_id,
+            "lv": w.get("LvMin_1", 0),
+            "m": m,
+            "u": u,
+            "v": vv,
+        })
+    json.dump(bosses, open(OUT / "bosses.json", "w"), separators=(",", ":"))
+    print(f"world bosses: {len(bosses)} "
+          f"({sum(1 for b in bosses if b['m'] == 'tree')} in World Tree)")
+except FileNotFoundError as e:
+    print(f"boss data skipped ({e})")
+
 # --- icons: embed as data URIs so the single-file build stays portable ---
 import base64
 

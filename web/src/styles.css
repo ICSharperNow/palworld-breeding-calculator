@@ -412,6 +412,36 @@ h3 { margin: 20px 0 6px; font-size: 15px; }
   .maptab-pals { max-height: 30vh; }
 }
 
+/* boss tracker */
+.bosshead { display: flex; align-items: center; gap: 10px; margin: 8px 0; }
+.bosscheck { font-size: 15px; width: 18px; }
+.maplist-row.boss.dead .maplist-name { text-decoration: line-through; opacity: .55; }
+.maplist-row.boss.dead .palicon { filter: grayscale(.8); opacity: .7; }
+.bossmark {
+  position: absolute; width: 34px; height: 34px; padding: 0;
+  border: 2px solid rgba(255, 255, 255, 0.9); border-radius: 50%;
+  background: rgba(10, 14, 20, 0.75); cursor: pointer;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.6);
+  transform-origin: center;
+}
+.bossmark img { width: 100%; height: 100%; border-radius: 50%; display: block; }
+.bossmark .bosslv {
+  position: absolute; bottom: -7px; left: 50%; transform: translateX(-50%);
+  background: var(--accent); color: #fff; font-size: 9px; font-weight: 700;
+  border-radius: 7px; padding: 0 5px; line-height: 12px; white-space: nowrap;
+}
+.bossmark:hover { border-color: var(--accent2); z-index: 3; }
+.bossmark.dead { border-color: rgba(255, 80, 80, 0.9); }
+.bossmark.dead img { filter: grayscale(.85) brightness(.8); }
+.bossmark .bossx {
+  position: absolute; inset: -4px; width: calc(100% + 8px); height: calc(100% + 8px);
+  pointer-events: none;
+}
+.bossmark .bossx line {
+  stroke: #ff3b30; stroke-width: 6; stroke-linecap: round;
+  filter: drop-shadow(0 0 2px rgba(0,0,0,.7));
+}
+
 /* passive skills index */
 .pdexlist { display: flex; flex-direction: column; gap: 4px; margin-top: 10px; }
 .pdexrow {

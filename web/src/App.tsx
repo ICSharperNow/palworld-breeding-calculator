@@ -18,7 +18,18 @@ import workIconsJson from './data/workicons.json'
 
 const workIconSrc = workIconsJson as Record<string, string>
 import { spawnsFor, worldMap, treeMap, SPAWN_GRID, gameCoords } from './lib/spawns'
-import { PalPicker, ElementChips, PalIcon } from './PalPicker'
+import { PalPicker, ElementChips, PalIcon, palIconSrc } from './PalPicker'
+import bossesJson from './data/bosses.json'
+
+interface WorldBoss {
+  id: string
+  pal: string
+  lv: number
+  m: 'main' | 'tree'
+  u: number
+  v: number
+}
+const worldBosses = bossesJson as WorldBoss[]
 
 function mixColors(a: string, b: string): string {
   const pa = [1, 3, 5].map(i => parseInt(a.slice(i, i + 2), 16))
@@ -1330,6 +1341,213 @@ function MapTab() {
   )
 }
 
+const KILLS_KEY = 'palworld-boss-kills'
+
+function loadKills(): Set<string> {
+  try {
+    return new Set(JSON.parse(localStorage.getItem(KILLS_KEY) ?? '[]'))
+  } catch {
+    return new Set()
+  }
+}
+
+function BossMapTab() {
+  const [kills, setKills] = useState<Set<string>>(loadKills)
+  const [which, setWhich] = useState<'main' | 'tree'>('main')
+  const [full, setFull] = useState(false)
+  const [zoom, setZoom] = useState(1)
+  const [pan, setPan] = useState<[number, number]>([0, 0])
+  const [hover, setHover] = useState<[number, number] | null>(null)
+  const wrapRef = useRef<HTMLDivElement>(null)
+  const dragRef = useRef<null | { x: number; y: number; px: number; py: number }>(null)
+  const viewRef = useRef({ zoom: 1, pan: [0, 0] as [number, number] })
+  viewRef.current = { zoom, pan }
+
+  const toggle = (id: string) => {
+    setKills(prev => {
+      const next = new Set(prev)
+      if (next.has(id)) next.delete(id)
+      else next.add(id)
+      try { localStorage.setItem(KILLS_KEY, JSON.stringify([...next])) } catch { /* file:// storage may be unavailable */ }
+      return next
+    })
+  }
+  const resetKills = () => {
+    setKills(new Set())
+    try { localStorage.removeItem(KILLS_KEY) } catch { /* ignore */ }
+  }
+
+  const shown = worldBosses.filter(b => b.m === which).sort((a, b) => a.lv - b.lv)
+  const killed = worldBosses.filter(b => kills.has(b.id)).length
+
+  const clampPan = (p: [number, number], z: number): [number, number] => {
+    const lim = (z - 1) / 2 / z
+    return [Math.max(-lim, Math.min(lim, p[0])), Math.max(-lim, Math.min(lim, p[1]))]
+  }
+  const baseRect = () => {
+    const r = wrapRef.current!.getBoundingClientRect()
+    const size = Math.min(r.width, r.height)
+    return { left: r.left + (r.width - size) / 2, top: r.top + (r.height - size) / 2, size }
+  }
+  const toMapFrac = (clientX: number, clientY: number): [number, number] => {
+    const rect = baseRect()
+    const { zoom: z, pan: p } = viewRef.current
+    const sx = (clientX - rect.left) / rect.size
+    const sy = (clientY - rect.top) / rect.size
+    return [(sx - 0.5) / z + 0.5 - p[0], (sy - 0.5) / z + 0.5 - p[1]]
+  }
+
+  useEffect(() => {
+    const node = wrapRef.current
+    if (!node) return
+    const onWheel = (e: WheelEvent) => {
+      e.preventDefault()
+      const [mu, mv] = toMapFrac(e.clientX, e.clientY)
+      const { zoom: z } = viewRef.current
+      const nz = Math.max(1, Math.min(10, z * (e.deltaY < 0 ? 1.25 : 0.8)))
+      const rect = baseRect()
+      const sx = (e.clientX - rect.left) / rect.size
+      const sy = (e.clientY - rect.top) / rect.size
+      const lim = (nz - 1) / 2 / nz
+      setZoom(nz)
+      setPan([
+        Math.max(-lim, Math.min(lim, (sx - 0.5) / nz + 0.5 - mu)),
+        Math.max(-lim, Math.min(lim, (sy - 0.5) / nz + 0.5 - mv)),
+      ])
+    }
+    node.addEventListener('wheel', onWheel, { passive: false })
+    return () => node.removeEventListener('wheel', onWheel)
+  }, [full])
+
+  const onMouseDown = (e: React.MouseEvent<HTMLDivElement>) => {
+    const { pan: p } = viewRef.current
+    dragRef.current = { x: e.clientX, y: e.clientY, px: p[0], py: p[1] }
+    const move = (ev: MouseEvent) => {
+      if (!dragRef.current || !wrapRef.current) return
+      const rect = baseRect()
+      const { zoom: z } = viewRef.current
+      const dx = (ev.clientX - dragRef.current.x) / rect.size / z
+      const dy = (ev.clientY - dragRef.current.y) / rect.size / z
+      setPan(clampPan([dragRef.current.px + dx, dragRef.current.py + dy], z))
+    }
+    const up = () => {
+      dragRef.current = null
+      document.removeEventListener('mousemove', move)
+      document.removeEventListener('mouseup', up)
+    }
+    document.addEventListener('mousemove', move)
+    document.addEventListener('mouseup', up)
+  }
+  const onMove = (e: React.MouseEvent<HTMLDivElement>) => {
+    const [u, v] = toMapFrac(e.clientX, e.clientY)
+    setHover(u >= 0 && u <= 1 && v >= 0 && v <= 1 ? gameCoords(u, v, which) : null)
+  }
+  const reset = () => { setZoom(1); setPan([0, 0]) }
+
+  useEffect(() => {
+    if (!full) return
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') { e.stopPropagation(); setFull(false) } }
+    document.addEventListener('keydown', onKey, true)
+    return () => document.removeEventListener('keydown', onKey, true)
+  }, [full])
+
+  const mapView = (
+    <>
+      <div className="maptoolbar">
+        <span className="mapnavbtns">
+          <button className={`modal-btn ${which === 'main' ? 'primary' : ''}`} onClick={() => { setWhich('main'); reset() }}>World</button>
+          <button className={`modal-btn ${which === 'tree' ? 'primary' : ''}`} onClick={() => { setWhich('tree'); reset() }}>World Tree</button>
+        </span>
+        <span className="mapnavbtns">
+          {zoom > 1 && <button className="modal-btn" onClick={reset}>reset zoom</button>}
+          <button className="modal-btn" onClick={() => setFull(!full)}>{full ? '🗗 Exit fullscreen' : '🗖 Fullscreen'}</button>
+        </span>
+      </div>
+      <div
+        className="mapwrap"
+        ref={wrapRef}
+        onMouseDown={onMouseDown}
+        onMouseMove={onMove}
+        onMouseLeave={() => setHover(null)}
+      >
+        <div className="mapinner" style={{ transform: `scale(${zoom}) translate(${pan[0] * 100}%, ${pan[1] * 100}%)` }}>
+          <img src={which === 'main' ? worldMap : treeMap} alt="Map" draggable={false} />
+          {shown.map(b => {
+            const dead = kills.has(b.id)
+            const pal = palById.get(b.pal)
+            return (
+              <button
+                key={b.id}
+                className={`bossmark ${dead ? 'dead' : ''}`}
+                style={{ left: `${b.u * 100}%`, top: `${b.v * 100}%`, transform: `translate(-50%, -50%) scale(${1 / Math.sqrt(zoom)})` }}
+                title={`${pal?.name ?? b.pal} Lv ${b.lv}${dead ? ' (defeated - click to restore)' : ' (click to mark defeated)'}`}
+                onMouseDown={e => e.stopPropagation()}
+                onClick={() => toggle(b.id)}
+              >
+                <img src={palIconSrc(b.pal)} alt="" />
+                <span className="bosslv">{b.lv}</span>
+                {dead && (
+                  <svg className="bossx" viewBox="0 0 40 40">
+                    <line x1="5" y1="5" x2="35" y2="35" />
+                    <line x1="35" y1="5" x2="5" y2="35" />
+                  </svg>
+                )}
+              </button>
+            )
+          })}
+        </div>
+        {hover && <div className="maphover">({hover[0]}, {hover[1]})</div>}
+      </div>
+      <div className="maplegend">
+        <span className="note">click a boss on the map or in the list to mark it defeated</span>
+        <span className="mapcentroid">{killed}/{worldBosses.length} defeated</span>
+      </div>
+    </>
+  )
+
+  return (
+    <section>
+      <p className="lede">
+        Every world (alpha) boss in 1.0 - all {worldBosses.length} of them. Check bosses off
+        as you defeat them; a red X marks them on the map. Progress is saved in your browser.
+      </p>
+      <div className="maptab">
+        <div className="maptab-list">
+          <div className="bosshead">
+            <b>{killed}/{worldBosses.length}</b> defeated
+            {killed > 0 && <button className="modal-btn" onClick={resetKills}>reset</button>}
+          </div>
+          <div className="maptab-pals">
+            {shown.map(b => {
+              const pal = palById.get(b.pal)
+              const dead = kills.has(b.id)
+              return (
+                <button key={b.id} className={`maplist-row boss ${dead ? 'dead' : ''}`} onClick={() => toggle(b.id)}>
+                  <span className="bosscheck">{dead ? '☑' : '☐'}</span>
+                  <PalIcon id={b.pal} size={28} />
+                  <span className="maplist-name">{pal?.name ?? b.pal}</span>
+                  <span className="decknum">Lv {b.lv}</span>
+                </button>
+              )
+            })}
+          </div>
+          {which === 'main'
+            ? <p className="muted small">7 more bosses on the World Tree map</p>
+            : <p className="muted small">65 bosses on the world map</p>}
+        </div>
+        <div className="maptab-map">
+          {full
+            ? createPortal(
+                <div className="modal-backdrop mapdrop full"><div className="mapmodal full">{mapView}</div></div>,
+                document.body,
+              )
+            : <div className="mapview">{mapView}</div>}
+        </div>
+      </div>
+    </section>
+  )
+}
+
 const PDEX_SORTS = [
   ['best', 'Best tier first'],
   ['worst', 'Worst tier first'],
@@ -1433,6 +1651,7 @@ const TABS = [
   ['passives', '✨', 'Passive Odds'],
   ['pdex', '📜', 'Passive Skills'],
   ['map', '🌍', 'Spawn Map'],
+  ['bosses', '👑', 'Boss Tracker'],
   ['deck', '📖', 'Paldeck'],
 ] as const
 
@@ -1483,6 +1702,7 @@ export default function App() {
         <div className={tab === 'passives' ? '' : 'hidden'}><PassivesTab /></div>
         <div className={tab === 'pdex' ? '' : 'hidden'}><PassiveDexTab /></div>
         <div className={tab === 'map' ? '' : 'hidden'}><MapTab /></div>
+        <div className={tab === 'bosses' ? '' : 'hidden'}><BossMapTab /></div>
         <div className={tab === 'deck' ? '' : 'hidden'}><PaldeckTab /></div>
         <footer className="muted small">
           Breeding data, names and icons extracted from Pal-Windows.pak (v1.0) ·{' '}
