@@ -270,9 +270,18 @@ except FileNotFoundError as e:
 try:
     placement = rows("DT_PalSpawnerPlacement")
     wild = rows("DT_PalWildSpawner")
+    # FieldBoss = open-world alphas; ImprisonmentBoss = Sealed Realm guardians
+    # (Vaelet, Verdash...). Both are fixed world bosses. RandomDungeonBoss is
+    # excluded: those rotate through randomized dungeons with no fixed spot.
+    BOSS_TYPES = ("FieldBoss", "ImprisonmentBoss")
+
+    def boss_type(row):
+        t = str(row.get("SpawnerType", ""))
+        return next((b for b in BOSS_TYPES if t.endswith(b)), None)
+
     boss_by_name = {}
     for w in wild.values():
-        if not str(w.get("SpawnerType", "")).endswith("FieldBoss"):
+        if not boss_type(w):
             continue
         pal_ref = w.get("Pal_1", "")
         if pal_ref in ("RowName", "None", ""):
@@ -287,7 +296,8 @@ try:
 
     bosses = []
     for v in placement.values():
-        if not str(v.get("SpawnerType", "")).endswith("FieldBoss"):
+        btype = boss_type(v)
+        if not btype:
             continue
         w = boss_by_name.get(v["SpawnerName"])
         if not w:
@@ -306,7 +316,7 @@ try:
             m, (u, vv) = "tree", norm(X, Y, TREE)
         else:
             continue
-        bosses.append({
+        entry = {
             # stable across regenerations: spawner name + rounded world coords
             "id": f"{v['SpawnerName']}@{round(X)},{round(Y)}",
             "pal": pal_id,
@@ -314,10 +324,14 @@ try:
             "m": m,
             "u": u,
             "v": vv,
-        })
+        }
+        if btype == "ImprisonmentBoss":
+            entry["sealed"] = 1
+        bosses.append(entry)
     json.dump(bosses, open(OUT / "bosses.json", "w"), separators=(",", ":"))
     print(f"world bosses: {len(bosses)} "
-          f"({sum(1 for b in bosses if b['m'] == 'tree')} in World Tree)")
+          f"({sum(1 for b in bosses if b.get('sealed'))} sealed realm, "
+          f"{sum(1 for b in bosses if b['m'] == 'tree')} in World Tree)")
 except FileNotFoundError as e:
     print(f"boss data skipped ({e})")
 

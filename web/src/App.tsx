@@ -28,6 +28,8 @@ interface WorldBoss {
   m: 'main' | 'tree'
   u: number
   v: number
+  /** Sealed Realm guardian */
+  sealed?: number
 }
 const worldBosses = bossesJson as WorldBoss[]
 
@@ -1480,7 +1482,7 @@ function BossMapTab() {
                 key={b.id}
                 className={`bossmark ${dead ? 'dead' : ''}`}
                 style={{ left: `${b.u * 100}%`, top: `${b.v * 100}%`, transform: `translate(-50%, -50%) scale(${1 / Math.sqrt(zoom)})` }}
-                title={`${pal?.name ?? b.pal} Lv ${b.lv}${dead ? ' (defeated - click to restore)' : ' (click to mark defeated)'}`}
+                title={`${pal?.name ?? b.pal} Lv ${b.lv}${b.sealed ? ' - Sealed Realm' : ''}${dead ? ' (defeated - click to restore)' : ' (click to mark defeated)'}`}
                 onMouseDown={e => e.stopPropagation()}
                 onClick={() => toggle(b.id)}
               >
@@ -1526,14 +1528,18 @@ function BossMapTab() {
                   <span className="bosscheck">{dead ? '☑' : '☐'}</span>
                   <PalIcon id={b.pal} size={28} />
                   <span className="maplist-name">{pal?.name ?? b.pal}</span>
+                  {b.sealed ? <span className="treetag" title="Sealed Realm guardian">🔒</span> : null}
                   <span className="decknum">Lv {b.lv}</span>
                 </button>
               )
             })}
           </div>
-          {which === 'main'
-            ? <p className="muted small">7 more bosses on the World Tree map</p>
-            : <p className="muted small">65 bosses on the world map</p>}
+          <p className="muted small">
+            {which === 'main'
+              ? `${worldBosses.filter(b => b.m === 'tree').length} more bosses on the World Tree map`
+              : `${worldBosses.filter(b => b.m === 'main').length} bosses on the world map`}
+            {' · '}🔒 = Sealed Realm
+          </p>
         </div>
         <div className="maptab-map">
           {full

@@ -5,7 +5,7 @@ with every number pulled **directly from the game files** - not from stale commu
 spreadsheets. When Pocketpair ships a patch, one command detects it and re-extracts
 everything.
 
-**9 tools · 291 pals · 185 unique combos · 115 passives · 72 world bosses · ~150k spawn points · in-game icons and maps**
+**9 tools · 291 pals · 185 unique combos · 115 passives · 90 world bosses · ~150k spawn points · in-game icons and maps**
 
 ## ✨ No install - just open it
 
@@ -86,7 +86,7 @@ Where every pal actually spawns, from the game's own Paldeck distribution data -
 
 ## 👑 Boss Tracker
 
-All 72 world (alpha) bosses from the game's spawner tables, each marked on the map with
+All 90 world bosses - open-world alphas plus the 18 Sealed Realm guardians - from the game's spawner tables, each marked on the map with
 its portrait and level. Click a boss on the map or in the list to check it off - defeated
 bosses get a red X and a struck-through list entry, with a running progress counter.
 Progress persists in your browser, works on both the world and World Tree maps, and the
