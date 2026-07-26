@@ -1481,7 +1481,7 @@ function BossMapTab() {
               <button
                 key={b.id}
                 className={`bossmark ${dead ? 'dead' : ''}`}
-                style={{ left: `${b.u * 100}%`, top: `${b.v * 100}%`, transform: `translate(-50%, -50%) scale(${1 / Math.sqrt(zoom)})` }}
+                style={{ left: `${b.u * 100}%`, top: `${b.v * 100}%`, transform: `translate(-50%, -50%) scale(${1 / zoom})` }}
                 title={`${pal?.name ?? b.pal} Lv ${b.lv}${b.sealed ? ' - Sealed Realm' : ''}${dead ? ' (defeated - click to restore)' : ' (click to mark defeated)'}`}
                 onMouseDown={e => e.stopPropagation()}
                 onClick={() => toggle(b.id)}
